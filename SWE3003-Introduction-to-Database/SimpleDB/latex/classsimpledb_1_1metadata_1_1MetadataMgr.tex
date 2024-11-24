@@ -1,0 +1,34 @@
+\hypertarget{classsimpledb_1_1metadata_1_1MetadataMgr}{}\section{simpledb.\+metadata.\+Metadata\+Mgr Class Reference}
+\label{classsimpledb_1_1metadata_1_1MetadataMgr}\index{simpledb.\+metadata.\+Metadata\+Mgr@{simpledb.\+metadata.\+Metadata\+Mgr}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1metadata_1_1MetadataMgr_a0c82fb3183a184ba3c23033017cbdb8e}\label{classsimpledb_1_1metadata_1_1MetadataMgr_a0c82fb3183a184ba3c23033017cbdb8e}} 
+{\bfseries Metadata\+Mgr} (boolean isnew, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1metadata_1_1MetadataMgr_a577aa1ae2e4f823bd9022be26f8db9d4}\label{classsimpledb_1_1metadata_1_1MetadataMgr_a577aa1ae2e4f823bd9022be26f8db9d4}} 
+void {\bfseries create\+Table} (String tblname, \hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} sch, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1metadata_1_1MetadataMgr_af53ec78039077e8f586e71fbec33aaa8}\label{classsimpledb_1_1metadata_1_1MetadataMgr_af53ec78039077e8f586e71fbec33aaa8}} 
+\hyperlink{classsimpledb_1_1record_1_1Layout}{Layout} {\bfseries get\+Layout} (String tblname, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1metadata_1_1MetadataMgr_a21b61baf2262ef9dc2d04e6d698935af}\label{classsimpledb_1_1metadata_1_1MetadataMgr_a21b61baf2262ef9dc2d04e6d698935af}} 
+void {\bfseries create\+View} (String viewname, String viewdef, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1metadata_1_1MetadataMgr_a11cdbca19f654c231481fbfd80070f9c}\label{classsimpledb_1_1metadata_1_1MetadataMgr_a11cdbca19f654c231481fbfd80070f9c}} 
+String {\bfseries get\+View\+Def} (String viewname, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1metadata_1_1MetadataMgr_ae9ff66ffe36f40c3fedb4615b0bffd87}\label{classsimpledb_1_1metadata_1_1MetadataMgr_ae9ff66ffe36f40c3fedb4615b0bffd87}} 
+void {\bfseries create\+Index} (String idxname, String tblname, String fldname, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1metadata_1_1MetadataMgr_a83ffd19e219d3298a7a71bbe1f04e592}\label{classsimpledb_1_1metadata_1_1MetadataMgr_a83ffd19e219d3298a7a71bbe1f04e592}} 
+Map$<$ String, \hyperlink{classsimpledb_1_1metadata_1_1IndexInfo}{Index\+Info} $>$ {\bfseries get\+Index\+Info} (String tblname, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1metadata_1_1MetadataMgr_affcdf17eb7d5f6bde4752ecf42108fe3}\label{classsimpledb_1_1metadata_1_1MetadataMgr_affcdf17eb7d5f6bde4752ecf42108fe3}} 
+\hyperlink{classsimpledb_1_1metadata_1_1StatInfo}{Stat\+Info} {\bfseries get\+Stat\+Info} (String tblname, \hyperlink{classsimpledb_1_1record_1_1Layout}{Layout} layout, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/metadata/Metadata\+Mgr.\+java\end{DoxyCompactItemize}

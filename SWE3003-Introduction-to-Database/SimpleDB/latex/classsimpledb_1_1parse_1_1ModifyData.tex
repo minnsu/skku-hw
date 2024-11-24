@@ -1,0 +1,74 @@
+\hypertarget{classsimpledb_1_1parse_1_1ModifyData}{}\section{simpledb.\+parse.\+Modify\+Data Class Reference}
+\label{classsimpledb_1_1parse_1_1ModifyData}\index{simpledb.\+parse.\+Modify\+Data@{simpledb.\+parse.\+Modify\+Data}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1parse_1_1ModifyData_a1b976f3da407f0b77e28a2cfc43f52db}{Modify\+Data} (String tblname, String fldname, \hyperlink{classsimpledb_1_1query_1_1Expression}{Expression} newval, \hyperlink{classsimpledb_1_1query_1_1Predicate}{Predicate} pred)
+\item 
+String \hyperlink{classsimpledb_1_1parse_1_1ModifyData_a34e80328d0a9fdbcb906908328c854c9}{table\+Name} ()
+\item 
+String \hyperlink{classsimpledb_1_1parse_1_1ModifyData_a54ff6b92596e40f3fc297e23c5cd8dc1}{target\+Field} ()
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Expression}{Expression} \hyperlink{classsimpledb_1_1parse_1_1ModifyData_a4bbcd89228fdd081bdd5ec42f761c5eb}{new\+Value} ()
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Predicate}{Predicate} \hyperlink{classsimpledb_1_1parse_1_1ModifyData_aa81f40c1844cc995612d93ce3b31de45}{pred} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Data for the S\+QL {\itshape update} statement. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1ModifyData_a1b976f3da407f0b77e28a2cfc43f52db}\label{classsimpledb_1_1parse_1_1ModifyData_a1b976f3da407f0b77e28a2cfc43f52db}} 
+\index{simpledb\+::parse\+::\+Modify\+Data@{simpledb\+::parse\+::\+Modify\+Data}!Modify\+Data@{Modify\+Data}}
+\index{Modify\+Data@{Modify\+Data}!simpledb\+::parse\+::\+Modify\+Data@{simpledb\+::parse\+::\+Modify\+Data}}
+\subsubsection{\texorpdfstring{Modify\+Data()}{ModifyData()}}
+{\footnotesize\ttfamily simpledb.\+parse.\+Modify\+Data.\+Modify\+Data (\begin{DoxyParamCaption}\item[{String}]{tblname,  }\item[{String}]{fldname,  }\item[{\hyperlink{classsimpledb_1_1query_1_1Expression}{Expression}}]{newval,  }\item[{\hyperlink{classsimpledb_1_1query_1_1Predicate}{Predicate}}]{pred }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Saves the table name, the modified field and its new value, and the predicate. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1ModifyData_a4bbcd89228fdd081bdd5ec42f761c5eb}\label{classsimpledb_1_1parse_1_1ModifyData_a4bbcd89228fdd081bdd5ec42f761c5eb}} 
+\index{simpledb\+::parse\+::\+Modify\+Data@{simpledb\+::parse\+::\+Modify\+Data}!new\+Value@{new\+Value}}
+\index{new\+Value@{new\+Value}!simpledb\+::parse\+::\+Modify\+Data@{simpledb\+::parse\+::\+Modify\+Data}}
+\subsubsection{\texorpdfstring{new\+Value()}{newValue()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Expression}{Expression} simpledb.\+parse.\+Modify\+Data.\+new\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns an expression. Evaluating this expression for a record produces the value that will be stored in the record\textquotesingle{}s target field. \begin{DoxyReturn}{Returns}
+the target expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1ModifyData_aa81f40c1844cc995612d93ce3b31de45}\label{classsimpledb_1_1parse_1_1ModifyData_aa81f40c1844cc995612d93ce3b31de45}} 
+\index{simpledb\+::parse\+::\+Modify\+Data@{simpledb\+::parse\+::\+Modify\+Data}!pred@{pred}}
+\index{pred@{pred}!simpledb\+::parse\+::\+Modify\+Data@{simpledb\+::parse\+::\+Modify\+Data}}
+\subsubsection{\texorpdfstring{pred()}{pred()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Predicate}{Predicate} simpledb.\+parse.\+Modify\+Data.\+pred (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the predicate that describes which records should be modified. \begin{DoxyReturn}{Returns}
+the modification predicate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1ModifyData_a34e80328d0a9fdbcb906908328c854c9}\label{classsimpledb_1_1parse_1_1ModifyData_a34e80328d0a9fdbcb906908328c854c9}} 
+\index{simpledb\+::parse\+::\+Modify\+Data@{simpledb\+::parse\+::\+Modify\+Data}!table\+Name@{table\+Name}}
+\index{table\+Name@{table\+Name}!simpledb\+::parse\+::\+Modify\+Data@{simpledb\+::parse\+::\+Modify\+Data}}
+\subsubsection{\texorpdfstring{table\+Name()}{tableName()}}
+{\footnotesize\ttfamily String simpledb.\+parse.\+Modify\+Data.\+table\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the name of the affected table. \begin{DoxyReturn}{Returns}
+the name of the affected table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1ModifyData_a54ff6b92596e40f3fc297e23c5cd8dc1}\label{classsimpledb_1_1parse_1_1ModifyData_a54ff6b92596e40f3fc297e23c5cd8dc1}} 
+\index{simpledb\+::parse\+::\+Modify\+Data@{simpledb\+::parse\+::\+Modify\+Data}!target\+Field@{target\+Field}}
+\index{target\+Field@{target\+Field}!simpledb\+::parse\+::\+Modify\+Data@{simpledb\+::parse\+::\+Modify\+Data}}
+\subsubsection{\texorpdfstring{target\+Field()}{targetField()}}
+{\footnotesize\ttfamily String simpledb.\+parse.\+Modify\+Data.\+target\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the field whose values will be modified \begin{DoxyReturn}{Returns}
+the name of the target field 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/parse/Modify\+Data.\+java\end{DoxyCompactItemize}

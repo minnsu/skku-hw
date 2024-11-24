@@ -1,0 +1,94 @@
+\hypertarget{classsimpledb_1_1record_1_1Layout}{}\section{simpledb.\+record.\+Layout Class Reference}
+\label{classsimpledb_1_1record_1_1Layout}\index{simpledb.\+record.\+Layout@{simpledb.\+record.\+Layout}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1record_1_1Layout_a2047aa91873cbb1e08d644f1f98ed801}{Layout} (\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} schema)
+\item 
+\hyperlink{classsimpledb_1_1record_1_1Layout_a778b97f2859ab75933e86c3bc87d6382}{Layout} (\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} schema, Map$<$ String, Integer $>$ offsets, int slotsize)
+\item 
+\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} \hyperlink{classsimpledb_1_1record_1_1Layout_ab647a930df39704c30501af29df28349}{schema} ()
+\item 
+int \hyperlink{classsimpledb_1_1record_1_1Layout_abfcef0e0b363f1d075a810bec77ffe57}{offset} (String fldname)
+\item 
+int \hyperlink{classsimpledb_1_1record_1_1Layout_a1e5e630fd8d2f2695136d9d80fb14b5b}{slot\+Size} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Description of the structure of a record. It contains the name, type, length and offset of each field of the table. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1Layout_a2047aa91873cbb1e08d644f1f98ed801}\label{classsimpledb_1_1record_1_1Layout_a2047aa91873cbb1e08d644f1f98ed801}} 
+\index{simpledb\+::record\+::\+Layout@{simpledb\+::record\+::\+Layout}!Layout@{Layout}}
+\index{Layout@{Layout}!simpledb\+::record\+::\+Layout@{simpledb\+::record\+::\+Layout}}
+\subsubsection{\texorpdfstring{Layout()}{Layout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily simpledb.\+record.\+Layout.\+Layout (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema}}]{schema }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This constructor creates a \hyperlink{classsimpledb_1_1record_1_1Layout}{Layout} object from a schema. This constructor is used when a table is created. It determines the physical offset of each field within the record. 
+\begin{DoxyParams}{Parameters}
+{\em tblname} & the name of the table \\
+\hline
+{\em schema} & the schema of the table\textquotesingle{}s records \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1Layout_a778b97f2859ab75933e86c3bc87d6382}\label{classsimpledb_1_1record_1_1Layout_a778b97f2859ab75933e86c3bc87d6382}} 
+\index{simpledb\+::record\+::\+Layout@{simpledb\+::record\+::\+Layout}!Layout@{Layout}}
+\index{Layout@{Layout}!simpledb\+::record\+::\+Layout@{simpledb\+::record\+::\+Layout}}
+\subsubsection{\texorpdfstring{Layout()}{Layout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily simpledb.\+record.\+Layout.\+Layout (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema}}]{schema,  }\item[{Map$<$ String, Integer $>$}]{offsets,  }\item[{int}]{slotsize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a \hyperlink{classsimpledb_1_1record_1_1Layout}{Layout} object from the specified metadata. This constructor is used when the metadata is retrieved from the catalog. 
+\begin{DoxyParams}{Parameters}
+{\em tblname} & the name of the table \\
+\hline
+{\em schema} & the schema of the table\textquotesingle{}s records \\
+\hline
+{\em offsets} & the already-\/calculated offsets of the fields within a record \\
+\hline
+{\em recordlen} & the already-\/calculated length of each record \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1Layout_abfcef0e0b363f1d075a810bec77ffe57}\label{classsimpledb_1_1record_1_1Layout_abfcef0e0b363f1d075a810bec77ffe57}} 
+\index{simpledb\+::record\+::\+Layout@{simpledb\+::record\+::\+Layout}!offset@{offset}}
+\index{offset@{offset}!simpledb\+::record\+::\+Layout@{simpledb\+::record\+::\+Layout}}
+\subsubsection{\texorpdfstring{offset()}{offset()}}
+{\footnotesize\ttfamily int simpledb.\+record.\+Layout.\+offset (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the offset of a specified field within a record 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the offset of that field within a record 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1Layout_ab647a930df39704c30501af29df28349}\label{classsimpledb_1_1record_1_1Layout_ab647a930df39704c30501af29df28349}} 
+\index{simpledb\+::record\+::\+Layout@{simpledb\+::record\+::\+Layout}!schema@{schema}}
+\index{schema@{schema}!simpledb\+::record\+::\+Layout@{simpledb\+::record\+::\+Layout}}
+\subsubsection{\texorpdfstring{schema()}{schema()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} simpledb.\+record.\+Layout.\+schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the schema of the table\textquotesingle{}s records \begin{DoxyReturn}{Returns}
+the table\textquotesingle{}s record schema 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1Layout_a1e5e630fd8d2f2695136d9d80fb14b5b}\label{classsimpledb_1_1record_1_1Layout_a1e5e630fd8d2f2695136d9d80fb14b5b}} 
+\index{simpledb\+::record\+::\+Layout@{simpledb\+::record\+::\+Layout}!slot\+Size@{slot\+Size}}
+\index{slot\+Size@{slot\+Size}!simpledb\+::record\+::\+Layout@{simpledb\+::record\+::\+Layout}}
+\subsubsection{\texorpdfstring{slot\+Size()}{slotSize()}}
+{\footnotesize\ttfamily int simpledb.\+record.\+Layout.\+slot\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the size of a slot, in bytes. \begin{DoxyReturn}{Returns}
+the size of a slot 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/record/Layout.\+java\end{DoxyCompactItemize}

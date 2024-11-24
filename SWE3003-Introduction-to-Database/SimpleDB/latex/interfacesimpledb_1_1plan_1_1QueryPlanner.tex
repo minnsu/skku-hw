@@ -1,0 +1,45 @@
+\hypertarget{interfacesimpledb_1_1plan_1_1QueryPlanner}{}\section{simpledb.\+plan.\+Query\+Planner Interface Reference}
+\label{interfacesimpledb_1_1plan_1_1QueryPlanner}\index{simpledb.\+plan.\+Query\+Planner@{simpledb.\+plan.\+Query\+Planner}}
+
+
+Inheritance diagram for simpledb.\+plan.\+Query\+Planner\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} \hyperlink{interfacesimpledb_1_1plan_1_1QueryPlanner_a3fcc576e66a155bdc11845ec3e95838f}{create\+Plan} (\hyperlink{classsimpledb_1_1parse_1_1QueryData}{Query\+Data} data, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The interface implemented by planners for the S\+QL select statement. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{interfacesimpledb_1_1plan_1_1QueryPlanner_a3fcc576e66a155bdc11845ec3e95838f}\label{interfacesimpledb_1_1plan_1_1QueryPlanner_a3fcc576e66a155bdc11845ec3e95838f}} 
+\index{simpledb\+::plan\+::\+Query\+Planner@{simpledb\+::plan\+::\+Query\+Planner}!create\+Plan@{create\+Plan}}
+\index{create\+Plan@{create\+Plan}!simpledb\+::plan\+::\+Query\+Planner@{simpledb\+::plan\+::\+Query\+Planner}}
+\subsubsection{\texorpdfstring{create\+Plan()}{createPlan()}}
+{\footnotesize\ttfamily \hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} simpledb.\+plan.\+Query\+Planner.\+create\+Plan (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1parse_1_1QueryData}{Query\+Data}}]{data,  }\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx }\end{DoxyParamCaption})}
+
+Creates a plan for the parsed query. 
+\begin{DoxyParams}{Parameters}
+{\em data} & the parsed representation of the query \\
+\hline
+{\em tx} & the calling transaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a plan for that query 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1opt_1_1HeuristicQueryPlanner_ae822113f750c0944a227a6de344d35f7}{simpledb.\+opt.\+Heuristic\+Query\+Planner}, \hyperlink{classsimpledb_1_1plan_1_1BasicQueryPlanner_af3daad5c5e44335beb608d1f4f5bf16f}{simpledb.\+plan.\+Basic\+Query\+Planner}, and \hyperlink{classsimpledb_1_1plan_1_1BetterQueryPlanner_a887ebdcc02b0de4a2bc8545cce7efa20}{simpledb.\+plan.\+Better\+Query\+Planner}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/plan/Query\+Planner.\+java\end{DoxyCompactItemize}

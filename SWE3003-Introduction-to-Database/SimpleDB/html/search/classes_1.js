@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['badstudentmajor',['BadStudentMajor',['../classBadStudentMajor.html',1,'']]],
+  ['badsyntaxexception',['BadSyntaxException',['../classsimpledb_1_1parse_1_1BadSyntaxException.html',1,'simpledb::parse']]],
+  ['basicqueryplanner',['BasicQueryPlanner',['../classsimpledb_1_1plan_1_1BasicQueryPlanner.html',1,'simpledb::plan']]],
+  ['basicupdateplanner',['BasicUpdatePlanner',['../classsimpledb_1_1plan_1_1BasicUpdatePlanner.html',1,'simpledb::plan']]],
+  ['betterqueryplanner',['BetterQueryPlanner',['../classsimpledb_1_1plan_1_1BetterQueryPlanner.html',1,'simpledb::plan']]],
+  ['blockid',['BlockId',['../classsimpledb_1_1file_1_1BlockId.html',1,'simpledb::file']]],
+  ['btpage',['BTPage',['../classsimpledb_1_1index_1_1btree_1_1BTPage.html',1,'simpledb::index::btree']]],
+  ['btreedir',['BTreeDir',['../classsimpledb_1_1index_1_1btree_1_1BTreeDir.html',1,'simpledb::index::btree']]],
+  ['btreeindex',['BTreeIndex',['../classsimpledb_1_1index_1_1btree_1_1BTreeIndex.html',1,'simpledb::index::btree']]],
+  ['btreeleaf',['BTreeLeaf',['../classsimpledb_1_1index_1_1btree_1_1BTreeLeaf.html',1,'simpledb::index::btree']]],
+  ['buffer',['Buffer',['../classsimpledb_1_1buffer_1_1Buffer.html',1,'simpledb::buffer']]],
+  ['bufferabortexception',['BufferAbortException',['../classsimpledb_1_1buffer_1_1BufferAbortException.html',1,'simpledb::buffer']]],
+  ['bufferfiletest',['BufferFileTest',['../classsimpledb_1_1buffer_1_1BufferFileTest.html',1,'simpledb::buffer']]],
+  ['buffermgr',['BufferMgr',['../classsimpledb_1_1buffer_1_1BufferMgr.html',1,'simpledb::buffer']]],
+  ['buffermgrtest',['BufferMgrTest',['../classsimpledb_1_1buffer_1_1BufferMgrTest.html',1,'simpledb::buffer']]],
+  ['bufferneeds',['BufferNeeds',['../classsimpledb_1_1multibuffer_1_1BufferNeeds.html',1,'simpledb::multibuffer']]],
+  ['buffertest',['BufferTest',['../classsimpledb_1_1buffer_1_1BufferTest.html',1,'simpledb::buffer']]]
+];

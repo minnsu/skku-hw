@@ -1,0 +1,156 @@
+\hypertarget{classsimpledb_1_1materialize_1_1MergeJoinScan}{}\section{simpledb.\+materialize.\+Merge\+Join\+Scan Class Reference}
+\label{classsimpledb_1_1materialize_1_1MergeJoinScan}\index{simpledb.\+materialize.\+Merge\+Join\+Scan@{simpledb.\+materialize.\+Merge\+Join\+Scan}}
+
+
+Inheritance diagram for simpledb.\+materialize.\+Merge\+Join\+Scan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+materialize.\+Merge\+Join\+Scan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1materialize_1_1MergeJoinScan_a22475a586ed556109d2dab7682a33218}{Merge\+Join\+Scan} (\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} s1, \hyperlink{classsimpledb_1_1materialize_1_1SortScan}{Sort\+Scan} s2, String fldname1, String fldname2)
+\item 
+void \hyperlink{classsimpledb_1_1materialize_1_1MergeJoinScan_a11fc3e14ebf559089454871786acf1fe}{close} ()
+\item 
+void \hyperlink{classsimpledb_1_1materialize_1_1MergeJoinScan_a171db3d5aad009a8f8b93dc4742f2a3a}{before\+First} ()
+\item 
+boolean \hyperlink{classsimpledb_1_1materialize_1_1MergeJoinScan_a557b6b51af330fe0180f639246fa7135}{next} ()
+\item 
+int \hyperlink{classsimpledb_1_1materialize_1_1MergeJoinScan_aa1cf26813dd8eedf72edf094d257648f}{get\+Int} (String fldname)
+\item 
+String \hyperlink{classsimpledb_1_1materialize_1_1MergeJoinScan_a75103d6b70f1138aa532abd01e9c436b}{get\+String} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{classsimpledb_1_1materialize_1_1MergeJoinScan_a7c6aaa5825fbb2b3ca2ebd7ceb49ba5d}{get\+Val} (String fldname)
+\item 
+boolean \hyperlink{classsimpledb_1_1materialize_1_1MergeJoinScan_a1450a0e4f554e53c628ed66d39020fc6}{has\+Field} (String fldname)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Scan class for the {\itshape mergejoin} operator. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1MergeJoinScan_a22475a586ed556109d2dab7682a33218}\label{classsimpledb_1_1materialize_1_1MergeJoinScan_a22475a586ed556109d2dab7682a33218}} 
+\index{simpledb\+::materialize\+::\+Merge\+Join\+Scan@{simpledb\+::materialize\+::\+Merge\+Join\+Scan}!Merge\+Join\+Scan@{Merge\+Join\+Scan}}
+\index{Merge\+Join\+Scan@{Merge\+Join\+Scan}!simpledb\+::materialize\+::\+Merge\+Join\+Scan@{simpledb\+::materialize\+::\+Merge\+Join\+Scan}}
+\subsubsection{\texorpdfstring{Merge\+Join\+Scan()}{MergeJoinScan()}}
+{\footnotesize\ttfamily simpledb.\+materialize.\+Merge\+Join\+Scan.\+Merge\+Join\+Scan (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan}}]{s1,  }\item[{\hyperlink{classsimpledb_1_1materialize_1_1SortScan}{Sort\+Scan}}]{s2,  }\item[{String}]{fldname1,  }\item[{String}]{fldname2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a mergejoin scan for the two underlying sorted scans. 
+\begin{DoxyParams}{Parameters}
+{\em s1} & the L\+HS sorted scan \\
+\hline
+{\em s2} & the R\+HS sorted scan \\
+\hline
+{\em fldname1} & the L\+HS join field \\
+\hline
+{\em fldname2} & the R\+HS join field \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1MergeJoinScan_a171db3d5aad009a8f8b93dc4742f2a3a}\label{classsimpledb_1_1materialize_1_1MergeJoinScan_a171db3d5aad009a8f8b93dc4742f2a3a}} 
+\index{simpledb\+::materialize\+::\+Merge\+Join\+Scan@{simpledb\+::materialize\+::\+Merge\+Join\+Scan}!before\+First@{before\+First}}
+\index{before\+First@{before\+First}!simpledb\+::materialize\+::\+Merge\+Join\+Scan@{simpledb\+::materialize\+::\+Merge\+Join\+Scan}}
+\subsubsection{\texorpdfstring{before\+First()}{beforeFirst()}}
+{\footnotesize\ttfamily void simpledb.\+materialize.\+Merge\+Join\+Scan.\+before\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Position the scan before the first record, by positioning each underlying scan before their first records. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a2eceb634b69da9bf1269a4355808cc6b}{simpledb.\+query.\+Scan\+::before\+First()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2eceb634b69da9bf1269a4355808cc6b}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1MergeJoinScan_a11fc3e14ebf559089454871786acf1fe}\label{classsimpledb_1_1materialize_1_1MergeJoinScan_a11fc3e14ebf559089454871786acf1fe}} 
+\index{simpledb\+::materialize\+::\+Merge\+Join\+Scan@{simpledb\+::materialize\+::\+Merge\+Join\+Scan}!close@{close}}
+\index{close@{close}!simpledb\+::materialize\+::\+Merge\+Join\+Scan@{simpledb\+::materialize\+::\+Merge\+Join\+Scan}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void simpledb.\+materialize.\+Merge\+Join\+Scan.\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Close the scan by closing the two underlying scans. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a260f40a8c82edaa00398bea9d698933c}{simpledb.\+query.\+Scan\+::close()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a260f40a8c82edaa00398bea9d698933c}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1MergeJoinScan_aa1cf26813dd8eedf72edf094d257648f}\label{classsimpledb_1_1materialize_1_1MergeJoinScan_aa1cf26813dd8eedf72edf094d257648f}} 
+\index{simpledb\+::materialize\+::\+Merge\+Join\+Scan@{simpledb\+::materialize\+::\+Merge\+Join\+Scan}!get\+Int@{get\+Int}}
+\index{get\+Int@{get\+Int}!simpledb\+::materialize\+::\+Merge\+Join\+Scan@{simpledb\+::materialize\+::\+Merge\+Join\+Scan}}
+\subsubsection{\texorpdfstring{get\+Int()}{getInt()}}
+{\footnotesize\ttfamily int simpledb.\+materialize.\+Merge\+Join\+Scan.\+get\+Int (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the integer value of the specified field. The value is obtained from whichever scan contains the field. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a2e064555e16240115167b5d42d2b3d19}{simpledb.\+query.\+Scan\+::get\+Int}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2e064555e16240115167b5d42d2b3d19}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1MergeJoinScan_a75103d6b70f1138aa532abd01e9c436b}\label{classsimpledb_1_1materialize_1_1MergeJoinScan_a75103d6b70f1138aa532abd01e9c436b}} 
+\index{simpledb\+::materialize\+::\+Merge\+Join\+Scan@{simpledb\+::materialize\+::\+Merge\+Join\+Scan}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!simpledb\+::materialize\+::\+Merge\+Join\+Scan@{simpledb\+::materialize\+::\+Merge\+Join\+Scan}}
+\subsubsection{\texorpdfstring{get\+String()}{getString()}}
+{\footnotesize\ttfamily String simpledb.\+materialize.\+Merge\+Join\+Scan.\+get\+String (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the string value of the specified field. The value is obtained from whichever scan contains the field. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a922e219fee53ecfa6163525f9e3ef222}{simpledb.\+query.\+Scan\+::get\+String}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a922e219fee53ecfa6163525f9e3ef222}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1MergeJoinScan_a7c6aaa5825fbb2b3ca2ebd7ceb49ba5d}\label{classsimpledb_1_1materialize_1_1MergeJoinScan_a7c6aaa5825fbb2b3ca2ebd7ceb49ba5d}} 
+\index{simpledb\+::materialize\+::\+Merge\+Join\+Scan@{simpledb\+::materialize\+::\+Merge\+Join\+Scan}!get\+Val@{get\+Val}}
+\index{get\+Val@{get\+Val}!simpledb\+::materialize\+::\+Merge\+Join\+Scan@{simpledb\+::materialize\+::\+Merge\+Join\+Scan}}
+\subsubsection{\texorpdfstring{get\+Val()}{getVal()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+materialize.\+Merge\+Join\+Scan.\+get\+Val (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the value of the specified field. The value is obtained from whichever scan contains the field. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan\+::get\+Val}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1MergeJoinScan_a1450a0e4f554e53c628ed66d39020fc6}\label{classsimpledb_1_1materialize_1_1MergeJoinScan_a1450a0e4f554e53c628ed66d39020fc6}} 
+\index{simpledb\+::materialize\+::\+Merge\+Join\+Scan@{simpledb\+::materialize\+::\+Merge\+Join\+Scan}!has\+Field@{has\+Field}}
+\index{has\+Field@{has\+Field}!simpledb\+::materialize\+::\+Merge\+Join\+Scan@{simpledb\+::materialize\+::\+Merge\+Join\+Scan}}
+\subsubsection{\texorpdfstring{has\+Field()}{hasField()}}
+{\footnotesize\ttfamily boolean simpledb.\+materialize.\+Merge\+Join\+Scan.\+has\+Field (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return true if the specified field is in either of the underlying scans. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a8f4ccf13eed0bed983c928e9b998fe5c}{simpledb.\+query.\+Scan\+::has\+Field}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a8f4ccf13eed0bed983c928e9b998fe5c}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1MergeJoinScan_a557b6b51af330fe0180f639246fa7135}\label{classsimpledb_1_1materialize_1_1MergeJoinScan_a557b6b51af330fe0180f639246fa7135}} 
+\index{simpledb\+::materialize\+::\+Merge\+Join\+Scan@{simpledb\+::materialize\+::\+Merge\+Join\+Scan}!next@{next}}
+\index{next@{next}!simpledb\+::materialize\+::\+Merge\+Join\+Scan@{simpledb\+::materialize\+::\+Merge\+Join\+Scan}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily boolean simpledb.\+materialize.\+Merge\+Join\+Scan.\+next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Move to the next record. This is where the action is. 
+
+If the next R\+HS record has the same join value, then move to it. Otherwise, if the next L\+HS record has the same join value, then reposition the R\+HS scan back to the first record having that join value. Otherwise, repeatedly move the scan having the smallest value until a common join value is found. When one of the scans runs out of records, return false. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}{simpledb.\+query.\+Scan\+::next()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}{simpledb.\+query.\+Scan}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/materialize/Merge\+Join\+Scan.\+java\end{DoxyCompactItemize}

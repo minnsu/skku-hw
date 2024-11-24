@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['writetolog',['writeToLog',['../classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord.html#ae8556c19188908e304e1592690689d3e',1,'simpledb.tx.recovery.CheckpointRecord.writeToLog()'],['../classsimpledb_1_1tx_1_1recovery_1_1CommitRecord.html#a5170a623502e3c852ef3fb0fd76d3bde',1,'simpledb.tx.recovery.CommitRecord.writeToLog()'],['../classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord.html#aa31fa6247f89d5cf47160c34d0a0dcbf',1,'simpledb.tx.recovery.RollbackRecord.writeToLog()'],['../classsimpledb_1_1tx_1_1recovery_1_1SetIntRecord.html#a535ee3773e4ab25a84fe770e1953d6c4',1,'simpledb.tx.recovery.SetIntRecord.writeToLog()'],['../classsimpledb_1_1tx_1_1recovery_1_1SetStringRecord.html#a47c5a58fa49e28c24f8111983ab2fc85',1,'simpledb.tx.recovery.SetStringRecord.writeToLog()'],['../classsimpledb_1_1tx_1_1recovery_1_1StartRecord.html#a11435145a96d9cc068a0c80cb3131d63',1,'simpledb.tx.recovery.StartRecord.writeToLog()']]]
+];

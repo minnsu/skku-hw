@@ -1,0 +1,40 @@
+1/111 11/11 1111 1111 ???
+1/000 00/00 0000 0001 * 2^(-15) : 존재 최솟값 : 1/1024 * 2^(-15) = 
+최솟값 : 0, 
+exp: 00000 => implied leading bit 없음
+
+★★★★★
+현재 hw1.c 에서 파일 읽는 경로 example 추가함, 나중에 새파일 받아서 해보기?
+★★★★★
+정리 : 테스트 케이스 구현 완료
+1. overflow: exp = 00000(0, close to 0), 11111(inf, NaN) 등
+	대상 함수: sfp2float 제외 모든 것(이 것은 단순 잘라 붙이기면 됨)
+	0 or very close to 0.0 : sfp2int, int2sfp, sfp2float, float2sfp, mul : 완
+		add: (5 -7, -7 5의 결과는 왜 다르지? : diff 같을 때 frac 크기 비교하여 sign을 정해야 했음)
+	infinit : sfp2int, int2sfp, sfp2float, float2sfp: 완
+		add, mul : 입력에 대한 inf, NaN은 해결, 결과값에 대한 변경 미완
+곱셈 후 bit pattern이 16 이상이면 어떻게 해결? -> round to even? 어느걸?
+2. 반올림 방법에 대한 확인 및 수정
+3. 그 외 예외
+
+궁금한 점 : sfp2float에서 모든 것이 대체 가능한 것은 알겠는데 inf나 NaN은 어떻게 처리하는지?
+	bit pattern이 길어서 오차가 나는 것들은 테스트케이스에서 제외된 것인지?
+	Normal value * (+,-)inf에서 Normal value의 부호는 상관없이 inf의 부호를 따르는가? : normal, inf의 부호 모두 고려할 것
+	round to even을 해야하는 add, mul은 더한 결과만 그 방법을 사용하는가? 
+		혹은 입력값에 대한 조작도 그 방법을 사용하는가?
+	int2sfp, float2sfp에서 round to zero면 이미 손실이 일어난 상태인데 맞는가?
+
+가능한 특이 수:
+0 : int2sfp, sfp2int, float2sfp, sfp2float 정상
+normal value : int2sfp, sfp2int, float2sfp, sfp2float: FRAC part 범위 내 정상
+
+inf, -inf의 경우: 
+int2sfp, float2sfp : frac 범위로 인해 65535는 65504로 표시되고 65536, -65536은 정상적으로 inf, -inf화 시킴
+	sfp2int 각각 TMax(2147483648), TMin(-2147483648)으로 바꿈
+	sfp2float float 그대로 해석해서 65536, -65536
+
+NaN
+
+add 후 0, normal, inf, -inf, NaN
+mul 후 0, normal, inf, -inf, NaN
+확인해야 함.

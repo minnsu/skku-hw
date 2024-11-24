@@ -1,0 +1,90 @@
+\hypertarget{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord}{}\section{simpledb.\+tx.\+recovery.\+Commit\+Record Class Reference}
+\label{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord}\index{simpledb.\+tx.\+recovery.\+Commit\+Record@{simpledb.\+tx.\+recovery.\+Commit\+Record}}
+
+
+Inheritance diagram for simpledb.\+tx.\+recovery.\+Commit\+Record\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+tx.\+recovery.\+Commit\+Record\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord_a2ef1fe40555b29dd1aa617fe23f0be8c}\label{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord_a2ef1fe40555b29dd1aa617fe23f0be8c}} 
+{\bfseries Commit\+Record} (\hyperlink{classsimpledb_1_1file_1_1Page}{Page} p)
+\item 
+int \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord_a4a550ab6247f33e349b3edff767bc630}{op} ()
+\item 
+int \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord_a9e644845f0e04b1c9c0fae4d9cdbe618}{tx\+Number} ()
+\item 
+void \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord_aa7a60156e7d7dfb10d2e6f8e4496f756}{undo} (\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord_a370bf526e1a97f59a847d822e11e3ce0}\label{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord_a370bf526e1a97f59a847d822e11e3ce0}} 
+String {\bfseries to\+String} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord_a5170a623502e3c852ef3fb0fd76d3bde}{write\+To\+Log} (\hyperlink{classsimpledb_1_1log_1_1LogMgr}{Log\+Mgr} lm, int txnum)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The C\+O\+M\+M\+IT log record \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord_a4a550ab6247f33e349b3edff767bc630}\label{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord_a4a550ab6247f33e349b3edff767bc630}} 
+\index{simpledb\+::tx\+::recovery\+::\+Commit\+Record@{simpledb\+::tx\+::recovery\+::\+Commit\+Record}!op@{op}}
+\index{op@{op}!simpledb\+::tx\+::recovery\+::\+Commit\+Record@{simpledb\+::tx\+::recovery\+::\+Commit\+Record}}
+\subsubsection{\texorpdfstring{op()}{op()}}
+{\footnotesize\ttfamily int simpledb.\+tx.\+recovery.\+Commit\+Record.\+op (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the log record\textquotesingle{}s type. \begin{DoxyReturn}{Returns}
+the log record\textquotesingle{}s type 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_aa97a8907de4709c2b3596e8c9709a26c}{simpledb.\+tx.\+recovery.\+Log\+Record}.
+
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord_a9e644845f0e04b1c9c0fae4d9cdbe618}\label{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord_a9e644845f0e04b1c9c0fae4d9cdbe618}} 
+\index{simpledb\+::tx\+::recovery\+::\+Commit\+Record@{simpledb\+::tx\+::recovery\+::\+Commit\+Record}!tx\+Number@{tx\+Number}}
+\index{tx\+Number@{tx\+Number}!simpledb\+::tx\+::recovery\+::\+Commit\+Record@{simpledb\+::tx\+::recovery\+::\+Commit\+Record}}
+\subsubsection{\texorpdfstring{tx\+Number()}{txNumber()}}
+{\footnotesize\ttfamily int simpledb.\+tx.\+recovery.\+Commit\+Record.\+tx\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the transaction id stored with the log record. \begin{DoxyReturn}{Returns}
+the log record\textquotesingle{}s transaction id 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a167f7406c18bf3367f1b83f6853870db}{simpledb.\+tx.\+recovery.\+Log\+Record}.
+
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord_aa7a60156e7d7dfb10d2e6f8e4496f756}\label{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord_aa7a60156e7d7dfb10d2e6f8e4496f756}} 
+\index{simpledb\+::tx\+::recovery\+::\+Commit\+Record@{simpledb\+::tx\+::recovery\+::\+Commit\+Record}!undo@{undo}}
+\index{undo@{undo}!simpledb\+::tx\+::recovery\+::\+Commit\+Record@{simpledb\+::tx\+::recovery\+::\+Commit\+Record}}
+\subsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily void simpledb.\+tx.\+recovery.\+Commit\+Record.\+undo (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Does nothing, because a commit record contains no undo information. 
+
+Implements \hyperlink{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a1f1949e7f3746b9b8b3bc985c89214e5}{simpledb.\+tx.\+recovery.\+Log\+Record}.
+
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord_a5170a623502e3c852ef3fb0fd76d3bde}\label{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord_a5170a623502e3c852ef3fb0fd76d3bde}} 
+\index{simpledb\+::tx\+::recovery\+::\+Commit\+Record@{simpledb\+::tx\+::recovery\+::\+Commit\+Record}!write\+To\+Log@{write\+To\+Log}}
+\index{write\+To\+Log@{write\+To\+Log}!simpledb\+::tx\+::recovery\+::\+Commit\+Record@{simpledb\+::tx\+::recovery\+::\+Commit\+Record}}
+\subsubsection{\texorpdfstring{write\+To\+Log()}{writeToLog()}}
+{\footnotesize\ttfamily static int simpledb.\+tx.\+recovery.\+Commit\+Record.\+write\+To\+Log (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1log_1_1LogMgr}{Log\+Mgr}}]{lm,  }\item[{int}]{txnum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+A static method to write a commit record to the log. This log record contains the C\+O\+M\+M\+IT operator, followed by the transaction id. \begin{DoxyReturn}{Returns}
+the L\+SN of the last log value 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/tx/recovery/Commit\+Record.\+java\end{DoxyCompactItemize}

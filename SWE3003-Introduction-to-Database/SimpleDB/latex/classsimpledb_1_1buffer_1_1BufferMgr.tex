@@ -1,0 +1,88 @@
+\hypertarget{classsimpledb_1_1buffer_1_1BufferMgr}{}\section{simpledb.\+buffer.\+Buffer\+Mgr Class Reference}
+\label{classsimpledb_1_1buffer_1_1BufferMgr}\index{simpledb.\+buffer.\+Buffer\+Mgr@{simpledb.\+buffer.\+Buffer\+Mgr}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1buffer_1_1BufferMgr_a902992b92f80e884e735f164666b7f8e}{Buffer\+Mgr} (\hyperlink{classsimpledb_1_1file_1_1FileMgr}{File\+Mgr} fm, \hyperlink{classsimpledb_1_1log_1_1LogMgr}{Log\+Mgr} lm, int numbuffs)
+\item 
+synchronized int \hyperlink{classsimpledb_1_1buffer_1_1BufferMgr_a39e0c2c3184bbf6c15e3c7b2bd4151e0}{available} ()
+\item 
+synchronized void \hyperlink{classsimpledb_1_1buffer_1_1BufferMgr_a0f77a2fcb04ff531bf44afb40860f10f}{flush\+All} (int txnum)
+\item 
+synchronized void \hyperlink{classsimpledb_1_1buffer_1_1BufferMgr_af8cfce0647ac8fbf190908c005bbb49a}{unpin} (\hyperlink{classsimpledb_1_1buffer_1_1Buffer}{Buffer} buff)
+\item 
+synchronized \hyperlink{classsimpledb_1_1buffer_1_1Buffer}{Buffer} \hyperlink{classsimpledb_1_1buffer_1_1BufferMgr_a8ce62cea253140d8b2faf76059f6808c}{pin} (\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} blk)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages the pinning and unpinning of buffers to blocks. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1buffer_1_1BufferMgr_a902992b92f80e884e735f164666b7f8e}\label{classsimpledb_1_1buffer_1_1BufferMgr_a902992b92f80e884e735f164666b7f8e}} 
+\index{simpledb\+::buffer\+::\+Buffer\+Mgr@{simpledb\+::buffer\+::\+Buffer\+Mgr}!Buffer\+Mgr@{Buffer\+Mgr}}
+\index{Buffer\+Mgr@{Buffer\+Mgr}!simpledb\+::buffer\+::\+Buffer\+Mgr@{simpledb\+::buffer\+::\+Buffer\+Mgr}}
+\subsubsection{\texorpdfstring{Buffer\+Mgr()}{BufferMgr()}}
+{\footnotesize\ttfamily simpledb.\+buffer.\+Buffer\+Mgr.\+Buffer\+Mgr (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1file_1_1FileMgr}{File\+Mgr}}]{fm,  }\item[{\hyperlink{classsimpledb_1_1log_1_1LogMgr}{Log\+Mgr}}]{lm,  }\item[{int}]{numbuffs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a buffer manager having the specified number of buffer slots. This constructor depends on a \hyperlink{}{File\+Mgr} and \hyperlink{classsimpledb_1_1log_1_1LogMgr}{Log\+Mgr} object. 
+\begin{DoxyParams}{Parameters}
+{\em numbuffs} & the number of buffer slots to allocate \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1buffer_1_1BufferMgr_a39e0c2c3184bbf6c15e3c7b2bd4151e0}\label{classsimpledb_1_1buffer_1_1BufferMgr_a39e0c2c3184bbf6c15e3c7b2bd4151e0}} 
+\index{simpledb\+::buffer\+::\+Buffer\+Mgr@{simpledb\+::buffer\+::\+Buffer\+Mgr}!available@{available}}
+\index{available@{available}!simpledb\+::buffer\+::\+Buffer\+Mgr@{simpledb\+::buffer\+::\+Buffer\+Mgr}}
+\subsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily synchronized int simpledb.\+buffer.\+Buffer\+Mgr.\+available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of available (i.\+e. unpinned) buffers. \begin{DoxyReturn}{Returns}
+the number of available buffers 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1buffer_1_1BufferMgr_a0f77a2fcb04ff531bf44afb40860f10f}\label{classsimpledb_1_1buffer_1_1BufferMgr_a0f77a2fcb04ff531bf44afb40860f10f}} 
+\index{simpledb\+::buffer\+::\+Buffer\+Mgr@{simpledb\+::buffer\+::\+Buffer\+Mgr}!flush\+All@{flush\+All}}
+\index{flush\+All@{flush\+All}!simpledb\+::buffer\+::\+Buffer\+Mgr@{simpledb\+::buffer\+::\+Buffer\+Mgr}}
+\subsubsection{\texorpdfstring{flush\+All()}{flushAll()}}
+{\footnotesize\ttfamily synchronized void simpledb.\+buffer.\+Buffer\+Mgr.\+flush\+All (\begin{DoxyParamCaption}\item[{int}]{txnum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Flushes the dirty buffers modified by the specified transaction. 
+\begin{DoxyParams}{Parameters}
+{\em txnum} & the transaction\textquotesingle{}s id number \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1buffer_1_1BufferMgr_a8ce62cea253140d8b2faf76059f6808c}\label{classsimpledb_1_1buffer_1_1BufferMgr_a8ce62cea253140d8b2faf76059f6808c}} 
+\index{simpledb\+::buffer\+::\+Buffer\+Mgr@{simpledb\+::buffer\+::\+Buffer\+Mgr}!pin@{pin}}
+\index{pin@{pin}!simpledb\+::buffer\+::\+Buffer\+Mgr@{simpledb\+::buffer\+::\+Buffer\+Mgr}}
+\subsubsection{\texorpdfstring{pin()}{pin()}}
+{\footnotesize\ttfamily synchronized \hyperlink{classsimpledb_1_1buffer_1_1Buffer}{Buffer} simpledb.\+buffer.\+Buffer\+Mgr.\+pin (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id}}]{blk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Pins a buffer to the specified block, potentially waiting until a buffer becomes available. If no buffer becomes available within a fixed time period, then a \hyperlink{classsimpledb_1_1buffer_1_1BufferAbortException}{Buffer\+Abort\+Exception} is thrown. 
+\begin{DoxyParams}{Parameters}
+{\em blk} & a reference to a disk block \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the buffer pinned to that block 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1buffer_1_1BufferMgr_af8cfce0647ac8fbf190908c005bbb49a}\label{classsimpledb_1_1buffer_1_1BufferMgr_af8cfce0647ac8fbf190908c005bbb49a}} 
+\index{simpledb\+::buffer\+::\+Buffer\+Mgr@{simpledb\+::buffer\+::\+Buffer\+Mgr}!unpin@{unpin}}
+\index{unpin@{unpin}!simpledb\+::buffer\+::\+Buffer\+Mgr@{simpledb\+::buffer\+::\+Buffer\+Mgr}}
+\subsubsection{\texorpdfstring{unpin()}{unpin()}}
+{\footnotesize\ttfamily synchronized void simpledb.\+buffer.\+Buffer\+Mgr.\+unpin (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1buffer_1_1Buffer}{Buffer}}]{buff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Unpins the specified data buffer. If its pin count goes to zero, then notify any waiting threads. 
+\begin{DoxyParams}{Parameters}
+{\em buff} & the buffer to be unpinned \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/buffer/Buffer\+Mgr.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,12 @@
+digraph "simpledb.jdbc.network.RemoteDriverImpl"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="simpledb.jdbc.network.Remote\lDriverImpl",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="UnicastRemoteObject",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="simpledb.jdbc.network.Remote\lDriver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfacesimpledb_1_1jdbc_1_1network_1_1RemoteDriver.html"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Remote",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

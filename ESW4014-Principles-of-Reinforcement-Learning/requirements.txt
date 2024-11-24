@@ -1,0 +1,7 @@
+torch==2.3.0
+torchaudio==2.3.0
+torchvision==0.18.0
+gym==0.22.0
+pygame==2.5.2
+Matplotlib==3.4.3
+pybullet==3.2.5

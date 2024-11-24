@@ -1,0 +1,10 @@
+input.txt : 44
+input2.txt : 120
+input3.txt : 6
+input4.txt : 8
+input5.txt : 8
+input6.txt : -1
+input7.txt : -1
+input8.txt : 2
+input9.txt : -1
+input10.txt : -1

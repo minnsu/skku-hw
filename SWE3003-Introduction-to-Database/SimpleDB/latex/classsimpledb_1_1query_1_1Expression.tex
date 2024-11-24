@@ -1,0 +1,93 @@
+\hypertarget{classsimpledb_1_1query_1_1Expression}{}\section{simpledb.\+query.\+Expression Class Reference}
+\label{classsimpledb_1_1query_1_1Expression}\index{simpledb.\+query.\+Expression@{simpledb.\+query.\+Expression}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Expression_a92c2ebc70f7be8829a829c74ac740882}\label{classsimpledb_1_1query_1_1Expression_a92c2ebc70f7be8829a829c74ac740882}} 
+{\bfseries Expression} (\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} val)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Expression_a8e698f09b08ea05ba7c384d6eabc09ea}\label{classsimpledb_1_1query_1_1Expression_a8e698f09b08ea05ba7c384d6eabc09ea}} 
+{\bfseries Expression} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{classsimpledb_1_1query_1_1Expression_a09021c7fb93aa5530f6b5ddccde46a2c}{evaluate} (\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} s)
+\item 
+boolean \hyperlink{classsimpledb_1_1query_1_1Expression_a9bbaeb4fd94c01671e8207ba95ddd808}{is\+Field\+Name} ()
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{classsimpledb_1_1query_1_1Expression_a493dcabb0b3952c3188ab2de5814b344}{as\+Constant} ()
+\item 
+String \hyperlink{classsimpledb_1_1query_1_1Expression_ae4d3c3da3385d0ee2f5a741e46625403}{as\+Field\+Name} ()
+\item 
+boolean \hyperlink{classsimpledb_1_1query_1_1Expression_a6ff0d7022de12290e82bd0aabd9a0449}{applies\+To} (\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} sch)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Expression_a30112b758164604a986330de50693647}\label{classsimpledb_1_1query_1_1Expression_a30112b758164604a986330de50693647}} 
+String {\bfseries to\+String} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The interface corresponding to S\+QL expressions. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Expression_a6ff0d7022de12290e82bd0aabd9a0449}\label{classsimpledb_1_1query_1_1Expression_a6ff0d7022de12290e82bd0aabd9a0449}} 
+\index{simpledb\+::query\+::\+Expression@{simpledb\+::query\+::\+Expression}!applies\+To@{applies\+To}}
+\index{applies\+To@{applies\+To}!simpledb\+::query\+::\+Expression@{simpledb\+::query\+::\+Expression}}
+\subsubsection{\texorpdfstring{applies\+To()}{appliesTo()}}
+{\footnotesize\ttfamily boolean simpledb.\+query.\+Expression.\+applies\+To (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema}}]{sch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Determine if all of the fields mentioned in this expression are contained in the specified schema. 
+\begin{DoxyParams}{Parameters}
+{\em sch} & the schema \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all fields in the expression are in the schema 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Expression_a493dcabb0b3952c3188ab2de5814b344}\label{classsimpledb_1_1query_1_1Expression_a493dcabb0b3952c3188ab2de5814b344}} 
+\index{simpledb\+::query\+::\+Expression@{simpledb\+::query\+::\+Expression}!as\+Constant@{as\+Constant}}
+\index{as\+Constant@{as\+Constant}!simpledb\+::query\+::\+Expression@{simpledb\+::query\+::\+Expression}}
+\subsubsection{\texorpdfstring{as\+Constant()}{asConstant()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+query.\+Expression.\+as\+Constant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the constant corresponding to a constant expression, or null if the expression does not denote a constant. \begin{DoxyReturn}{Returns}
+the expression as a constant 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Expression_ae4d3c3da3385d0ee2f5a741e46625403}\label{classsimpledb_1_1query_1_1Expression_ae4d3c3da3385d0ee2f5a741e46625403}} 
+\index{simpledb\+::query\+::\+Expression@{simpledb\+::query\+::\+Expression}!as\+Field\+Name@{as\+Field\+Name}}
+\index{as\+Field\+Name@{as\+Field\+Name}!simpledb\+::query\+::\+Expression@{simpledb\+::query\+::\+Expression}}
+\subsubsection{\texorpdfstring{as\+Field\+Name()}{asFieldName()}}
+{\footnotesize\ttfamily String simpledb.\+query.\+Expression.\+as\+Field\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the field name corresponding to a constant expression, or null if the expression does not denote a field. \begin{DoxyReturn}{Returns}
+the expression as a field name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Expression_a09021c7fb93aa5530f6b5ddccde46a2c}\label{classsimpledb_1_1query_1_1Expression_a09021c7fb93aa5530f6b5ddccde46a2c}} 
+\index{simpledb\+::query\+::\+Expression@{simpledb\+::query\+::\+Expression}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!simpledb\+::query\+::\+Expression@{simpledb\+::query\+::\+Expression}}
+\subsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+query.\+Expression.\+evaluate (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Evaluate the expression with respect to the current record of the specified scan. 
+\begin{DoxyParams}{Parameters}
+{\em s} & the scan \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value of the expression, as a \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Expression_a9bbaeb4fd94c01671e8207ba95ddd808}\label{classsimpledb_1_1query_1_1Expression_a9bbaeb4fd94c01671e8207ba95ddd808}} 
+\index{simpledb\+::query\+::\+Expression@{simpledb\+::query\+::\+Expression}!is\+Field\+Name@{is\+Field\+Name}}
+\index{is\+Field\+Name@{is\+Field\+Name}!simpledb\+::query\+::\+Expression@{simpledb\+::query\+::\+Expression}}
+\subsubsection{\texorpdfstring{is\+Field\+Name()}{isFieldName()}}
+{\footnotesize\ttfamily boolean simpledb.\+query.\+Expression.\+is\+Field\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return true if the expression is a field reference. \begin{DoxyReturn}{Returns}
+true if the expression denotes a field 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/query/Expression.\+java\end{DoxyCompactItemize}

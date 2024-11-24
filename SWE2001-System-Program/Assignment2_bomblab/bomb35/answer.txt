@@ -1,0 +1,6 @@
+All your base are belong to us.
+1 2 4 8 16 32
+2 626
+48 4
+defghi
+4 3 2 5 6 1

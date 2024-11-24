@@ -1,0 +1,155 @@
+\hypertarget{interfacesimpledb_1_1plan_1_1UpdatePlanner}{}\section{simpledb.\+plan.\+Update\+Planner Interface Reference}
+\label{interfacesimpledb_1_1plan_1_1UpdatePlanner}\index{simpledb.\+plan.\+Update\+Planner@{simpledb.\+plan.\+Update\+Planner}}
+
+
+Inheritance diagram for simpledb.\+plan.\+Update\+Planner\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{interfacesimpledb_1_1plan_1_1UpdatePlanner_a6f2cfe8428b2c5f61204b8606905100e}{execute\+Insert} (\hyperlink{classsimpledb_1_1parse_1_1InsertData}{Insert\+Data} data, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\item 
+int \hyperlink{interfacesimpledb_1_1plan_1_1UpdatePlanner_a7141a96cb092881cc149f0804bbafc20}{execute\+Delete} (\hyperlink{classsimpledb_1_1parse_1_1DeleteData}{Delete\+Data} data, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\item 
+int \hyperlink{interfacesimpledb_1_1plan_1_1UpdatePlanner_af887ff3fe178adb4fc3b3bee98acde73}{execute\+Modify} (\hyperlink{classsimpledb_1_1parse_1_1ModifyData}{Modify\+Data} data, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\item 
+int \hyperlink{interfacesimpledb_1_1plan_1_1UpdatePlanner_a44085c8b895a3da12486d3f59fde4a3a}{execute\+Create\+Table} (\hyperlink{classsimpledb_1_1parse_1_1CreateTableData}{Create\+Table\+Data} data, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\item 
+int \hyperlink{interfacesimpledb_1_1plan_1_1UpdatePlanner_a3f1e2a94b4ca0c9c4090989670fd111a}{execute\+Create\+View} (\hyperlink{classsimpledb_1_1parse_1_1CreateViewData}{Create\+View\+Data} data, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\item 
+int \hyperlink{interfacesimpledb_1_1plan_1_1UpdatePlanner_a62e66672add275bc79b05825186051aa}{execute\+Create\+Index} (\hyperlink{classsimpledb_1_1parse_1_1CreateIndexData}{Create\+Index\+Data} data, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The interface implemented by the planners for S\+QL insert, delete, and modify statements. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{interfacesimpledb_1_1plan_1_1UpdatePlanner_a62e66672add275bc79b05825186051aa}\label{interfacesimpledb_1_1plan_1_1UpdatePlanner_a62e66672add275bc79b05825186051aa}} 
+\index{simpledb\+::plan\+::\+Update\+Planner@{simpledb\+::plan\+::\+Update\+Planner}!execute\+Create\+Index@{execute\+Create\+Index}}
+\index{execute\+Create\+Index@{execute\+Create\+Index}!simpledb\+::plan\+::\+Update\+Planner@{simpledb\+::plan\+::\+Update\+Planner}}
+\subsubsection{\texorpdfstring{execute\+Create\+Index()}{executeCreateIndex()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Update\+Planner.\+execute\+Create\+Index (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1parse_1_1CreateIndexData}{Create\+Index\+Data}}]{data,  }\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx }\end{DoxyParamCaption})}
+
+Executes the specified create index statement, and returns the number of affected records. 
+\begin{DoxyParams}{Parameters}
+{\em data} & the parsed representation of the create index statement \\
+\hline
+{\em tx} & the calling transaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of affected records 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexUpdatePlanner_ad743dd19ed44d8b11338ddcd49bf861a}{simpledb.\+index.\+planner.\+Index\+Update\+Planner}, and \hyperlink{classsimpledb_1_1plan_1_1BasicUpdatePlanner_a662b9a96ae0b34c6820cf7e1c25a0577}{simpledb.\+plan.\+Basic\+Update\+Planner}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1plan_1_1UpdatePlanner_a44085c8b895a3da12486d3f59fde4a3a}\label{interfacesimpledb_1_1plan_1_1UpdatePlanner_a44085c8b895a3da12486d3f59fde4a3a}} 
+\index{simpledb\+::plan\+::\+Update\+Planner@{simpledb\+::plan\+::\+Update\+Planner}!execute\+Create\+Table@{execute\+Create\+Table}}
+\index{execute\+Create\+Table@{execute\+Create\+Table}!simpledb\+::plan\+::\+Update\+Planner@{simpledb\+::plan\+::\+Update\+Planner}}
+\subsubsection{\texorpdfstring{execute\+Create\+Table()}{executeCreateTable()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Update\+Planner.\+execute\+Create\+Table (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1parse_1_1CreateTableData}{Create\+Table\+Data}}]{data,  }\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx }\end{DoxyParamCaption})}
+
+Executes the specified create table statement, and returns the number of affected records. 
+\begin{DoxyParams}{Parameters}
+{\em data} & the parsed representation of the create table statement \\
+\hline
+{\em tx} & the calling transaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of affected records 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexUpdatePlanner_a530ca9f0043be30f228ccaf7d99ce0bb}{simpledb.\+index.\+planner.\+Index\+Update\+Planner}, and \hyperlink{classsimpledb_1_1plan_1_1BasicUpdatePlanner_ad29eefdb27d7f1c40de1af9031abc5b8}{simpledb.\+plan.\+Basic\+Update\+Planner}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1plan_1_1UpdatePlanner_a3f1e2a94b4ca0c9c4090989670fd111a}\label{interfacesimpledb_1_1plan_1_1UpdatePlanner_a3f1e2a94b4ca0c9c4090989670fd111a}} 
+\index{simpledb\+::plan\+::\+Update\+Planner@{simpledb\+::plan\+::\+Update\+Planner}!execute\+Create\+View@{execute\+Create\+View}}
+\index{execute\+Create\+View@{execute\+Create\+View}!simpledb\+::plan\+::\+Update\+Planner@{simpledb\+::plan\+::\+Update\+Planner}}
+\subsubsection{\texorpdfstring{execute\+Create\+View()}{executeCreateView()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Update\+Planner.\+execute\+Create\+View (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1parse_1_1CreateViewData}{Create\+View\+Data}}]{data,  }\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx }\end{DoxyParamCaption})}
+
+Executes the specified create view statement, and returns the number of affected records. 
+\begin{DoxyParams}{Parameters}
+{\em data} & the parsed representation of the create view statement \\
+\hline
+{\em tx} & the calling transaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of affected records 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexUpdatePlanner_aa1ce4cdb68a43048a7809b08a28149f0}{simpledb.\+index.\+planner.\+Index\+Update\+Planner}, and \hyperlink{classsimpledb_1_1plan_1_1BasicUpdatePlanner_a2c43aed5eb272962bd57a66bdb200ce3}{simpledb.\+plan.\+Basic\+Update\+Planner}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1plan_1_1UpdatePlanner_a7141a96cb092881cc149f0804bbafc20}\label{interfacesimpledb_1_1plan_1_1UpdatePlanner_a7141a96cb092881cc149f0804bbafc20}} 
+\index{simpledb\+::plan\+::\+Update\+Planner@{simpledb\+::plan\+::\+Update\+Planner}!execute\+Delete@{execute\+Delete}}
+\index{execute\+Delete@{execute\+Delete}!simpledb\+::plan\+::\+Update\+Planner@{simpledb\+::plan\+::\+Update\+Planner}}
+\subsubsection{\texorpdfstring{execute\+Delete()}{executeDelete()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Update\+Planner.\+execute\+Delete (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1parse_1_1DeleteData}{Delete\+Data}}]{data,  }\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx }\end{DoxyParamCaption})}
+
+Executes the specified delete statement, and returns the number of affected records. 
+\begin{DoxyParams}{Parameters}
+{\em data} & the parsed representation of the delete statement \\
+\hline
+{\em tx} & the calling transaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of affected records 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexUpdatePlanner_abc99996e4228128a9ce3a1588a35722a}{simpledb.\+index.\+planner.\+Index\+Update\+Planner}, and \hyperlink{classsimpledb_1_1plan_1_1BasicUpdatePlanner_ae6881ef6bd8ea00c07dd66ee8153bfb9}{simpledb.\+plan.\+Basic\+Update\+Planner}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1plan_1_1UpdatePlanner_a6f2cfe8428b2c5f61204b8606905100e}\label{interfacesimpledb_1_1plan_1_1UpdatePlanner_a6f2cfe8428b2c5f61204b8606905100e}} 
+\index{simpledb\+::plan\+::\+Update\+Planner@{simpledb\+::plan\+::\+Update\+Planner}!execute\+Insert@{execute\+Insert}}
+\index{execute\+Insert@{execute\+Insert}!simpledb\+::plan\+::\+Update\+Planner@{simpledb\+::plan\+::\+Update\+Planner}}
+\subsubsection{\texorpdfstring{execute\+Insert()}{executeInsert()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Update\+Planner.\+execute\+Insert (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1parse_1_1InsertData}{Insert\+Data}}]{data,  }\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx }\end{DoxyParamCaption})}
+
+Executes the specified insert statement, and returns the number of affected records. 
+\begin{DoxyParams}{Parameters}
+{\em data} & the parsed representation of the insert statement \\
+\hline
+{\em tx} & the calling transaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of affected records 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1plan_1_1BasicUpdatePlanner_a8c1ed83755ef7d71adab3590b3d995fa}{simpledb.\+plan.\+Basic\+Update\+Planner}, and \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexUpdatePlanner_ab6e0638b0692e80ec5685ce0b75214a9}{simpledb.\+index.\+planner.\+Index\+Update\+Planner}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1plan_1_1UpdatePlanner_af887ff3fe178adb4fc3b3bee98acde73}\label{interfacesimpledb_1_1plan_1_1UpdatePlanner_af887ff3fe178adb4fc3b3bee98acde73}} 
+\index{simpledb\+::plan\+::\+Update\+Planner@{simpledb\+::plan\+::\+Update\+Planner}!execute\+Modify@{execute\+Modify}}
+\index{execute\+Modify@{execute\+Modify}!simpledb\+::plan\+::\+Update\+Planner@{simpledb\+::plan\+::\+Update\+Planner}}
+\subsubsection{\texorpdfstring{execute\+Modify()}{executeModify()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Update\+Planner.\+execute\+Modify (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1parse_1_1ModifyData}{Modify\+Data}}]{data,  }\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx }\end{DoxyParamCaption})}
+
+Executes the specified modify statement, and returns the number of affected records. 
+\begin{DoxyParams}{Parameters}
+{\em data} & the parsed representation of the modify statement \\
+\hline
+{\em tx} & the calling transaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of affected records 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexUpdatePlanner_a540a81b73146d9d7b1404d62cfcf13ff}{simpledb.\+index.\+planner.\+Index\+Update\+Planner}, and \hyperlink{classsimpledb_1_1plan_1_1BasicUpdatePlanner_a938959eb04b3f6079876760e67b4627f}{simpledb.\+plan.\+Basic\+Update\+Planner}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/plan/Update\+Planner.\+java\end{DoxyCompactItemize}

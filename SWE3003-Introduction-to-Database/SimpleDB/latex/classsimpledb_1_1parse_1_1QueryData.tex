@@ -1,0 +1,66 @@
+\hypertarget{classsimpledb_1_1parse_1_1QueryData}{}\section{simpledb.\+parse.\+Query\+Data Class Reference}
+\label{classsimpledb_1_1parse_1_1QueryData}\index{simpledb.\+parse.\+Query\+Data@{simpledb.\+parse.\+Query\+Data}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1parse_1_1QueryData_a6d0ee71b2b7bdd9637952d22599d8e6b}{Query\+Data} (List$<$ String $>$ fields, Collection$<$ String $>$ tables, \hyperlink{classsimpledb_1_1query_1_1Predicate}{Predicate} pred)
+\item 
+List$<$ String $>$ \hyperlink{classsimpledb_1_1parse_1_1QueryData_a3fc0b39d3ac9755593a5b79c55654279}{fields} ()
+\item 
+Collection$<$ String $>$ \hyperlink{classsimpledb_1_1parse_1_1QueryData_a3faec3eb9571200bc9c6153ef1e43992}{tables} ()
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Predicate}{Predicate} \hyperlink{classsimpledb_1_1parse_1_1QueryData_ab53d5837aa506003cebefd3cfc7bfe79}{pred} ()
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1QueryData_a096ff63b369be9fe9aa2a2e3823e5ab3}\label{classsimpledb_1_1parse_1_1QueryData_a096ff63b369be9fe9aa2a2e3823e5ab3}} 
+String {\bfseries to\+String} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Data for the S\+QL {\itshape select} statement. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1QueryData_a6d0ee71b2b7bdd9637952d22599d8e6b}\label{classsimpledb_1_1parse_1_1QueryData_a6d0ee71b2b7bdd9637952d22599d8e6b}} 
+\index{simpledb\+::parse\+::\+Query\+Data@{simpledb\+::parse\+::\+Query\+Data}!Query\+Data@{Query\+Data}}
+\index{Query\+Data@{Query\+Data}!simpledb\+::parse\+::\+Query\+Data@{simpledb\+::parse\+::\+Query\+Data}}
+\subsubsection{\texorpdfstring{Query\+Data()}{QueryData()}}
+{\footnotesize\ttfamily simpledb.\+parse.\+Query\+Data.\+Query\+Data (\begin{DoxyParamCaption}\item[{List$<$ String $>$}]{fields,  }\item[{Collection$<$ String $>$}]{tables,  }\item[{\hyperlink{classsimpledb_1_1query_1_1Predicate}{Predicate}}]{pred }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Saves the field and table list and predicate. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1QueryData_a3fc0b39d3ac9755593a5b79c55654279}\label{classsimpledb_1_1parse_1_1QueryData_a3fc0b39d3ac9755593a5b79c55654279}} 
+\index{simpledb\+::parse\+::\+Query\+Data@{simpledb\+::parse\+::\+Query\+Data}!fields@{fields}}
+\index{fields@{fields}!simpledb\+::parse\+::\+Query\+Data@{simpledb\+::parse\+::\+Query\+Data}}
+\subsubsection{\texorpdfstring{fields()}{fields()}}
+{\footnotesize\ttfamily List$<$String$>$ simpledb.\+parse.\+Query\+Data.\+fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the fields mentioned in the select clause. \begin{DoxyReturn}{Returns}
+a list of field names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1QueryData_ab53d5837aa506003cebefd3cfc7bfe79}\label{classsimpledb_1_1parse_1_1QueryData_ab53d5837aa506003cebefd3cfc7bfe79}} 
+\index{simpledb\+::parse\+::\+Query\+Data@{simpledb\+::parse\+::\+Query\+Data}!pred@{pred}}
+\index{pred@{pred}!simpledb\+::parse\+::\+Query\+Data@{simpledb\+::parse\+::\+Query\+Data}}
+\subsubsection{\texorpdfstring{pred()}{pred()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Predicate}{Predicate} simpledb.\+parse.\+Query\+Data.\+pred (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the predicate that describes which records should be in the output table. \begin{DoxyReturn}{Returns}
+the query predicate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1QueryData_a3faec3eb9571200bc9c6153ef1e43992}\label{classsimpledb_1_1parse_1_1QueryData_a3faec3eb9571200bc9c6153ef1e43992}} 
+\index{simpledb\+::parse\+::\+Query\+Data@{simpledb\+::parse\+::\+Query\+Data}!tables@{tables}}
+\index{tables@{tables}!simpledb\+::parse\+::\+Query\+Data@{simpledb\+::parse\+::\+Query\+Data}}
+\subsubsection{\texorpdfstring{tables()}{tables()}}
+{\footnotesize\ttfamily Collection$<$String$>$ simpledb.\+parse.\+Query\+Data.\+tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the tables mentioned in the from clause. \begin{DoxyReturn}{Returns}
+a collection of table names 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/parse/Query\+Data.\+java\end{DoxyCompactItemize}

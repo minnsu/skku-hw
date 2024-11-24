@@ -1,0 +1,45 @@
+\hypertarget{classsimpledb_1_1opt_1_1HeuristicQueryPlanner}{}\section{simpledb.\+opt.\+Heuristic\+Query\+Planner Class Reference}
+\label{classsimpledb_1_1opt_1_1HeuristicQueryPlanner}\index{simpledb.\+opt.\+Heuristic\+Query\+Planner@{simpledb.\+opt.\+Heuristic\+Query\+Planner}}
+
+
+Inheritance diagram for simpledb.\+opt.\+Heuristic\+Query\+Planner\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+opt.\+Heuristic\+Query\+Planner\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1opt_1_1HeuristicQueryPlanner_a72c076cf01b210a6ebfe985ee3595d6a}\label{classsimpledb_1_1opt_1_1HeuristicQueryPlanner_a72c076cf01b210a6ebfe985ee3595d6a}} 
+{\bfseries Heuristic\+Query\+Planner} (\hyperlink{classsimpledb_1_1metadata_1_1MetadataMgr}{Metadata\+Mgr} mdm)
+\item 
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} \hyperlink{classsimpledb_1_1opt_1_1HeuristicQueryPlanner_ae822113f750c0944a227a6de344d35f7}{create\+Plan} (\hyperlink{classsimpledb_1_1parse_1_1QueryData}{Query\+Data} data, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1opt_1_1HeuristicQueryPlanner_aa1b73dbe834b57a53dfb4c2d70ae14f1}\label{classsimpledb_1_1opt_1_1HeuristicQueryPlanner_aa1b73dbe834b57a53dfb4c2d70ae14f1}} 
+void {\bfseries set\+Planner} (\hyperlink{classsimpledb_1_1plan_1_1Planner}{Planner} p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A query planner that optimizes using a heuristic-\/based algorithm. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1opt_1_1HeuristicQueryPlanner_ae822113f750c0944a227a6de344d35f7}\label{classsimpledb_1_1opt_1_1HeuristicQueryPlanner_ae822113f750c0944a227a6de344d35f7}} 
+\index{simpledb\+::opt\+::\+Heuristic\+Query\+Planner@{simpledb\+::opt\+::\+Heuristic\+Query\+Planner}!create\+Plan@{create\+Plan}}
+\index{create\+Plan@{create\+Plan}!simpledb\+::opt\+::\+Heuristic\+Query\+Planner@{simpledb\+::opt\+::\+Heuristic\+Query\+Planner}}
+\subsubsection{\texorpdfstring{create\+Plan()}{createPlan()}}
+{\footnotesize\ttfamily \hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} simpledb.\+opt.\+Heuristic\+Query\+Planner.\+create\+Plan (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1parse_1_1QueryData}{Query\+Data}}]{data,  }\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates an optimized left-\/deep query plan using the following heuristics. H1. Choose the smallest table (considering selection predicates) to be first in the join order. H2. Add the table to the join order which results in the smallest output. 
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1QueryPlanner_a3fcc576e66a155bdc11845ec3e95838f}{simpledb.\+plan.\+Query\+Planner}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/opt/Heuristic\+Query\+Planner.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,53 @@
+\hypertarget{classsimpledb_1_1tx_1_1concurrency_1_1ConcurrencyMgr}{}\section{simpledb.\+tx.\+concurrency.\+Concurrency\+Mgr Class Reference}
+\label{classsimpledb_1_1tx_1_1concurrency_1_1ConcurrencyMgr}\index{simpledb.\+tx.\+concurrency.\+Concurrency\+Mgr@{simpledb.\+tx.\+concurrency.\+Concurrency\+Mgr}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classsimpledb_1_1tx_1_1concurrency_1_1ConcurrencyMgr_abf21a565749b8a624c69a304beff2038}{s\+Lock} (\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} blk)
+\item 
+void \hyperlink{classsimpledb_1_1tx_1_1concurrency_1_1ConcurrencyMgr_af92234d0ce20f0913bd6306026969055}{x\+Lock} (\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} blk)
+\item 
+void \hyperlink{classsimpledb_1_1tx_1_1concurrency_1_1ConcurrencyMgr_ae5a41ee9c3b02efed425d621ac7be025}{release} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The concurrency manager for the transaction. Each transaction has its own concurrency manager. The concurrency manager keeps track of which locks the transaction currently has, and interacts with the global lock table as needed. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1concurrency_1_1ConcurrencyMgr_ae5a41ee9c3b02efed425d621ac7be025}\label{classsimpledb_1_1tx_1_1concurrency_1_1ConcurrencyMgr_ae5a41ee9c3b02efed425d621ac7be025}} 
+\index{simpledb\+::tx\+::concurrency\+::\+Concurrency\+Mgr@{simpledb\+::tx\+::concurrency\+::\+Concurrency\+Mgr}!release@{release}}
+\index{release@{release}!simpledb\+::tx\+::concurrency\+::\+Concurrency\+Mgr@{simpledb\+::tx\+::concurrency\+::\+Concurrency\+Mgr}}
+\subsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily void simpledb.\+tx.\+concurrency.\+Concurrency\+Mgr.\+release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Release all locks by asking the lock table to unlock each one. \mbox{\Hypertarget{classsimpledb_1_1tx_1_1concurrency_1_1ConcurrencyMgr_abf21a565749b8a624c69a304beff2038}\label{classsimpledb_1_1tx_1_1concurrency_1_1ConcurrencyMgr_abf21a565749b8a624c69a304beff2038}} 
+\index{simpledb\+::tx\+::concurrency\+::\+Concurrency\+Mgr@{simpledb\+::tx\+::concurrency\+::\+Concurrency\+Mgr}!s\+Lock@{s\+Lock}}
+\index{s\+Lock@{s\+Lock}!simpledb\+::tx\+::concurrency\+::\+Concurrency\+Mgr@{simpledb\+::tx\+::concurrency\+::\+Concurrency\+Mgr}}
+\subsubsection{\texorpdfstring{s\+Lock()}{sLock()}}
+{\footnotesize\ttfamily void simpledb.\+tx.\+concurrency.\+Concurrency\+Mgr.\+s\+Lock (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id}}]{blk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Obtain an S\+Lock on the block, if necessary. The method will ask the lock table for an S\+Lock if the transaction currently has no locks on that block. 
+\begin{DoxyParams}{Parameters}
+{\em blk} & a reference to the disk block \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1concurrency_1_1ConcurrencyMgr_af92234d0ce20f0913bd6306026969055}\label{classsimpledb_1_1tx_1_1concurrency_1_1ConcurrencyMgr_af92234d0ce20f0913bd6306026969055}} 
+\index{simpledb\+::tx\+::concurrency\+::\+Concurrency\+Mgr@{simpledb\+::tx\+::concurrency\+::\+Concurrency\+Mgr}!x\+Lock@{x\+Lock}}
+\index{x\+Lock@{x\+Lock}!simpledb\+::tx\+::concurrency\+::\+Concurrency\+Mgr@{simpledb\+::tx\+::concurrency\+::\+Concurrency\+Mgr}}
+\subsubsection{\texorpdfstring{x\+Lock()}{xLock()}}
+{\footnotesize\ttfamily void simpledb.\+tx.\+concurrency.\+Concurrency\+Mgr.\+x\+Lock (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id}}]{blk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Obtain an X\+Lock on the block, if necessary. If the transaction does not have an X\+Lock on that block, then the method first gets an S\+Lock on that block (if necessary), and then upgrades it to an X\+Lock. 
+\begin{DoxyParams}{Parameters}
+{\em blk} & a reference to the disk block \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/tx/concurrency/Concurrency\+Mgr.\+java\end{DoxyCompactItemize}

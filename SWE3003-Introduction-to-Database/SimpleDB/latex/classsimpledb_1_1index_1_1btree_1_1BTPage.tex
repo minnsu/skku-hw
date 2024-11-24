@@ -1,0 +1,241 @@
+\hypertarget{classsimpledb_1_1index_1_1btree_1_1BTPage}{}\section{simpledb.\+index.\+btree.\+B\+T\+Page Class Reference}
+\label{classsimpledb_1_1index_1_1btree_1_1BTPage}\index{simpledb.\+index.\+btree.\+B\+T\+Page@{simpledb.\+index.\+btree.\+B\+T\+Page}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1index_1_1btree_1_1BTPage_a1ef33a79d3b3bb2f7bf9859cb046df02}{B\+T\+Page} (\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx, \hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} currentblk, \hyperlink{classsimpledb_1_1record_1_1Layout}{Layout} layout)
+\item 
+int \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTPage_ab1ad1f77a657d6bca43d428a55e33efd}{find\+Slot\+Before} (\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} searchkey)
+\item 
+void \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTPage_add568d42fe2e359adbacdfe4adee61b3}{close} ()
+\item 
+boolean \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTPage_ab7753b547f62a31c9d5c75932f3dcdbe}{is\+Full} ()
+\item 
+\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTPage_acea0d766bf9bae1d35bf734e280505db}{split} (int splitpos, int flag)
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTPage_a1e192bef2519022c3b29aae2d6162861}{get\+Data\+Val} (int slot)
+\item 
+int \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTPage_a85cda5670746c6d33e2e57fe482d2677}{get\+Flag} ()
+\item 
+void \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTPage_a7ae809da6323d411d984e706523fff46}{set\+Flag} (int val)
+\item 
+\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTPage_ac6f092a2811f1a70b18b6795df1311b7}{append\+New} (int flag)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTPage_a01d439e4a61bf73c653c8c93c694b0fc}\label{classsimpledb_1_1index_1_1btree_1_1BTPage_a01d439e4a61bf73c653c8c93c694b0fc}} 
+void {\bfseries format} (\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} blk, int flag)
+\item 
+int \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTPage_a94c6ab7b56f3456083e2d18d0b5cd036}{get\+Child\+Num} (int slot)
+\item 
+void \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTPage_a0ea20d043ba60421c1e2b242b56f4986}{insert\+Dir} (int slot, \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} val, int blknum)
+\item 
+\hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTPage_a58b8e14ece178dfaa8032f20eb3236d5}{get\+Data\+Rid} (int slot)
+\item 
+void \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTPage_a61e46367916cca912b7c37968826e01b}{insert\+Leaf} (int slot, \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} val, \hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} rid)
+\item 
+void \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTPage_a202eb8527fc7ff66b5b1e328c00df15d}{delete} (int slot)
+\item 
+int \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTPage_aba2b632141026a579a0066aca2302b0a}{get\+Num\+Recs} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+B-\/tree directory and leaf pages have many commonalities\+: in particular, their records are stored in sorted order, and pages split when full. A B\+T\+Node object contains this common functionality. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTPage_a1ef33a79d3b3bb2f7bf9859cb046df02}\label{classsimpledb_1_1index_1_1btree_1_1BTPage_a1ef33a79d3b3bb2f7bf9859cb046df02}} 
+\index{simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}!B\+T\+Page@{B\+T\+Page}}
+\index{B\+T\+Page@{B\+T\+Page}!simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}}
+\subsubsection{\texorpdfstring{B\+T\+Page()}{BTPage()}}
+{\footnotesize\ttfamily simpledb.\+index.\+btree.\+B\+T\+Page.\+B\+T\+Page (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx,  }\item[{\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id}}]{currentblk,  }\item[{\hyperlink{classsimpledb_1_1record_1_1Layout}{Layout}}]{layout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Open a node for the specified B-\/tree block. 
+\begin{DoxyParams}{Parameters}
+{\em currentblk} & a reference to the B-\/tree block \\
+\hline
+{\em layout} & the metadata for the particular B-\/tree file \\
+\hline
+{\em tx} & the calling transaction \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTPage_ac6f092a2811f1a70b18b6795df1311b7}\label{classsimpledb_1_1index_1_1btree_1_1BTPage_ac6f092a2811f1a70b18b6795df1311b7}} 
+\index{simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}!append\+New@{append\+New}}
+\index{append\+New@{append\+New}!simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}}
+\subsubsection{\texorpdfstring{append\+New()}{appendNew()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} simpledb.\+index.\+btree.\+B\+T\+Page.\+append\+New (\begin{DoxyParamCaption}\item[{int}]{flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Append a new block to the end of the specified B-\/tree file, having the specified flag value. 
+\begin{DoxyParams}{Parameters}
+{\em flag} & the initial value of the flag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a reference to the newly-\/created block 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTPage_add568d42fe2e359adbacdfe4adee61b3}\label{classsimpledb_1_1index_1_1btree_1_1BTPage_add568d42fe2e359adbacdfe4adee61b3}} 
+\index{simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}!close@{close}}
+\index{close@{close}!simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void simpledb.\+index.\+btree.\+B\+T\+Page.\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Close the page by unpinning its buffer. \mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTPage_a202eb8527fc7ff66b5b1e328c00df15d}\label{classsimpledb_1_1index_1_1btree_1_1BTPage_a202eb8527fc7ff66b5b1e328c00df15d}} 
+\index{simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}!delete@{delete}}
+\index{delete@{delete}!simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}}
+\subsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily void simpledb.\+index.\+btree.\+B\+T\+Page.\+delete (\begin{DoxyParamCaption}\item[{int}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Delete the index record at the specified slot. 
+\begin{DoxyParams}{Parameters}
+{\em slot} & the slot of the deleted index record \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTPage_ab1ad1f77a657d6bca43d428a55e33efd}\label{classsimpledb_1_1index_1_1btree_1_1BTPage_ab1ad1f77a657d6bca43d428a55e33efd}} 
+\index{simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}!find\+Slot\+Before@{find\+Slot\+Before}}
+\index{find\+Slot\+Before@{find\+Slot\+Before}!simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}}
+\subsubsection{\texorpdfstring{find\+Slot\+Before()}{findSlotBefore()}}
+{\footnotesize\ttfamily int simpledb.\+index.\+btree.\+B\+T\+Page.\+find\+Slot\+Before (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}}]{searchkey }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calculate the position where the first record having the specified search key should be, then returns the position before it. 
+\begin{DoxyParams}{Parameters}
+{\em searchkey} & the search key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the position before where the search key goes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTPage_a94c6ab7b56f3456083e2d18d0b5cd036}\label{classsimpledb_1_1index_1_1btree_1_1BTPage_a94c6ab7b56f3456083e2d18d0b5cd036}} 
+\index{simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}!get\+Child\+Num@{get\+Child\+Num}}
+\index{get\+Child\+Num@{get\+Child\+Num}!simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}}
+\subsubsection{\texorpdfstring{get\+Child\+Num()}{getChildNum()}}
+{\footnotesize\ttfamily int simpledb.\+index.\+btree.\+B\+T\+Page.\+get\+Child\+Num (\begin{DoxyParamCaption}\item[{int}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the block number stored in the index record at the specified slot. 
+\begin{DoxyParams}{Parameters}
+{\em slot} & the slot of an index record \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the block number stored in that record 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTPage_a58b8e14ece178dfaa8032f20eb3236d5}\label{classsimpledb_1_1index_1_1btree_1_1BTPage_a58b8e14ece178dfaa8032f20eb3236d5}} 
+\index{simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}!get\+Data\+Rid@{get\+Data\+Rid}}
+\index{get\+Data\+Rid@{get\+Data\+Rid}!simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}}
+\subsubsection{\texorpdfstring{get\+Data\+Rid()}{getDataRid()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} simpledb.\+index.\+btree.\+B\+T\+Page.\+get\+Data\+Rid (\begin{DoxyParamCaption}\item[{int}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the data\+R\+ID value stored in the specified leaf index record. 
+\begin{DoxyParams}{Parameters}
+{\em slot} & the slot of the desired index record \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the data\+R\+ID value store at that slot 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTPage_a1e192bef2519022c3b29aae2d6162861}\label{classsimpledb_1_1index_1_1btree_1_1BTPage_a1e192bef2519022c3b29aae2d6162861}} 
+\index{simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}!get\+Data\+Val@{get\+Data\+Val}}
+\index{get\+Data\+Val@{get\+Data\+Val}!simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}}
+\subsubsection{\texorpdfstring{get\+Data\+Val()}{getDataVal()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+index.\+btree.\+B\+T\+Page.\+get\+Data\+Val (\begin{DoxyParamCaption}\item[{int}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the dataval of the record at the specified slot. 
+\begin{DoxyParams}{Parameters}
+{\em slot} & the integer slot of an index record \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the dataval of the record at that slot 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTPage_a85cda5670746c6d33e2e57fe482d2677}\label{classsimpledb_1_1index_1_1btree_1_1BTPage_a85cda5670746c6d33e2e57fe482d2677}} 
+\index{simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}!get\+Flag@{get\+Flag}}
+\index{get\+Flag@{get\+Flag}!simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}}
+\subsubsection{\texorpdfstring{get\+Flag()}{getFlag()}}
+{\footnotesize\ttfamily int simpledb.\+index.\+btree.\+B\+T\+Page.\+get\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the value of the page\textquotesingle{}s flag field \begin{DoxyReturn}{Returns}
+the value of the page\textquotesingle{}s flag field 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTPage_aba2b632141026a579a0066aca2302b0a}\label{classsimpledb_1_1index_1_1btree_1_1BTPage_aba2b632141026a579a0066aca2302b0a}} 
+\index{simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}!get\+Num\+Recs@{get\+Num\+Recs}}
+\index{get\+Num\+Recs@{get\+Num\+Recs}!simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}}
+\subsubsection{\texorpdfstring{get\+Num\+Recs()}{getNumRecs()}}
+{\footnotesize\ttfamily int simpledb.\+index.\+btree.\+B\+T\+Page.\+get\+Num\+Recs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of index records in this page. \begin{DoxyReturn}{Returns}
+the number of index records in this page 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTPage_a0ea20d043ba60421c1e2b242b56f4986}\label{classsimpledb_1_1index_1_1btree_1_1BTPage_a0ea20d043ba60421c1e2b242b56f4986}} 
+\index{simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}!insert\+Dir@{insert\+Dir}}
+\index{insert\+Dir@{insert\+Dir}!simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}}
+\subsubsection{\texorpdfstring{insert\+Dir()}{insertDir()}}
+{\footnotesize\ttfamily void simpledb.\+index.\+btree.\+B\+T\+Page.\+insert\+Dir (\begin{DoxyParamCaption}\item[{int}]{slot,  }\item[{\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}}]{val,  }\item[{int}]{blknum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Insert a directory entry at the specified slot. 
+\begin{DoxyParams}{Parameters}
+{\em slot} & the slot of an index record \\
+\hline
+{\em val} & the dataval to be stored \\
+\hline
+{\em blknum} & the block number to be stored \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTPage_a61e46367916cca912b7c37968826e01b}\label{classsimpledb_1_1index_1_1btree_1_1BTPage_a61e46367916cca912b7c37968826e01b}} 
+\index{simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}!insert\+Leaf@{insert\+Leaf}}
+\index{insert\+Leaf@{insert\+Leaf}!simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}}
+\subsubsection{\texorpdfstring{insert\+Leaf()}{insertLeaf()}}
+{\footnotesize\ttfamily void simpledb.\+index.\+btree.\+B\+T\+Page.\+insert\+Leaf (\begin{DoxyParamCaption}\item[{int}]{slot,  }\item[{\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}}]{val,  }\item[{\hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID}}]{rid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Insert a leaf index record at the specified slot. 
+\begin{DoxyParams}{Parameters}
+{\em slot} & the slot of the desired index record \\
+\hline
+{\em val} & the new dataval \\
+\hline
+{\em rid} & the new data\+R\+ID \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTPage_ab7753b547f62a31c9d5c75932f3dcdbe}\label{classsimpledb_1_1index_1_1btree_1_1BTPage_ab7753b547f62a31c9d5c75932f3dcdbe}} 
+\index{simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}!is\+Full@{is\+Full}}
+\index{is\+Full@{is\+Full}!simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}}
+\subsubsection{\texorpdfstring{is\+Full()}{isFull()}}
+{\footnotesize\ttfamily boolean simpledb.\+index.\+btree.\+B\+T\+Page.\+is\+Full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return true if the block is full. \begin{DoxyReturn}{Returns}
+true if the block is full 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTPage_a7ae809da6323d411d984e706523fff46}\label{classsimpledb_1_1index_1_1btree_1_1BTPage_a7ae809da6323d411d984e706523fff46}} 
+\index{simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}!set\+Flag@{set\+Flag}}
+\index{set\+Flag@{set\+Flag}!simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}}
+\subsubsection{\texorpdfstring{set\+Flag()}{setFlag()}}
+{\footnotesize\ttfamily void simpledb.\+index.\+btree.\+B\+T\+Page.\+set\+Flag (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the page\textquotesingle{}s flag field to the specified value 
+\begin{DoxyParams}{Parameters}
+{\em val} & the new value of the page flag \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTPage_acea0d766bf9bae1d35bf734e280505db}\label{classsimpledb_1_1index_1_1btree_1_1BTPage_acea0d766bf9bae1d35bf734e280505db}} 
+\index{simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}!split@{split}}
+\index{split@{split}!simpledb\+::index\+::btree\+::\+B\+T\+Page@{simpledb\+::index\+::btree\+::\+B\+T\+Page}}
+\subsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} simpledb.\+index.\+btree.\+B\+T\+Page.\+split (\begin{DoxyParamCaption}\item[{int}]{splitpos,  }\item[{int}]{flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Split the page at the specified position. A new page is created, and the records of the page starting at the split position are transferred to the new page. 
+\begin{DoxyParams}{Parameters}
+{\em splitpos} & the split position \\
+\hline
+{\em flag} & the initial value of the flag field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the reference to the new block 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/index/btree/B\+T\+Page.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', path='css/index.css')}}">
+<script src="{{ url_for('static', path='js/register.js')}}"></script>
+{% endblock %}
+
+{% block content %}
+<div id="div_title">
+    <span id="span_title">SKKU talk</span>
+</div>
+<form id="form_index">
+    <div class="div_index_input">
+        <input type="text" placeholder="name" id="input_name" class="index_text">
+        <input type="text" placeholder="id" id="input_id" class="index_text">
+        <input type="password" placeholder="password" id="input_pw" class="index_text">
+        <div style="margin: 10px;"></div>
+        <input type="button" value="Register" id="btn_register" class="index_btn">
+    </div>
+</form>
+{% endblock %}

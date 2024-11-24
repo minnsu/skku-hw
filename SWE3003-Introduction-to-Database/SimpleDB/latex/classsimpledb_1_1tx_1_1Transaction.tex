@@ -1,0 +1,188 @@
+\hypertarget{classsimpledb_1_1tx_1_1Transaction}{}\section{simpledb.\+tx.\+Transaction Class Reference}
+\label{classsimpledb_1_1tx_1_1Transaction}\index{simpledb.\+tx.\+Transaction@{simpledb.\+tx.\+Transaction}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1tx_1_1Transaction_a1c2f61c55730c0de8ca616197cf2ec08}{Transaction} (\hyperlink{classsimpledb_1_1file_1_1FileMgr}{File\+Mgr} fm, \hyperlink{classsimpledb_1_1log_1_1LogMgr}{Log\+Mgr} lm, \hyperlink{classsimpledb_1_1buffer_1_1BufferMgr}{Buffer\+Mgr} bm)
+\item 
+void \hyperlink{classsimpledb_1_1tx_1_1Transaction_a853d9a4e2979555d80806793fb1f83fb}{commit} ()
+\item 
+void \hyperlink{classsimpledb_1_1tx_1_1Transaction_a1fea478b918e70a45caa0521c1686a73}{rollback} ()
+\item 
+void \hyperlink{classsimpledb_1_1tx_1_1Transaction_a857670b0a879033a797cbe5658463db1}{recover} ()
+\item 
+void \hyperlink{classsimpledb_1_1tx_1_1Transaction_a782c86ca857e897c9886bec8269b4c74}{pin} (\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} blk)
+\item 
+void \hyperlink{classsimpledb_1_1tx_1_1Transaction_a42fe8eafb8392377f70bf747cb219dbb}{unpin} (\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} blk)
+\item 
+int \hyperlink{classsimpledb_1_1tx_1_1Transaction_a1ccaf673a876a9c3fc0deda5638172df}{get\+Int} (\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} blk, int offset)
+\item 
+String \hyperlink{classsimpledb_1_1tx_1_1Transaction_a4af20129bd0e8fa7eb26efa308bba6b3}{get\+String} (\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} blk, int offset)
+\item 
+void \hyperlink{classsimpledb_1_1tx_1_1Transaction_ade3cfca948f02de979004f34a23a1237}{set\+Int} (\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} blk, int offset, int val, boolean ok\+To\+Log)
+\item 
+void \hyperlink{classsimpledb_1_1tx_1_1Transaction_a3cfe6dbb03d9c83d48c01ac68b520e2a}{set\+String} (\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} blk, int offset, String val, boolean ok\+To\+Log)
+\item 
+int \hyperlink{classsimpledb_1_1tx_1_1Transaction_a72039ee10cdb989da8dda4f39f304848}{size} (String filename)
+\item 
+\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} \hyperlink{classsimpledb_1_1tx_1_1Transaction_a88d23a92c71f7c637963a2ee5c429ee8}{append} (String filename)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1Transaction_a8440197ad1ea5315b7a6700e800e955c}\label{classsimpledb_1_1tx_1_1Transaction_a8440197ad1ea5315b7a6700e800e955c}} 
+int {\bfseries block\+Size} ()
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1Transaction_a0ef88e6d5031b0b8a1f1c813b9b5e45a}\label{classsimpledb_1_1tx_1_1Transaction_a0ef88e6d5031b0b8a1f1c813b9b5e45a}} 
+int {\bfseries available\+Buffs} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provide transaction management for clients, ensuring that all transactions are serializable, recoverable, and in general satisfy the A\+C\+ID properties. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1Transaction_a1c2f61c55730c0de8ca616197cf2ec08}\label{classsimpledb_1_1tx_1_1Transaction_a1c2f61c55730c0de8ca616197cf2ec08}} 
+\index{simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}!Transaction@{Transaction}}
+\index{Transaction@{Transaction}!simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}}
+\subsubsection{\texorpdfstring{Transaction()}{Transaction()}}
+{\footnotesize\ttfamily simpledb.\+tx.\+Transaction.\+Transaction (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1file_1_1FileMgr}{File\+Mgr}}]{fm,  }\item[{\hyperlink{classsimpledb_1_1log_1_1LogMgr}{Log\+Mgr}}]{lm,  }\item[{\hyperlink{classsimpledb_1_1buffer_1_1BufferMgr}{Buffer\+Mgr}}]{bm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a new transaction and its associated recovery and concurrency managers. This constructor depends on the file, log, and buffer managers that it gets from the class \hyperlink{classsimpledb_1_1server_1_1SimpleDB}{simpledb.\+server.\+Simple\+DB}. Those objects are created during system initialization. Thus this constructor cannot be called until either \hyperlink{}{simpledb.\+server.\+Simple\+D\+B\#init(\+String)} or \hyperlink{}{simpledb.\+server.\+Simple\+D\+B\#init\+File\+Log\+And\+Buffer\+Mgr(\+String)} or is called first. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1Transaction_a88d23a92c71f7c637963a2ee5c429ee8}\label{classsimpledb_1_1tx_1_1Transaction_a88d23a92c71f7c637963a2ee5c429ee8}} 
+\index{simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}!append@{append}}
+\index{append@{append}!simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}}
+\subsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} simpledb.\+tx.\+Transaction.\+append (\begin{DoxyParamCaption}\item[{String}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Append a new block to the end of the specified file and returns a reference to it. This method first obtains an X\+Lock on the \char`\"{}end of the file\char`\"{}, before performing the append. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the name of the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a reference to the newly-\/created disk block 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1Transaction_a853d9a4e2979555d80806793fb1f83fb}\label{classsimpledb_1_1tx_1_1Transaction_a853d9a4e2979555d80806793fb1f83fb}} 
+\index{simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}!commit@{commit}}
+\index{commit@{commit}!simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}}
+\subsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily void simpledb.\+tx.\+Transaction.\+commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Commit the current transaction. Flush all modified buffers (and their log records), write and flush a commit record to the log, release all locks, and unpin any pinned buffers. \mbox{\Hypertarget{classsimpledb_1_1tx_1_1Transaction_a1ccaf673a876a9c3fc0deda5638172df}\label{classsimpledb_1_1tx_1_1Transaction_a1ccaf673a876a9c3fc0deda5638172df}} 
+\index{simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}!get\+Int@{get\+Int}}
+\index{get\+Int@{get\+Int}!simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}}
+\subsubsection{\texorpdfstring{get\+Int()}{getInt()}}
+{\footnotesize\ttfamily int simpledb.\+tx.\+Transaction.\+get\+Int (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id}}]{blk,  }\item[{int}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the integer value stored at the specified offset of the specified block. The method first obtains an S\+Lock on the block, then it calls the buffer to retrieve the value. 
+\begin{DoxyParams}{Parameters}
+{\em blk} & a reference to a disk block \\
+\hline
+{\em offset} & the byte offset within the block \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the integer stored at that offset 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1Transaction_a4af20129bd0e8fa7eb26efa308bba6b3}\label{classsimpledb_1_1tx_1_1Transaction_a4af20129bd0e8fa7eb26efa308bba6b3}} 
+\index{simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}}
+\subsubsection{\texorpdfstring{get\+String()}{getString()}}
+{\footnotesize\ttfamily String simpledb.\+tx.\+Transaction.\+get\+String (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id}}]{blk,  }\item[{int}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the string value stored at the specified offset of the specified block. The method first obtains an S\+Lock on the block, then it calls the buffer to retrieve the value. 
+\begin{DoxyParams}{Parameters}
+{\em blk} & a reference to a disk block \\
+\hline
+{\em offset} & the byte offset within the block \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the string stored at that offset 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1Transaction_a782c86ca857e897c9886bec8269b4c74}\label{classsimpledb_1_1tx_1_1Transaction_a782c86ca857e897c9886bec8269b4c74}} 
+\index{simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}!pin@{pin}}
+\index{pin@{pin}!simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}}
+\subsubsection{\texorpdfstring{pin()}{pin()}}
+{\footnotesize\ttfamily void simpledb.\+tx.\+Transaction.\+pin (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id}}]{blk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Pin the specified block. The transaction manages the buffer for the client. 
+\begin{DoxyParams}{Parameters}
+{\em blk} & a reference to the disk block \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1Transaction_a857670b0a879033a797cbe5658463db1}\label{classsimpledb_1_1tx_1_1Transaction_a857670b0a879033a797cbe5658463db1}} 
+\index{simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}!recover@{recover}}
+\index{recover@{recover}!simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}}
+\subsubsection{\texorpdfstring{recover()}{recover()}}
+{\footnotesize\ttfamily void simpledb.\+tx.\+Transaction.\+recover (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Flush all modified buffers. Then go through the log, rolling back all uncommitted transactions. Finally, write a quiescent checkpoint record to the log. This method is called during system startup, before user transactions begin. \mbox{\Hypertarget{classsimpledb_1_1tx_1_1Transaction_a1fea478b918e70a45caa0521c1686a73}\label{classsimpledb_1_1tx_1_1Transaction_a1fea478b918e70a45caa0521c1686a73}} 
+\index{simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}!rollback@{rollback}}
+\index{rollback@{rollback}!simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}}
+\subsubsection{\texorpdfstring{rollback()}{rollback()}}
+{\footnotesize\ttfamily void simpledb.\+tx.\+Transaction.\+rollback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Rollback the current transaction. Undo any modified values, flush those buffers, write and flush a rollback record to the log, release all locks, and unpin any pinned buffers. \mbox{\Hypertarget{classsimpledb_1_1tx_1_1Transaction_ade3cfca948f02de979004f34a23a1237}\label{classsimpledb_1_1tx_1_1Transaction_ade3cfca948f02de979004f34a23a1237}} 
+\index{simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}!set\+Int@{set\+Int}}
+\index{set\+Int@{set\+Int}!simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}}
+\subsubsection{\texorpdfstring{set\+Int()}{setInt()}}
+{\footnotesize\ttfamily void simpledb.\+tx.\+Transaction.\+set\+Int (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id}}]{blk,  }\item[{int}]{offset,  }\item[{int}]{val,  }\item[{boolean}]{ok\+To\+Log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Store an integer at the specified offset of the specified block. The method first obtains an X\+Lock on the block. It then reads the current value at that offset, puts it into an update log record, and writes that record to the log. Finally, it calls the buffer to store the value, passing in the L\+SN of the log record and the transaction\textquotesingle{}s id. 
+\begin{DoxyParams}{Parameters}
+{\em blk} & a reference to the disk block \\
+\hline
+{\em offset} & a byte offset within that block \\
+\hline
+{\em val} & the value to be stored \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1Transaction_a3cfe6dbb03d9c83d48c01ac68b520e2a}\label{classsimpledb_1_1tx_1_1Transaction_a3cfe6dbb03d9c83d48c01ac68b520e2a}} 
+\index{simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}!set\+String@{set\+String}}
+\index{set\+String@{set\+String}!simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}}
+\subsubsection{\texorpdfstring{set\+String()}{setString()}}
+{\footnotesize\ttfamily void simpledb.\+tx.\+Transaction.\+set\+String (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id}}]{blk,  }\item[{int}]{offset,  }\item[{String}]{val,  }\item[{boolean}]{ok\+To\+Log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Store a string at the specified offset of the specified block. The method first obtains an X\+Lock on the block. It then reads the current value at that offset, puts it into an update log record, and writes that record to the log. Finally, it calls the buffer to store the value, passing in the L\+SN of the log record and the transaction\textquotesingle{}s id. 
+\begin{DoxyParams}{Parameters}
+{\em blk} & a reference to the disk block \\
+\hline
+{\em offset} & a byte offset within that block \\
+\hline
+{\em val} & the value to be stored \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1Transaction_a72039ee10cdb989da8dda4f39f304848}\label{classsimpledb_1_1tx_1_1Transaction_a72039ee10cdb989da8dda4f39f304848}} 
+\index{simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}!size@{size}}
+\index{size@{size}!simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int simpledb.\+tx.\+Transaction.\+size (\begin{DoxyParamCaption}\item[{String}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of blocks in the specified file. This method first obtains an S\+Lock on the \char`\"{}end of the file\char`\"{}, before asking the file manager to return the file size. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the name of the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of blocks in the file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1Transaction_a42fe8eafb8392377f70bf747cb219dbb}\label{classsimpledb_1_1tx_1_1Transaction_a42fe8eafb8392377f70bf747cb219dbb}} 
+\index{simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}!unpin@{unpin}}
+\index{unpin@{unpin}!simpledb\+::tx\+::\+Transaction@{simpledb\+::tx\+::\+Transaction}}
+\subsubsection{\texorpdfstring{unpin()}{unpin()}}
+{\footnotesize\ttfamily void simpledb.\+tx.\+Transaction.\+unpin (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id}}]{blk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Unpin the specified block. The transaction looks up the buffer pinned to this block, and unpins it. 
+\begin{DoxyParams}{Parameters}
+{\em blk} & a reference to the disk block \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/tx/Transaction.\+java\end{DoxyCompactItemize}

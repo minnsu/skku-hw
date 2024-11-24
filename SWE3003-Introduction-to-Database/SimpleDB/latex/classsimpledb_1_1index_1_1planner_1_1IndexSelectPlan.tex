@@ -1,0 +1,124 @@
+\hypertarget{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan}{}\section{simpledb.\+index.\+planner.\+Index\+Select\+Plan Class Reference}
+\label{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan}\index{simpledb.\+index.\+planner.\+Index\+Select\+Plan@{simpledb.\+index.\+planner.\+Index\+Select\+Plan}}
+
+
+Inheritance diagram for simpledb.\+index.\+planner.\+Index\+Select\+Plan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+index.\+planner.\+Index\+Select\+Plan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_a829c5720b9ebde1791f0b59c40a0a8aa}{Index\+Select\+Plan} (\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} p, \hyperlink{classsimpledb_1_1metadata_1_1IndexInfo}{Index\+Info} ii, \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} val)
+\item 
+\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_af1acee7f900bcacf37d2ff1100a31545}{open} ()
+\item 
+int \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_ae88ded6d91db76c651532f94a59ef97a}{blocks\+Accessed} ()
+\item 
+int \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_abbbff69541cb3700bf74674f851297bc}{records\+Output} ()
+\item 
+int \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_a7552fbdecccb53183ce575051cdb93a1}{distinct\+Values} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_a3010453110b539de5e3af184131dee7a}{schema} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Plan class corresponding to the {\itshape indexselect} relational algebra operator. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_a829c5720b9ebde1791f0b59c40a0a8aa}\label{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_a829c5720b9ebde1791f0b59c40a0a8aa}} 
+\index{simpledb\+::index\+::planner\+::\+Index\+Select\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Select\+Plan}!Index\+Select\+Plan@{Index\+Select\+Plan}}
+\index{Index\+Select\+Plan@{Index\+Select\+Plan}!simpledb\+::index\+::planner\+::\+Index\+Select\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Select\+Plan}}
+\subsubsection{\texorpdfstring{Index\+Select\+Plan()}{IndexSelectPlan()}}
+{\footnotesize\ttfamily simpledb.\+index.\+planner.\+Index\+Select\+Plan.\+Index\+Select\+Plan (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan}}]{p,  }\item[{\hyperlink{classsimpledb_1_1metadata_1_1IndexInfo}{Index\+Info}}]{ii,  }\item[{\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new indexselect node in the query tree for the specified index and selection constant. 
+\begin{DoxyParams}{Parameters}
+{\em p} & the input table \\
+\hline
+{\em ii} & information about the index \\
+\hline
+{\em val} & the selection constant \\
+\hline
+{\em tx} & the calling transaction \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_ae88ded6d91db76c651532f94a59ef97a}\label{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_ae88ded6d91db76c651532f94a59ef97a}} 
+\index{simpledb\+::index\+::planner\+::\+Index\+Select\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Select\+Plan}!blocks\+Accessed@{blocks\+Accessed}}
+\index{blocks\+Accessed@{blocks\+Accessed}!simpledb\+::index\+::planner\+::\+Index\+Select\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Select\+Plan}}
+\subsubsection{\texorpdfstring{blocks\+Accessed()}{blocksAccessed()}}
+{\footnotesize\ttfamily int simpledb.\+index.\+planner.\+Index\+Select\+Plan.\+blocks\+Accessed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimates the number of block accesses to compute the index selection, which is the same as the index traversal cost plus the number of matching data records. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan\+::blocks\+Accessed()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_a7552fbdecccb53183ce575051cdb93a1}\label{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_a7552fbdecccb53183ce575051cdb93a1}} 
+\index{simpledb\+::index\+::planner\+::\+Index\+Select\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Select\+Plan}!distinct\+Values@{distinct\+Values}}
+\index{distinct\+Values@{distinct\+Values}!simpledb\+::index\+::planner\+::\+Index\+Select\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Select\+Plan}}
+\subsubsection{\texorpdfstring{distinct\+Values()}{distinctValues()}}
+{\footnotesize\ttfamily int simpledb.\+index.\+planner.\+Index\+Select\+Plan.\+distinct\+Values (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the distinct values as defined by the index. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan\+::distinct\+Values}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_af1acee7f900bcacf37d2ff1100a31545}\label{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_af1acee7f900bcacf37d2ff1100a31545}} 
+\index{simpledb\+::index\+::planner\+::\+Index\+Select\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Select\+Plan}!open@{open}}
+\index{open@{open}!simpledb\+::index\+::planner\+::\+Index\+Select\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Select\+Plan}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} simpledb.\+index.\+planner.\+Index\+Select\+Plan.\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new indexselect scan for this query \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan\+::open()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_abbbff69541cb3700bf74674f851297bc}\label{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_abbbff69541cb3700bf74674f851297bc}} 
+\index{simpledb\+::index\+::planner\+::\+Index\+Select\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Select\+Plan}!records\+Output@{records\+Output}}
+\index{records\+Output@{records\+Output}!simpledb\+::index\+::planner\+::\+Index\+Select\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Select\+Plan}}
+\subsubsection{\texorpdfstring{records\+Output()}{recordsOutput()}}
+{\footnotesize\ttfamily int simpledb.\+index.\+planner.\+Index\+Select\+Plan.\+records\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimates the number of output records in the index selection, which is the same as the number of search key values for the index. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan\+::records\+Output()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_a3010453110b539de5e3af184131dee7a}\label{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_a3010453110b539de5e3af184131dee7a}} 
+\index{simpledb\+::index\+::planner\+::\+Index\+Select\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Select\+Plan}!schema@{schema}}
+\index{schema@{schema}!simpledb\+::index\+::planner\+::\+Index\+Select\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Select\+Plan}}
+\subsubsection{\texorpdfstring{schema()}{schema()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} simpledb.\+index.\+planner.\+Index\+Select\+Plan.\+schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the schema of the data table. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan\+::schema()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/index/planner/Index\+Select\+Plan.\+java\end{DoxyCompactItemize}

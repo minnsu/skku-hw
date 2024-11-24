@@ -1,0 +1,1 @@
+diff <(seq 7 | xargs -I % ocaml ex%.ml) testcase.txt

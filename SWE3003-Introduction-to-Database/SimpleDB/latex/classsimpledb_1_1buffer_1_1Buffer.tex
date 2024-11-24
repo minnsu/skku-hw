@@ -1,0 +1,53 @@
+\hypertarget{classsimpledb_1_1buffer_1_1Buffer}{}\section{simpledb.\+buffer.\+Buffer Class Reference}
+\label{classsimpledb_1_1buffer_1_1Buffer}\index{simpledb.\+buffer.\+Buffer@{simpledb.\+buffer.\+Buffer}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1buffer_1_1Buffer_a4265dcc79d434ea5d77054240c58860f}\label{classsimpledb_1_1buffer_1_1Buffer_a4265dcc79d434ea5d77054240c58860f}} 
+{\bfseries Buffer} (\hyperlink{classsimpledb_1_1file_1_1FileMgr}{File\+Mgr} fm, \hyperlink{classsimpledb_1_1log_1_1LogMgr}{Log\+Mgr} lm)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1buffer_1_1Buffer_a14c7c919a61da2c74bf45fb44801a1ef}\label{classsimpledb_1_1buffer_1_1Buffer_a14c7c919a61da2c74bf45fb44801a1ef}} 
+\hyperlink{classsimpledb_1_1file_1_1Page}{Page} {\bfseries contents} ()
+\item 
+\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} \hyperlink{classsimpledb_1_1buffer_1_1Buffer_a788d7d5ccd48a559ed05347b3fc05e4f}{block} ()
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1buffer_1_1Buffer_a6834011cbda1270a8b8d1aa241df0f2e}\label{classsimpledb_1_1buffer_1_1Buffer_a6834011cbda1270a8b8d1aa241df0f2e}} 
+void {\bfseries set\+Modified} (int txnum, int lsn)
+\item 
+boolean \hyperlink{classsimpledb_1_1buffer_1_1Buffer_a01c37a49ef6b653f7aa160f1900edb45}{is\+Pinned} ()
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1buffer_1_1Buffer_a0825ea0c277f59a6170b49a21a5ff1b3}\label{classsimpledb_1_1buffer_1_1Buffer_a0825ea0c277f59a6170b49a21a5ff1b3}} 
+int {\bfseries modifying\+Tx} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An individual buffer. A databuffer wraps a page and stores information about its status, such as the associated disk block, the number of times the buffer has been pinned, whether its contents have been modified, and if so, the id and lsn of the modifying transaction. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1buffer_1_1Buffer_a788d7d5ccd48a559ed05347b3fc05e4f}\label{classsimpledb_1_1buffer_1_1Buffer_a788d7d5ccd48a559ed05347b3fc05e4f}} 
+\index{simpledb\+::buffer\+::\+Buffer@{simpledb\+::buffer\+::\+Buffer}!block@{block}}
+\index{block@{block}!simpledb\+::buffer\+::\+Buffer@{simpledb\+::buffer\+::\+Buffer}}
+\subsubsection{\texorpdfstring{block()}{block()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} simpledb.\+buffer.\+Buffer.\+block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a reference to the disk block allocated to the buffer. \begin{DoxyReturn}{Returns}
+a reference to a disk block 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1buffer_1_1Buffer_a01c37a49ef6b653f7aa160f1900edb45}\label{classsimpledb_1_1buffer_1_1Buffer_a01c37a49ef6b653f7aa160f1900edb45}} 
+\index{simpledb\+::buffer\+::\+Buffer@{simpledb\+::buffer\+::\+Buffer}!is\+Pinned@{is\+Pinned}}
+\index{is\+Pinned@{is\+Pinned}!simpledb\+::buffer\+::\+Buffer@{simpledb\+::buffer\+::\+Buffer}}
+\subsubsection{\texorpdfstring{is\+Pinned()}{isPinned()}}
+{\footnotesize\ttfamily boolean simpledb.\+buffer.\+Buffer.\+is\+Pinned (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return true if the buffer is currently pinned (that is, if it has a nonzero pin count). \begin{DoxyReturn}{Returns}
+true if the buffer is pinned 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/buffer/Buffer.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,164 @@
+\hypertarget{classsimpledb_1_1query_1_1ProjectScan}{}\section{simpledb.\+query.\+Project\+Scan Class Reference}
+\label{classsimpledb_1_1query_1_1ProjectScan}\index{simpledb.\+query.\+Project\+Scan@{simpledb.\+query.\+Project\+Scan}}
+
+
+Inheritance diagram for simpledb.\+query.\+Project\+Scan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+query.\+Project\+Scan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1query_1_1ProjectScan_a897ca2e090e0978dcc3f9b1c36127b0d}{Project\+Scan} (\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} s, List$<$ String $>$ fieldlist)
+\item 
+void \hyperlink{classsimpledb_1_1query_1_1ProjectScan_ab34d4470b97f47e22879911fb71eeca6}{before\+First} ()
+\item 
+boolean \hyperlink{classsimpledb_1_1query_1_1ProjectScan_ae90eaf25301873aba0a2f743becf7c9a}{next} ()
+\item 
+int \hyperlink{classsimpledb_1_1query_1_1ProjectScan_a89039656c72ea917c18442e8f3627d14}{get\+Int} (String fldname)
+\item 
+String \hyperlink{classsimpledb_1_1query_1_1ProjectScan_afaf845b45f703794f37b6c48d68a753a}{get\+String} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{classsimpledb_1_1query_1_1ProjectScan_a519337a8db86470d88e8bc24c068e53b}{get\+Val} (String fldname)
+\item 
+boolean \hyperlink{classsimpledb_1_1query_1_1ProjectScan_aff65421fc21f24723e730cb1d26fa6ed}{has\+Field} (String fldname)
+\item 
+void \hyperlink{classsimpledb_1_1query_1_1ProjectScan_a192669ae4807d1f623fe6200fe37522f}{close} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The scan class corresponding to the {\itshape project} relational algebra operator. All methods except has\+Field delegate their work to the underlying scan. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1ProjectScan_a897ca2e090e0978dcc3f9b1c36127b0d}\label{classsimpledb_1_1query_1_1ProjectScan_a897ca2e090e0978dcc3f9b1c36127b0d}} 
+\index{simpledb\+::query\+::\+Project\+Scan@{simpledb\+::query\+::\+Project\+Scan}!Project\+Scan@{Project\+Scan}}
+\index{Project\+Scan@{Project\+Scan}!simpledb\+::query\+::\+Project\+Scan@{simpledb\+::query\+::\+Project\+Scan}}
+\subsubsection{\texorpdfstring{Project\+Scan()}{ProjectScan()}}
+{\footnotesize\ttfamily simpledb.\+query.\+Project\+Scan.\+Project\+Scan (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan}}]{s,  }\item[{List$<$ String $>$}]{fieldlist }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a project scan having the specified underlying scan and field list. 
+\begin{DoxyParams}{Parameters}
+{\em s} & the underlying scan \\
+\hline
+{\em fieldlist} & the list of field names \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1ProjectScan_ab34d4470b97f47e22879911fb71eeca6}\label{classsimpledb_1_1query_1_1ProjectScan_ab34d4470b97f47e22879911fb71eeca6}} 
+\index{simpledb\+::query\+::\+Project\+Scan@{simpledb\+::query\+::\+Project\+Scan}!before\+First@{before\+First}}
+\index{before\+First@{before\+First}!simpledb\+::query\+::\+Project\+Scan@{simpledb\+::query\+::\+Project\+Scan}}
+\subsubsection{\texorpdfstring{before\+First()}{beforeFirst()}}
+{\footnotesize\ttfamily void simpledb.\+query.\+Project\+Scan.\+before\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Position the scan before its first record. A subsequent call to \hyperlink{classsimpledb_1_1query_1_1ProjectScan_ae90eaf25301873aba0a2f743becf7c9a}{next()} will return the first record. 
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2eceb634b69da9bf1269a4355808cc6b}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1ProjectScan_a192669ae4807d1f623fe6200fe37522f}\label{classsimpledb_1_1query_1_1ProjectScan_a192669ae4807d1f623fe6200fe37522f}} 
+\index{simpledb\+::query\+::\+Project\+Scan@{simpledb\+::query\+::\+Project\+Scan}!close@{close}}
+\index{close@{close}!simpledb\+::query\+::\+Project\+Scan@{simpledb\+::query\+::\+Project\+Scan}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void simpledb.\+query.\+Project\+Scan.\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Close the scan and its subscans, if any. 
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a260f40a8c82edaa00398bea9d698933c}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1ProjectScan_a89039656c72ea917c18442e8f3627d14}\label{classsimpledb_1_1query_1_1ProjectScan_a89039656c72ea917c18442e8f3627d14}} 
+\index{simpledb\+::query\+::\+Project\+Scan@{simpledb\+::query\+::\+Project\+Scan}!get\+Int@{get\+Int}}
+\index{get\+Int@{get\+Int}!simpledb\+::query\+::\+Project\+Scan@{simpledb\+::query\+::\+Project\+Scan}}
+\subsubsection{\texorpdfstring{get\+Int()}{getInt()}}
+{\footnotesize\ttfamily int simpledb.\+query.\+Project\+Scan.\+get\+Int (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the value of the specified integer field in the current record. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the field\textquotesingle{}s integer value in the current record 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2e064555e16240115167b5d42d2b3d19}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1ProjectScan_afaf845b45f703794f37b6c48d68a753a}\label{classsimpledb_1_1query_1_1ProjectScan_afaf845b45f703794f37b6c48d68a753a}} 
+\index{simpledb\+::query\+::\+Project\+Scan@{simpledb\+::query\+::\+Project\+Scan}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!simpledb\+::query\+::\+Project\+Scan@{simpledb\+::query\+::\+Project\+Scan}}
+\subsubsection{\texorpdfstring{get\+String()}{getString()}}
+{\footnotesize\ttfamily String simpledb.\+query.\+Project\+Scan.\+get\+String (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the value of the specified string field in the current record. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the field\textquotesingle{}s string value in the current record 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a922e219fee53ecfa6163525f9e3ef222}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1ProjectScan_a519337a8db86470d88e8bc24c068e53b}\label{classsimpledb_1_1query_1_1ProjectScan_a519337a8db86470d88e8bc24c068e53b}} 
+\index{simpledb\+::query\+::\+Project\+Scan@{simpledb\+::query\+::\+Project\+Scan}!get\+Val@{get\+Val}}
+\index{get\+Val@{get\+Val}!simpledb\+::query\+::\+Project\+Scan@{simpledb\+::query\+::\+Project\+Scan}}
+\subsubsection{\texorpdfstring{get\+Val()}{getVal()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+query.\+Project\+Scan.\+get\+Val (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the value of the specified field in the current record. The value is expressed as a \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value of that field, expressed as a \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1ProjectScan_aff65421fc21f24723e730cb1d26fa6ed}\label{classsimpledb_1_1query_1_1ProjectScan_aff65421fc21f24723e730cb1d26fa6ed}} 
+\index{simpledb\+::query\+::\+Project\+Scan@{simpledb\+::query\+::\+Project\+Scan}!has\+Field@{has\+Field}}
+\index{has\+Field@{has\+Field}!simpledb\+::query\+::\+Project\+Scan@{simpledb\+::query\+::\+Project\+Scan}}
+\subsubsection{\texorpdfstring{has\+Field()}{hasField()}}
+{\footnotesize\ttfamily boolean simpledb.\+query.\+Project\+Scan.\+has\+Field (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return true if the scan has the specified field. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the scan has that field 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a8f4ccf13eed0bed983c928e9b998fe5c}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1ProjectScan_ae90eaf25301873aba0a2f743becf7c9a}\label{classsimpledb_1_1query_1_1ProjectScan_ae90eaf25301873aba0a2f743becf7c9a}} 
+\index{simpledb\+::query\+::\+Project\+Scan@{simpledb\+::query\+::\+Project\+Scan}!next@{next}}
+\index{next@{next}!simpledb\+::query\+::\+Project\+Scan@{simpledb\+::query\+::\+Project\+Scan}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily boolean simpledb.\+query.\+Project\+Scan.\+next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Move the scan to the next record. \begin{DoxyReturn}{Returns}
+false if there is no next record 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}{simpledb.\+query.\+Scan}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/query/Project\+Scan.\+java\end{DoxyCompactItemize}

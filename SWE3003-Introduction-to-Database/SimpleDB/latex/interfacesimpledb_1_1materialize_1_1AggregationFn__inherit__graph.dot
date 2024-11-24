@@ -1,0 +1,10 @@
+digraph "simpledb.materialize.AggregationFn"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="simpledb.materialize.AggregationFn",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="simpledb.materialize.CountFn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsimpledb_1_1materialize_1_1CountFn.html"];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="simpledb.materialize.MaxFn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsimpledb_1_1materialize_1_1MaxFn.html"];
+}

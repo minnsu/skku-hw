@@ -1,0 +1,87 @@
+\hypertarget{interfacesimpledb_1_1materialize_1_1AggregationFn}{}\section{simpledb.\+materialize.\+Aggregation\+Fn Interface Reference}
+\label{interfacesimpledb_1_1materialize_1_1AggregationFn}\index{simpledb.\+materialize.\+Aggregation\+Fn@{simpledb.\+materialize.\+Aggregation\+Fn}}
+
+
+Inheritance diagram for simpledb.\+materialize.\+Aggregation\+Fn\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_abc424e0873445d14786ae0f3c539c80f}{process\+First} (\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} s)
+\item 
+void \hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_ae2ff3fb2b1207eab18a70ecf8ffb98dc}{process\+Next} (\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} s)
+\item 
+String \hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_a03cbdf13e41c3e6ea0b8a76863cd58cf}{field\+Name} ()
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_a65957d8075e508ef5555e3bf6ba16184}{value} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The interface implemented by aggregation functions. Aggregation functions are used by the {\itshape groupby} operator. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{interfacesimpledb_1_1materialize_1_1AggregationFn_a03cbdf13e41c3e6ea0b8a76863cd58cf}\label{interfacesimpledb_1_1materialize_1_1AggregationFn_a03cbdf13e41c3e6ea0b8a76863cd58cf}} 
+\index{simpledb\+::materialize\+::\+Aggregation\+Fn@{simpledb\+::materialize\+::\+Aggregation\+Fn}!field\+Name@{field\+Name}}
+\index{field\+Name@{field\+Name}!simpledb\+::materialize\+::\+Aggregation\+Fn@{simpledb\+::materialize\+::\+Aggregation\+Fn}}
+\subsubsection{\texorpdfstring{field\+Name()}{fieldName()}}
+{\footnotesize\ttfamily String simpledb.\+materialize.\+Aggregation\+Fn.\+field\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the name of the new aggregation field. \begin{DoxyReturn}{Returns}
+the name of the new aggregation field 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1materialize_1_1CountFn_a283e9fa1325fd5f81821ef3d3fdcec27}{simpledb.\+materialize.\+Count\+Fn}, and \hyperlink{classsimpledb_1_1materialize_1_1MaxFn_a51dc995821073599a8780df18b86ae9f}{simpledb.\+materialize.\+Max\+Fn}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1materialize_1_1AggregationFn_abc424e0873445d14786ae0f3c539c80f}\label{interfacesimpledb_1_1materialize_1_1AggregationFn_abc424e0873445d14786ae0f3c539c80f}} 
+\index{simpledb\+::materialize\+::\+Aggregation\+Fn@{simpledb\+::materialize\+::\+Aggregation\+Fn}!process\+First@{process\+First}}
+\index{process\+First@{process\+First}!simpledb\+::materialize\+::\+Aggregation\+Fn@{simpledb\+::materialize\+::\+Aggregation\+Fn}}
+\subsubsection{\texorpdfstring{process\+First()}{processFirst()}}
+{\footnotesize\ttfamily void simpledb.\+materialize.\+Aggregation\+Fn.\+process\+First (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan}}]{s }\end{DoxyParamCaption})}
+
+Use the current record of the specified scan to be the first record in the group. 
+\begin{DoxyParams}{Parameters}
+{\em s} & the scan to aggregate over. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classsimpledb_1_1materialize_1_1CountFn_ad2de83ee6906e5407cad7e8f2b2c9e42}{simpledb.\+materialize.\+Count\+Fn}, and \hyperlink{classsimpledb_1_1materialize_1_1MaxFn_aeb7c0c3b7beddb944fac6f843f288cae}{simpledb.\+materialize.\+Max\+Fn}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1materialize_1_1AggregationFn_ae2ff3fb2b1207eab18a70ecf8ffb98dc}\label{interfacesimpledb_1_1materialize_1_1AggregationFn_ae2ff3fb2b1207eab18a70ecf8ffb98dc}} 
+\index{simpledb\+::materialize\+::\+Aggregation\+Fn@{simpledb\+::materialize\+::\+Aggregation\+Fn}!process\+Next@{process\+Next}}
+\index{process\+Next@{process\+Next}!simpledb\+::materialize\+::\+Aggregation\+Fn@{simpledb\+::materialize\+::\+Aggregation\+Fn}}
+\subsubsection{\texorpdfstring{process\+Next()}{processNext()}}
+{\footnotesize\ttfamily void simpledb.\+materialize.\+Aggregation\+Fn.\+process\+Next (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan}}]{s }\end{DoxyParamCaption})}
+
+Use the current record of the specified scan to be the next record in the group. 
+\begin{DoxyParams}{Parameters}
+{\em s} & the scan to aggregate over. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classsimpledb_1_1materialize_1_1CountFn_ac50cdba40eda7611ff8e015d8c305197}{simpledb.\+materialize.\+Count\+Fn}, and \hyperlink{classsimpledb_1_1materialize_1_1MaxFn_a4ce58a04c1c3891b611771630a33dc74}{simpledb.\+materialize.\+Max\+Fn}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1materialize_1_1AggregationFn_a65957d8075e508ef5555e3bf6ba16184}\label{interfacesimpledb_1_1materialize_1_1AggregationFn_a65957d8075e508ef5555e3bf6ba16184}} 
+\index{simpledb\+::materialize\+::\+Aggregation\+Fn@{simpledb\+::materialize\+::\+Aggregation\+Fn}!value@{value}}
+\index{value@{value}!simpledb\+::materialize\+::\+Aggregation\+Fn@{simpledb\+::materialize\+::\+Aggregation\+Fn}}
+\subsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+materialize.\+Aggregation\+Fn.\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the computed aggregation value. \begin{DoxyReturn}{Returns}
+the computed aggregation value 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1materialize_1_1CountFn_aba7aff6e83f0f0af171edb64be6cb342}{simpledb.\+materialize.\+Count\+Fn}, and \hyperlink{classsimpledb_1_1materialize_1_1MaxFn_a00a636276f06c0599ebbe3dbc560a4e6}{simpledb.\+materialize.\+Max\+Fn}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/materialize/Aggregation\+Fn.\+java\end{DoxyCompactItemize}

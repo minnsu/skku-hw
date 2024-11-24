@@ -1,0 +1,103 @@
+\hypertarget{interfacesimpledb_1_1plan_1_1Plan}{}\section{simpledb.\+plan.\+Plan Interface Reference}
+\label{interfacesimpledb_1_1plan_1_1Plan}\index{simpledb.\+plan.\+Plan@{simpledb.\+plan.\+Plan}}
+
+
+Inheritance diagram for simpledb.\+plan.\+Plan\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} \hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{open} ()
+\item 
+int \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{blocks\+Accessed} ()
+\item 
+int \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{records\+Output} ()
+\item 
+int \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{distinct\+Values} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} \hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{schema} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The interface implemented by each query plan. There is a \hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} class for each relational algebra operator. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}\label{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}} 
+\index{simpledb\+::plan\+::\+Plan@{simpledb\+::plan\+::\+Plan}!blocks\+Accessed@{blocks\+Accessed}}
+\index{blocks\+Accessed@{blocks\+Accessed}!simpledb\+::plan\+::\+Plan@{simpledb\+::plan\+::\+Plan}}
+\subsubsection{\texorpdfstring{blocks\+Accessed()}{blocksAccessed()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Plan.\+blocks\+Accessed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns an estimate of the number of block accesses that will occur when the scan is read to completion. \begin{DoxyReturn}{Returns}
+the estimated number of block accesses 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1materialize_1_1MergeJoinPlan_a4ceef561ece4dad75dd41e46ff5d184c}{simpledb.\+materialize.\+Merge\+Join\+Plan}, \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a5e3555f5da62f198a1d0e8d1b73a3d0d}{simpledb.\+multibuffer.\+Multibuffer\+Product\+Plan}, \hyperlink{classsimpledb_1_1materialize_1_1GroupByPlan_a741eec5aa2c6dc59f1814a4268a3af46}{simpledb.\+materialize.\+Group\+By\+Plan}, \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_a6189cff464c671000c394b56616e4f89}{simpledb.\+index.\+planner.\+Index\+Join\+Plan}, \hyperlink{classsimpledb_1_1materialize_1_1SortPlan_ab5541a8f02fbd3b751dfdb2af86283e0}{simpledb.\+materialize.\+Sort\+Plan}, \hyperlink{classsimpledb_1_1materialize_1_1MaterializePlan_a17e5dc3ecdd3ea848ad34c796f988da1}{simpledb.\+materialize.\+Materialize\+Plan}, \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_ae88ded6d91db76c651532f94a59ef97a}{simpledb.\+index.\+planner.\+Index\+Select\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1ProductPlan_aed99978816a650c8f9268bb842d75a5b}{simpledb.\+plan.\+Product\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1TablePlan_a02096e40476829aa8df6de4519bfee33}{simpledb.\+plan.\+Table\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1ProjectPlan_a179e4f2151d40cef19af2117bb790112}{simpledb.\+plan.\+Project\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1SelectPlan_aac8710bb3dcdab26ccd276ccb19f95cb}{simpledb.\+plan.\+Select\+Plan}, and \hyperlink{classsimpledb_1_1plan_1_1OptimizedProductPlan_a52b0ca647203a27b037e001abda794ae}{simpledb.\+plan.\+Optimized\+Product\+Plan}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}\label{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}} 
+\index{simpledb\+::plan\+::\+Plan@{simpledb\+::plan\+::\+Plan}!distinct\+Values@{distinct\+Values}}
+\index{distinct\+Values@{distinct\+Values}!simpledb\+::plan\+::\+Plan@{simpledb\+::plan\+::\+Plan}}
+\subsubsection{\texorpdfstring{distinct\+Values()}{distinctValues()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Plan.\+distinct\+Values (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})}
+
+Returns an estimate of the number of distinct values for the specified field in the query\textquotesingle{}s output table. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of a field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the estimated number of distinct field values in the output 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1materialize_1_1MergeJoinPlan_a70b3e49e98fb23b0f99051e5f3e8af60}{simpledb.\+materialize.\+Merge\+Join\+Plan}, \hyperlink{classsimpledb_1_1materialize_1_1GroupByPlan_ac7d2a7c034341a5c032a1247a297ec1e}{simpledb.\+materialize.\+Group\+By\+Plan}, \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a94df401d9ea9f4da99e4851fc5be731a}{simpledb.\+multibuffer.\+Multibuffer\+Product\+Plan}, \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_a91f22c04a47d5bc2385eeadd9b270ac5}{simpledb.\+index.\+planner.\+Index\+Join\+Plan}, \hyperlink{classsimpledb_1_1materialize_1_1SortPlan_a7742b83f40664e6a497f87b0e1df958f}{simpledb.\+materialize.\+Sort\+Plan}, \hyperlink{classsimpledb_1_1materialize_1_1MaterializePlan_a98964c2c20961730b37e240e318b537d}{simpledb.\+materialize.\+Materialize\+Plan}, \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_a7552fbdecccb53183ce575051cdb93a1}{simpledb.\+index.\+planner.\+Index\+Select\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1SelectPlan_ac7c325819656fe5de7a5b4b88ced3bc7}{simpledb.\+plan.\+Select\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1ProductPlan_af15c3dd2da35b2d41ed02e0586603f39}{simpledb.\+plan.\+Product\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1TablePlan_a07271b00072ebfcc314da8f4be7a93f4}{simpledb.\+plan.\+Table\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1ProjectPlan_a5a6ec7fd1d13d1ae9f14d81f5d61be56}{simpledb.\+plan.\+Project\+Plan}, and \hyperlink{classsimpledb_1_1plan_1_1OptimizedProductPlan_a53c2cbca815961d5349736f735fa2a0b}{simpledb.\+plan.\+Optimized\+Product\+Plan}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}\label{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}} 
+\index{simpledb\+::plan\+::\+Plan@{simpledb\+::plan\+::\+Plan}!open@{open}}
+\index{open@{open}!simpledb\+::plan\+::\+Plan@{simpledb\+::plan\+::\+Plan}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} simpledb.\+plan.\+Plan.\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Opens a scan corresponding to this plan. The scan will be positioned before its first record. \begin{DoxyReturn}{Returns}
+a scan 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1materialize_1_1MergeJoinPlan_aa37bca23bb46556e265de8ed03c0e2e9}{simpledb.\+materialize.\+Merge\+Join\+Plan}, \hyperlink{classsimpledb_1_1materialize_1_1GroupByPlan_a2f4aa5e9b356af297091a27ff2b97343}{simpledb.\+materialize.\+Group\+By\+Plan}, \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a0874bcf0d5bb9839346404d40b06eaed}{simpledb.\+multibuffer.\+Multibuffer\+Product\+Plan}, \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_ab9c7fc729baa00380ee1a314578f5828}{simpledb.\+index.\+planner.\+Index\+Join\+Plan}, \hyperlink{classsimpledb_1_1materialize_1_1SortPlan_ace1a90e7d7d4b498e0b1c6ef5d30e4a4}{simpledb.\+materialize.\+Sort\+Plan}, \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_af1acee7f900bcacf37d2ff1100a31545}{simpledb.\+index.\+planner.\+Index\+Select\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1TablePlan_afb47e9016581a59788ec4de4c672cf76}{simpledb.\+plan.\+Table\+Plan}, \hyperlink{classsimpledb_1_1materialize_1_1MaterializePlan_acf693ce6e3b9e7603286ea4c971e1d51}{simpledb.\+materialize.\+Materialize\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1ProductPlan_a42d2c091a1b387611af9e960783c0931}{simpledb.\+plan.\+Product\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1ProjectPlan_aa63f3cd034d9b00c29210731cc6ff368}{simpledb.\+plan.\+Project\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1SelectPlan_aa18edd10f7bac870ffd458c8da82c5f1}{simpledb.\+plan.\+Select\+Plan}, and \hyperlink{classsimpledb_1_1plan_1_1OptimizedProductPlan_a885a442c4708535114b8e7a8b022a5f7}{simpledb.\+plan.\+Optimized\+Product\+Plan}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}\label{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}} 
+\index{simpledb\+::plan\+::\+Plan@{simpledb\+::plan\+::\+Plan}!records\+Output@{records\+Output}}
+\index{records\+Output@{records\+Output}!simpledb\+::plan\+::\+Plan@{simpledb\+::plan\+::\+Plan}}
+\subsubsection{\texorpdfstring{records\+Output()}{recordsOutput()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Plan.\+records\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns an estimate of the number of records in the query\textquotesingle{}s output table. \begin{DoxyReturn}{Returns}
+the estimated number of output records 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a45cef849c8ac76cce183b7d9909929c1}{simpledb.\+multibuffer.\+Multibuffer\+Product\+Plan}, \hyperlink{classsimpledb_1_1materialize_1_1MergeJoinPlan_a4491095a660740e251d50bd33628dc2d}{simpledb.\+materialize.\+Merge\+Join\+Plan}, \hyperlink{classsimpledb_1_1materialize_1_1GroupByPlan_aac232f69ae5b322754b34f83c4813883}{simpledb.\+materialize.\+Group\+By\+Plan}, \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_a885b5d4ff1b8b96353d58a87417e6f5f}{simpledb.\+index.\+planner.\+Index\+Join\+Plan}, \hyperlink{classsimpledb_1_1materialize_1_1MaterializePlan_a3e3d3cdd3bff924c476e7943d7fe70e7}{simpledb.\+materialize.\+Materialize\+Plan}, \hyperlink{classsimpledb_1_1materialize_1_1SortPlan_a1bcfa71f5e5f33c4bd484d68b6121fbd}{simpledb.\+materialize.\+Sort\+Plan}, \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_abbbff69541cb3700bf74674f851297bc}{simpledb.\+index.\+planner.\+Index\+Select\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1ProductPlan_a5fce0180a7e282d587fc254dd302d009}{simpledb.\+plan.\+Product\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1TablePlan_ab55d872332c11cd882240f8b1851abc6}{simpledb.\+plan.\+Table\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1SelectPlan_af68bc517292c7bd5706b191f30124a2e}{simpledb.\+plan.\+Select\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1ProjectPlan_ae62939db691f1180bb17101d48d08f82}{simpledb.\+plan.\+Project\+Plan}, and \hyperlink{classsimpledb_1_1plan_1_1OptimizedProductPlan_acf3d4c379376683928f83fa56de38d60}{simpledb.\+plan.\+Optimized\+Product\+Plan}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}\label{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}} 
+\index{simpledb\+::plan\+::\+Plan@{simpledb\+::plan\+::\+Plan}!schema@{schema}}
+\index{schema@{schema}!simpledb\+::plan\+::\+Plan@{simpledb\+::plan\+::\+Plan}}
+\subsubsection{\texorpdfstring{schema()}{schema()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} simpledb.\+plan.\+Plan.\+schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the schema of the query. \begin{DoxyReturn}{Returns}
+the query\textquotesingle{}s schema 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1materialize_1_1GroupByPlan_a2060788080c03855f35d72a1742e6ec6}{simpledb.\+materialize.\+Group\+By\+Plan}, \hyperlink{classsimpledb_1_1materialize_1_1MergeJoinPlan_a3e1d4a728b4454d33adc811aa24989f4}{simpledb.\+materialize.\+Merge\+Join\+Plan}, \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a8cc53b6bf91a6d7f28ce76c0c226a93f}{simpledb.\+multibuffer.\+Multibuffer\+Product\+Plan}, \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_a4dcc700748306498294974d01a5f78fd}{simpledb.\+index.\+planner.\+Index\+Join\+Plan}, \hyperlink{classsimpledb_1_1materialize_1_1SortPlan_a38d147acf86926b81ce04c9ba6216e63}{simpledb.\+materialize.\+Sort\+Plan}, \hyperlink{classsimpledb_1_1materialize_1_1MaterializePlan_aa15451a3ee0639ccca88ca332d050b57}{simpledb.\+materialize.\+Materialize\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1SelectPlan_a74090f0d52af6e4f8d5fe925fac3cb4c}{simpledb.\+plan.\+Select\+Plan}, \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexSelectPlan_a3010453110b539de5e3af184131dee7a}{simpledb.\+index.\+planner.\+Index\+Select\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1ProductPlan_aefae6a42767a872bc50882b415a9f76c}{simpledb.\+plan.\+Product\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1TablePlan_aeceae838a8fdc6dedfd23e8175374510}{simpledb.\+plan.\+Table\+Plan}, \hyperlink{classsimpledb_1_1plan_1_1ProjectPlan_a748d16b8055b9b3769e6f0713f1da18f}{simpledb.\+plan.\+Project\+Plan}, and \hyperlink{classsimpledb_1_1plan_1_1OptimizedProductPlan_aaeadc35607f4bce16a6f57988e8737b5}{simpledb.\+plan.\+Optimized\+Product\+Plan}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/plan/Plan.\+java\end{DoxyCompactItemize}

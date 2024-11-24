@@ -1,0 +1,140 @@
+\hypertarget{interfacesimpledb_1_1query_1_1UpdateScan}{}\section{simpledb.\+query.\+Update\+Scan Interface Reference}
+\label{interfacesimpledb_1_1query_1_1UpdateScan}\index{simpledb.\+query.\+Update\+Scan@{simpledb.\+query.\+Update\+Scan}}
+
+
+Inheritance diagram for simpledb.\+query.\+Update\+Scan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+query.\+Update\+Scan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interfacesimpledb_1_1query_1_1UpdateScan_a70fdd638a395be56dcbc65ecd791f075}{set\+Val} (String fldname, \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} val)
+\item 
+void \hyperlink{interfacesimpledb_1_1query_1_1UpdateScan_ad866b1c21bbe8f0442a8779a6240c069}{set\+Int} (String fldname, int val)
+\item 
+void \hyperlink{interfacesimpledb_1_1query_1_1UpdateScan_a06d8414432dac908fd6c5d337e848f95}{set\+String} (String fldname, String val)
+\item 
+void \hyperlink{interfacesimpledb_1_1query_1_1UpdateScan_a6a281cd50f596c008e868bddd0534774}{insert} ()
+\item 
+void \hyperlink{interfacesimpledb_1_1query_1_1UpdateScan_a503723e6287a2ea9ce73375f70a5e819}{delete} ()
+\item 
+\hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} \hyperlink{interfacesimpledb_1_1query_1_1UpdateScan_aa98f38fa6d4fc66862e0c739b577ce2d}{get\+Rid} ()
+\item 
+void \hyperlink{interfacesimpledb_1_1query_1_1UpdateScan_a5096e90da6d88cfaa015cd3aa20bc9d7}{move\+To\+Rid} (\hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} rid)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The interface implemented by all updateable scans. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{interfacesimpledb_1_1query_1_1UpdateScan_a503723e6287a2ea9ce73375f70a5e819}\label{interfacesimpledb_1_1query_1_1UpdateScan_a503723e6287a2ea9ce73375f70a5e819}} 
+\index{simpledb\+::query\+::\+Update\+Scan@{simpledb\+::query\+::\+Update\+Scan}!delete@{delete}}
+\index{delete@{delete}!simpledb\+::query\+::\+Update\+Scan@{simpledb\+::query\+::\+Update\+Scan}}
+\subsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily void simpledb.\+query.\+Update\+Scan.\+delete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Delete the current record from the scan. 
+
+Implemented in \hyperlink{classsimpledb_1_1record_1_1TableScan_a6797bdf6cdf1cd9f73cb86b32ac339d7}{simpledb.\+record.\+Table\+Scan}, and \hyperlink{classsimpledb_1_1query_1_1SelectScan_a698afd872a1362c6d20e59396adf64bb}{simpledb.\+query.\+Select\+Scan}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1query_1_1UpdateScan_aa98f38fa6d4fc66862e0c739b577ce2d}\label{interfacesimpledb_1_1query_1_1UpdateScan_aa98f38fa6d4fc66862e0c739b577ce2d}} 
+\index{simpledb\+::query\+::\+Update\+Scan@{simpledb\+::query\+::\+Update\+Scan}!get\+Rid@{get\+Rid}}
+\index{get\+Rid@{get\+Rid}!simpledb\+::query\+::\+Update\+Scan@{simpledb\+::query\+::\+Update\+Scan}}
+\subsubsection{\texorpdfstring{get\+Rid()}{getRid()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} simpledb.\+query.\+Update\+Scan.\+get\+Rid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the id of the current record. \begin{DoxyReturn}{Returns}
+the id of the current record 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1record_1_1TableScan_ae04ff0088830ea94e2af70bdbb398a80}{simpledb.\+record.\+Table\+Scan}, and \hyperlink{classsimpledb_1_1query_1_1SelectScan_aa7c6dfd2ab2cd1846c4fa84ee2c455d5}{simpledb.\+query.\+Select\+Scan}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1query_1_1UpdateScan_a6a281cd50f596c008e868bddd0534774}\label{interfacesimpledb_1_1query_1_1UpdateScan_a6a281cd50f596c008e868bddd0534774}} 
+\index{simpledb\+::query\+::\+Update\+Scan@{simpledb\+::query\+::\+Update\+Scan}!insert@{insert}}
+\index{insert@{insert}!simpledb\+::query\+::\+Update\+Scan@{simpledb\+::query\+::\+Update\+Scan}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void simpledb.\+query.\+Update\+Scan.\+insert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Insert a new record somewhere in the scan. 
+
+Implemented in \hyperlink{classsimpledb_1_1record_1_1TableScan_a45f93916b026b51b1511ba2610630564}{simpledb.\+record.\+Table\+Scan}, and \hyperlink{classsimpledb_1_1query_1_1SelectScan_aef5c943c4a905265c588913e2f9958c2}{simpledb.\+query.\+Select\+Scan}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1query_1_1UpdateScan_a5096e90da6d88cfaa015cd3aa20bc9d7}\label{interfacesimpledb_1_1query_1_1UpdateScan_a5096e90da6d88cfaa015cd3aa20bc9d7}} 
+\index{simpledb\+::query\+::\+Update\+Scan@{simpledb\+::query\+::\+Update\+Scan}!move\+To\+Rid@{move\+To\+Rid}}
+\index{move\+To\+Rid@{move\+To\+Rid}!simpledb\+::query\+::\+Update\+Scan@{simpledb\+::query\+::\+Update\+Scan}}
+\subsubsection{\texorpdfstring{move\+To\+Rid()}{moveToRid()}}
+{\footnotesize\ttfamily void simpledb.\+query.\+Update\+Scan.\+move\+To\+Rid (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID}}]{rid }\end{DoxyParamCaption})}
+
+Position the scan so that the current record has the specified id. 
+\begin{DoxyParams}{Parameters}
+{\em rid} & the id of the desired record \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classsimpledb_1_1record_1_1TableScan_a21372d00e959d8bbe5eee1c8bda8f08b}{simpledb.\+record.\+Table\+Scan}, and \hyperlink{classsimpledb_1_1query_1_1SelectScan_ae2a640b4e49eb8cb5fef5f48103dca3e}{simpledb.\+query.\+Select\+Scan}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1query_1_1UpdateScan_ad866b1c21bbe8f0442a8779a6240c069}\label{interfacesimpledb_1_1query_1_1UpdateScan_ad866b1c21bbe8f0442a8779a6240c069}} 
+\index{simpledb\+::query\+::\+Update\+Scan@{simpledb\+::query\+::\+Update\+Scan}!set\+Int@{set\+Int}}
+\index{set\+Int@{set\+Int}!simpledb\+::query\+::\+Update\+Scan@{simpledb\+::query\+::\+Update\+Scan}}
+\subsubsection{\texorpdfstring{set\+Int()}{setInt()}}
+{\footnotesize\ttfamily void simpledb.\+query.\+Update\+Scan.\+set\+Int (\begin{DoxyParamCaption}\item[{String}]{fldname,  }\item[{int}]{val }\end{DoxyParamCaption})}
+
+Modify the field value of the current record. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+{\em val} & the new integer value \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classsimpledb_1_1record_1_1TableScan_af36f97fd4163b889c0e3d76a824406c2}{simpledb.\+record.\+Table\+Scan}, and \hyperlink{classsimpledb_1_1query_1_1SelectScan_a1c800a9b658cc70338670412913ac614}{simpledb.\+query.\+Select\+Scan}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1query_1_1UpdateScan_a06d8414432dac908fd6c5d337e848f95}\label{interfacesimpledb_1_1query_1_1UpdateScan_a06d8414432dac908fd6c5d337e848f95}} 
+\index{simpledb\+::query\+::\+Update\+Scan@{simpledb\+::query\+::\+Update\+Scan}!set\+String@{set\+String}}
+\index{set\+String@{set\+String}!simpledb\+::query\+::\+Update\+Scan@{simpledb\+::query\+::\+Update\+Scan}}
+\subsubsection{\texorpdfstring{set\+String()}{setString()}}
+{\footnotesize\ttfamily void simpledb.\+query.\+Update\+Scan.\+set\+String (\begin{DoxyParamCaption}\item[{String}]{fldname,  }\item[{String}]{val }\end{DoxyParamCaption})}
+
+Modify the field value of the current record. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+{\em val} & the new string value \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classsimpledb_1_1record_1_1TableScan_a0d7d00cd93ce179297abf17b5900b750}{simpledb.\+record.\+Table\+Scan}, and \hyperlink{classsimpledb_1_1query_1_1SelectScan_a89d69e60a20cab136352370e7e27d1db}{simpledb.\+query.\+Select\+Scan}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1query_1_1UpdateScan_a70fdd638a395be56dcbc65ecd791f075}\label{interfacesimpledb_1_1query_1_1UpdateScan_a70fdd638a395be56dcbc65ecd791f075}} 
+\index{simpledb\+::query\+::\+Update\+Scan@{simpledb\+::query\+::\+Update\+Scan}!set\+Val@{set\+Val}}
+\index{set\+Val@{set\+Val}!simpledb\+::query\+::\+Update\+Scan@{simpledb\+::query\+::\+Update\+Scan}}
+\subsubsection{\texorpdfstring{set\+Val()}{setVal()}}
+{\footnotesize\ttfamily void simpledb.\+query.\+Update\+Scan.\+set\+Val (\begin{DoxyParamCaption}\item[{String}]{fldname,  }\item[{\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}}]{val }\end{DoxyParamCaption})}
+
+Modify the field value of the current record. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+{\em val} & the new value, expressed as a \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classsimpledb_1_1record_1_1TableScan_aa43095f81b040417816d8493b66a91d3}{simpledb.\+record.\+Table\+Scan}, and \hyperlink{classsimpledb_1_1query_1_1SelectScan_a2c767921954b2e2ea83ef5d90712b64f}{simpledb.\+query.\+Select\+Scan}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/query/Update\+Scan.\+java\end{DoxyCompactItemize}

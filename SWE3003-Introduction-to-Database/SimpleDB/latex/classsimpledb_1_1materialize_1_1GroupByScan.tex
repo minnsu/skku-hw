@@ -1,0 +1,152 @@
+\hypertarget{classsimpledb_1_1materialize_1_1GroupByScan}{}\section{simpledb.\+materialize.\+Group\+By\+Scan Class Reference}
+\label{classsimpledb_1_1materialize_1_1GroupByScan}\index{simpledb.\+materialize.\+Group\+By\+Scan@{simpledb.\+materialize.\+Group\+By\+Scan}}
+
+
+Inheritance diagram for simpledb.\+materialize.\+Group\+By\+Scan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+materialize.\+Group\+By\+Scan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1materialize_1_1GroupByScan_a89a179c335e4fac13cb3632d5526dd07}{Group\+By\+Scan} (\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} s, List$<$ String $>$ groupfields, List$<$ \hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn}{Aggregation\+Fn} $>$ aggfns)
+\item 
+void \hyperlink{classsimpledb_1_1materialize_1_1GroupByScan_aa8e3233026ee744d9037288ef0fffb3d}{before\+First} ()
+\item 
+boolean \hyperlink{classsimpledb_1_1materialize_1_1GroupByScan_acbe4614c0d8a58cea2cdc86eb964dd8d}{next} ()
+\item 
+void \hyperlink{classsimpledb_1_1materialize_1_1GroupByScan_a95a307d14faf60c967efaaa666d22bf0}{close} ()
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{classsimpledb_1_1materialize_1_1GroupByScan_acb46660cae0539050eb6041f6310425f}{get\+Val} (String fldname)
+\item 
+int \hyperlink{classsimpledb_1_1materialize_1_1GroupByScan_a04e34f64ca9d51765f0d6ab05dc157bf}{get\+Int} (String fldname)
+\item 
+String \hyperlink{classsimpledb_1_1materialize_1_1GroupByScan_a5de9ab1d8e9da876aa5cd7cb3b953f62}{get\+String} (String fldname)
+\item 
+boolean \hyperlink{classsimpledb_1_1materialize_1_1GroupByScan_aeff4514ccf6106445de717b20ec3d155}{has\+Field} (String fldname)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Scan class for the {\itshape groupby} operator. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1GroupByScan_a89a179c335e4fac13cb3632d5526dd07}\label{classsimpledb_1_1materialize_1_1GroupByScan_a89a179c335e4fac13cb3632d5526dd07}} 
+\index{simpledb\+::materialize\+::\+Group\+By\+Scan@{simpledb\+::materialize\+::\+Group\+By\+Scan}!Group\+By\+Scan@{Group\+By\+Scan}}
+\index{Group\+By\+Scan@{Group\+By\+Scan}!simpledb\+::materialize\+::\+Group\+By\+Scan@{simpledb\+::materialize\+::\+Group\+By\+Scan}}
+\subsubsection{\texorpdfstring{Group\+By\+Scan()}{GroupByScan()}}
+{\footnotesize\ttfamily simpledb.\+materialize.\+Group\+By\+Scan.\+Group\+By\+Scan (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan}}]{s,  }\item[{List$<$ String $>$}]{groupfields,  }\item[{List$<$ \hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn}{Aggregation\+Fn} $>$}]{aggfns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a groupby scan, given a grouped table scan. 
+\begin{DoxyParams}{Parameters}
+{\em s} & the grouped scan \\
+\hline
+{\em groupfields} & the group fields \\
+\hline
+{\em aggfns} & the aggregation functions \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1GroupByScan_aa8e3233026ee744d9037288ef0fffb3d}\label{classsimpledb_1_1materialize_1_1GroupByScan_aa8e3233026ee744d9037288ef0fffb3d}} 
+\index{simpledb\+::materialize\+::\+Group\+By\+Scan@{simpledb\+::materialize\+::\+Group\+By\+Scan}!before\+First@{before\+First}}
+\index{before\+First@{before\+First}!simpledb\+::materialize\+::\+Group\+By\+Scan@{simpledb\+::materialize\+::\+Group\+By\+Scan}}
+\subsubsection{\texorpdfstring{before\+First()}{beforeFirst()}}
+{\footnotesize\ttfamily void simpledb.\+materialize.\+Group\+By\+Scan.\+before\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Position the scan before the first group. Internally, the underlying scan is always positioned at the first record of a group, which means that this method moves to the first underlying record. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a2eceb634b69da9bf1269a4355808cc6b}{simpledb.\+query.\+Scan\+::before\+First()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2eceb634b69da9bf1269a4355808cc6b}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1GroupByScan_a95a307d14faf60c967efaaa666d22bf0}\label{classsimpledb_1_1materialize_1_1GroupByScan_a95a307d14faf60c967efaaa666d22bf0}} 
+\index{simpledb\+::materialize\+::\+Group\+By\+Scan@{simpledb\+::materialize\+::\+Group\+By\+Scan}!close@{close}}
+\index{close@{close}!simpledb\+::materialize\+::\+Group\+By\+Scan@{simpledb\+::materialize\+::\+Group\+By\+Scan}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void simpledb.\+materialize.\+Group\+By\+Scan.\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Close the scan by closing the underlying scan. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a260f40a8c82edaa00398bea9d698933c}{simpledb.\+query.\+Scan\+::close()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a260f40a8c82edaa00398bea9d698933c}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1GroupByScan_a04e34f64ca9d51765f0d6ab05dc157bf}\label{classsimpledb_1_1materialize_1_1GroupByScan_a04e34f64ca9d51765f0d6ab05dc157bf}} 
+\index{simpledb\+::materialize\+::\+Group\+By\+Scan@{simpledb\+::materialize\+::\+Group\+By\+Scan}!get\+Int@{get\+Int}}
+\index{get\+Int@{get\+Int}!simpledb\+::materialize\+::\+Group\+By\+Scan@{simpledb\+::materialize\+::\+Group\+By\+Scan}}
+\subsubsection{\texorpdfstring{get\+Int()}{getInt()}}
+{\footnotesize\ttfamily int simpledb.\+materialize.\+Group\+By\+Scan.\+get\+Int (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the integer value of the specified field. If the field is a group field, then its value can be obtained from the saved group value. Otherwise, the value is obtained from the appropriate aggregation function. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan\+::get\+Val}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2e064555e16240115167b5d42d2b3d19}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1GroupByScan_a5de9ab1d8e9da876aa5cd7cb3b953f62}\label{classsimpledb_1_1materialize_1_1GroupByScan_a5de9ab1d8e9da876aa5cd7cb3b953f62}} 
+\index{simpledb\+::materialize\+::\+Group\+By\+Scan@{simpledb\+::materialize\+::\+Group\+By\+Scan}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!simpledb\+::materialize\+::\+Group\+By\+Scan@{simpledb\+::materialize\+::\+Group\+By\+Scan}}
+\subsubsection{\texorpdfstring{get\+String()}{getString()}}
+{\footnotesize\ttfamily String simpledb.\+materialize.\+Group\+By\+Scan.\+get\+String (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the string value of the specified field. If the field is a group field, then its value can be obtained from the saved group value. Otherwise, the value is obtained from the appropriate aggregation function. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan\+::get\+Val}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a922e219fee53ecfa6163525f9e3ef222}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1GroupByScan_acb46660cae0539050eb6041f6310425f}\label{classsimpledb_1_1materialize_1_1GroupByScan_acb46660cae0539050eb6041f6310425f}} 
+\index{simpledb\+::materialize\+::\+Group\+By\+Scan@{simpledb\+::materialize\+::\+Group\+By\+Scan}!get\+Val@{get\+Val}}
+\index{get\+Val@{get\+Val}!simpledb\+::materialize\+::\+Group\+By\+Scan@{simpledb\+::materialize\+::\+Group\+By\+Scan}}
+\subsubsection{\texorpdfstring{get\+Val()}{getVal()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+materialize.\+Group\+By\+Scan.\+get\+Val (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the Constant value of the specified field. If the field is a group field, then its value can be obtained from the saved group value. Otherwise, the value is obtained from the appropriate aggregation function. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan\+::get\+Val}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1GroupByScan_aeff4514ccf6106445de717b20ec3d155}\label{classsimpledb_1_1materialize_1_1GroupByScan_aeff4514ccf6106445de717b20ec3d155}} 
+\index{simpledb\+::materialize\+::\+Group\+By\+Scan@{simpledb\+::materialize\+::\+Group\+By\+Scan}!has\+Field@{has\+Field}}
+\index{has\+Field@{has\+Field}!simpledb\+::materialize\+::\+Group\+By\+Scan@{simpledb\+::materialize\+::\+Group\+By\+Scan}}
+\subsubsection{\texorpdfstring{has\+Field()}{hasField()}}
+{\footnotesize\ttfamily boolean simpledb.\+materialize.\+Group\+By\+Scan.\+has\+Field (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return true if the specified field is either a grouping field or created by an aggregation function. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a8f4ccf13eed0bed983c928e9b998fe5c}{simpledb.\+query.\+Scan\+::has\+Field}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a8f4ccf13eed0bed983c928e9b998fe5c}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1GroupByScan_acbe4614c0d8a58cea2cdc86eb964dd8d}\label{classsimpledb_1_1materialize_1_1GroupByScan_acbe4614c0d8a58cea2cdc86eb964dd8d}} 
+\index{simpledb\+::materialize\+::\+Group\+By\+Scan@{simpledb\+::materialize\+::\+Group\+By\+Scan}!next@{next}}
+\index{next@{next}!simpledb\+::materialize\+::\+Group\+By\+Scan@{simpledb\+::materialize\+::\+Group\+By\+Scan}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily boolean simpledb.\+materialize.\+Group\+By\+Scan.\+next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Move to the next group. The key of the group is determined by the group values at the current record. The method repeatedly reads underlying records until it encounters a record having a different key. The aggregation functions are called for each record in the group. The values of the grouping fields for the group are saved. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}{simpledb.\+query.\+Scan\+::next()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}{simpledb.\+query.\+Scan}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/materialize/Group\+By\+Scan.\+java\end{DoxyCompactItemize}

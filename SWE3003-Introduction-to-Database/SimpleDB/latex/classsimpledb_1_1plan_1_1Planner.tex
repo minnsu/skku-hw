@@ -1,0 +1,58 @@
+\hypertarget{classsimpledb_1_1plan_1_1Planner}{}\section{simpledb.\+plan.\+Planner Class Reference}
+\label{classsimpledb_1_1plan_1_1Planner}\index{simpledb.\+plan.\+Planner@{simpledb.\+plan.\+Planner}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1Planner_a04a3e0905b8bd2f118088313a10e1a6f}\label{classsimpledb_1_1plan_1_1Planner_a04a3e0905b8bd2f118088313a10e1a6f}} 
+{\bfseries Planner} (\hyperlink{interfacesimpledb_1_1plan_1_1QueryPlanner}{Query\+Planner} qplanner, \hyperlink{interfacesimpledb_1_1plan_1_1UpdatePlanner}{Update\+Planner} uplanner)
+\item 
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} \hyperlink{classsimpledb_1_1plan_1_1Planner_a73253aa589ee3214e8e056e4dc0845c4}{create\+Query\+Plan} (String qry, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\item 
+int \hyperlink{classsimpledb_1_1plan_1_1Planner_a4bf5b4eb298f5719f24a4464bf168e17}{execute\+Update} (String cmd, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The object that executes S\+QL statements. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1Planner_a73253aa589ee3214e8e056e4dc0845c4}\label{classsimpledb_1_1plan_1_1Planner_a73253aa589ee3214e8e056e4dc0845c4}} 
+\index{simpledb\+::plan\+::\+Planner@{simpledb\+::plan\+::\+Planner}!create\+Query\+Plan@{create\+Query\+Plan}}
+\index{create\+Query\+Plan@{create\+Query\+Plan}!simpledb\+::plan\+::\+Planner@{simpledb\+::plan\+::\+Planner}}
+\subsubsection{\texorpdfstring{create\+Query\+Plan()}{createQueryPlan()}}
+{\footnotesize\ttfamily \hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} simpledb.\+plan.\+Planner.\+create\+Query\+Plan (\begin{DoxyParamCaption}\item[{String}]{qry,  }\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a plan for an S\+QL select statement, using the supplied planner. 
+\begin{DoxyParams}{Parameters}
+{\em qry} & the S\+QL query string \\
+\hline
+{\em tx} & the transaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the scan corresponding to the query plan 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1Planner_a4bf5b4eb298f5719f24a4464bf168e17}\label{classsimpledb_1_1plan_1_1Planner_a4bf5b4eb298f5719f24a4464bf168e17}} 
+\index{simpledb\+::plan\+::\+Planner@{simpledb\+::plan\+::\+Planner}!execute\+Update@{execute\+Update}}
+\index{execute\+Update@{execute\+Update}!simpledb\+::plan\+::\+Planner@{simpledb\+::plan\+::\+Planner}}
+\subsubsection{\texorpdfstring{execute\+Update()}{executeUpdate()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Planner.\+execute\+Update (\begin{DoxyParamCaption}\item[{String}]{cmd,  }\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Executes an S\+QL insert, delete, modify, or create statement. The method dispatches to the appropriate method of the supplied update planner, depending on what the parser returns. 
+\begin{DoxyParams}{Parameters}
+{\em cmd} & the S\+QL update string \\
+\hline
+{\em tx} & the transaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an integer denoting the number of affected records 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/plan/Planner.\+java\end{DoxyCompactItemize}

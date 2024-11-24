@@ -1,0 +1,120 @@
+\hypertarget{classsimpledb_1_1plan_1_1ProjectPlan}{}\section{simpledb.\+plan.\+Project\+Plan Class Reference}
+\label{classsimpledb_1_1plan_1_1ProjectPlan}\index{simpledb.\+plan.\+Project\+Plan@{simpledb.\+plan.\+Project\+Plan}}
+
+
+Inheritance diagram for simpledb.\+plan.\+Project\+Plan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+plan.\+Project\+Plan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1plan_1_1ProjectPlan_a3a1bf93e00a9e1a83e286e38ff473c0a}{Project\+Plan} (\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} p, List$<$ String $>$ fieldlist)
+\item 
+\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} \hyperlink{classsimpledb_1_1plan_1_1ProjectPlan_aa63f3cd034d9b00c29210731cc6ff368}{open} ()
+\item 
+int \hyperlink{classsimpledb_1_1plan_1_1ProjectPlan_a179e4f2151d40cef19af2117bb790112}{blocks\+Accessed} ()
+\item 
+int \hyperlink{classsimpledb_1_1plan_1_1ProjectPlan_ae62939db691f1180bb17101d48d08f82}{records\+Output} ()
+\item 
+int \hyperlink{classsimpledb_1_1plan_1_1ProjectPlan_a5a6ec7fd1d13d1ae9f14d81f5d61be56}{distinct\+Values} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} \hyperlink{classsimpledb_1_1plan_1_1ProjectPlan_a748d16b8055b9b3769e6f0713f1da18f}{schema} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} class corresponding to the {\itshape project} relational algebra operator. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1ProjectPlan_a3a1bf93e00a9e1a83e286e38ff473c0a}\label{classsimpledb_1_1plan_1_1ProjectPlan_a3a1bf93e00a9e1a83e286e38ff473c0a}} 
+\index{simpledb\+::plan\+::\+Project\+Plan@{simpledb\+::plan\+::\+Project\+Plan}!Project\+Plan@{Project\+Plan}}
+\index{Project\+Plan@{Project\+Plan}!simpledb\+::plan\+::\+Project\+Plan@{simpledb\+::plan\+::\+Project\+Plan}}
+\subsubsection{\texorpdfstring{Project\+Plan()}{ProjectPlan()}}
+{\footnotesize\ttfamily simpledb.\+plan.\+Project\+Plan.\+Project\+Plan (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan}}]{p,  }\item[{List$<$ String $>$}]{fieldlist }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new project node in the query tree, having the specified subquery and field list. 
+\begin{DoxyParams}{Parameters}
+{\em p} & the subquery \\
+\hline
+{\em fieldlist} & the list of fields \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1ProjectPlan_a179e4f2151d40cef19af2117bb790112}\label{classsimpledb_1_1plan_1_1ProjectPlan_a179e4f2151d40cef19af2117bb790112}} 
+\index{simpledb\+::plan\+::\+Project\+Plan@{simpledb\+::plan\+::\+Project\+Plan}!blocks\+Accessed@{blocks\+Accessed}}
+\index{blocks\+Accessed@{blocks\+Accessed}!simpledb\+::plan\+::\+Project\+Plan@{simpledb\+::plan\+::\+Project\+Plan}}
+\subsubsection{\texorpdfstring{blocks\+Accessed()}{blocksAccessed()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Project\+Plan.\+blocks\+Accessed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimates the number of block accesses in the projection, which is the same as in the underlying query. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan\+::blocks\+Accessed()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1ProjectPlan_a5a6ec7fd1d13d1ae9f14d81f5d61be56}\label{classsimpledb_1_1plan_1_1ProjectPlan_a5a6ec7fd1d13d1ae9f14d81f5d61be56}} 
+\index{simpledb\+::plan\+::\+Project\+Plan@{simpledb\+::plan\+::\+Project\+Plan}!distinct\+Values@{distinct\+Values}}
+\index{distinct\+Values@{distinct\+Values}!simpledb\+::plan\+::\+Project\+Plan@{simpledb\+::plan\+::\+Project\+Plan}}
+\subsubsection{\texorpdfstring{distinct\+Values()}{distinctValues()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Project\+Plan.\+distinct\+Values (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimates the number of distinct field values in the projection, which is the same as in the underlying query. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan\+::distinct\+Values}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1ProjectPlan_aa63f3cd034d9b00c29210731cc6ff368}\label{classsimpledb_1_1plan_1_1ProjectPlan_aa63f3cd034d9b00c29210731cc6ff368}} 
+\index{simpledb\+::plan\+::\+Project\+Plan@{simpledb\+::plan\+::\+Project\+Plan}!open@{open}}
+\index{open@{open}!simpledb\+::plan\+::\+Project\+Plan@{simpledb\+::plan\+::\+Project\+Plan}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} simpledb.\+plan.\+Project\+Plan.\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a project scan for this query. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan\+::open()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1ProjectPlan_ae62939db691f1180bb17101d48d08f82}\label{classsimpledb_1_1plan_1_1ProjectPlan_ae62939db691f1180bb17101d48d08f82}} 
+\index{simpledb\+::plan\+::\+Project\+Plan@{simpledb\+::plan\+::\+Project\+Plan}!records\+Output@{records\+Output}}
+\index{records\+Output@{records\+Output}!simpledb\+::plan\+::\+Project\+Plan@{simpledb\+::plan\+::\+Project\+Plan}}
+\subsubsection{\texorpdfstring{records\+Output()}{recordsOutput()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Project\+Plan.\+records\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimates the number of output records in the projection, which is the same as in the underlying query. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan\+::records\+Output()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1ProjectPlan_a748d16b8055b9b3769e6f0713f1da18f}\label{classsimpledb_1_1plan_1_1ProjectPlan_a748d16b8055b9b3769e6f0713f1da18f}} 
+\index{simpledb\+::plan\+::\+Project\+Plan@{simpledb\+::plan\+::\+Project\+Plan}!schema@{schema}}
+\index{schema@{schema}!simpledb\+::plan\+::\+Project\+Plan@{simpledb\+::plan\+::\+Project\+Plan}}
+\subsubsection{\texorpdfstring{schema()}{schema()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} simpledb.\+plan.\+Project\+Plan.\+schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the schema of the projection, which is taken from the field list. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan\+::schema()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/plan/Project\+Plan.\+java\end{DoxyCompactItemize}

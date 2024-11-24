@@ -1,0 +1,120 @@
+\hypertarget{interfacesimpledb_1_1index_1_1Index}{}\section{simpledb.\+index.\+Index Interface Reference}
+\label{interfacesimpledb_1_1index_1_1Index}\index{simpledb.\+index.\+Index@{simpledb.\+index.\+Index}}
+
+
+Inheritance diagram for simpledb.\+index.\+Index\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interfacesimpledb_1_1index_1_1Index_a393ce322b5a7ffee20d8ff85abef7444}{before\+First} (\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} searchkey)
+\item 
+boolean \hyperlink{interfacesimpledb_1_1index_1_1Index_a38b2addb6813fbf1d94e77de2345724c}{next} ()
+\item 
+\hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} \hyperlink{interfacesimpledb_1_1index_1_1Index_aad4ee85740a0f5b3453bdf24e8b82615}{get\+Data\+Rid} ()
+\item 
+void \hyperlink{interfacesimpledb_1_1index_1_1Index_a7e72ba9fe47d6d7631e0ad3feee882d7}{insert} (\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} dataval, \hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} datarid)
+\item 
+void \hyperlink{interfacesimpledb_1_1index_1_1Index_a3bbe4098bf5422023391ce24f2e7df88}{delete} (\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} dataval, \hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} datarid)
+\item 
+void \hyperlink{interfacesimpledb_1_1index_1_1Index_aedde7a12ff7788c1dc00ef9404b4266e}{close} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This interface contains methods to traverse an index. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{interfacesimpledb_1_1index_1_1Index_a393ce322b5a7ffee20d8ff85abef7444}\label{interfacesimpledb_1_1index_1_1Index_a393ce322b5a7ffee20d8ff85abef7444}} 
+\index{simpledb\+::index\+::\+Index@{simpledb\+::index\+::\+Index}!before\+First@{before\+First}}
+\index{before\+First@{before\+First}!simpledb\+::index\+::\+Index@{simpledb\+::index\+::\+Index}}
+\subsubsection{\texorpdfstring{before\+First()}{beforeFirst()}}
+{\footnotesize\ttfamily void simpledb.\+index.\+Index.\+before\+First (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}}]{searchkey }\end{DoxyParamCaption})}
+
+Positions the index before the first record having the specified search key. 
+\begin{DoxyParams}{Parameters}
+{\em searchkey} & the search key value. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_adaca869455d2d631df38e7bc81de2420}{simpledb.\+index.\+btree.\+B\+Tree\+Index}, and \hyperlink{classsimpledb_1_1index_1_1hash_1_1HashIndex_a23b60680c25ec3ba70d92e5fde16f059}{simpledb.\+index.\+hash.\+Hash\+Index}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1index_1_1Index_aedde7a12ff7788c1dc00ef9404b4266e}\label{interfacesimpledb_1_1index_1_1Index_aedde7a12ff7788c1dc00ef9404b4266e}} 
+\index{simpledb\+::index\+::\+Index@{simpledb\+::index\+::\+Index}!close@{close}}
+\index{close@{close}!simpledb\+::index\+::\+Index@{simpledb\+::index\+::\+Index}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void simpledb.\+index.\+Index.\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Closes the index. 
+
+Implemented in \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_a057aed52a768423734720f07bf0db94b}{simpledb.\+index.\+btree.\+B\+Tree\+Index}, and \hyperlink{classsimpledb_1_1index_1_1hash_1_1HashIndex_abc28a52b702d34572280aa10c20f1f43}{simpledb.\+index.\+hash.\+Hash\+Index}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1index_1_1Index_a3bbe4098bf5422023391ce24f2e7df88}\label{interfacesimpledb_1_1index_1_1Index_a3bbe4098bf5422023391ce24f2e7df88}} 
+\index{simpledb\+::index\+::\+Index@{simpledb\+::index\+::\+Index}!delete@{delete}}
+\index{delete@{delete}!simpledb\+::index\+::\+Index@{simpledb\+::index\+::\+Index}}
+\subsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily void simpledb.\+index.\+Index.\+delete (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}}]{dataval,  }\item[{\hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID}}]{datarid }\end{DoxyParamCaption})}
+
+Deletes the index record having the specified dataval and data\+R\+ID values. 
+\begin{DoxyParams}{Parameters}
+{\em dataval} & the dataval of the deleted index record \\
+\hline
+{\em datarid} & the data\+R\+ID of the deleted index record \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_ae7be53ba321674d7300c2c67376a9859}{simpledb.\+index.\+btree.\+B\+Tree\+Index}, and \hyperlink{classsimpledb_1_1index_1_1hash_1_1HashIndex_a76d2d6f98901db61549cfe51a1433d45}{simpledb.\+index.\+hash.\+Hash\+Index}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1index_1_1Index_aad4ee85740a0f5b3453bdf24e8b82615}\label{interfacesimpledb_1_1index_1_1Index_aad4ee85740a0f5b3453bdf24e8b82615}} 
+\index{simpledb\+::index\+::\+Index@{simpledb\+::index\+::\+Index}!get\+Data\+Rid@{get\+Data\+Rid}}
+\index{get\+Data\+Rid@{get\+Data\+Rid}!simpledb\+::index\+::\+Index@{simpledb\+::index\+::\+Index}}
+\subsubsection{\texorpdfstring{get\+Data\+Rid()}{getDataRid()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} simpledb.\+index.\+Index.\+get\+Data\+Rid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the data\+R\+ID value stored in the current index record. \begin{DoxyReturn}{Returns}
+the data\+R\+ID stored in the current index record. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_a842091f8c02f9d3009f634c5c0635b4f}{simpledb.\+index.\+btree.\+B\+Tree\+Index}, and \hyperlink{classsimpledb_1_1index_1_1hash_1_1HashIndex_ae8318b51f79a93009bcf9806aacda405}{simpledb.\+index.\+hash.\+Hash\+Index}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1index_1_1Index_a7e72ba9fe47d6d7631e0ad3feee882d7}\label{interfacesimpledb_1_1index_1_1Index_a7e72ba9fe47d6d7631e0ad3feee882d7}} 
+\index{simpledb\+::index\+::\+Index@{simpledb\+::index\+::\+Index}!insert@{insert}}
+\index{insert@{insert}!simpledb\+::index\+::\+Index@{simpledb\+::index\+::\+Index}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void simpledb.\+index.\+Index.\+insert (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}}]{dataval,  }\item[{\hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID}}]{datarid }\end{DoxyParamCaption})}
+
+Inserts an index record having the specified dataval and data\+R\+ID values. 
+\begin{DoxyParams}{Parameters}
+{\em dataval} & the dataval in the new index record. \\
+\hline
+{\em datarid} & the data\+R\+ID in the new index record. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_a74ac0fcec24483159ab82ac47d7bc790}{simpledb.\+index.\+btree.\+B\+Tree\+Index}, and \hyperlink{classsimpledb_1_1index_1_1hash_1_1HashIndex_a8fd2cc37db3d7b254658fdd4b2814f40}{simpledb.\+index.\+hash.\+Hash\+Index}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1index_1_1Index_a38b2addb6813fbf1d94e77de2345724c}\label{interfacesimpledb_1_1index_1_1Index_a38b2addb6813fbf1d94e77de2345724c}} 
+\index{simpledb\+::index\+::\+Index@{simpledb\+::index\+::\+Index}!next@{next}}
+\index{next@{next}!simpledb\+::index\+::\+Index@{simpledb\+::index\+::\+Index}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily boolean simpledb.\+index.\+Index.\+next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Moves the index to the next record having the search key specified in the before\+First method. Returns false if there are no more such index records. \begin{DoxyReturn}{Returns}
+false if no other index records have the search key. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_aa2629b173455d96fde28353e150da4f0}{simpledb.\+index.\+btree.\+B\+Tree\+Index}, and \hyperlink{classsimpledb_1_1index_1_1hash_1_1HashIndex_a07532e9c86a7d28791f9bed10a27387f}{simpledb.\+index.\+hash.\+Hash\+Index}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/index/Index.\+java\end{DoxyCompactItemize}

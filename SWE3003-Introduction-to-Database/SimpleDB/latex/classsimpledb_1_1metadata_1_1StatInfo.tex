@@ -1,0 +1,75 @@
+\hypertarget{classsimpledb_1_1metadata_1_1StatInfo}{}\section{simpledb.\+metadata.\+Stat\+Info Class Reference}
+\label{classsimpledb_1_1metadata_1_1StatInfo}\index{simpledb.\+metadata.\+Stat\+Info@{simpledb.\+metadata.\+Stat\+Info}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1metadata_1_1StatInfo_a41069c4ee6db6c259d37b3e731bc6456}{Stat\+Info} (int numblocks, int numrecs)
+\item 
+int \hyperlink{classsimpledb_1_1metadata_1_1StatInfo_a7e29f4b50659bef0e6c27afcc69d8e8f}{blocks\+Accessed} ()
+\item 
+int \hyperlink{classsimpledb_1_1metadata_1_1StatInfo_a44040cb918b4c2130605e43e06d7e833}{records\+Output} ()
+\item 
+int \hyperlink{classsimpledb_1_1metadata_1_1StatInfo_a50af6cd74d6166400e5921d982ba8264}{distinct\+Values} (String fldname)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classsimpledb_1_1metadata_1_1StatInfo}{Stat\+Info} object holds three pieces of statistical information about a table\+: the number of blocks, the number of records, and the number of distinct values for each field. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1metadata_1_1StatInfo_a41069c4ee6db6c259d37b3e731bc6456}\label{classsimpledb_1_1metadata_1_1StatInfo_a41069c4ee6db6c259d37b3e731bc6456}} 
+\index{simpledb\+::metadata\+::\+Stat\+Info@{simpledb\+::metadata\+::\+Stat\+Info}!Stat\+Info@{Stat\+Info}}
+\index{Stat\+Info@{Stat\+Info}!simpledb\+::metadata\+::\+Stat\+Info@{simpledb\+::metadata\+::\+Stat\+Info}}
+\subsubsection{\texorpdfstring{Stat\+Info()}{StatInfo()}}
+{\footnotesize\ttfamily simpledb.\+metadata.\+Stat\+Info.\+Stat\+Info (\begin{DoxyParamCaption}\item[{int}]{numblocks,  }\item[{int}]{numrecs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a \hyperlink{classsimpledb_1_1metadata_1_1StatInfo}{Stat\+Info} object. Note that the number of distinct values is not passed into the constructor. The object fakes this value. 
+\begin{DoxyParams}{Parameters}
+{\em numblocks} & the number of blocks in the table \\
+\hline
+{\em numrecs} & the number of records in the table \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1metadata_1_1StatInfo_a7e29f4b50659bef0e6c27afcc69d8e8f}\label{classsimpledb_1_1metadata_1_1StatInfo_a7e29f4b50659bef0e6c27afcc69d8e8f}} 
+\index{simpledb\+::metadata\+::\+Stat\+Info@{simpledb\+::metadata\+::\+Stat\+Info}!blocks\+Accessed@{blocks\+Accessed}}
+\index{blocks\+Accessed@{blocks\+Accessed}!simpledb\+::metadata\+::\+Stat\+Info@{simpledb\+::metadata\+::\+Stat\+Info}}
+\subsubsection{\texorpdfstring{blocks\+Accessed()}{blocksAccessed()}}
+{\footnotesize\ttfamily int simpledb.\+metadata.\+Stat\+Info.\+blocks\+Accessed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the estimated number of blocks in the table. \begin{DoxyReturn}{Returns}
+the estimated number of blocks in the table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1metadata_1_1StatInfo_a50af6cd74d6166400e5921d982ba8264}\label{classsimpledb_1_1metadata_1_1StatInfo_a50af6cd74d6166400e5921d982ba8264}} 
+\index{simpledb\+::metadata\+::\+Stat\+Info@{simpledb\+::metadata\+::\+Stat\+Info}!distinct\+Values@{distinct\+Values}}
+\index{distinct\+Values@{distinct\+Values}!simpledb\+::metadata\+::\+Stat\+Info@{simpledb\+::metadata\+::\+Stat\+Info}}
+\subsubsection{\texorpdfstring{distinct\+Values()}{distinctValues()}}
+{\footnotesize\ttfamily int simpledb.\+metadata.\+Stat\+Info.\+distinct\+Values (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the estimated number of distinct values for the specified field. This estimate is a complete guess, because doing something reasonable is beyond the scope of this system. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a guess as to the number of distinct field values 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1metadata_1_1StatInfo_a44040cb918b4c2130605e43e06d7e833}\label{classsimpledb_1_1metadata_1_1StatInfo_a44040cb918b4c2130605e43e06d7e833}} 
+\index{simpledb\+::metadata\+::\+Stat\+Info@{simpledb\+::metadata\+::\+Stat\+Info}!records\+Output@{records\+Output}}
+\index{records\+Output@{records\+Output}!simpledb\+::metadata\+::\+Stat\+Info@{simpledb\+::metadata\+::\+Stat\+Info}}
+\subsubsection{\texorpdfstring{records\+Output()}{recordsOutput()}}
+{\footnotesize\ttfamily int simpledb.\+metadata.\+Stat\+Info.\+records\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the estimated number of records in the table. \begin{DoxyReturn}{Returns}
+the estimated number of records in the table 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/metadata/Stat\+Info.\+java\end{DoxyCompactItemize}

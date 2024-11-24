@@ -1,0 +1,154 @@
+\hypertarget{classsimpledb_1_1multibuffer_1_1ChunkScan}{}\section{simpledb.\+multibuffer.\+Chunk\+Scan Class Reference}
+\label{classsimpledb_1_1multibuffer_1_1ChunkScan}\index{simpledb.\+multibuffer.\+Chunk\+Scan@{simpledb.\+multibuffer.\+Chunk\+Scan}}
+
+
+Inheritance diagram for simpledb.\+multibuffer.\+Chunk\+Scan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+multibuffer.\+Chunk\+Scan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1multibuffer_1_1ChunkScan_a8f4dd101347e36183b0d69e6e20056dd}{Chunk\+Scan} (\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx, String filename, \hyperlink{classsimpledb_1_1record_1_1Layout}{Layout} layout, int startbnum, int endbnum)
+\item 
+void \hyperlink{classsimpledb_1_1multibuffer_1_1ChunkScan_ac05118042ff2f71f455a3fc4cd5288d0}{close} ()
+\item 
+void \hyperlink{classsimpledb_1_1multibuffer_1_1ChunkScan_acd915cad8a1a21a0838eab8c4ee47935}{before\+First} ()
+\item 
+boolean \hyperlink{classsimpledb_1_1multibuffer_1_1ChunkScan_a67b28d9b880f45fe94257b483cc3093a}{next} ()
+\item 
+int \hyperlink{classsimpledb_1_1multibuffer_1_1ChunkScan_a60fb6e3568149c5284b80e339d3e3ffb}{get\+Int} (String fldname)
+\item 
+String \hyperlink{classsimpledb_1_1multibuffer_1_1ChunkScan_aa66edd9026c2c2f92015d3d6c2b9c932}{get\+String} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{classsimpledb_1_1multibuffer_1_1ChunkScan_a8c5c7202add0289c7fc15f036332db96}{get\+Val} (String fldname)
+\item 
+boolean \hyperlink{classsimpledb_1_1multibuffer_1_1ChunkScan_ab63331aac633c7b12a5aa0401a77d2b2}{has\+Field} (String fldname)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The class for the {\itshape chunk} operator. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1ChunkScan_a8f4dd101347e36183b0d69e6e20056dd}\label{classsimpledb_1_1multibuffer_1_1ChunkScan_a8f4dd101347e36183b0d69e6e20056dd}} 
+\index{simpledb\+::multibuffer\+::\+Chunk\+Scan@{simpledb\+::multibuffer\+::\+Chunk\+Scan}!Chunk\+Scan@{Chunk\+Scan}}
+\index{Chunk\+Scan@{Chunk\+Scan}!simpledb\+::multibuffer\+::\+Chunk\+Scan@{simpledb\+::multibuffer\+::\+Chunk\+Scan}}
+\subsubsection{\texorpdfstring{Chunk\+Scan()}{ChunkScan()}}
+{\footnotesize\ttfamily simpledb.\+multibuffer.\+Chunk\+Scan.\+Chunk\+Scan (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx,  }\item[{String}]{filename,  }\item[{\hyperlink{classsimpledb_1_1record_1_1Layout}{Layout}}]{layout,  }\item[{int}]{startbnum,  }\item[{int}]{endbnum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a chunk consisting of the specified pages. 
+\begin{DoxyParams}{Parameters}
+{\em layout} & the metadata for the chunked table \\
+\hline
+{\em startbnum} & the starting block number \\
+\hline
+{\em endbnum} & the ending block number \\
+\hline
+{\em tx} & the current transaction \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1ChunkScan_acd915cad8a1a21a0838eab8c4ee47935}\label{classsimpledb_1_1multibuffer_1_1ChunkScan_acd915cad8a1a21a0838eab8c4ee47935}} 
+\index{simpledb\+::multibuffer\+::\+Chunk\+Scan@{simpledb\+::multibuffer\+::\+Chunk\+Scan}!before\+First@{before\+First}}
+\index{before\+First@{before\+First}!simpledb\+::multibuffer\+::\+Chunk\+Scan@{simpledb\+::multibuffer\+::\+Chunk\+Scan}}
+\subsubsection{\texorpdfstring{before\+First()}{beforeFirst()}}
+{\footnotesize\ttfamily void simpledb.\+multibuffer.\+Chunk\+Scan.\+before\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a2eceb634b69da9bf1269a4355808cc6b}{simpledb.\+query.\+Scan\+::before\+First()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2eceb634b69da9bf1269a4355808cc6b}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1ChunkScan_ac05118042ff2f71f455a3fc4cd5288d0}\label{classsimpledb_1_1multibuffer_1_1ChunkScan_ac05118042ff2f71f455a3fc4cd5288d0}} 
+\index{simpledb\+::multibuffer\+::\+Chunk\+Scan@{simpledb\+::multibuffer\+::\+Chunk\+Scan}!close@{close}}
+\index{close@{close}!simpledb\+::multibuffer\+::\+Chunk\+Scan@{simpledb\+::multibuffer\+::\+Chunk\+Scan}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void simpledb.\+multibuffer.\+Chunk\+Scan.\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a260f40a8c82edaa00398bea9d698933c}{simpledb.\+query.\+Scan\+::close()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a260f40a8c82edaa00398bea9d698933c}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1ChunkScan_a60fb6e3568149c5284b80e339d3e3ffb}\label{classsimpledb_1_1multibuffer_1_1ChunkScan_a60fb6e3568149c5284b80e339d3e3ffb}} 
+\index{simpledb\+::multibuffer\+::\+Chunk\+Scan@{simpledb\+::multibuffer\+::\+Chunk\+Scan}!get\+Int@{get\+Int}}
+\index{get\+Int@{get\+Int}!simpledb\+::multibuffer\+::\+Chunk\+Scan@{simpledb\+::multibuffer\+::\+Chunk\+Scan}}
+\subsubsection{\texorpdfstring{get\+Int()}{getInt()}}
+{\footnotesize\ttfamily int simpledb.\+multibuffer.\+Chunk\+Scan.\+get\+Int (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a2e064555e16240115167b5d42d2b3d19}{simpledb.\+query.\+Scan\+::get\+Int}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2e064555e16240115167b5d42d2b3d19}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1ChunkScan_aa66edd9026c2c2f92015d3d6c2b9c932}\label{classsimpledb_1_1multibuffer_1_1ChunkScan_aa66edd9026c2c2f92015d3d6c2b9c932}} 
+\index{simpledb\+::multibuffer\+::\+Chunk\+Scan@{simpledb\+::multibuffer\+::\+Chunk\+Scan}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!simpledb\+::multibuffer\+::\+Chunk\+Scan@{simpledb\+::multibuffer\+::\+Chunk\+Scan}}
+\subsubsection{\texorpdfstring{get\+String()}{getString()}}
+{\footnotesize\ttfamily String simpledb.\+multibuffer.\+Chunk\+Scan.\+get\+String (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a922e219fee53ecfa6163525f9e3ef222}{simpledb.\+query.\+Scan\+::get\+String}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a922e219fee53ecfa6163525f9e3ef222}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1ChunkScan_a8c5c7202add0289c7fc15f036332db96}\label{classsimpledb_1_1multibuffer_1_1ChunkScan_a8c5c7202add0289c7fc15f036332db96}} 
+\index{simpledb\+::multibuffer\+::\+Chunk\+Scan@{simpledb\+::multibuffer\+::\+Chunk\+Scan}!get\+Val@{get\+Val}}
+\index{get\+Val@{get\+Val}!simpledb\+::multibuffer\+::\+Chunk\+Scan@{simpledb\+::multibuffer\+::\+Chunk\+Scan}}
+\subsubsection{\texorpdfstring{get\+Val()}{getVal()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+multibuffer.\+Chunk\+Scan.\+get\+Val (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan\+::get\+Val}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1ChunkScan_ab63331aac633c7b12a5aa0401a77d2b2}\label{classsimpledb_1_1multibuffer_1_1ChunkScan_ab63331aac633c7b12a5aa0401a77d2b2}} 
+\index{simpledb\+::multibuffer\+::\+Chunk\+Scan@{simpledb\+::multibuffer\+::\+Chunk\+Scan}!has\+Field@{has\+Field}}
+\index{has\+Field@{has\+Field}!simpledb\+::multibuffer\+::\+Chunk\+Scan@{simpledb\+::multibuffer\+::\+Chunk\+Scan}}
+\subsubsection{\texorpdfstring{has\+Field()}{hasField()}}
+{\footnotesize\ttfamily boolean simpledb.\+multibuffer.\+Chunk\+Scan.\+has\+Field (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a8f4ccf13eed0bed983c928e9b998fe5c}{simpledb.\+query.\+Scan\+::has\+Field}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a8f4ccf13eed0bed983c928e9b998fe5c}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1ChunkScan_a67b28d9b880f45fe94257b483cc3093a}\label{classsimpledb_1_1multibuffer_1_1ChunkScan_a67b28d9b880f45fe94257b483cc3093a}} 
+\index{simpledb\+::multibuffer\+::\+Chunk\+Scan@{simpledb\+::multibuffer\+::\+Chunk\+Scan}!next@{next}}
+\index{next@{next}!simpledb\+::multibuffer\+::\+Chunk\+Scan@{simpledb\+::multibuffer\+::\+Chunk\+Scan}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily boolean simpledb.\+multibuffer.\+Chunk\+Scan.\+next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Moves to the next record in the current block of the chunk. If there are no more records, then make the next block be current. If there are no more blocks in the chunk, return false. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}{simpledb.\+query.\+Scan\+::next()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}{simpledb.\+query.\+Scan}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/multibuffer/Chunk\+Scan.\+java\end{DoxyCompactItemize}

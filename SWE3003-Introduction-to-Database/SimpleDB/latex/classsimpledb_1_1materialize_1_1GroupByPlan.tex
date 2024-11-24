@@ -1,0 +1,124 @@
+\hypertarget{classsimpledb_1_1materialize_1_1GroupByPlan}{}\section{simpledb.\+materialize.\+Group\+By\+Plan Class Reference}
+\label{classsimpledb_1_1materialize_1_1GroupByPlan}\index{simpledb.\+materialize.\+Group\+By\+Plan@{simpledb.\+materialize.\+Group\+By\+Plan}}
+
+
+Inheritance diagram for simpledb.\+materialize.\+Group\+By\+Plan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+materialize.\+Group\+By\+Plan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1materialize_1_1GroupByPlan_a5290c34a04ce9ae4758742b9a20dfd2d}{Group\+By\+Plan} (\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx, \hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} p, List$<$ String $>$ groupfields, List$<$ \hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn}{Aggregation\+Fn} $>$ aggfns)
+\item 
+\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} \hyperlink{classsimpledb_1_1materialize_1_1GroupByPlan_a2f4aa5e9b356af297091a27ff2b97343}{open} ()
+\item 
+int \hyperlink{classsimpledb_1_1materialize_1_1GroupByPlan_a741eec5aa2c6dc59f1814a4268a3af46}{blocks\+Accessed} ()
+\item 
+int \hyperlink{classsimpledb_1_1materialize_1_1GroupByPlan_aac232f69ae5b322754b34f83c4813883}{records\+Output} ()
+\item 
+int \hyperlink{classsimpledb_1_1materialize_1_1GroupByPlan_ac7d2a7c034341a5c032a1247a297ec1e}{distinct\+Values} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} \hyperlink{classsimpledb_1_1materialize_1_1GroupByPlan_a2060788080c03855f35d72a1742e6ec6}{schema} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Plan class for the {\itshape groupby} operator. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1GroupByPlan_a5290c34a04ce9ae4758742b9a20dfd2d}\label{classsimpledb_1_1materialize_1_1GroupByPlan_a5290c34a04ce9ae4758742b9a20dfd2d}} 
+\index{simpledb\+::materialize\+::\+Group\+By\+Plan@{simpledb\+::materialize\+::\+Group\+By\+Plan}!Group\+By\+Plan@{Group\+By\+Plan}}
+\index{Group\+By\+Plan@{Group\+By\+Plan}!simpledb\+::materialize\+::\+Group\+By\+Plan@{simpledb\+::materialize\+::\+Group\+By\+Plan}}
+\subsubsection{\texorpdfstring{Group\+By\+Plan()}{GroupByPlan()}}
+{\footnotesize\ttfamily simpledb.\+materialize.\+Group\+By\+Plan.\+Group\+By\+Plan (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx,  }\item[{\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan}}]{p,  }\item[{List$<$ String $>$}]{groupfields,  }\item[{List$<$ \hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn}{Aggregation\+Fn} $>$}]{aggfns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a groupby plan for the underlying query. The grouping is determined by the specified collection of group fields, and the aggregation is computed by the specified collection of aggregation functions. 
+\begin{DoxyParams}{Parameters}
+{\em p} & a plan for the underlying query \\
+\hline
+{\em groupfields} & the group fields \\
+\hline
+{\em aggfns} & the aggregation functions \\
+\hline
+{\em tx} & the calling transaction \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1GroupByPlan_a741eec5aa2c6dc59f1814a4268a3af46}\label{classsimpledb_1_1materialize_1_1GroupByPlan_a741eec5aa2c6dc59f1814a4268a3af46}} 
+\index{simpledb\+::materialize\+::\+Group\+By\+Plan@{simpledb\+::materialize\+::\+Group\+By\+Plan}!blocks\+Accessed@{blocks\+Accessed}}
+\index{blocks\+Accessed@{blocks\+Accessed}!simpledb\+::materialize\+::\+Group\+By\+Plan@{simpledb\+::materialize\+::\+Group\+By\+Plan}}
+\subsubsection{\texorpdfstring{blocks\+Accessed()}{blocksAccessed()}}
+{\footnotesize\ttfamily int simpledb.\+materialize.\+Group\+By\+Plan.\+blocks\+Accessed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of blocks required to compute the aggregation, which is one pass through the sorted table. It does {\itshape not} include the one-\/time cost of materializing and sorting the records. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan\+::blocks\+Accessed()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1GroupByPlan_ac7d2a7c034341a5c032a1247a297ec1e}\label{classsimpledb_1_1materialize_1_1GroupByPlan_ac7d2a7c034341a5c032a1247a297ec1e}} 
+\index{simpledb\+::materialize\+::\+Group\+By\+Plan@{simpledb\+::materialize\+::\+Group\+By\+Plan}!distinct\+Values@{distinct\+Values}}
+\index{distinct\+Values@{distinct\+Values}!simpledb\+::materialize\+::\+Group\+By\+Plan@{simpledb\+::materialize\+::\+Group\+By\+Plan}}
+\subsubsection{\texorpdfstring{distinct\+Values()}{distinctValues()}}
+{\footnotesize\ttfamily int simpledb.\+materialize.\+Group\+By\+Plan.\+distinct\+Values (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of distinct values for the specified field. If the field is a grouping field, then the number of distinct values is the same as in the underlying query. If the field is an aggregate field, then we assume that all values are distinct. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan\+::distinct\+Values}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1GroupByPlan_a2f4aa5e9b356af297091a27ff2b97343}\label{classsimpledb_1_1materialize_1_1GroupByPlan_a2f4aa5e9b356af297091a27ff2b97343}} 
+\index{simpledb\+::materialize\+::\+Group\+By\+Plan@{simpledb\+::materialize\+::\+Group\+By\+Plan}!open@{open}}
+\index{open@{open}!simpledb\+::materialize\+::\+Group\+By\+Plan@{simpledb\+::materialize\+::\+Group\+By\+Plan}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} simpledb.\+materialize.\+Group\+By\+Plan.\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method opens a sort plan for the specified plan. The sort plan ensures that the underlying records will be appropriately grouped. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan\+::open()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1GroupByPlan_aac232f69ae5b322754b34f83c4813883}\label{classsimpledb_1_1materialize_1_1GroupByPlan_aac232f69ae5b322754b34f83c4813883}} 
+\index{simpledb\+::materialize\+::\+Group\+By\+Plan@{simpledb\+::materialize\+::\+Group\+By\+Plan}!records\+Output@{records\+Output}}
+\index{records\+Output@{records\+Output}!simpledb\+::materialize\+::\+Group\+By\+Plan@{simpledb\+::materialize\+::\+Group\+By\+Plan}}
+\subsubsection{\texorpdfstring{records\+Output()}{recordsOutput()}}
+{\footnotesize\ttfamily int simpledb.\+materialize.\+Group\+By\+Plan.\+records\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of groups. Assuming equal distribution, this is the product of the distinct values for each grouping field. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan\+::records\+Output()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1GroupByPlan_a2060788080c03855f35d72a1742e6ec6}\label{classsimpledb_1_1materialize_1_1GroupByPlan_a2060788080c03855f35d72a1742e6ec6}} 
+\index{simpledb\+::materialize\+::\+Group\+By\+Plan@{simpledb\+::materialize\+::\+Group\+By\+Plan}!schema@{schema}}
+\index{schema@{schema}!simpledb\+::materialize\+::\+Group\+By\+Plan@{simpledb\+::materialize\+::\+Group\+By\+Plan}}
+\subsubsection{\texorpdfstring{schema()}{schema()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} simpledb.\+materialize.\+Group\+By\+Plan.\+schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the schema of the output table. The schema consists of the group fields, plus one field for each aggregation function. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan\+::schema()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/materialize/Group\+By\+Plan.\+java\end{DoxyCompactItemize}

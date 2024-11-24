@@ -1,0 +1,150 @@
+\hypertarget{classsimpledb_1_1query_1_1ProductScan}{}\section{simpledb.\+query.\+Product\+Scan Class Reference}
+\label{classsimpledb_1_1query_1_1ProductScan}\index{simpledb.\+query.\+Product\+Scan@{simpledb.\+query.\+Product\+Scan}}
+
+
+Inheritance diagram for simpledb.\+query.\+Product\+Scan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+query.\+Product\+Scan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1query_1_1ProductScan_adfac2583e7ed22b4b1e31d6d85c6be38}{Product\+Scan} (\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} s1, \hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} s2)
+\item 
+void \hyperlink{classsimpledb_1_1query_1_1ProductScan_a2b5520d561ce26d401b4744f637a4d76}{before\+First} ()
+\item 
+boolean \hyperlink{classsimpledb_1_1query_1_1ProductScan_a5c467cd753d2b088b96b649c7b8cf420}{next} ()
+\item 
+int \hyperlink{classsimpledb_1_1query_1_1ProductScan_a7b94328d04d2d0bf10f460d6abfc9299}{get\+Int} (String fldname)
+\item 
+String \hyperlink{classsimpledb_1_1query_1_1ProductScan_a2fda3abb7dc55d443791b8e5664ef1e3}{get\+String} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{classsimpledb_1_1query_1_1ProductScan_ade690f4d248b8d489e9565bb73e0cf59}{get\+Val} (String fldname)
+\item 
+boolean \hyperlink{classsimpledb_1_1query_1_1ProductScan_a06c138c93e98cede58b6421c93aa451d}{has\+Field} (String fldname)
+\item 
+void \hyperlink{classsimpledb_1_1query_1_1ProductScan_a58ee47fd6a8b397c3ad386fd7f3d257e}{close} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The scan class corresponding to the {\itshape product} relational algebra operator. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1ProductScan_adfac2583e7ed22b4b1e31d6d85c6be38}\label{classsimpledb_1_1query_1_1ProductScan_adfac2583e7ed22b4b1e31d6d85c6be38}} 
+\index{simpledb\+::query\+::\+Product\+Scan@{simpledb\+::query\+::\+Product\+Scan}!Product\+Scan@{Product\+Scan}}
+\index{Product\+Scan@{Product\+Scan}!simpledb\+::query\+::\+Product\+Scan@{simpledb\+::query\+::\+Product\+Scan}}
+\subsubsection{\texorpdfstring{Product\+Scan()}{ProductScan()}}
+{\footnotesize\ttfamily simpledb.\+query.\+Product\+Scan.\+Product\+Scan (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan}}]{s1,  }\item[{\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan}}]{s2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a product scan having the two underlying scans. 
+\begin{DoxyParams}{Parameters}
+{\em s1} & the L\+HS scan \\
+\hline
+{\em s2} & the R\+HS scan \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1ProductScan_a2b5520d561ce26d401b4744f637a4d76}\label{classsimpledb_1_1query_1_1ProductScan_a2b5520d561ce26d401b4744f637a4d76}} 
+\index{simpledb\+::query\+::\+Product\+Scan@{simpledb\+::query\+::\+Product\+Scan}!before\+First@{before\+First}}
+\index{before\+First@{before\+First}!simpledb\+::query\+::\+Product\+Scan@{simpledb\+::query\+::\+Product\+Scan}}
+\subsubsection{\texorpdfstring{before\+First()}{beforeFirst()}}
+{\footnotesize\ttfamily void simpledb.\+query.\+Product\+Scan.\+before\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Position the scan before its first record. In particular, the L\+HS scan is positioned at its first record, and the R\+HS scan is positioned before its first record. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a2eceb634b69da9bf1269a4355808cc6b}{simpledb.\+query.\+Scan\+::before\+First()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2eceb634b69da9bf1269a4355808cc6b}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1ProductScan_a58ee47fd6a8b397c3ad386fd7f3d257e}\label{classsimpledb_1_1query_1_1ProductScan_a58ee47fd6a8b397c3ad386fd7f3d257e}} 
+\index{simpledb\+::query\+::\+Product\+Scan@{simpledb\+::query\+::\+Product\+Scan}!close@{close}}
+\index{close@{close}!simpledb\+::query\+::\+Product\+Scan@{simpledb\+::query\+::\+Product\+Scan}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void simpledb.\+query.\+Product\+Scan.\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Close both underlying scans. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a260f40a8c82edaa00398bea9d698933c}{simpledb.\+query.\+Scan\+::close()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a260f40a8c82edaa00398bea9d698933c}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1ProductScan_a7b94328d04d2d0bf10f460d6abfc9299}\label{classsimpledb_1_1query_1_1ProductScan_a7b94328d04d2d0bf10f460d6abfc9299}} 
+\index{simpledb\+::query\+::\+Product\+Scan@{simpledb\+::query\+::\+Product\+Scan}!get\+Int@{get\+Int}}
+\index{get\+Int@{get\+Int}!simpledb\+::query\+::\+Product\+Scan@{simpledb\+::query\+::\+Product\+Scan}}
+\subsubsection{\texorpdfstring{get\+Int()}{getInt()}}
+{\footnotesize\ttfamily int simpledb.\+query.\+Product\+Scan.\+get\+Int (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the integer value of the specified field. The value is obtained from whichever scan contains the field. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a2e064555e16240115167b5d42d2b3d19}{simpledb.\+query.\+Scan\+::get\+Int}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2e064555e16240115167b5d42d2b3d19}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1ProductScan_a2fda3abb7dc55d443791b8e5664ef1e3}\label{classsimpledb_1_1query_1_1ProductScan_a2fda3abb7dc55d443791b8e5664ef1e3}} 
+\index{simpledb\+::query\+::\+Product\+Scan@{simpledb\+::query\+::\+Product\+Scan}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!simpledb\+::query\+::\+Product\+Scan@{simpledb\+::query\+::\+Product\+Scan}}
+\subsubsection{\texorpdfstring{get\+String()}{getString()}}
+{\footnotesize\ttfamily String simpledb.\+query.\+Product\+Scan.\+get\+String (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the string value of the specified field. The value is obtained from whichever scan contains the field. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a922e219fee53ecfa6163525f9e3ef222}{simpledb.\+query.\+Scan\+::get\+String}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a922e219fee53ecfa6163525f9e3ef222}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1ProductScan_ade690f4d248b8d489e9565bb73e0cf59}\label{classsimpledb_1_1query_1_1ProductScan_ade690f4d248b8d489e9565bb73e0cf59}} 
+\index{simpledb\+::query\+::\+Product\+Scan@{simpledb\+::query\+::\+Product\+Scan}!get\+Val@{get\+Val}}
+\index{get\+Val@{get\+Val}!simpledb\+::query\+::\+Product\+Scan@{simpledb\+::query\+::\+Product\+Scan}}
+\subsubsection{\texorpdfstring{get\+Val()}{getVal()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+query.\+Product\+Scan.\+get\+Val (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the value of the specified field. The value is obtained from whichever scan contains the field. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan\+::get\+Val}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1ProductScan_a06c138c93e98cede58b6421c93aa451d}\label{classsimpledb_1_1query_1_1ProductScan_a06c138c93e98cede58b6421c93aa451d}} 
+\index{simpledb\+::query\+::\+Product\+Scan@{simpledb\+::query\+::\+Product\+Scan}!has\+Field@{has\+Field}}
+\index{has\+Field@{has\+Field}!simpledb\+::query\+::\+Product\+Scan@{simpledb\+::query\+::\+Product\+Scan}}
+\subsubsection{\texorpdfstring{has\+Field()}{hasField()}}
+{\footnotesize\ttfamily boolean simpledb.\+query.\+Product\+Scan.\+has\+Field (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns true if the specified field is in either of the underlying scans. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a8f4ccf13eed0bed983c928e9b998fe5c}{simpledb.\+query.\+Scan\+::has\+Field}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a8f4ccf13eed0bed983c928e9b998fe5c}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1ProductScan_a5c467cd753d2b088b96b649c7b8cf420}\label{classsimpledb_1_1query_1_1ProductScan_a5c467cd753d2b088b96b649c7b8cf420}} 
+\index{simpledb\+::query\+::\+Product\+Scan@{simpledb\+::query\+::\+Product\+Scan}!next@{next}}
+\index{next@{next}!simpledb\+::query\+::\+Product\+Scan@{simpledb\+::query\+::\+Product\+Scan}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily boolean simpledb.\+query.\+Product\+Scan.\+next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Move the scan to the next record. The method moves to the next R\+HS record, if possible. Otherwise, it moves to the next L\+HS record and the first R\+HS record. If there are no more L\+HS records, the method returns false. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}{simpledb.\+query.\+Scan\+::next()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}{simpledb.\+query.\+Scan}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/query/Product\+Scan.\+java\end{DoxyCompactItemize}

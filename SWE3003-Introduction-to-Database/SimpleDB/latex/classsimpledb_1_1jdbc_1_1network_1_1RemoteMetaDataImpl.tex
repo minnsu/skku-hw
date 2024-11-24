@@ -1,0 +1,108 @@
+\hypertarget{classsimpledb_1_1jdbc_1_1network_1_1RemoteMetaDataImpl}{}\section{simpledb.\+jdbc.\+network.\+Remote\+Meta\+Data\+Impl Class Reference}
+\label{classsimpledb_1_1jdbc_1_1network_1_1RemoteMetaDataImpl}\index{simpledb.\+jdbc.\+network.\+Remote\+Meta\+Data\+Impl@{simpledb.\+jdbc.\+network.\+Remote\+Meta\+Data\+Impl}}
+
+
+Inheritance diagram for simpledb.\+jdbc.\+network.\+Remote\+Meta\+Data\+Impl\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+jdbc.\+network.\+Remote\+Meta\+Data\+Impl\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1jdbc_1_1network_1_1RemoteMetaDataImpl_a552ef2129f2c4be5a963d12a4db6fdb4}{Remote\+Meta\+Data\+Impl} (\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} sch)  throws Remote\+Exception 
+\item 
+int \hyperlink{classsimpledb_1_1jdbc_1_1network_1_1RemoteMetaDataImpl_ada92f0f38b9379024a59bcf50ea3c6c4}{get\+Column\+Count} ()  throws Remote\+Exception 
+\item 
+String \hyperlink{classsimpledb_1_1jdbc_1_1network_1_1RemoteMetaDataImpl_a94a385bd9190b10c3a865f17a53978d6}{get\+Column\+Name} (int column)  throws Remote\+Exception 
+\item 
+int \hyperlink{classsimpledb_1_1jdbc_1_1network_1_1RemoteMetaDataImpl_a9b478868603ba76bdb7ef16f7c483236}{get\+Column\+Type} (int column)  throws Remote\+Exception 
+\item 
+int \hyperlink{classsimpledb_1_1jdbc_1_1network_1_1RemoteMetaDataImpl_a0706aa74aa84aa1823062b6c7375d6c3}{get\+Column\+Display\+Size} (int column)  throws Remote\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The R\+MI server-\/side implementation of \hyperlink{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteMetaData}{Remote\+Meta\+Data}. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1network_1_1RemoteMetaDataImpl_a552ef2129f2c4be5a963d12a4db6fdb4}\label{classsimpledb_1_1jdbc_1_1network_1_1RemoteMetaDataImpl_a552ef2129f2c4be5a963d12a4db6fdb4}} 
+\index{simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl@{simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl}!Remote\+Meta\+Data\+Impl@{Remote\+Meta\+Data\+Impl}}
+\index{Remote\+Meta\+Data\+Impl@{Remote\+Meta\+Data\+Impl}!simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl@{simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl}}
+\subsubsection{\texorpdfstring{Remote\+Meta\+Data\+Impl()}{RemoteMetaDataImpl()}}
+{\footnotesize\ttfamily simpledb.\+jdbc.\+network.\+Remote\+Meta\+Data\+Impl.\+Remote\+Meta\+Data\+Impl (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema}}]{sch }\end{DoxyParamCaption}) throws Remote\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a metadata object that wraps the specified schema. The method also creates a list to hold the schema\textquotesingle{}s collection of field names, so that the fields can be accessed by position. 
+\begin{DoxyParams}{Parameters}
+{\em sch} & the schema \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Remote\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1network_1_1RemoteMetaDataImpl_ada92f0f38b9379024a59bcf50ea3c6c4}\label{classsimpledb_1_1jdbc_1_1network_1_1RemoteMetaDataImpl_ada92f0f38b9379024a59bcf50ea3c6c4}} 
+\index{simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl@{simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl}!get\+Column\+Count@{get\+Column\+Count}}
+\index{get\+Column\+Count@{get\+Column\+Count}!simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl@{simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl}}
+\subsubsection{\texorpdfstring{get\+Column\+Count()}{getColumnCount()}}
+{\footnotesize\ttfamily int simpledb.\+jdbc.\+network.\+Remote\+Meta\+Data\+Impl.\+get\+Column\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Remote\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the size of the field list. \begin{DoxySeeAlso}{See also}
+simpledb.\+jdbc.\+network.\+Remote\+Meta\+Data\+::get\+Column\+Count() 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteMetaData}{simpledb.\+jdbc.\+network.\+Remote\+Meta\+Data}.
+
+\mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1network_1_1RemoteMetaDataImpl_a0706aa74aa84aa1823062b6c7375d6c3}\label{classsimpledb_1_1jdbc_1_1network_1_1RemoteMetaDataImpl_a0706aa74aa84aa1823062b6c7375d6c3}} 
+\index{simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl@{simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl}!get\+Column\+Display\+Size@{get\+Column\+Display\+Size}}
+\index{get\+Column\+Display\+Size@{get\+Column\+Display\+Size}!simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl@{simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl}}
+\subsubsection{\texorpdfstring{get\+Column\+Display\+Size()}{getColumnDisplaySize()}}
+{\footnotesize\ttfamily int simpledb.\+jdbc.\+network.\+Remote\+Meta\+Data\+Impl.\+get\+Column\+Display\+Size (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption}) throws Remote\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of characters required to display the specified column. For a string-\/type field, the method simply looks up the field\textquotesingle{}s length in the schema and returns that. For an int-\/type field, the method needs to decide how large integers can be. Here, the method arbitrarily chooses 6 characters, which means that integers over 999,999 will probably get displayed improperly. \begin{DoxySeeAlso}{See also}
+simpledb.\+jdbc.\+network.\+Remote\+Meta\+Data\+::get\+Column\+Display\+Size(int) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteMetaData}{simpledb.\+jdbc.\+network.\+Remote\+Meta\+Data}.
+
+\mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1network_1_1RemoteMetaDataImpl_a94a385bd9190b10c3a865f17a53978d6}\label{classsimpledb_1_1jdbc_1_1network_1_1RemoteMetaDataImpl_a94a385bd9190b10c3a865f17a53978d6}} 
+\index{simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl@{simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl}!get\+Column\+Name@{get\+Column\+Name}}
+\index{get\+Column\+Name@{get\+Column\+Name}!simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl@{simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl}}
+\subsubsection{\texorpdfstring{get\+Column\+Name()}{getColumnName()}}
+{\footnotesize\ttfamily String simpledb.\+jdbc.\+network.\+Remote\+Meta\+Data\+Impl.\+get\+Column\+Name (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption}) throws Remote\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the field name for the specified column number. In J\+D\+BC, column numbers start with 1, so the field is taken from position (column-\/1) in the list. \begin{DoxySeeAlso}{See also}
+simpledb.\+jdbc.\+network.\+Remote\+Meta\+Data\+::get\+Column\+Name(int) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteMetaData}{simpledb.\+jdbc.\+network.\+Remote\+Meta\+Data}.
+
+\mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1network_1_1RemoteMetaDataImpl_a9b478868603ba76bdb7ef16f7c483236}\label{classsimpledb_1_1jdbc_1_1network_1_1RemoteMetaDataImpl_a9b478868603ba76bdb7ef16f7c483236}} 
+\index{simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl@{simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl}!get\+Column\+Type@{get\+Column\+Type}}
+\index{get\+Column\+Type@{get\+Column\+Type}!simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl@{simpledb\+::jdbc\+::network\+::\+Remote\+Meta\+Data\+Impl}}
+\subsubsection{\texorpdfstring{get\+Column\+Type()}{getColumnType()}}
+{\footnotesize\ttfamily int simpledb.\+jdbc.\+network.\+Remote\+Meta\+Data\+Impl.\+get\+Column\+Type (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption}) throws Remote\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the type of the specified column. The method first finds the name of the field in that column, and then looks up its type in the schema. \begin{DoxySeeAlso}{See also}
+simpledb.\+jdbc.\+network.\+Remote\+Meta\+Data\+::get\+Column\+Type(int) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteMetaData}{simpledb.\+jdbc.\+network.\+Remote\+Meta\+Data}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/jdbc/network/Remote\+Meta\+Data\+Impl.\+java\end{DoxyCompactItemize}

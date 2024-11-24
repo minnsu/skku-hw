@@ -1,0 +1,124 @@
+\hypertarget{classsimpledb_1_1plan_1_1ProductPlan}{}\section{simpledb.\+plan.\+Product\+Plan Class Reference}
+\label{classsimpledb_1_1plan_1_1ProductPlan}\index{simpledb.\+plan.\+Product\+Plan@{simpledb.\+plan.\+Product\+Plan}}
+
+
+Inheritance diagram for simpledb.\+plan.\+Product\+Plan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+plan.\+Product\+Plan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1plan_1_1ProductPlan_a1f6d8e3f0afa2edd6ea6a29997897041}{Product\+Plan} (\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} p1, \hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} p2)
+\item 
+\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} \hyperlink{classsimpledb_1_1plan_1_1ProductPlan_a42d2c091a1b387611af9e960783c0931}{open} ()
+\item 
+int \hyperlink{classsimpledb_1_1plan_1_1ProductPlan_aed99978816a650c8f9268bb842d75a5b}{blocks\+Accessed} ()
+\item 
+int \hyperlink{classsimpledb_1_1plan_1_1ProductPlan_a5fce0180a7e282d587fc254dd302d009}{records\+Output} ()
+\item 
+int \hyperlink{classsimpledb_1_1plan_1_1ProductPlan_af15c3dd2da35b2d41ed02e0586603f39}{distinct\+Values} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} \hyperlink{classsimpledb_1_1plan_1_1ProductPlan_aefae6a42767a872bc50882b415a9f76c}{schema} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} class corresponding to the {\itshape product} relational algebra operator. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1ProductPlan_a1f6d8e3f0afa2edd6ea6a29997897041}\label{classsimpledb_1_1plan_1_1ProductPlan_a1f6d8e3f0afa2edd6ea6a29997897041}} 
+\index{simpledb\+::plan\+::\+Product\+Plan@{simpledb\+::plan\+::\+Product\+Plan}!Product\+Plan@{Product\+Plan}}
+\index{Product\+Plan@{Product\+Plan}!simpledb\+::plan\+::\+Product\+Plan@{simpledb\+::plan\+::\+Product\+Plan}}
+\subsubsection{\texorpdfstring{Product\+Plan()}{ProductPlan()}}
+{\footnotesize\ttfamily simpledb.\+plan.\+Product\+Plan.\+Product\+Plan (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan}}]{p1,  }\item[{\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan}}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new product node in the query tree, having the two specified subqueries. 
+\begin{DoxyParams}{Parameters}
+{\em p1} & the left-\/hand subquery \\
+\hline
+{\em p2} & the right-\/hand subquery \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1ProductPlan_aed99978816a650c8f9268bb842d75a5b}\label{classsimpledb_1_1plan_1_1ProductPlan_aed99978816a650c8f9268bb842d75a5b}} 
+\index{simpledb\+::plan\+::\+Product\+Plan@{simpledb\+::plan\+::\+Product\+Plan}!blocks\+Accessed@{blocks\+Accessed}}
+\index{blocks\+Accessed@{blocks\+Accessed}!simpledb\+::plan\+::\+Product\+Plan@{simpledb\+::plan\+::\+Product\+Plan}}
+\subsubsection{\texorpdfstring{blocks\+Accessed()}{blocksAccessed()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Product\+Plan.\+blocks\+Accessed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimates the number of block accesses in the product. The formula is\+: 
+\begin{DoxyPre} B(product(p1,p2)) = B(p1) + R(p1)*B(p2) \end{DoxyPre}
+ \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan\+::blocks\+Accessed()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1ProductPlan_af15c3dd2da35b2d41ed02e0586603f39}\label{classsimpledb_1_1plan_1_1ProductPlan_af15c3dd2da35b2d41ed02e0586603f39}} 
+\index{simpledb\+::plan\+::\+Product\+Plan@{simpledb\+::plan\+::\+Product\+Plan}!distinct\+Values@{distinct\+Values}}
+\index{distinct\+Values@{distinct\+Values}!simpledb\+::plan\+::\+Product\+Plan@{simpledb\+::plan\+::\+Product\+Plan}}
+\subsubsection{\texorpdfstring{distinct\+Values()}{distinctValues()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Product\+Plan.\+distinct\+Values (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimates the distinct number of field values in the product. Since the product does not increase or decrease field values, the estimate is the same as in the appropriate underlying query. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan\+::distinct\+Values}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1ProductPlan_a42d2c091a1b387611af9e960783c0931}\label{classsimpledb_1_1plan_1_1ProductPlan_a42d2c091a1b387611af9e960783c0931}} 
+\index{simpledb\+::plan\+::\+Product\+Plan@{simpledb\+::plan\+::\+Product\+Plan}!open@{open}}
+\index{open@{open}!simpledb\+::plan\+::\+Product\+Plan@{simpledb\+::plan\+::\+Product\+Plan}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} simpledb.\+plan.\+Product\+Plan.\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a product scan for this query. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan\+::open()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1ProductPlan_a5fce0180a7e282d587fc254dd302d009}\label{classsimpledb_1_1plan_1_1ProductPlan_a5fce0180a7e282d587fc254dd302d009}} 
+\index{simpledb\+::plan\+::\+Product\+Plan@{simpledb\+::plan\+::\+Product\+Plan}!records\+Output@{records\+Output}}
+\index{records\+Output@{records\+Output}!simpledb\+::plan\+::\+Product\+Plan@{simpledb\+::plan\+::\+Product\+Plan}}
+\subsubsection{\texorpdfstring{records\+Output()}{recordsOutput()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Product\+Plan.\+records\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimates the number of output records in the product. The formula is\+: 
+\begin{DoxyPre} R(product(p1,p2)) = R(p1)*R(p2) \end{DoxyPre}
+ \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan\+::records\+Output()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1ProductPlan_aefae6a42767a872bc50882b415a9f76c}\label{classsimpledb_1_1plan_1_1ProductPlan_aefae6a42767a872bc50882b415a9f76c}} 
+\index{simpledb\+::plan\+::\+Product\+Plan@{simpledb\+::plan\+::\+Product\+Plan}!schema@{schema}}
+\index{schema@{schema}!simpledb\+::plan\+::\+Product\+Plan@{simpledb\+::plan\+::\+Product\+Plan}}
+\subsubsection{\texorpdfstring{schema()}{schema()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} simpledb.\+plan.\+Product\+Plan.\+schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the schema of the product, which is the union of the schemas of the underlying queries. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan\+::schema()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/plan/Product\+Plan.\+java\end{DoxyCompactItemize}

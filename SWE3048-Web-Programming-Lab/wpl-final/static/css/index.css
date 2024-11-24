@@ -1,0 +1,35 @@
+#div_title {
+    height: 250px;
+    font-size: 35px;
+    text-align: center;
+}
+#span_title {
+    font-weight: bold;
+    position: relative;
+    top: 60%;
+}
+
+.div_index_input {
+    text-align: center;
+}
+.div_index_input input {
+    border: solid 3px #000000;
+    font-size: 20px;
+    height: 40px;
+    margin: 3px;
+}
+
+.index_text {
+    width: 250px;
+}
+.index_text::placeholder {
+    text-align: center;
+    color: #000000;
+}
+.index_btn {
+    font-weight: bold;
+    border-radius: 3px;
+    color: #FFFFFF;
+    background-color: #000000;
+    width: 260px;
+}

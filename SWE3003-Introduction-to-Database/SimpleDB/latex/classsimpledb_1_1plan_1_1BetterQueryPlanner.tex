@@ -1,0 +1,42 @@
+\hypertarget{classsimpledb_1_1plan_1_1BetterQueryPlanner}{}\section{simpledb.\+plan.\+Better\+Query\+Planner Class Reference}
+\label{classsimpledb_1_1plan_1_1BetterQueryPlanner}\index{simpledb.\+plan.\+Better\+Query\+Planner@{simpledb.\+plan.\+Better\+Query\+Planner}}
+
+
+Inheritance diagram for simpledb.\+plan.\+Better\+Query\+Planner\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+plan.\+Better\+Query\+Planner\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1BetterQueryPlanner_a5344e2fad6e156fea7cf345e00b2a113}\label{classsimpledb_1_1plan_1_1BetterQueryPlanner_a5344e2fad6e156fea7cf345e00b2a113}} 
+{\bfseries Better\+Query\+Planner} (\hyperlink{classsimpledb_1_1metadata_1_1MetadataMgr}{Metadata\+Mgr} mdm)
+\item 
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} \hyperlink{classsimpledb_1_1plan_1_1BetterQueryPlanner_a887ebdcc02b0de4a2bc8545cce7efa20}{create\+Plan} (\hyperlink{classsimpledb_1_1parse_1_1QueryData}{Query\+Data} data, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A small improvement on the basic query planner. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1BetterQueryPlanner_a887ebdcc02b0de4a2bc8545cce7efa20}\label{classsimpledb_1_1plan_1_1BetterQueryPlanner_a887ebdcc02b0de4a2bc8545cce7efa20}} 
+\index{simpledb\+::plan\+::\+Better\+Query\+Planner@{simpledb\+::plan\+::\+Better\+Query\+Planner}!create\+Plan@{create\+Plan}}
+\index{create\+Plan@{create\+Plan}!simpledb\+::plan\+::\+Better\+Query\+Planner@{simpledb\+::plan\+::\+Better\+Query\+Planner}}
+\subsubsection{\texorpdfstring{create\+Plan()}{createPlan()}}
+{\footnotesize\ttfamily \hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} simpledb.\+plan.\+Better\+Query\+Planner.\+create\+Plan (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1parse_1_1QueryData}{Query\+Data}}]{data,  }\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a query plan as follows. It first takes the product of all tables and views; it then selects on the predicate; and finally it projects on the field list. 
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1QueryPlanner_a3fcc576e66a155bdc11845ec3e95838f}{simpledb.\+plan.\+Query\+Planner}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/plan/Better\+Query\+Planner.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,93 @@
+\hypertarget{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr}{}\section{simpledb.\+tx.\+recovery.\+Recovery\+Mgr Class Reference}
+\label{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr}\index{simpledb.\+tx.\+recovery.\+Recovery\+Mgr@{simpledb.\+tx.\+recovery.\+Recovery\+Mgr}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr_a208eb59b2bed7b2493e68fc43742f813}{Recovery\+Mgr} (\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx, int txnum, \hyperlink{classsimpledb_1_1log_1_1LogMgr}{Log\+Mgr} lm, \hyperlink{classsimpledb_1_1buffer_1_1BufferMgr}{Buffer\+Mgr} bm)
+\item 
+void \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr_a7aaf21c8afc97f5118943721c58450bb}{commit} ()
+\item 
+void \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr_a4fd081a3a950886ce87ba6987199cfc6}{rollback} ()
+\item 
+void \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr_a5886374d7a898bffcc9c6b05d18c12a1}{recover} ()
+\item 
+int \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr_af89e8dddf6f248ca53b752f2ff038ddb}{set\+Int} (\hyperlink{classsimpledb_1_1buffer_1_1Buffer}{Buffer} buff, int offset, int newval)
+\item 
+int \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr_a732be73a217bb918f3f46f802e189ccf}{set\+String} (\hyperlink{classsimpledb_1_1buffer_1_1Buffer}{Buffer} buff, int offset, String newval)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The recovery manager. Each transaction has its own recovery manager. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr_a208eb59b2bed7b2493e68fc43742f813}\label{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr_a208eb59b2bed7b2493e68fc43742f813}} 
+\index{simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr@{simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr}!Recovery\+Mgr@{Recovery\+Mgr}}
+\index{Recovery\+Mgr@{Recovery\+Mgr}!simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr@{simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr}}
+\subsubsection{\texorpdfstring{Recovery\+Mgr()}{RecoveryMgr()}}
+{\footnotesize\ttfamily simpledb.\+tx.\+recovery.\+Recovery\+Mgr.\+Recovery\+Mgr (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx,  }\item[{int}]{txnum,  }\item[{\hyperlink{classsimpledb_1_1log_1_1LogMgr}{Log\+Mgr}}]{lm,  }\item[{\hyperlink{classsimpledb_1_1buffer_1_1BufferMgr}{Buffer\+Mgr}}]{bm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a recovery manager for the specified transaction. 
+\begin{DoxyParams}{Parameters}
+{\em txnum} & the ID of the specified transaction \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr_a7aaf21c8afc97f5118943721c58450bb}\label{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr_a7aaf21c8afc97f5118943721c58450bb}} 
+\index{simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr@{simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr}!commit@{commit}}
+\index{commit@{commit}!simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr@{simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr}}
+\subsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily void simpledb.\+tx.\+recovery.\+Recovery\+Mgr.\+commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Write a commit record to the log, and flushes it to disk. \mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr_a5886374d7a898bffcc9c6b05d18c12a1}\label{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr_a5886374d7a898bffcc9c6b05d18c12a1}} 
+\index{simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr@{simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr}!recover@{recover}}
+\index{recover@{recover}!simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr@{simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr}}
+\subsubsection{\texorpdfstring{recover()}{recover()}}
+{\footnotesize\ttfamily void simpledb.\+tx.\+recovery.\+Recovery\+Mgr.\+recover (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Recover uncompleted transactions from the log and then write a quiescent checkpoint record to the log and flush it. \mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr_a4fd081a3a950886ce87ba6987199cfc6}\label{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr_a4fd081a3a950886ce87ba6987199cfc6}} 
+\index{simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr@{simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr}!rollback@{rollback}}
+\index{rollback@{rollback}!simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr@{simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr}}
+\subsubsection{\texorpdfstring{rollback()}{rollback()}}
+{\footnotesize\ttfamily void simpledb.\+tx.\+recovery.\+Recovery\+Mgr.\+rollback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Write a rollback record to the log and flush it to disk. \mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr_af89e8dddf6f248ca53b752f2ff038ddb}\label{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr_af89e8dddf6f248ca53b752f2ff038ddb}} 
+\index{simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr@{simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr}!set\+Int@{set\+Int}}
+\index{set\+Int@{set\+Int}!simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr@{simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr}}
+\subsubsection{\texorpdfstring{set\+Int()}{setInt()}}
+{\footnotesize\ttfamily int simpledb.\+tx.\+recovery.\+Recovery\+Mgr.\+set\+Int (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1buffer_1_1Buffer}{Buffer}}]{buff,  }\item[{int}]{offset,  }\item[{int}]{newval }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Write a setint record to the log and return its lsn. 
+\begin{DoxyParams}{Parameters}
+{\em buff} & the buffer containing the page \\
+\hline
+{\em offset} & the offset of the value in the page \\
+\hline
+{\em newval} & the value to be written \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr_a732be73a217bb918f3f46f802e189ccf}\label{classsimpledb_1_1tx_1_1recovery_1_1RecoveryMgr_a732be73a217bb918f3f46f802e189ccf}} 
+\index{simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr@{simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr}!set\+String@{set\+String}}
+\index{set\+String@{set\+String}!simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr@{simpledb\+::tx\+::recovery\+::\+Recovery\+Mgr}}
+\subsubsection{\texorpdfstring{set\+String()}{setString()}}
+{\footnotesize\ttfamily int simpledb.\+tx.\+recovery.\+Recovery\+Mgr.\+set\+String (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1buffer_1_1Buffer}{Buffer}}]{buff,  }\item[{int}]{offset,  }\item[{String}]{newval }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Write a setstring record to the log and return its lsn. 
+\begin{DoxyParams}{Parameters}
+{\em buff} & the buffer containing the page \\
+\hline
+{\em offset} & the offset of the value in the page \\
+\hline
+{\em newval} & the value to be written \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/tx/recovery/Recovery\+Mgr.\+java\end{DoxyCompactItemize}

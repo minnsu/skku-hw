@@ -1,0 +1,120 @@
+\hypertarget{classsimpledb_1_1plan_1_1SelectPlan}{}\section{simpledb.\+plan.\+Select\+Plan Class Reference}
+\label{classsimpledb_1_1plan_1_1SelectPlan}\index{simpledb.\+plan.\+Select\+Plan@{simpledb.\+plan.\+Select\+Plan}}
+
+
+Inheritance diagram for simpledb.\+plan.\+Select\+Plan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+plan.\+Select\+Plan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1plan_1_1SelectPlan_a9a68f7746d59d465befeda13b3f759fc}{Select\+Plan} (\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} p, \hyperlink{classsimpledb_1_1query_1_1Predicate}{Predicate} pred)
+\item 
+\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} \hyperlink{classsimpledb_1_1plan_1_1SelectPlan_aa18edd10f7bac870ffd458c8da82c5f1}{open} ()
+\item 
+int \hyperlink{classsimpledb_1_1plan_1_1SelectPlan_aac8710bb3dcdab26ccd276ccb19f95cb}{blocks\+Accessed} ()
+\item 
+int \hyperlink{classsimpledb_1_1plan_1_1SelectPlan_af68bc517292c7bd5706b191f30124a2e}{records\+Output} ()
+\item 
+int \hyperlink{classsimpledb_1_1plan_1_1SelectPlan_ac7c325819656fe5de7a5b4b88ced3bc7}{distinct\+Values} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} \hyperlink{classsimpledb_1_1plan_1_1SelectPlan_a74090f0d52af6e4f8d5fe925fac3cb4c}{schema} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} class corresponding to the {\itshape select} relational algebra operator. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1SelectPlan_a9a68f7746d59d465befeda13b3f759fc}\label{classsimpledb_1_1plan_1_1SelectPlan_a9a68f7746d59d465befeda13b3f759fc}} 
+\index{simpledb\+::plan\+::\+Select\+Plan@{simpledb\+::plan\+::\+Select\+Plan}!Select\+Plan@{Select\+Plan}}
+\index{Select\+Plan@{Select\+Plan}!simpledb\+::plan\+::\+Select\+Plan@{simpledb\+::plan\+::\+Select\+Plan}}
+\subsubsection{\texorpdfstring{Select\+Plan()}{SelectPlan()}}
+{\footnotesize\ttfamily simpledb.\+plan.\+Select\+Plan.\+Select\+Plan (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan}}]{p,  }\item[{\hyperlink{classsimpledb_1_1query_1_1Predicate}{Predicate}}]{pred }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new select node in the query tree, having the specified subquery and predicate. 
+\begin{DoxyParams}{Parameters}
+{\em p} & the subquery \\
+\hline
+{\em pred} & the predicate \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1SelectPlan_aac8710bb3dcdab26ccd276ccb19f95cb}\label{classsimpledb_1_1plan_1_1SelectPlan_aac8710bb3dcdab26ccd276ccb19f95cb}} 
+\index{simpledb\+::plan\+::\+Select\+Plan@{simpledb\+::plan\+::\+Select\+Plan}!blocks\+Accessed@{blocks\+Accessed}}
+\index{blocks\+Accessed@{blocks\+Accessed}!simpledb\+::plan\+::\+Select\+Plan@{simpledb\+::plan\+::\+Select\+Plan}}
+\subsubsection{\texorpdfstring{blocks\+Accessed()}{blocksAccessed()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Select\+Plan.\+blocks\+Accessed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimates the number of block accesses in the selection, which is the same as in the underlying query. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan\+::blocks\+Accessed()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1SelectPlan_ac7c325819656fe5de7a5b4b88ced3bc7}\label{classsimpledb_1_1plan_1_1SelectPlan_ac7c325819656fe5de7a5b4b88ced3bc7}} 
+\index{simpledb\+::plan\+::\+Select\+Plan@{simpledb\+::plan\+::\+Select\+Plan}!distinct\+Values@{distinct\+Values}}
+\index{distinct\+Values@{distinct\+Values}!simpledb\+::plan\+::\+Select\+Plan@{simpledb\+::plan\+::\+Select\+Plan}}
+\subsubsection{\texorpdfstring{distinct\+Values()}{distinctValues()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Select\+Plan.\+distinct\+Values (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimates the number of distinct field values in the projection. If the predicate contains a term equating the specified field to a constant, then this value will be 1. Otherwise, it will be the number of the distinct values in the underlying query (but not more than the size of the output table). \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan\+::distinct\+Values}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1SelectPlan_aa18edd10f7bac870ffd458c8da82c5f1}\label{classsimpledb_1_1plan_1_1SelectPlan_aa18edd10f7bac870ffd458c8da82c5f1}} 
+\index{simpledb\+::plan\+::\+Select\+Plan@{simpledb\+::plan\+::\+Select\+Plan}!open@{open}}
+\index{open@{open}!simpledb\+::plan\+::\+Select\+Plan@{simpledb\+::plan\+::\+Select\+Plan}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} simpledb.\+plan.\+Select\+Plan.\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a select scan for this query. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan\+::open()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1SelectPlan_af68bc517292c7bd5706b191f30124a2e}\label{classsimpledb_1_1plan_1_1SelectPlan_af68bc517292c7bd5706b191f30124a2e}} 
+\index{simpledb\+::plan\+::\+Select\+Plan@{simpledb\+::plan\+::\+Select\+Plan}!records\+Output@{records\+Output}}
+\index{records\+Output@{records\+Output}!simpledb\+::plan\+::\+Select\+Plan@{simpledb\+::plan\+::\+Select\+Plan}}
+\subsubsection{\texorpdfstring{records\+Output()}{recordsOutput()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Select\+Plan.\+records\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimates the number of output records in the selection, which is determined by the reduction factor of the predicate. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan\+::records\+Output()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1SelectPlan_a74090f0d52af6e4f8d5fe925fac3cb4c}\label{classsimpledb_1_1plan_1_1SelectPlan_a74090f0d52af6e4f8d5fe925fac3cb4c}} 
+\index{simpledb\+::plan\+::\+Select\+Plan@{simpledb\+::plan\+::\+Select\+Plan}!schema@{schema}}
+\index{schema@{schema}!simpledb\+::plan\+::\+Select\+Plan@{simpledb\+::plan\+::\+Select\+Plan}}
+\subsubsection{\texorpdfstring{schema()}{schema()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} simpledb.\+plan.\+Select\+Plan.\+schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the schema of the selection, which is the same as in the underlying query. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan\+::schema()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/plan/Select\+Plan.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,159 @@
+\hypertarget{classsimpledb_1_1parse_1_1Lexer}{}\section{simpledb.\+parse.\+Lexer Class Reference}
+\label{classsimpledb_1_1parse_1_1Lexer}\index{simpledb.\+parse.\+Lexer@{simpledb.\+parse.\+Lexer}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1parse_1_1Lexer_a8c376102a2a444c7cda738ad0dce5113}{Lexer} (String s)
+\item 
+boolean \hyperlink{classsimpledb_1_1parse_1_1Lexer_ab63b0b6fbda48cb0523fcb2c83d3a514}{match\+Delim} (char d)
+\item 
+boolean \hyperlink{classsimpledb_1_1parse_1_1Lexer_a2356cc7664be66956a0282bae224f0af}{match\+Int\+Constant} ()
+\item 
+boolean \hyperlink{classsimpledb_1_1parse_1_1Lexer_aca5f9432fda019a69fe5a52dbfab0236}{match\+String\+Constant} ()
+\item 
+boolean \hyperlink{classsimpledb_1_1parse_1_1Lexer_ad7ef9a56476573552f41c072251a4106}{match\+Keyword} (String w)
+\item 
+boolean \hyperlink{classsimpledb_1_1parse_1_1Lexer_afce0043bfddfa1503110faace1e0ba5b}{match\+Id} ()
+\item 
+void \hyperlink{classsimpledb_1_1parse_1_1Lexer_a85d4e04dece07a2810c5fe4560efbed1}{eat\+Delim} (char d)
+\item 
+int \hyperlink{classsimpledb_1_1parse_1_1Lexer_a21315c8461ce8cf2b8de369252c12270}{eat\+Int\+Constant} ()
+\item 
+String \hyperlink{classsimpledb_1_1parse_1_1Lexer_a85a2a94288c68eadfaf8e48c5824bea8}{eat\+String\+Constant} ()
+\item 
+void \hyperlink{classsimpledb_1_1parse_1_1Lexer_a636868ec2864b11d552fe39180deea5f}{eat\+Keyword} (String w)
+\item 
+String \hyperlink{classsimpledb_1_1parse_1_1Lexer_a3c57900b25a12edc2c8542e62f101f0f}{eat\+Id} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The lexical analyzer. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1Lexer_a8c376102a2a444c7cda738ad0dce5113}\label{classsimpledb_1_1parse_1_1Lexer_a8c376102a2a444c7cda738ad0dce5113}} 
+\index{simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}!Lexer@{Lexer}}
+\index{Lexer@{Lexer}!simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}}
+\subsubsection{\texorpdfstring{Lexer()}{Lexer()}}
+{\footnotesize\ttfamily simpledb.\+parse.\+Lexer.\+Lexer (\begin{DoxyParamCaption}\item[{String}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new lexical analyzer for S\+QL statement s. 
+\begin{DoxyParams}{Parameters}
+{\em s} & the S\+QL statement \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1Lexer_a85d4e04dece07a2810c5fe4560efbed1}\label{classsimpledb_1_1parse_1_1Lexer_a85d4e04dece07a2810c5fe4560efbed1}} 
+\index{simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}!eat\+Delim@{eat\+Delim}}
+\index{eat\+Delim@{eat\+Delim}!simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}}
+\subsubsection{\texorpdfstring{eat\+Delim()}{eatDelim()}}
+{\footnotesize\ttfamily void simpledb.\+parse.\+Lexer.\+eat\+Delim (\begin{DoxyParamCaption}\item[{char}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Throws an exception if the current token is not the specified delimiter. Otherwise, moves to the next token. 
+\begin{DoxyParams}{Parameters}
+{\em d} & a character denoting the delimiter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1Lexer_a3c57900b25a12edc2c8542e62f101f0f}\label{classsimpledb_1_1parse_1_1Lexer_a3c57900b25a12edc2c8542e62f101f0f}} 
+\index{simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}!eat\+Id@{eat\+Id}}
+\index{eat\+Id@{eat\+Id}!simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}}
+\subsubsection{\texorpdfstring{eat\+Id()}{eatId()}}
+{\footnotesize\ttfamily String simpledb.\+parse.\+Lexer.\+eat\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Throws an exception if the current token is not an identifier. Otherwise, returns the identifier string and moves to the next token. \begin{DoxyReturn}{Returns}
+the string value of the current token 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1Lexer_a21315c8461ce8cf2b8de369252c12270}\label{classsimpledb_1_1parse_1_1Lexer_a21315c8461ce8cf2b8de369252c12270}} 
+\index{simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}!eat\+Int\+Constant@{eat\+Int\+Constant}}
+\index{eat\+Int\+Constant@{eat\+Int\+Constant}!simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}}
+\subsubsection{\texorpdfstring{eat\+Int\+Constant()}{eatIntConstant()}}
+{\footnotesize\ttfamily int simpledb.\+parse.\+Lexer.\+eat\+Int\+Constant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Throws an exception if the current token is not an integer. Otherwise, returns that integer and moves to the next token. \begin{DoxyReturn}{Returns}
+the integer value of the current token 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1Lexer_a636868ec2864b11d552fe39180deea5f}\label{classsimpledb_1_1parse_1_1Lexer_a636868ec2864b11d552fe39180deea5f}} 
+\index{simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}!eat\+Keyword@{eat\+Keyword}}
+\index{eat\+Keyword@{eat\+Keyword}!simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}}
+\subsubsection{\texorpdfstring{eat\+Keyword()}{eatKeyword()}}
+{\footnotesize\ttfamily void simpledb.\+parse.\+Lexer.\+eat\+Keyword (\begin{DoxyParamCaption}\item[{String}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Throws an exception if the current token is not the specified keyword. Otherwise, moves to the next token. 
+\begin{DoxyParams}{Parameters}
+{\em w} & the keyword string \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1Lexer_a85a2a94288c68eadfaf8e48c5824bea8}\label{classsimpledb_1_1parse_1_1Lexer_a85a2a94288c68eadfaf8e48c5824bea8}} 
+\index{simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}!eat\+String\+Constant@{eat\+String\+Constant}}
+\index{eat\+String\+Constant@{eat\+String\+Constant}!simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}}
+\subsubsection{\texorpdfstring{eat\+String\+Constant()}{eatStringConstant()}}
+{\footnotesize\ttfamily String simpledb.\+parse.\+Lexer.\+eat\+String\+Constant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Throws an exception if the current token is not a string. Otherwise, returns that string and moves to the next token. \begin{DoxyReturn}{Returns}
+the string value of the current token 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1Lexer_ab63b0b6fbda48cb0523fcb2c83d3a514}\label{classsimpledb_1_1parse_1_1Lexer_ab63b0b6fbda48cb0523fcb2c83d3a514}} 
+\index{simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}!match\+Delim@{match\+Delim}}
+\index{match\+Delim@{match\+Delim}!simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}}
+\subsubsection{\texorpdfstring{match\+Delim()}{matchDelim()}}
+{\footnotesize\ttfamily boolean simpledb.\+parse.\+Lexer.\+match\+Delim (\begin{DoxyParamCaption}\item[{char}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns true if the current token is the specified delimiter character. 
+\begin{DoxyParams}{Parameters}
+{\em d} & a character denoting the delimiter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the delimiter is the current token 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1Lexer_afce0043bfddfa1503110faace1e0ba5b}\label{classsimpledb_1_1parse_1_1Lexer_afce0043bfddfa1503110faace1e0ba5b}} 
+\index{simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}!match\+Id@{match\+Id}}
+\index{match\+Id@{match\+Id}!simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}}
+\subsubsection{\texorpdfstring{match\+Id()}{matchId()}}
+{\footnotesize\ttfamily boolean simpledb.\+parse.\+Lexer.\+match\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns true if the current token is a legal identifier. \begin{DoxyReturn}{Returns}
+true if the current token is an identifier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1Lexer_a2356cc7664be66956a0282bae224f0af}\label{classsimpledb_1_1parse_1_1Lexer_a2356cc7664be66956a0282bae224f0af}} 
+\index{simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}!match\+Int\+Constant@{match\+Int\+Constant}}
+\index{match\+Int\+Constant@{match\+Int\+Constant}!simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}}
+\subsubsection{\texorpdfstring{match\+Int\+Constant()}{matchIntConstant()}}
+{\footnotesize\ttfamily boolean simpledb.\+parse.\+Lexer.\+match\+Int\+Constant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns true if the current token is an integer. \begin{DoxyReturn}{Returns}
+true if the current token is an integer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1Lexer_ad7ef9a56476573552f41c072251a4106}\label{classsimpledb_1_1parse_1_1Lexer_ad7ef9a56476573552f41c072251a4106}} 
+\index{simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}!match\+Keyword@{match\+Keyword}}
+\index{match\+Keyword@{match\+Keyword}!simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}}
+\subsubsection{\texorpdfstring{match\+Keyword()}{matchKeyword()}}
+{\footnotesize\ttfamily boolean simpledb.\+parse.\+Lexer.\+match\+Keyword (\begin{DoxyParamCaption}\item[{String}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns true if the current token is the specified keyword. 
+\begin{DoxyParams}{Parameters}
+{\em w} & the keyword string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if that keyword is the current token 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1Lexer_aca5f9432fda019a69fe5a52dbfab0236}\label{classsimpledb_1_1parse_1_1Lexer_aca5f9432fda019a69fe5a52dbfab0236}} 
+\index{simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}!match\+String\+Constant@{match\+String\+Constant}}
+\index{match\+String\+Constant@{match\+String\+Constant}!simpledb\+::parse\+::\+Lexer@{simpledb\+::parse\+::\+Lexer}}
+\subsubsection{\texorpdfstring{match\+String\+Constant()}{matchStringConstant()}}
+{\footnotesize\ttfamily boolean simpledb.\+parse.\+Lexer.\+match\+String\+Constant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns true if the current token is a string. \begin{DoxyReturn}{Returns}
+true if the current token is a string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/parse/Lexer.\+java\end{DoxyCompactItemize}

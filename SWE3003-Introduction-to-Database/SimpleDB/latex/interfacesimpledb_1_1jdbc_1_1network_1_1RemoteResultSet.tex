@@ -1,0 +1,39 @@
+\hypertarget{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteResultSet}{}\section{simpledb.\+jdbc.\+network.\+Remote\+Result\+Set Interface Reference}
+\label{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteResultSet}\index{simpledb.\+jdbc.\+network.\+Remote\+Result\+Set@{simpledb.\+jdbc.\+network.\+Remote\+Result\+Set}}
+
+
+Inheritance diagram for simpledb.\+jdbc.\+network.\+Remote\+Result\+Set\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+jdbc.\+network.\+Remote\+Result\+Set\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteResultSet_a0fee7b3139f3b29b3281b563c0cce203}\label{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteResultSet_a0fee7b3139f3b29b3281b563c0cce203}} 
+boolean {\bfseries next} ()  throws Remote\+Exception
+\item 
+\mbox{\Hypertarget{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteResultSet_acf397822cdab28bfe994420bf26d68fc}\label{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteResultSet_acf397822cdab28bfe994420bf26d68fc}} 
+int {\bfseries get\+Int} (String fldname)  throws Remote\+Exception
+\item 
+\mbox{\Hypertarget{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteResultSet_a271da6a305af8d3769418f3a440afc02}\label{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteResultSet_a271da6a305af8d3769418f3a440afc02}} 
+String {\bfseries get\+String} (String fldname)  throws Remote\+Exception
+\item 
+\mbox{\Hypertarget{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteResultSet_a574510d57fadc08e764b2070dc80fa24}\label{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteResultSet_a574510d57fadc08e764b2070dc80fa24}} 
+\hyperlink{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteMetaData}{Remote\+Meta\+Data} {\bfseries get\+Meta\+Data} ()  throws Remote\+Exception
+\item 
+\mbox{\Hypertarget{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteResultSet_a0bfbf481b56a1dc2dce168b86aa04462}\label{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteResultSet_a0bfbf481b56a1dc2dce168b86aa04462}} 
+void {\bfseries close} ()  throws Remote\+Exception
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The R\+MI remote interface corresponding to Result\+Set. The methods are identical to those of Result\+Set, except that they throw Remote\+Exceptions instead of S\+Q\+L\+Exceptions. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/jdbc/network/Remote\+Result\+Set.\+java\end{DoxyCompactItemize}

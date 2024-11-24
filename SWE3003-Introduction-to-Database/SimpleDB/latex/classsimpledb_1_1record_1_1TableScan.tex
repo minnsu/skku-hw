@@ -1,0 +1,262 @@
+\hypertarget{classsimpledb_1_1record_1_1TableScan}{}\section{simpledb.\+record.\+Table\+Scan Class Reference}
+\label{classsimpledb_1_1record_1_1TableScan}\index{simpledb.\+record.\+Table\+Scan@{simpledb.\+record.\+Table\+Scan}}
+
+
+Inheritance diagram for simpledb.\+record.\+Table\+Scan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+record.\+Table\+Scan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1TableScan_a72c0b36932ac3399d1aac7b4c8338a45}\label{classsimpledb_1_1record_1_1TableScan_a72c0b36932ac3399d1aac7b4c8338a45}} 
+{\bfseries Table\+Scan} (\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx, String tblname, \hyperlink{classsimpledb_1_1record_1_1Layout}{Layout} layout)
+\item 
+void \hyperlink{classsimpledb_1_1record_1_1TableScan_a2b5a99c638ace01efded11dd93cf9240}{before\+First} ()
+\item 
+boolean \hyperlink{classsimpledb_1_1record_1_1TableScan_aefc2187ef691253a8d569d01f423c18b}{next} ()
+\item 
+int \hyperlink{classsimpledb_1_1record_1_1TableScan_abb08c41204e3130311ed1f264778b750}{get\+Int} (String fldname)
+\item 
+String \hyperlink{classsimpledb_1_1record_1_1TableScan_af43f30e2489c5cd23566cb60271db331}{get\+String} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{classsimpledb_1_1record_1_1TableScan_a0a4ad2c10c2c60f3c984876c672e15e1}{get\+Val} (String fldname)
+\item 
+boolean \hyperlink{classsimpledb_1_1record_1_1TableScan_aad90f69cc2d14ecfe8a7854e8ed60548}{has\+Field} (String fldname)
+\item 
+void \hyperlink{classsimpledb_1_1record_1_1TableScan_aff0239675c54b7e5d7c72695a7169c7c}{close} ()
+\item 
+void \hyperlink{classsimpledb_1_1record_1_1TableScan_af36f97fd4163b889c0e3d76a824406c2}{set\+Int} (String fldname, int val)
+\item 
+void \hyperlink{classsimpledb_1_1record_1_1TableScan_a0d7d00cd93ce179297abf17b5900b750}{set\+String} (String fldname, String val)
+\item 
+void \hyperlink{classsimpledb_1_1record_1_1TableScan_aa43095f81b040417816d8493b66a91d3}{set\+Val} (String fldname, \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} val)
+\item 
+void \hyperlink{classsimpledb_1_1record_1_1TableScan_a45f93916b026b51b1511ba2610630564}{insert} ()
+\item 
+void \hyperlink{classsimpledb_1_1record_1_1TableScan_a6797bdf6cdf1cd9f73cb86b32ac339d7}{delete} ()
+\item 
+void \hyperlink{classsimpledb_1_1record_1_1TableScan_a21372d00e959d8bbe5eee1c8bda8f08b}{move\+To\+Rid} (\hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} rid)
+\item 
+\hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} \hyperlink{classsimpledb_1_1record_1_1TableScan_ae04ff0088830ea94e2af70bdbb398a80}{get\+Rid} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides the abstraction of an arbitrarily large array of records. \begin{DoxyAuthor}{Author}
+sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1TableScan_a2b5a99c638ace01efded11dd93cf9240}\label{classsimpledb_1_1record_1_1TableScan_a2b5a99c638ace01efded11dd93cf9240}} 
+\index{simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}!before\+First@{before\+First}}
+\index{before\+First@{before\+First}!simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}}
+\subsubsection{\texorpdfstring{before\+First()}{beforeFirst()}}
+{\footnotesize\ttfamily void simpledb.\+record.\+Table\+Scan.\+before\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Position the scan before its first record. A subsequent call to \hyperlink{classsimpledb_1_1record_1_1TableScan_aefc2187ef691253a8d569d01f423c18b}{next()} will return the first record. 
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2eceb634b69da9bf1269a4355808cc6b}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1TableScan_aff0239675c54b7e5d7c72695a7169c7c}\label{classsimpledb_1_1record_1_1TableScan_aff0239675c54b7e5d7c72695a7169c7c}} 
+\index{simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}!close@{close}}
+\index{close@{close}!simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void simpledb.\+record.\+Table\+Scan.\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Close the scan and its subscans, if any. 
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a260f40a8c82edaa00398bea9d698933c}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1TableScan_a6797bdf6cdf1cd9f73cb86b32ac339d7}\label{classsimpledb_1_1record_1_1TableScan_a6797bdf6cdf1cd9f73cb86b32ac339d7}} 
+\index{simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}!delete@{delete}}
+\index{delete@{delete}!simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}}
+\subsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily void simpledb.\+record.\+Table\+Scan.\+delete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Delete the current record from the scan. 
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1UpdateScan_a503723e6287a2ea9ce73375f70a5e819}{simpledb.\+query.\+Update\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1TableScan_abb08c41204e3130311ed1f264778b750}\label{classsimpledb_1_1record_1_1TableScan_abb08c41204e3130311ed1f264778b750}} 
+\index{simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}!get\+Int@{get\+Int}}
+\index{get\+Int@{get\+Int}!simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}}
+\subsubsection{\texorpdfstring{get\+Int()}{getInt()}}
+{\footnotesize\ttfamily int simpledb.\+record.\+Table\+Scan.\+get\+Int (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the value of the specified integer field in the current record. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the field\textquotesingle{}s integer value in the current record 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2e064555e16240115167b5d42d2b3d19}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1TableScan_ae04ff0088830ea94e2af70bdbb398a80}\label{classsimpledb_1_1record_1_1TableScan_ae04ff0088830ea94e2af70bdbb398a80}} 
+\index{simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}!get\+Rid@{get\+Rid}}
+\index{get\+Rid@{get\+Rid}!simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}}
+\subsubsection{\texorpdfstring{get\+Rid()}{getRid()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} simpledb.\+record.\+Table\+Scan.\+get\+Rid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the id of the current record. \begin{DoxyReturn}{Returns}
+the id of the current record 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1UpdateScan_aa98f38fa6d4fc66862e0c739b577ce2d}{simpledb.\+query.\+Update\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1TableScan_af43f30e2489c5cd23566cb60271db331}\label{classsimpledb_1_1record_1_1TableScan_af43f30e2489c5cd23566cb60271db331}} 
+\index{simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}}
+\subsubsection{\texorpdfstring{get\+String()}{getString()}}
+{\footnotesize\ttfamily String simpledb.\+record.\+Table\+Scan.\+get\+String (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the value of the specified string field in the current record. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the field\textquotesingle{}s string value in the current record 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a922e219fee53ecfa6163525f9e3ef222}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1TableScan_a0a4ad2c10c2c60f3c984876c672e15e1}\label{classsimpledb_1_1record_1_1TableScan_a0a4ad2c10c2c60f3c984876c672e15e1}} 
+\index{simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}!get\+Val@{get\+Val}}
+\index{get\+Val@{get\+Val}!simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}}
+\subsubsection{\texorpdfstring{get\+Val()}{getVal()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+record.\+Table\+Scan.\+get\+Val (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the value of the specified field in the current record. The value is expressed as a Constant. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value of that field, expressed as a Constant. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1TableScan_aad90f69cc2d14ecfe8a7854e8ed60548}\label{classsimpledb_1_1record_1_1TableScan_aad90f69cc2d14ecfe8a7854e8ed60548}} 
+\index{simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}!has\+Field@{has\+Field}}
+\index{has\+Field@{has\+Field}!simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}}
+\subsubsection{\texorpdfstring{has\+Field()}{hasField()}}
+{\footnotesize\ttfamily boolean simpledb.\+record.\+Table\+Scan.\+has\+Field (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return true if the scan has the specified field. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the scan has that field 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a8f4ccf13eed0bed983c928e9b998fe5c}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1TableScan_a45f93916b026b51b1511ba2610630564}\label{classsimpledb_1_1record_1_1TableScan_a45f93916b026b51b1511ba2610630564}} 
+\index{simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}!insert@{insert}}
+\index{insert@{insert}!simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void simpledb.\+record.\+Table\+Scan.\+insert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Insert a new record somewhere in the scan. 
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1UpdateScan_a6a281cd50f596c008e868bddd0534774}{simpledb.\+query.\+Update\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1TableScan_a21372d00e959d8bbe5eee1c8bda8f08b}\label{classsimpledb_1_1record_1_1TableScan_a21372d00e959d8bbe5eee1c8bda8f08b}} 
+\index{simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}!move\+To\+Rid@{move\+To\+Rid}}
+\index{move\+To\+Rid@{move\+To\+Rid}!simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}}
+\subsubsection{\texorpdfstring{move\+To\+Rid()}{moveToRid()}}
+{\footnotesize\ttfamily void simpledb.\+record.\+Table\+Scan.\+move\+To\+Rid (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID}}]{rid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Position the scan so that the current record has the specified id. 
+\begin{DoxyParams}{Parameters}
+{\em rid} & the id of the desired record \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1UpdateScan_a5096e90da6d88cfaa015cd3aa20bc9d7}{simpledb.\+query.\+Update\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1TableScan_aefc2187ef691253a8d569d01f423c18b}\label{classsimpledb_1_1record_1_1TableScan_aefc2187ef691253a8d569d01f423c18b}} 
+\index{simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}!next@{next}}
+\index{next@{next}!simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily boolean simpledb.\+record.\+Table\+Scan.\+next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Move the scan to the next record. \begin{DoxyReturn}{Returns}
+false if there is no next record 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1TableScan_af36f97fd4163b889c0e3d76a824406c2}\label{classsimpledb_1_1record_1_1TableScan_af36f97fd4163b889c0e3d76a824406c2}} 
+\index{simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}!set\+Int@{set\+Int}}
+\index{set\+Int@{set\+Int}!simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}}
+\subsubsection{\texorpdfstring{set\+Int()}{setInt()}}
+{\footnotesize\ttfamily void simpledb.\+record.\+Table\+Scan.\+set\+Int (\begin{DoxyParamCaption}\item[{String}]{fldname,  }\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Modify the field value of the current record. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+{\em val} & the new integer value \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1UpdateScan_ad866b1c21bbe8f0442a8779a6240c069}{simpledb.\+query.\+Update\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1TableScan_a0d7d00cd93ce179297abf17b5900b750}\label{classsimpledb_1_1record_1_1TableScan_a0d7d00cd93ce179297abf17b5900b750}} 
+\index{simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}!set\+String@{set\+String}}
+\index{set\+String@{set\+String}!simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}}
+\subsubsection{\texorpdfstring{set\+String()}{setString()}}
+{\footnotesize\ttfamily void simpledb.\+record.\+Table\+Scan.\+set\+String (\begin{DoxyParamCaption}\item[{String}]{fldname,  }\item[{String}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Modify the field value of the current record. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+{\em val} & the new string value \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1UpdateScan_a06d8414432dac908fd6c5d337e848f95}{simpledb.\+query.\+Update\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1TableScan_aa43095f81b040417816d8493b66a91d3}\label{classsimpledb_1_1record_1_1TableScan_aa43095f81b040417816d8493b66a91d3}} 
+\index{simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}!set\+Val@{set\+Val}}
+\index{set\+Val@{set\+Val}!simpledb\+::record\+::\+Table\+Scan@{simpledb\+::record\+::\+Table\+Scan}}
+\subsubsection{\texorpdfstring{set\+Val()}{setVal()}}
+{\footnotesize\ttfamily void simpledb.\+record.\+Table\+Scan.\+set\+Val (\begin{DoxyParamCaption}\item[{String}]{fldname,  }\item[{\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Modify the field value of the current record. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+{\em val} & the new value, expressed as a Constant \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1UpdateScan_a70fdd638a395be56dcbc65ecd791f075}{simpledb.\+query.\+Update\+Scan}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/record/Table\+Scan.\+java\end{DoxyCompactItemize}

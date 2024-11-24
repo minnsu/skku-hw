@@ -1,0 +1,72 @@
+\hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeDir}{}\section{simpledb.\+index.\+btree.\+B\+Tree\+Dir Class Reference}
+\label{classsimpledb_1_1index_1_1btree_1_1BTreeDir}\index{simpledb.\+index.\+btree.\+B\+Tree\+Dir@{simpledb.\+index.\+btree.\+B\+Tree\+Dir}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeDir_aca9a0ddfcdddbcd4e8c47d1548dc45b7}{close} ()
+\item 
+int \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeDir_a3f04be4cc17e50a6a5048731ed83fabd}{search} (\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} searchkey)
+\item 
+void \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeDir_ac06e5a1031dc5ce29f911b8473ee058b}{make\+New\+Root} (\hyperlink{classsimpledb_1_1index_1_1btree_1_1DirEntry}{Dir\+Entry} e)
+\item 
+\hyperlink{classsimpledb_1_1index_1_1btree_1_1DirEntry}{Dir\+Entry} \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeDir_afa780e1626a87518225351bc875b01ec}{insert} (\hyperlink{classsimpledb_1_1index_1_1btree_1_1DirEntry}{Dir\+Entry} e)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A B-\/tree directory block. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeDir_aca9a0ddfcdddbcd4e8c47d1548dc45b7}\label{classsimpledb_1_1index_1_1btree_1_1BTreeDir_aca9a0ddfcdddbcd4e8c47d1548dc45b7}} 
+\index{simpledb\+::index\+::btree\+::\+B\+Tree\+Dir@{simpledb\+::index\+::btree\+::\+B\+Tree\+Dir}!close@{close}}
+\index{close@{close}!simpledb\+::index\+::btree\+::\+B\+Tree\+Dir@{simpledb\+::index\+::btree\+::\+B\+Tree\+Dir}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void simpledb.\+index.\+btree.\+B\+Tree\+Dir.\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Closes the directory page. \mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeDir_afa780e1626a87518225351bc875b01ec}\label{classsimpledb_1_1index_1_1btree_1_1BTreeDir_afa780e1626a87518225351bc875b01ec}} 
+\index{simpledb\+::index\+::btree\+::\+B\+Tree\+Dir@{simpledb\+::index\+::btree\+::\+B\+Tree\+Dir}!insert@{insert}}
+\index{insert@{insert}!simpledb\+::index\+::btree\+::\+B\+Tree\+Dir@{simpledb\+::index\+::btree\+::\+B\+Tree\+Dir}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1index_1_1btree_1_1DirEntry}{Dir\+Entry} simpledb.\+index.\+btree.\+B\+Tree\+Dir.\+insert (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1index_1_1btree_1_1DirEntry}{Dir\+Entry}}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Inserts a new directory entry into the B-\/tree block. If the block is at level 0, then the entry is inserted there. Otherwise, the entry is inserted into the appropriate child node, and the return value is examined. A non-\/null return value indicates that the child node split, and so the returned entry is inserted into this block. If this block splits, then the method similarly returns the entry information of the new block to its caller; otherwise, the method returns null. 
+\begin{DoxyParams}{Parameters}
+{\em e} & the directory entry to be inserted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the directory entry of the newly-\/split block, if one exists; otherwise, null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeDir_ac06e5a1031dc5ce29f911b8473ee058b}\label{classsimpledb_1_1index_1_1btree_1_1BTreeDir_ac06e5a1031dc5ce29f911b8473ee058b}} 
+\index{simpledb\+::index\+::btree\+::\+B\+Tree\+Dir@{simpledb\+::index\+::btree\+::\+B\+Tree\+Dir}!make\+New\+Root@{make\+New\+Root}}
+\index{make\+New\+Root@{make\+New\+Root}!simpledb\+::index\+::btree\+::\+B\+Tree\+Dir@{simpledb\+::index\+::btree\+::\+B\+Tree\+Dir}}
+\subsubsection{\texorpdfstring{make\+New\+Root()}{makeNewRoot()}}
+{\footnotesize\ttfamily void simpledb.\+index.\+btree.\+B\+Tree\+Dir.\+make\+New\+Root (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1index_1_1btree_1_1DirEntry}{Dir\+Entry}}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new root block for the B-\/tree. The new root will have two children\+: the old root, and the specified block. Since the root must always be in block 0 of the file, the contents of the old root will get transferred to a new block. 
+\begin{DoxyParams}{Parameters}
+{\em e} & the directory entry to be added as a child of the new root \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeDir_a3f04be4cc17e50a6a5048731ed83fabd}\label{classsimpledb_1_1index_1_1btree_1_1BTreeDir_a3f04be4cc17e50a6a5048731ed83fabd}} 
+\index{simpledb\+::index\+::btree\+::\+B\+Tree\+Dir@{simpledb\+::index\+::btree\+::\+B\+Tree\+Dir}!search@{search}}
+\index{search@{search}!simpledb\+::index\+::btree\+::\+B\+Tree\+Dir@{simpledb\+::index\+::btree\+::\+B\+Tree\+Dir}}
+\subsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily int simpledb.\+index.\+btree.\+B\+Tree\+Dir.\+search (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}}]{searchkey }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the block number of the B-\/tree leaf block that contains the specified search key. 
+\begin{DoxyParams}{Parameters}
+{\em searchkey} & the search key value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the block number of the leaf block containing that search key 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/index/btree/B\+Tree\+Dir.\+java\end{DoxyCompactItemize}

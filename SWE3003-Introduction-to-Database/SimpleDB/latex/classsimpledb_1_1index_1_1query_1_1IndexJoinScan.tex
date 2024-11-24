@@ -1,0 +1,154 @@
+\hypertarget{classsimpledb_1_1index_1_1query_1_1IndexJoinScan}{}\section{simpledb.\+index.\+query.\+Index\+Join\+Scan Class Reference}
+\label{classsimpledb_1_1index_1_1query_1_1IndexJoinScan}\index{simpledb.\+index.\+query.\+Index\+Join\+Scan@{simpledb.\+index.\+query.\+Index\+Join\+Scan}}
+
+
+Inheritance diagram for simpledb.\+index.\+query.\+Index\+Join\+Scan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+index.\+query.\+Index\+Join\+Scan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_aef4763781164462054a641f5f82f5a0e}{Index\+Join\+Scan} (\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} lhs, \hyperlink{interfacesimpledb_1_1index_1_1Index}{Index} idx, String joinfield, \hyperlink{classsimpledb_1_1record_1_1TableScan}{Table\+Scan} rhs)
+\item 
+void \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_abbdd650c312ffc1ba633f57f5988fb85}{before\+First} ()
+\item 
+boolean \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_a5d91dbe6fb77001095d3fc0830bb2d24}{next} ()
+\item 
+int \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_aa18e11532e9379d49fac3b9b3cd6f0a6}{get\+Int} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_a8a554a0f56fcfe981c302e4929e2c211}{get\+Val} (String fldname)
+\item 
+String \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_adf3610c0e68bc8491ec7d6d887b71a59}{get\+String} (String fldname)
+\item 
+boolean \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_a2079804951f64581efd8cc1ef6af297b}{has\+Field} (String fldname)
+\item 
+void \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_a2746415c838f22a234167417f8c538b6}{close} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The scan class corresponding to the indexjoin relational algebra operator. The code is very similar to that of Product\+Scan, which makes sense because an index join is essentially the product of each L\+HS record with the matching R\+HS index records. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_aef4763781164462054a641f5f82f5a0e}\label{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_aef4763781164462054a641f5f82f5a0e}} 
+\index{simpledb\+::index\+::query\+::\+Index\+Join\+Scan@{simpledb\+::index\+::query\+::\+Index\+Join\+Scan}!Index\+Join\+Scan@{Index\+Join\+Scan}}
+\index{Index\+Join\+Scan@{Index\+Join\+Scan}!simpledb\+::index\+::query\+::\+Index\+Join\+Scan@{simpledb\+::index\+::query\+::\+Index\+Join\+Scan}}
+\subsubsection{\texorpdfstring{Index\+Join\+Scan()}{IndexJoinScan()}}
+{\footnotesize\ttfamily simpledb.\+index.\+query.\+Index\+Join\+Scan.\+Index\+Join\+Scan (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan}}]{lhs,  }\item[{\hyperlink{interfacesimpledb_1_1index_1_1Index}{Index}}]{idx,  }\item[{String}]{joinfield,  }\item[{\hyperlink{classsimpledb_1_1record_1_1TableScan}{Table\+Scan}}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates an index join scan for the specified L\+HS scan and R\+HS index. 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the L\+HS scan \\
+\hline
+{\em idx} & the R\+HS index \\
+\hline
+{\em joinfield} & the L\+HS field used for joining \\
+\hline
+{\em rhs} & the R\+HS scan \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_abbdd650c312ffc1ba633f57f5988fb85}\label{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_abbdd650c312ffc1ba633f57f5988fb85}} 
+\index{simpledb\+::index\+::query\+::\+Index\+Join\+Scan@{simpledb\+::index\+::query\+::\+Index\+Join\+Scan}!before\+First@{before\+First}}
+\index{before\+First@{before\+First}!simpledb\+::index\+::query\+::\+Index\+Join\+Scan@{simpledb\+::index\+::query\+::\+Index\+Join\+Scan}}
+\subsubsection{\texorpdfstring{before\+First()}{beforeFirst()}}
+{\footnotesize\ttfamily void simpledb.\+index.\+query.\+Index\+Join\+Scan.\+before\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Positions the scan before the first record. That is, the L\+HS scan will be positioned at its first record, and the index will be positioned before the first record for the join value. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a2eceb634b69da9bf1269a4355808cc6b}{simpledb.\+query.\+Scan\+::before\+First()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2eceb634b69da9bf1269a4355808cc6b}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_a2746415c838f22a234167417f8c538b6}\label{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_a2746415c838f22a234167417f8c538b6}} 
+\index{simpledb\+::index\+::query\+::\+Index\+Join\+Scan@{simpledb\+::index\+::query\+::\+Index\+Join\+Scan}!close@{close}}
+\index{close@{close}!simpledb\+::index\+::query\+::\+Index\+Join\+Scan@{simpledb\+::index\+::query\+::\+Index\+Join\+Scan}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void simpledb.\+index.\+query.\+Index\+Join\+Scan.\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Closes the scan by closing its L\+HS scan and its R\+HS index. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a260f40a8c82edaa00398bea9d698933c}{simpledb.\+query.\+Scan\+::close()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a260f40a8c82edaa00398bea9d698933c}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_aa18e11532e9379d49fac3b9b3cd6f0a6}\label{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_aa18e11532e9379d49fac3b9b3cd6f0a6}} 
+\index{simpledb\+::index\+::query\+::\+Index\+Join\+Scan@{simpledb\+::index\+::query\+::\+Index\+Join\+Scan}!get\+Int@{get\+Int}}
+\index{get\+Int@{get\+Int}!simpledb\+::index\+::query\+::\+Index\+Join\+Scan@{simpledb\+::index\+::query\+::\+Index\+Join\+Scan}}
+\subsubsection{\texorpdfstring{get\+Int()}{getInt()}}
+{\footnotesize\ttfamily int simpledb.\+index.\+query.\+Index\+Join\+Scan.\+get\+Int (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the integer value of the specified field. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan\+::get\+Val}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2e064555e16240115167b5d42d2b3d19}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_adf3610c0e68bc8491ec7d6d887b71a59}\label{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_adf3610c0e68bc8491ec7d6d887b71a59}} 
+\index{simpledb\+::index\+::query\+::\+Index\+Join\+Scan@{simpledb\+::index\+::query\+::\+Index\+Join\+Scan}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!simpledb\+::index\+::query\+::\+Index\+Join\+Scan@{simpledb\+::index\+::query\+::\+Index\+Join\+Scan}}
+\subsubsection{\texorpdfstring{get\+String()}{getString()}}
+{\footnotesize\ttfamily String simpledb.\+index.\+query.\+Index\+Join\+Scan.\+get\+String (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the string value of the specified field. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan\+::get\+Val}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a922e219fee53ecfa6163525f9e3ef222}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_a8a554a0f56fcfe981c302e4929e2c211}\label{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_a8a554a0f56fcfe981c302e4929e2c211}} 
+\index{simpledb\+::index\+::query\+::\+Index\+Join\+Scan@{simpledb\+::index\+::query\+::\+Index\+Join\+Scan}!get\+Val@{get\+Val}}
+\index{get\+Val@{get\+Val}!simpledb\+::index\+::query\+::\+Index\+Join\+Scan@{simpledb\+::index\+::query\+::\+Index\+Join\+Scan}}
+\subsubsection{\texorpdfstring{get\+Val()}{getVal()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+index.\+query.\+Index\+Join\+Scan.\+get\+Val (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the Constant value of the specified field. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan\+::get\+Val}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_a2079804951f64581efd8cc1ef6af297b}\label{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_a2079804951f64581efd8cc1ef6af297b}} 
+\index{simpledb\+::index\+::query\+::\+Index\+Join\+Scan@{simpledb\+::index\+::query\+::\+Index\+Join\+Scan}!has\+Field@{has\+Field}}
+\index{has\+Field@{has\+Field}!simpledb\+::index\+::query\+::\+Index\+Join\+Scan@{simpledb\+::index\+::query\+::\+Index\+Join\+Scan}}
+\subsubsection{\texorpdfstring{has\+Field()}{hasField()}}
+{\footnotesize\ttfamily boolean simpledb.\+index.\+query.\+Index\+Join\+Scan.\+has\+Field (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns true if the field is in the schema. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a8f4ccf13eed0bed983c928e9b998fe5c}{simpledb.\+query.\+Scan\+::has\+Field}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a8f4ccf13eed0bed983c928e9b998fe5c}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_a5d91dbe6fb77001095d3fc0830bb2d24}\label{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_a5d91dbe6fb77001095d3fc0830bb2d24}} 
+\index{simpledb\+::index\+::query\+::\+Index\+Join\+Scan@{simpledb\+::index\+::query\+::\+Index\+Join\+Scan}!next@{next}}
+\index{next@{next}!simpledb\+::index\+::query\+::\+Index\+Join\+Scan@{simpledb\+::index\+::query\+::\+Index\+Join\+Scan}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily boolean simpledb.\+index.\+query.\+Index\+Join\+Scan.\+next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Moves the scan to the next record. The method moves to the next index record, if possible. Otherwise, it moves to the next L\+HS record and the first index record. If there are no more L\+HS records, the method returns false. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}{simpledb.\+query.\+Scan\+::next()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}{simpledb.\+query.\+Scan}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/index/query/Index\+Join\+Scan.\+java\end{DoxyCompactItemize}

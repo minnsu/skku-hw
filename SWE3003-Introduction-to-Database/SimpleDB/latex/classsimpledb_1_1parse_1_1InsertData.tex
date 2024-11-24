@@ -1,0 +1,63 @@
+\hypertarget{classsimpledb_1_1parse_1_1InsertData}{}\section{simpledb.\+parse.\+Insert\+Data Class Reference}
+\label{classsimpledb_1_1parse_1_1InsertData}\index{simpledb.\+parse.\+Insert\+Data@{simpledb.\+parse.\+Insert\+Data}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1parse_1_1InsertData_add9a9bcf6380613202291ade6f0c121a}{Insert\+Data} (String tblname, List$<$ String $>$ flds, List$<$ \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} $>$ vals)
+\item 
+String \hyperlink{classsimpledb_1_1parse_1_1InsertData_aab0d64b2fe9bf60a34e2341cc515fae9}{table\+Name} ()
+\item 
+List$<$ String $>$ \hyperlink{classsimpledb_1_1parse_1_1InsertData_a961e06a30097c81b78a7f6328274c3c3}{fields} ()
+\item 
+List$<$ \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} $>$ \hyperlink{classsimpledb_1_1parse_1_1InsertData_a9f16fbf1c7a4e544d5cc6f17ca915469}{vals} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Data for the S\+QL {\itshape insert} statement. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1InsertData_add9a9bcf6380613202291ade6f0c121a}\label{classsimpledb_1_1parse_1_1InsertData_add9a9bcf6380613202291ade6f0c121a}} 
+\index{simpledb\+::parse\+::\+Insert\+Data@{simpledb\+::parse\+::\+Insert\+Data}!Insert\+Data@{Insert\+Data}}
+\index{Insert\+Data@{Insert\+Data}!simpledb\+::parse\+::\+Insert\+Data@{simpledb\+::parse\+::\+Insert\+Data}}
+\subsubsection{\texorpdfstring{Insert\+Data()}{InsertData()}}
+{\footnotesize\ttfamily simpledb.\+parse.\+Insert\+Data.\+Insert\+Data (\begin{DoxyParamCaption}\item[{String}]{tblname,  }\item[{List$<$ String $>$}]{flds,  }\item[{List$<$ \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} $>$}]{vals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Saves the table name and the field and value lists. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1InsertData_a961e06a30097c81b78a7f6328274c3c3}\label{classsimpledb_1_1parse_1_1InsertData_a961e06a30097c81b78a7f6328274c3c3}} 
+\index{simpledb\+::parse\+::\+Insert\+Data@{simpledb\+::parse\+::\+Insert\+Data}!fields@{fields}}
+\index{fields@{fields}!simpledb\+::parse\+::\+Insert\+Data@{simpledb\+::parse\+::\+Insert\+Data}}
+\subsubsection{\texorpdfstring{fields()}{fields()}}
+{\footnotesize\ttfamily List$<$String$>$ simpledb.\+parse.\+Insert\+Data.\+fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a list of fields for which values will be specified in the new record. \begin{DoxyReturn}{Returns}
+a list of field names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1InsertData_aab0d64b2fe9bf60a34e2341cc515fae9}\label{classsimpledb_1_1parse_1_1InsertData_aab0d64b2fe9bf60a34e2341cc515fae9}} 
+\index{simpledb\+::parse\+::\+Insert\+Data@{simpledb\+::parse\+::\+Insert\+Data}!table\+Name@{table\+Name}}
+\index{table\+Name@{table\+Name}!simpledb\+::parse\+::\+Insert\+Data@{simpledb\+::parse\+::\+Insert\+Data}}
+\subsubsection{\texorpdfstring{table\+Name()}{tableName()}}
+{\footnotesize\ttfamily String simpledb.\+parse.\+Insert\+Data.\+table\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the name of the affected table. \begin{DoxyReturn}{Returns}
+the name of the affected table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1parse_1_1InsertData_a9f16fbf1c7a4e544d5cc6f17ca915469}\label{classsimpledb_1_1parse_1_1InsertData_a9f16fbf1c7a4e544d5cc6f17ca915469}} 
+\index{simpledb\+::parse\+::\+Insert\+Data@{simpledb\+::parse\+::\+Insert\+Data}!vals@{vals}}
+\index{vals@{vals}!simpledb\+::parse\+::\+Insert\+Data@{simpledb\+::parse\+::\+Insert\+Data}}
+\subsubsection{\texorpdfstring{vals()}{vals()}}
+{\footnotesize\ttfamily List$<$\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}$>$ simpledb.\+parse.\+Insert\+Data.\+vals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a list of values for the specified fields. There is a one-\/one correspondence between this list of values and the list of fields. \begin{DoxyReturn}{Returns}
+a list of Constant values. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/parse/Insert\+Data.\+java\end{DoxyCompactItemize}

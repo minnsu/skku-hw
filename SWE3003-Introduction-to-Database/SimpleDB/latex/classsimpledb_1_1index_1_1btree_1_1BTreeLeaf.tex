@@ -1,0 +1,100 @@
+\hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf}{}\section{simpledb.\+index.\+btree.\+B\+Tree\+Leaf Class Reference}
+\label{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf}\index{simpledb.\+index.\+btree.\+B\+Tree\+Leaf@{simpledb.\+index.\+btree.\+B\+Tree\+Leaf}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf_a2209d908e450ace4c77ae358fc5e6126}{B\+Tree\+Leaf} (\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx, \hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} blk, \hyperlink{classsimpledb_1_1record_1_1Layout}{Layout} layout, \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} searchkey)
+\item 
+void \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf_a6e526d7dc8163bdd05d5012b82a10d84}{close} ()
+\item 
+boolean \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf_a682895688ae67d02556041c1a5b83c6d}{next} ()
+\item 
+\hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf_a79b4f0a4d4e9480d9cfdeb64298a0b53}{get\+Data\+Rid} ()
+\item 
+void \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf_a1fda546b620e8ec27ed9d33579926c6b}{delete} (\hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} datarid)
+\item 
+\hyperlink{classsimpledb_1_1index_1_1btree_1_1DirEntry}{Dir\+Entry} \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf_aeeaf9ad926466091ff6dc03b62304145}{insert} (\hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} datarid)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An object that holds the contents of a B-\/tree leaf block. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf_a2209d908e450ace4c77ae358fc5e6126}\label{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf_a2209d908e450ace4c77ae358fc5e6126}} 
+\index{simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf@{simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf}!B\+Tree\+Leaf@{B\+Tree\+Leaf}}
+\index{B\+Tree\+Leaf@{B\+Tree\+Leaf}!simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf@{simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf}}
+\subsubsection{\texorpdfstring{B\+Tree\+Leaf()}{BTreeLeaf()}}
+{\footnotesize\ttfamily simpledb.\+index.\+btree.\+B\+Tree\+Leaf.\+B\+Tree\+Leaf (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx,  }\item[{\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id}}]{blk,  }\item[{\hyperlink{classsimpledb_1_1record_1_1Layout}{Layout}}]{layout,  }\item[{\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}}]{searchkey }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Opens a buffer to hold the specified leaf block. The buffer is positioned immediately before the first record having the specified search key (if any). 
+\begin{DoxyParams}{Parameters}
+{\em blk} & a reference to the disk block \\
+\hline
+{\em layout} & the metadata of the B-\/tree leaf file \\
+\hline
+{\em searchkey} & the search key value \\
+\hline
+{\em tx} & the calling transaction \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf_a6e526d7dc8163bdd05d5012b82a10d84}\label{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf_a6e526d7dc8163bdd05d5012b82a10d84}} 
+\index{simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf@{simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf}!close@{close}}
+\index{close@{close}!simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf@{simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void simpledb.\+index.\+btree.\+B\+Tree\+Leaf.\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Closes the leaf page. \mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf_a1fda546b620e8ec27ed9d33579926c6b}\label{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf_a1fda546b620e8ec27ed9d33579926c6b}} 
+\index{simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf@{simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf}!delete@{delete}}
+\index{delete@{delete}!simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf@{simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf}}
+\subsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily void simpledb.\+index.\+btree.\+B\+Tree\+Leaf.\+delete (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID}}]{datarid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Deletes the leaf record having the specified data\+R\+ID 
+\begin{DoxyParams}{Parameters}
+{\em datarid} & the data\+R\+Id whose record is to be deleted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf_a79b4f0a4d4e9480d9cfdeb64298a0b53}\label{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf_a79b4f0a4d4e9480d9cfdeb64298a0b53}} 
+\index{simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf@{simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf}!get\+Data\+Rid@{get\+Data\+Rid}}
+\index{get\+Data\+Rid@{get\+Data\+Rid}!simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf@{simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf}}
+\subsubsection{\texorpdfstring{get\+Data\+Rid()}{getDataRid()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} simpledb.\+index.\+btree.\+B\+Tree\+Leaf.\+get\+Data\+Rid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the data\+R\+ID value of the current leaf record. \begin{DoxyReturn}{Returns}
+the data\+R\+ID of the current record 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf_aeeaf9ad926466091ff6dc03b62304145}\label{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf_aeeaf9ad926466091ff6dc03b62304145}} 
+\index{simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf@{simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf}!insert@{insert}}
+\index{insert@{insert}!simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf@{simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1index_1_1btree_1_1DirEntry}{Dir\+Entry} simpledb.\+index.\+btree.\+B\+Tree\+Leaf.\+insert (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID}}]{datarid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Inserts a new leaf record having the specified data\+R\+ID and the previously-\/specified search key. If the record does not fit in the page, then the page splits and the method returns the directory entry for the new page; otherwise, the method returns null. If all of the records in the page have the same dataval, then the block does not split; instead, all but one of the records are placed into an overflow block. 
+\begin{DoxyParams}{Parameters}
+{\em datarid} & the data\+R\+ID value of the new record \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the directory entry of the newly-\/split page, if one exists. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf_a682895688ae67d02556041c1a5b83c6d}\label{classsimpledb_1_1index_1_1btree_1_1BTreeLeaf_a682895688ae67d02556041c1a5b83c6d}} 
+\index{simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf@{simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf}!next@{next}}
+\index{next@{next}!simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf@{simpledb\+::index\+::btree\+::\+B\+Tree\+Leaf}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily boolean simpledb.\+index.\+btree.\+B\+Tree\+Leaf.\+next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Moves to the next leaf record having the previously-\/specified search key. Returns false if there is no more such records. \begin{DoxyReturn}{Returns}
+false if there are no more leaf records for the search key 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/index/btree/B\+Tree\+Leaf.\+java\end{DoxyCompactItemize}

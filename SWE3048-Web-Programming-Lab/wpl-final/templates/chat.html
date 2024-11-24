@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', path='css/chat.css')}}">
+<script src="{{ url_for('static', path='js/chat.js')}}"></script>
+{% endblock %}
+
+{% block content %}
+<div id="div_wrapper">
+    <div id="div_chat_messages">
+        <div class="chat_box">
+        </div>
+    </div>
+    <div id="div_chat_textarea">
+        <textarea id="textarea"></textarea>
+    </div>
+    <div id="div_btns">
+        <label for="input_file" id="file_label">Photo & Video</label>
+        <input type="file" id="input_file">
+        <input type="button" value="Send" id="btn_send">
+    </div>
+</div>
+{% endblock %}

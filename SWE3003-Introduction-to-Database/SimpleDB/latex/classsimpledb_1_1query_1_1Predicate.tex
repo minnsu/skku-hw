@@ -1,0 +1,157 @@
+\hypertarget{classsimpledb_1_1query_1_1Predicate}{}\section{simpledb.\+query.\+Predicate Class Reference}
+\label{classsimpledb_1_1query_1_1Predicate}\index{simpledb.\+query.\+Predicate@{simpledb.\+query.\+Predicate}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Predicate_aa52f71d773d6c8577f78868eecc30b5d}{Predicate} ()
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Predicate_abf1bd6b991bdbf075da1926957458d04}{Predicate} (\hyperlink{classsimpledb_1_1query_1_1Term}{Term} t)
+\item 
+void \hyperlink{classsimpledb_1_1query_1_1Predicate_a986fd2943734aef4ed929e17d7d65e59}{conjoin\+With} (\hyperlink{classsimpledb_1_1query_1_1Predicate}{Predicate} pred)
+\item 
+boolean \hyperlink{classsimpledb_1_1query_1_1Predicate_a5dec40f471ec4552ef01fba7cf5d51cf}{is\+Satisfied} (\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} s)
+\item 
+int \hyperlink{classsimpledb_1_1query_1_1Predicate_a75d25b296d403755e0f49f13aabb290d}{reduction\+Factor} (\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} p)
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Predicate}{Predicate} \hyperlink{classsimpledb_1_1query_1_1Predicate_a4f8ab1bd25e5bdf45076190ebb290524}{select\+Sub\+Pred} (\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} sch)
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Predicate}{Predicate} \hyperlink{classsimpledb_1_1query_1_1Predicate_a38645596a0d83c05ec9017984f6ffa86}{join\+Sub\+Pred} (\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} sch1, \hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} sch2)
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{classsimpledb_1_1query_1_1Predicate_aeed39e1683b339b552f2855666c59e85}{equates\+With\+Constant} (String fldname)
+\item 
+String \hyperlink{classsimpledb_1_1query_1_1Predicate_a8d615e9ed4f49a5e6fe8ad0f245f5ba7}{equates\+With\+Field} (String fldname)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Predicate_a046829d148b96e81947537fd46878642}\label{classsimpledb_1_1query_1_1Predicate_a046829d148b96e81947537fd46878642}} 
+String {\bfseries to\+String} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A predicate is a Boolean combination of terms. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Predicate_aa52f71d773d6c8577f78868eecc30b5d}\label{classsimpledb_1_1query_1_1Predicate_aa52f71d773d6c8577f78868eecc30b5d}} 
+\index{simpledb\+::query\+::\+Predicate@{simpledb\+::query\+::\+Predicate}!Predicate@{Predicate}}
+\index{Predicate@{Predicate}!simpledb\+::query\+::\+Predicate@{simpledb\+::query\+::\+Predicate}}
+\subsubsection{\texorpdfstring{Predicate()}{Predicate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily simpledb.\+query.\+Predicate.\+Predicate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create an empty predicate, corresponding to \char`\"{}true\char`\"{}. \mbox{\Hypertarget{classsimpledb_1_1query_1_1Predicate_abf1bd6b991bdbf075da1926957458d04}\label{classsimpledb_1_1query_1_1Predicate_abf1bd6b991bdbf075da1926957458d04}} 
+\index{simpledb\+::query\+::\+Predicate@{simpledb\+::query\+::\+Predicate}!Predicate@{Predicate}}
+\index{Predicate@{Predicate}!simpledb\+::query\+::\+Predicate@{simpledb\+::query\+::\+Predicate}}
+\subsubsection{\texorpdfstring{Predicate()}{Predicate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily simpledb.\+query.\+Predicate.\+Predicate (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1query_1_1Term}{Term}}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a predicate containing a single term. 
+\begin{DoxyParams}{Parameters}
+{\em t} & the term \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Predicate_a986fd2943734aef4ed929e17d7d65e59}\label{classsimpledb_1_1query_1_1Predicate_a986fd2943734aef4ed929e17d7d65e59}} 
+\index{simpledb\+::query\+::\+Predicate@{simpledb\+::query\+::\+Predicate}!conjoin\+With@{conjoin\+With}}
+\index{conjoin\+With@{conjoin\+With}!simpledb\+::query\+::\+Predicate@{simpledb\+::query\+::\+Predicate}}
+\subsubsection{\texorpdfstring{conjoin\+With()}{conjoinWith()}}
+{\footnotesize\ttfamily void simpledb.\+query.\+Predicate.\+conjoin\+With (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1query_1_1Predicate}{Predicate}}]{pred }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Modifies the predicate to be the conjunction of itself and the specified predicate. 
+\begin{DoxyParams}{Parameters}
+{\em pred} & the other predicate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Predicate_aeed39e1683b339b552f2855666c59e85}\label{classsimpledb_1_1query_1_1Predicate_aeed39e1683b339b552f2855666c59e85}} 
+\index{simpledb\+::query\+::\+Predicate@{simpledb\+::query\+::\+Predicate}!equates\+With\+Constant@{equates\+With\+Constant}}
+\index{equates\+With\+Constant@{equates\+With\+Constant}!simpledb\+::query\+::\+Predicate@{simpledb\+::query\+::\+Predicate}}
+\subsubsection{\texorpdfstring{equates\+With\+Constant()}{equatesWithConstant()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+query.\+Predicate.\+equates\+With\+Constant (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Determine if there is a term of the form \char`\"{}\+F=c\char`\"{} where F is the specified field and c is some constant. If so, the method returns that constant. If not, the method returns null. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+either the constant or null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Predicate_a8d615e9ed4f49a5e6fe8ad0f245f5ba7}\label{classsimpledb_1_1query_1_1Predicate_a8d615e9ed4f49a5e6fe8ad0f245f5ba7}} 
+\index{simpledb\+::query\+::\+Predicate@{simpledb\+::query\+::\+Predicate}!equates\+With\+Field@{equates\+With\+Field}}
+\index{equates\+With\+Field@{equates\+With\+Field}!simpledb\+::query\+::\+Predicate@{simpledb\+::query\+::\+Predicate}}
+\subsubsection{\texorpdfstring{equates\+With\+Field()}{equatesWithField()}}
+{\footnotesize\ttfamily String simpledb.\+query.\+Predicate.\+equates\+With\+Field (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Determine if there is a term of the form \char`\"{}\+F1=\+F2\char`\"{} where F1 is the specified field and F2 is another field. If so, the method returns the name of that field. If not, the method returns null. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the name of the other field, or null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Predicate_a5dec40f471ec4552ef01fba7cf5d51cf}\label{classsimpledb_1_1query_1_1Predicate_a5dec40f471ec4552ef01fba7cf5d51cf}} 
+\index{simpledb\+::query\+::\+Predicate@{simpledb\+::query\+::\+Predicate}!is\+Satisfied@{is\+Satisfied}}
+\index{is\+Satisfied@{is\+Satisfied}!simpledb\+::query\+::\+Predicate@{simpledb\+::query\+::\+Predicate}}
+\subsubsection{\texorpdfstring{is\+Satisfied()}{isSatisfied()}}
+{\footnotesize\ttfamily boolean simpledb.\+query.\+Predicate.\+is\+Satisfied (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns true if the predicate evaluates to true with respect to the specified scan. 
+\begin{DoxyParams}{Parameters}
+{\em s} & the scan \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the predicate is true in the scan 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Predicate_a38645596a0d83c05ec9017984f6ffa86}\label{classsimpledb_1_1query_1_1Predicate_a38645596a0d83c05ec9017984f6ffa86}} 
+\index{simpledb\+::query\+::\+Predicate@{simpledb\+::query\+::\+Predicate}!join\+Sub\+Pred@{join\+Sub\+Pred}}
+\index{join\+Sub\+Pred@{join\+Sub\+Pred}!simpledb\+::query\+::\+Predicate@{simpledb\+::query\+::\+Predicate}}
+\subsubsection{\texorpdfstring{join\+Sub\+Pred()}{joinSubPred()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Predicate}{Predicate} simpledb.\+query.\+Predicate.\+join\+Sub\+Pred (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema}}]{sch1,  }\item[{\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema}}]{sch2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the subpredicate consisting of terms that apply to the union of the two specified schemas, but not to either schema separately. 
+\begin{DoxyParams}{Parameters}
+{\em sch1} & the first schema \\
+\hline
+{\em sch2} & the second schema \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the subpredicate whose terms apply to the union of the two schemas but not either schema separately. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Predicate_a75d25b296d403755e0f49f13aabb290d}\label{classsimpledb_1_1query_1_1Predicate_a75d25b296d403755e0f49f13aabb290d}} 
+\index{simpledb\+::query\+::\+Predicate@{simpledb\+::query\+::\+Predicate}!reduction\+Factor@{reduction\+Factor}}
+\index{reduction\+Factor@{reduction\+Factor}!simpledb\+::query\+::\+Predicate@{simpledb\+::query\+::\+Predicate}}
+\subsubsection{\texorpdfstring{reduction\+Factor()}{reductionFactor()}}
+{\footnotesize\ttfamily int simpledb.\+query.\+Predicate.\+reduction\+Factor (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan}}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calculate the extent to which selecting on the predicate reduces the number of records output by a query. For example if the reduction factor is 2, then the predicate cuts the size of the output in half. 
+\begin{DoxyParams}{Parameters}
+{\em p} & the query\textquotesingle{}s plan \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the integer reduction factor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Predicate_a4f8ab1bd25e5bdf45076190ebb290524}\label{classsimpledb_1_1query_1_1Predicate_a4f8ab1bd25e5bdf45076190ebb290524}} 
+\index{simpledb\+::query\+::\+Predicate@{simpledb\+::query\+::\+Predicate}!select\+Sub\+Pred@{select\+Sub\+Pred}}
+\index{select\+Sub\+Pred@{select\+Sub\+Pred}!simpledb\+::query\+::\+Predicate@{simpledb\+::query\+::\+Predicate}}
+\subsubsection{\texorpdfstring{select\+Sub\+Pred()}{selectSubPred()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Predicate}{Predicate} simpledb.\+query.\+Predicate.\+select\+Sub\+Pred (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema}}]{sch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the subpredicate that applies to the specified schema. 
+\begin{DoxyParams}{Parameters}
+{\em sch} & the schema \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the subpredicate applying to the schema 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/query/Predicate.\+java\end{DoxyCompactItemize}

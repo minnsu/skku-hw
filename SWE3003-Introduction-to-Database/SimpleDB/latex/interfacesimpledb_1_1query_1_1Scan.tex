@@ -1,0 +1,142 @@
+\hypertarget{interfacesimpledb_1_1query_1_1Scan}{}\section{simpledb.\+query.\+Scan Interface Reference}
+\label{interfacesimpledb_1_1query_1_1Scan}\index{simpledb.\+query.\+Scan@{simpledb.\+query.\+Scan}}
+
+
+Inheritance diagram for simpledb.\+query.\+Scan\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2eceb634b69da9bf1269a4355808cc6b}{before\+First} ()
+\item 
+boolean \hyperlink{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}{next} ()
+\item 
+int \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2e064555e16240115167b5d42d2b3d19}{get\+Int} (String fldname)
+\item 
+String \hyperlink{interfacesimpledb_1_1query_1_1Scan_a922e219fee53ecfa6163525f9e3ef222}{get\+String} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{get\+Val} (String fldname)
+\item 
+boolean \hyperlink{interfacesimpledb_1_1query_1_1Scan_a8f4ccf13eed0bed983c928e9b998fe5c}{has\+Field} (String fldname)
+\item 
+void \hyperlink{interfacesimpledb_1_1query_1_1Scan_a260f40a8c82edaa00398bea9d698933c}{close} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The interface will be implemented by each query scan. There is a \hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} class for each relational algebra operator. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{interfacesimpledb_1_1query_1_1Scan_a2eceb634b69da9bf1269a4355808cc6b}\label{interfacesimpledb_1_1query_1_1Scan_a2eceb634b69da9bf1269a4355808cc6b}} 
+\index{simpledb\+::query\+::\+Scan@{simpledb\+::query\+::\+Scan}!before\+First@{before\+First}}
+\index{before\+First@{before\+First}!simpledb\+::query\+::\+Scan@{simpledb\+::query\+::\+Scan}}
+\subsubsection{\texorpdfstring{before\+First()}{beforeFirst()}}
+{\footnotesize\ttfamily void simpledb.\+query.\+Scan.\+before\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Position the scan before its first record. A subsequent call to \hyperlink{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}{next()} will return the first record. 
+
+Implemented in \hyperlink{classsimpledb_1_1multibuffer_1_1ChunkScan_acd915cad8a1a21a0838eab8c4ee47935}{simpledb.\+multibuffer.\+Chunk\+Scan}, \hyperlink{classsimpledb_1_1materialize_1_1SortScan_aa9fed9077d78dcbd50a0c1504e5b5c86}{simpledb.\+materialize.\+Sort\+Scan}, \hyperlink{classsimpledb_1_1materialize_1_1MergeJoinScan_a171db3d5aad009a8f8b93dc4742f2a3a}{simpledb.\+materialize.\+Merge\+Join\+Scan}, \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_abbdd650c312ffc1ba633f57f5988fb85}{simpledb.\+index.\+query.\+Index\+Join\+Scan}, \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_ab8cc812f19837c2f6b559d2f6734d858}{simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan}, \hyperlink{classsimpledb_1_1materialize_1_1GroupByScan_aa8e3233026ee744d9037288ef0fffb3d}{simpledb.\+materialize.\+Group\+By\+Scan}, \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexSelectScan_a4d7ce96f840cfc13840b3dcbee65801a}{simpledb.\+index.\+query.\+Index\+Select\+Scan}, \hyperlink{classsimpledb_1_1record_1_1TableScan_a2b5a99c638ace01efded11dd93cf9240}{simpledb.\+record.\+Table\+Scan}, \hyperlink{classsimpledb_1_1query_1_1ProductScan_a2b5520d561ce26d401b4744f637a4d76}{simpledb.\+query.\+Product\+Scan}, \hyperlink{classsimpledb_1_1query_1_1SelectScan_a5ba571c7504c39532b8a211f804e1726}{simpledb.\+query.\+Select\+Scan}, and \hyperlink{classsimpledb_1_1query_1_1ProjectScan_ab34d4470b97f47e22879911fb71eeca6}{simpledb.\+query.\+Project\+Scan}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1query_1_1Scan_a260f40a8c82edaa00398bea9d698933c}\label{interfacesimpledb_1_1query_1_1Scan_a260f40a8c82edaa00398bea9d698933c}} 
+\index{simpledb\+::query\+::\+Scan@{simpledb\+::query\+::\+Scan}!close@{close}}
+\index{close@{close}!simpledb\+::query\+::\+Scan@{simpledb\+::query\+::\+Scan}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void simpledb.\+query.\+Scan.\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Close the scan and its subscans, if any. 
+
+Implemented in \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_a2746415c838f22a234167417f8c538b6}{simpledb.\+index.\+query.\+Index\+Join\+Scan}, \hyperlink{classsimpledb_1_1query_1_1ProductScan_a58ee47fd6a8b397c3ad386fd7f3d257e}{simpledb.\+query.\+Product\+Scan}, \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexSelectScan_a5dab2095d3e3d77a6db1f8ad849dc8ad}{simpledb.\+index.\+query.\+Index\+Select\+Scan}, \hyperlink{classsimpledb_1_1materialize_1_1SortScan_abbd920a65ae5509e705112fe6cfbb966}{simpledb.\+materialize.\+Sort\+Scan}, \hyperlink{classsimpledb_1_1materialize_1_1GroupByScan_a95a307d14faf60c967efaaa666d22bf0}{simpledb.\+materialize.\+Group\+By\+Scan}, \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_a20a1d9952bcac4f243d591b56cefaad2}{simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan}, \hyperlink{classsimpledb_1_1record_1_1TableScan_aff0239675c54b7e5d7c72695a7169c7c}{simpledb.\+record.\+Table\+Scan}, \hyperlink{classsimpledb_1_1query_1_1ProjectScan_a192669ae4807d1f623fe6200fe37522f}{simpledb.\+query.\+Project\+Scan}, \hyperlink{classsimpledb_1_1query_1_1SelectScan_a5baa8036fe4b4ab88760ce5cad67e7ec}{simpledb.\+query.\+Select\+Scan}, \hyperlink{classsimpledb_1_1multibuffer_1_1ChunkScan_ac05118042ff2f71f455a3fc4cd5288d0}{simpledb.\+multibuffer.\+Chunk\+Scan}, and \hyperlink{classsimpledb_1_1materialize_1_1MergeJoinScan_a11fc3e14ebf559089454871786acf1fe}{simpledb.\+materialize.\+Merge\+Join\+Scan}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1query_1_1Scan_a2e064555e16240115167b5d42d2b3d19}\label{interfacesimpledb_1_1query_1_1Scan_a2e064555e16240115167b5d42d2b3d19}} 
+\index{simpledb\+::query\+::\+Scan@{simpledb\+::query\+::\+Scan}!get\+Int@{get\+Int}}
+\index{get\+Int@{get\+Int}!simpledb\+::query\+::\+Scan@{simpledb\+::query\+::\+Scan}}
+\subsubsection{\texorpdfstring{get\+Int()}{getInt()}}
+{\footnotesize\ttfamily int simpledb.\+query.\+Scan.\+get\+Int (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})}
+
+Return the value of the specified integer field in the current record. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the field\textquotesingle{}s integer value in the current record 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1materialize_1_1SortScan_a2a0cdce171742d1f7b29d15ba4413621}{simpledb.\+materialize.\+Sort\+Scan}, \hyperlink{classsimpledb_1_1materialize_1_1GroupByScan_a04e34f64ca9d51765f0d6ab05dc157bf}{simpledb.\+materialize.\+Group\+By\+Scan}, \hyperlink{classsimpledb_1_1materialize_1_1MergeJoinScan_aa1cf26813dd8eedf72edf094d257648f}{simpledb.\+materialize.\+Merge\+Join\+Scan}, \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_ab41a5fafcf3d1af5b9657e83b1d734c2}{simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan}, \hyperlink{classsimpledb_1_1multibuffer_1_1ChunkScan_a60fb6e3568149c5284b80e339d3e3ffb}{simpledb.\+multibuffer.\+Chunk\+Scan}, \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_aa18e11532e9379d49fac3b9b3cd6f0a6}{simpledb.\+index.\+query.\+Index\+Join\+Scan}, \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexSelectScan_aae5a05685f70eff1c67c9d4b47b84ba8}{simpledb.\+index.\+query.\+Index\+Select\+Scan}, \hyperlink{classsimpledb_1_1query_1_1ProductScan_a7b94328d04d2d0bf10f460d6abfc9299}{simpledb.\+query.\+Product\+Scan}, \hyperlink{classsimpledb_1_1record_1_1TableScan_abb08c41204e3130311ed1f264778b750}{simpledb.\+record.\+Table\+Scan}, \hyperlink{classsimpledb_1_1query_1_1SelectScan_af1af0f56c8c9afcc128cc2be6f4f4670}{simpledb.\+query.\+Select\+Scan}, and \hyperlink{classsimpledb_1_1query_1_1ProjectScan_a89039656c72ea917c18442e8f3627d14}{simpledb.\+query.\+Project\+Scan}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1query_1_1Scan_a922e219fee53ecfa6163525f9e3ef222}\label{interfacesimpledb_1_1query_1_1Scan_a922e219fee53ecfa6163525f9e3ef222}} 
+\index{simpledb\+::query\+::\+Scan@{simpledb\+::query\+::\+Scan}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!simpledb\+::query\+::\+Scan@{simpledb\+::query\+::\+Scan}}
+\subsubsection{\texorpdfstring{get\+String()}{getString()}}
+{\footnotesize\ttfamily String simpledb.\+query.\+Scan.\+get\+String (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})}
+
+Return the value of the specified string field in the current record. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the field\textquotesingle{}s string value in the current record 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1materialize_1_1SortScan_a4e8f52b556a029c86480d969f06bb1e0}{simpledb.\+materialize.\+Sort\+Scan}, \hyperlink{classsimpledb_1_1materialize_1_1GroupByScan_a5de9ab1d8e9da876aa5cd7cb3b953f62}{simpledb.\+materialize.\+Group\+By\+Scan}, \hyperlink{classsimpledb_1_1materialize_1_1MergeJoinScan_a75103d6b70f1138aa532abd01e9c436b}{simpledb.\+materialize.\+Merge\+Join\+Scan}, \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_ad79341706c7a797ec6d56dc7c04b9276}{simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan}, \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_adf3610c0e68bc8491ec7d6d887b71a59}{simpledb.\+index.\+query.\+Index\+Join\+Scan}, \hyperlink{classsimpledb_1_1multibuffer_1_1ChunkScan_aa66edd9026c2c2f92015d3d6c2b9c932}{simpledb.\+multibuffer.\+Chunk\+Scan}, \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexSelectScan_ab67c9c8e34fa77975e00d9202075df3b}{simpledb.\+index.\+query.\+Index\+Select\+Scan}, \hyperlink{classsimpledb_1_1query_1_1ProductScan_a2fda3abb7dc55d443791b8e5664ef1e3}{simpledb.\+query.\+Product\+Scan}, \hyperlink{classsimpledb_1_1record_1_1TableScan_af43f30e2489c5cd23566cb60271db331}{simpledb.\+record.\+Table\+Scan}, \hyperlink{classsimpledb_1_1query_1_1SelectScan_a82a4ef8dd0ba1287cfb3bd9f25d01bd2}{simpledb.\+query.\+Select\+Scan}, and \hyperlink{classsimpledb_1_1query_1_1ProjectScan_afaf845b45f703794f37b6c48d68a753a}{simpledb.\+query.\+Project\+Scan}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}\label{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}} 
+\index{simpledb\+::query\+::\+Scan@{simpledb\+::query\+::\+Scan}!get\+Val@{get\+Val}}
+\index{get\+Val@{get\+Val}!simpledb\+::query\+::\+Scan@{simpledb\+::query\+::\+Scan}}
+\subsubsection{\texorpdfstring{get\+Val()}{getVal()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+query.\+Scan.\+get\+Val (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})}
+
+Return the value of the specified field in the current record. The value is expressed as a \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value of that field, expressed as a \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1materialize_1_1MergeJoinScan_a7c6aaa5825fbb2b3ca2ebd7ceb49ba5d}{simpledb.\+materialize.\+Merge\+Join\+Scan}, \hyperlink{classsimpledb_1_1materialize_1_1SortScan_a6be5b206585dbd12c251a203364b5b1f}{simpledb.\+materialize.\+Sort\+Scan}, \hyperlink{classsimpledb_1_1multibuffer_1_1ChunkScan_a8c5c7202add0289c7fc15f036332db96}{simpledb.\+multibuffer.\+Chunk\+Scan}, \hyperlink{classsimpledb_1_1materialize_1_1GroupByScan_acb46660cae0539050eb6041f6310425f}{simpledb.\+materialize.\+Group\+By\+Scan}, \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_a8a554a0f56fcfe981c302e4929e2c211}{simpledb.\+index.\+query.\+Index\+Join\+Scan}, \hyperlink{classsimpledb_1_1query_1_1ProductScan_ade690f4d248b8d489e9565bb73e0cf59}{simpledb.\+query.\+Product\+Scan}, \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexSelectScan_a2fc2cb0693d8c75ab2265b920f923439}{simpledb.\+index.\+query.\+Index\+Select\+Scan}, \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_acb1cdfd6dfe1b848e423bfb4b513b48f}{simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan}, \hyperlink{classsimpledb_1_1record_1_1TableScan_a0a4ad2c10c2c60f3c984876c672e15e1}{simpledb.\+record.\+Table\+Scan}, \hyperlink{classsimpledb_1_1query_1_1ProjectScan_a519337a8db86470d88e8bc24c068e53b}{simpledb.\+query.\+Project\+Scan}, and \hyperlink{classsimpledb_1_1query_1_1SelectScan_a5e5fcf6179ecbbb316e6fde68a04dc7f}{simpledb.\+query.\+Select\+Scan}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1query_1_1Scan_a8f4ccf13eed0bed983c928e9b998fe5c}\label{interfacesimpledb_1_1query_1_1Scan_a8f4ccf13eed0bed983c928e9b998fe5c}} 
+\index{simpledb\+::query\+::\+Scan@{simpledb\+::query\+::\+Scan}!has\+Field@{has\+Field}}
+\index{has\+Field@{has\+Field}!simpledb\+::query\+::\+Scan@{simpledb\+::query\+::\+Scan}}
+\subsubsection{\texorpdfstring{has\+Field()}{hasField()}}
+{\footnotesize\ttfamily boolean simpledb.\+query.\+Scan.\+has\+Field (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})}
+
+Return true if the scan has the specified field. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the scan has that field 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1materialize_1_1MergeJoinScan_a1450a0e4f554e53c628ed66d39020fc6}{simpledb.\+materialize.\+Merge\+Join\+Scan}, \hyperlink{classsimpledb_1_1materialize_1_1SortScan_a9987dac3483863a86dd3a97495a1f522}{simpledb.\+materialize.\+Sort\+Scan}, \hyperlink{classsimpledb_1_1materialize_1_1GroupByScan_aeff4514ccf6106445de717b20ec3d155}{simpledb.\+materialize.\+Group\+By\+Scan}, \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_a2079804951f64581efd8cc1ef6af297b}{simpledb.\+index.\+query.\+Index\+Join\+Scan}, \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_afc843ca9e632e75d171245fe59e2bd14}{simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan}, \hyperlink{classsimpledb_1_1multibuffer_1_1ChunkScan_ab63331aac633c7b12a5aa0401a77d2b2}{simpledb.\+multibuffer.\+Chunk\+Scan}, \hyperlink{classsimpledb_1_1query_1_1ProductScan_a06c138c93e98cede58b6421c93aa451d}{simpledb.\+query.\+Product\+Scan}, \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexSelectScan_a5ab76aa38dcde3d563d88753c9c171ce}{simpledb.\+index.\+query.\+Index\+Select\+Scan}, \hyperlink{classsimpledb_1_1record_1_1TableScan_aad90f69cc2d14ecfe8a7854e8ed60548}{simpledb.\+record.\+Table\+Scan}, \hyperlink{classsimpledb_1_1query_1_1ProjectScan_aff65421fc21f24723e730cb1d26fa6ed}{simpledb.\+query.\+Project\+Scan}, and \hyperlink{classsimpledb_1_1query_1_1SelectScan_ab96fcae15d9b956cddd234ae1cbe84e7}{simpledb.\+query.\+Select\+Scan}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}\label{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}} 
+\index{simpledb\+::query\+::\+Scan@{simpledb\+::query\+::\+Scan}!next@{next}}
+\index{next@{next}!simpledb\+::query\+::\+Scan@{simpledb\+::query\+::\+Scan}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily boolean simpledb.\+query.\+Scan.\+next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Move the scan to the next record. \begin{DoxyReturn}{Returns}
+false if there is no next record 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1multibuffer_1_1ChunkScan_a67b28d9b880f45fe94257b483cc3093a}{simpledb.\+multibuffer.\+Chunk\+Scan}, \hyperlink{classsimpledb_1_1materialize_1_1MergeJoinScan_a557b6b51af330fe0180f639246fa7135}{simpledb.\+materialize.\+Merge\+Join\+Scan}, \hyperlink{classsimpledb_1_1materialize_1_1SortScan_a4180abc890522265c22728e67f2131cd}{simpledb.\+materialize.\+Sort\+Scan}, \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexJoinScan_a5d91dbe6fb77001095d3fc0830bb2d24}{simpledb.\+index.\+query.\+Index\+Join\+Scan}, \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_aec94240353c72bb7eedb60dbe7d3d5e6}{simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan}, \hyperlink{classsimpledb_1_1materialize_1_1GroupByScan_acbe4614c0d8a58cea2cdc86eb964dd8d}{simpledb.\+materialize.\+Group\+By\+Scan}, \hyperlink{classsimpledb_1_1index_1_1query_1_1IndexSelectScan_af642270c5b38d4c87d6a60218660b60e}{simpledb.\+index.\+query.\+Index\+Select\+Scan}, \hyperlink{classsimpledb_1_1query_1_1ProductScan_a5c467cd753d2b088b96b649c7b8cf420}{simpledb.\+query.\+Product\+Scan}, \hyperlink{classsimpledb_1_1record_1_1TableScan_aefc2187ef691253a8d569d01f423c18b}{simpledb.\+record.\+Table\+Scan}, \hyperlink{classsimpledb_1_1query_1_1SelectScan_aefb8c0f74e03179755553ce178f7504d}{simpledb.\+query.\+Select\+Scan}, and \hyperlink{classsimpledb_1_1query_1_1ProjectScan_ae90eaf25301873aba0a2f743becf7c9a}{simpledb.\+query.\+Project\+Scan}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/query/Scan.\+java\end{DoxyCompactItemize}

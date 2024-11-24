@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', path='css/main.css')}}">
+<script src="{{ url_for('static', path='js/main.js')}}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="div_wrapper">
+    <div class="div_sidebar">
+        <div id="div_friends"><input type="button" value="Friends" id="btn_friends"></div>
+        <div id="div_chats"><input type="button" value="Chats" id="btn_chats"></div>
+    </div>
+    <div class="div_list">
+        <ul id="list">
+
+        </ul>
+        <div id="div_add_friend">
+            <input type="button" value="Make group chat" id="btn_group_chat">
+            <input type="button" value="Add friend" id="btn_add_friend">
+            <input type="text" placeholder="User id to add" class="hide" id="input_friend_id">
+        </div>
+    </div>
+</div>
+{% endblock %}

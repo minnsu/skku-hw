@@ -1,0 +1,21 @@
+\hypertarget{classsimpledb_1_1buffer_1_1BufferAbortException}{}\section{simpledb.\+buffer.\+Buffer\+Abort\+Exception Class Reference}
+\label{classsimpledb_1_1buffer_1_1BufferAbortException}\index{simpledb.\+buffer.\+Buffer\+Abort\+Exception@{simpledb.\+buffer.\+Buffer\+Abort\+Exception}}
+
+
+Inheritance diagram for simpledb.\+buffer.\+Buffer\+Abort\+Exception\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+buffer.\+Buffer\+Abort\+Exception\+:
+% FIG 1
+
+
+\subsection{Detailed Description}
+A runtime exception indicating that the transaction needs to abort because a buffer request could not be satisfied. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/buffer/Buffer\+Abort\+Exception.\+java\end{DoxyCompactItemize}

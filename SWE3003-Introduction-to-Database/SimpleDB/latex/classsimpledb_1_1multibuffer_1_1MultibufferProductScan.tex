@@ -1,0 +1,152 @@
+\hypertarget{classsimpledb_1_1multibuffer_1_1MultibufferProductScan}{}\section{simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan Class Reference}
+\label{classsimpledb_1_1multibuffer_1_1MultibufferProductScan}\index{simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan@{simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan}}
+
+
+Inheritance diagram for simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_a5dc4e4e042eeec2cbed845ecd4ae6d50}{Multibuffer\+Product\+Scan} (\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx, \hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} lhsscan, String tblname, \hyperlink{classsimpledb_1_1record_1_1Layout}{Layout} layout)
+\item 
+void \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_ab8cc812f19837c2f6b559d2f6734d858}{before\+First} ()
+\item 
+boolean \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_aec94240353c72bb7eedb60dbe7d3d5e6}{next} ()
+\item 
+void \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_a20a1d9952bcac4f243d591b56cefaad2}{close} ()
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_acb1cdfd6dfe1b848e423bfb4b513b48f}{get\+Val} (String fldname)
+\item 
+int \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_ab41a5fafcf3d1af5b9657e83b1d734c2}{get\+Int} (String fldname)
+\item 
+String \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_ad79341706c7a797ec6d56dc7c04b9276}{get\+String} (String fldname)
+\item 
+boolean \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_afc843ca9e632e75d171245fe59e2bd14}{has\+Field} (String fldname)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Scan class for the multi-\/buffer version of the {\itshape product} operator. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_a5dc4e4e042eeec2cbed845ecd4ae6d50}\label{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_a5dc4e4e042eeec2cbed845ecd4ae6d50}} 
+\index{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan}!Multibuffer\+Product\+Scan@{Multibuffer\+Product\+Scan}}
+\index{Multibuffer\+Product\+Scan@{Multibuffer\+Product\+Scan}!simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan}}
+\subsubsection{\texorpdfstring{Multibuffer\+Product\+Scan()}{MultibufferProductScan()}}
+{\footnotesize\ttfamily simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan.\+Multibuffer\+Product\+Scan (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx,  }\item[{\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan}}]{lhsscan,  }\item[{String}]{tblname,  }\item[{\hyperlink{classsimpledb_1_1record_1_1Layout}{Layout}}]{layout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates the scan class for the product of the L\+HS scan and a table. 
+\begin{DoxyParams}{Parameters}
+{\em lhsscan} & the L\+HS scan \\
+\hline
+{\em layout} & the metadata for the R\+HS table \\
+\hline
+{\em tx} & the current transaction \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_ab8cc812f19837c2f6b559d2f6734d858}\label{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_ab8cc812f19837c2f6b559d2f6734d858}} 
+\index{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan}!before\+First@{before\+First}}
+\index{before\+First@{before\+First}!simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan}}
+\subsubsection{\texorpdfstring{before\+First()}{beforeFirst()}}
+{\footnotesize\ttfamily void simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan.\+before\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Positions the scan before the first record. That is, the L\+HS scan is positioned at its first record, and the R\+HS scan is positioned before the first record of the first chunk. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a2eceb634b69da9bf1269a4355808cc6b}{simpledb.\+query.\+Scan\+::before\+First()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2eceb634b69da9bf1269a4355808cc6b}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_a20a1d9952bcac4f243d591b56cefaad2}\label{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_a20a1d9952bcac4f243d591b56cefaad2}} 
+\index{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan}!close@{close}}
+\index{close@{close}!simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan.\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Closes the current scans. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a260f40a8c82edaa00398bea9d698933c}{simpledb.\+query.\+Scan\+::close()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a260f40a8c82edaa00398bea9d698933c}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_ab41a5fafcf3d1af5b9657e83b1d734c2}\label{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_ab41a5fafcf3d1af5b9657e83b1d734c2}} 
+\index{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan}!get\+Int@{get\+Int}}
+\index{get\+Int@{get\+Int}!simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan}}
+\subsubsection{\texorpdfstring{get\+Int()}{getInt()}}
+{\footnotesize\ttfamily int simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan.\+get\+Int (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the integer value of the specified field. The value is obtained from whichever scan contains the field. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a2e064555e16240115167b5d42d2b3d19}{simpledb.\+query.\+Scan\+::get\+Int}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2e064555e16240115167b5d42d2b3d19}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_ad79341706c7a797ec6d56dc7c04b9276}\label{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_ad79341706c7a797ec6d56dc7c04b9276}} 
+\index{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan}}
+\subsubsection{\texorpdfstring{get\+String()}{getString()}}
+{\footnotesize\ttfamily String simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan.\+get\+String (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the string value of the specified field. The value is obtained from whichever scan contains the field. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a922e219fee53ecfa6163525f9e3ef222}{simpledb.\+query.\+Scan\+::get\+String}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a922e219fee53ecfa6163525f9e3ef222}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_acb1cdfd6dfe1b848e423bfb4b513b48f}\label{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_acb1cdfd6dfe1b848e423bfb4b513b48f}} 
+\index{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan}!get\+Val@{get\+Val}}
+\index{get\+Val@{get\+Val}!simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan}}
+\subsubsection{\texorpdfstring{get\+Val()}{getVal()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan.\+get\+Val (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the value of the specified field. The value is obtained from whichever scan contains the field. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan\+::get\+Val}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_afc843ca9e632e75d171245fe59e2bd14}\label{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_afc843ca9e632e75d171245fe59e2bd14}} 
+\index{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan}!has\+Field@{has\+Field}}
+\index{has\+Field@{has\+Field}!simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan}}
+\subsubsection{\texorpdfstring{has\+Field()}{hasField()}}
+{\footnotesize\ttfamily boolean simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan.\+has\+Field (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns true if the specified field is in either of the underlying scans. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a8f4ccf13eed0bed983c928e9b998fe5c}{simpledb.\+query.\+Scan\+::has\+Field}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a8f4ccf13eed0bed983c928e9b998fe5c}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_aec94240353c72bb7eedb60dbe7d3d5e6}\label{classsimpledb_1_1multibuffer_1_1MultibufferProductScan_aec94240353c72bb7eedb60dbe7d3d5e6}} 
+\index{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan}!next@{next}}
+\index{next@{next}!simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Scan}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily boolean simpledb.\+multibuffer.\+Multibuffer\+Product\+Scan.\+next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Moves to the next record in the current scan. If there are no more records in the current chunk, then move to the next L\+HS record and the beginning of that chunk. If there are no more L\+HS records, then move to the next chunk and begin again. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}{simpledb.\+query.\+Scan\+::next()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}{simpledb.\+query.\+Scan}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/multibuffer/Multibuffer\+Product\+Scan.\+java\end{DoxyCompactItemize}

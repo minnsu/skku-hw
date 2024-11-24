@@ -1,0 +1,103 @@
+\hypertarget{classsimpledb_1_1materialize_1_1CountFn}{}\section{simpledb.\+materialize.\+Count\+Fn Class Reference}
+\label{classsimpledb_1_1materialize_1_1CountFn}\index{simpledb.\+materialize.\+Count\+Fn@{simpledb.\+materialize.\+Count\+Fn}}
+
+
+Inheritance diagram for simpledb.\+materialize.\+Count\+Fn\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+materialize.\+Count\+Fn\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1materialize_1_1CountFn_a0b09ab4463c263133a043050ada1ae16}{Count\+Fn} (String fldname)
+\item 
+void \hyperlink{classsimpledb_1_1materialize_1_1CountFn_ad2de83ee6906e5407cad7e8f2b2c9e42}{process\+First} (\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} s)
+\item 
+void \hyperlink{classsimpledb_1_1materialize_1_1CountFn_ac50cdba40eda7611ff8e015d8c305197}{process\+Next} (\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} s)
+\item 
+String \hyperlink{classsimpledb_1_1materialize_1_1CountFn_a283e9fa1325fd5f81821ef3d3fdcec27}{field\+Name} ()
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{classsimpledb_1_1materialize_1_1CountFn_aba7aff6e83f0f0af171edb64be6cb342}{value} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The {\itshape count} aggregation function. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1CountFn_a0b09ab4463c263133a043050ada1ae16}\label{classsimpledb_1_1materialize_1_1CountFn_a0b09ab4463c263133a043050ada1ae16}} 
+\index{simpledb\+::materialize\+::\+Count\+Fn@{simpledb\+::materialize\+::\+Count\+Fn}!Count\+Fn@{Count\+Fn}}
+\index{Count\+Fn@{Count\+Fn}!simpledb\+::materialize\+::\+Count\+Fn@{simpledb\+::materialize\+::\+Count\+Fn}}
+\subsubsection{\texorpdfstring{Count\+Fn()}{CountFn()}}
+{\footnotesize\ttfamily simpledb.\+materialize.\+Count\+Fn.\+Count\+Fn (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a count aggregation function for the specified field. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the aggregated field \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1CountFn_a283e9fa1325fd5f81821ef3d3fdcec27}\label{classsimpledb_1_1materialize_1_1CountFn_a283e9fa1325fd5f81821ef3d3fdcec27}} 
+\index{simpledb\+::materialize\+::\+Count\+Fn@{simpledb\+::materialize\+::\+Count\+Fn}!field\+Name@{field\+Name}}
+\index{field\+Name@{field\+Name}!simpledb\+::materialize\+::\+Count\+Fn@{simpledb\+::materialize\+::\+Count\+Fn}}
+\subsubsection{\texorpdfstring{field\+Name()}{fieldName()}}
+{\footnotesize\ttfamily String simpledb.\+materialize.\+Count\+Fn.\+field\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the field\textquotesingle{}s name, prepended by \char`\"{}countof\char`\"{}. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_a03cbdf13e41c3e6ea0b8a76863cd58cf}{simpledb.\+materialize.\+Aggregation\+Fn\+::field\+Name()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_a03cbdf13e41c3e6ea0b8a76863cd58cf}{simpledb.\+materialize.\+Aggregation\+Fn}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1CountFn_ad2de83ee6906e5407cad7e8f2b2c9e42}\label{classsimpledb_1_1materialize_1_1CountFn_ad2de83ee6906e5407cad7e8f2b2c9e42}} 
+\index{simpledb\+::materialize\+::\+Count\+Fn@{simpledb\+::materialize\+::\+Count\+Fn}!process\+First@{process\+First}}
+\index{process\+First@{process\+First}!simpledb\+::materialize\+::\+Count\+Fn@{simpledb\+::materialize\+::\+Count\+Fn}}
+\subsubsection{\texorpdfstring{process\+First()}{processFirst()}}
+{\footnotesize\ttfamily void simpledb.\+materialize.\+Count\+Fn.\+process\+First (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Start a new count. Since Simple\+DB does not support null values, every record will be counted, regardless of the field. The current count is thus set to 1. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_abc424e0873445d14786ae0f3c539c80f}{simpledb.\+materialize.\+Aggregation\+Fn\+::process\+First}(\hyperlink{interfacesimpledb_1_1query_1_1Scan}{simpledb.\+query.\+Scan}) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_abc424e0873445d14786ae0f3c539c80f}{simpledb.\+materialize.\+Aggregation\+Fn}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1CountFn_ac50cdba40eda7611ff8e015d8c305197}\label{classsimpledb_1_1materialize_1_1CountFn_ac50cdba40eda7611ff8e015d8c305197}} 
+\index{simpledb\+::materialize\+::\+Count\+Fn@{simpledb\+::materialize\+::\+Count\+Fn}!process\+Next@{process\+Next}}
+\index{process\+Next@{process\+Next}!simpledb\+::materialize\+::\+Count\+Fn@{simpledb\+::materialize\+::\+Count\+Fn}}
+\subsubsection{\texorpdfstring{process\+Next()}{processNext()}}
+{\footnotesize\ttfamily void simpledb.\+materialize.\+Count\+Fn.\+process\+Next (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Since Simple\+DB does not support null values, this method always increments the count, regardless of the field. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_ae2ff3fb2b1207eab18a70ecf8ffb98dc}{simpledb.\+materialize.\+Aggregation\+Fn\+::process\+Next}(\hyperlink{interfacesimpledb_1_1query_1_1Scan}{simpledb.\+query.\+Scan}) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_ae2ff3fb2b1207eab18a70ecf8ffb98dc}{simpledb.\+materialize.\+Aggregation\+Fn}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1CountFn_aba7aff6e83f0f0af171edb64be6cb342}\label{classsimpledb_1_1materialize_1_1CountFn_aba7aff6e83f0f0af171edb64be6cb342}} 
+\index{simpledb\+::materialize\+::\+Count\+Fn@{simpledb\+::materialize\+::\+Count\+Fn}!value@{value}}
+\index{value@{value}!simpledb\+::materialize\+::\+Count\+Fn@{simpledb\+::materialize\+::\+Count\+Fn}}
+\subsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+materialize.\+Count\+Fn.\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the current count. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_a65957d8075e508ef5555e3bf6ba16184}{simpledb.\+materialize.\+Aggregation\+Fn\+::value()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_a65957d8075e508ef5555e3bf6ba16184}{simpledb.\+materialize.\+Aggregation\+Fn}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/materialize/Count\+Fn.\+java\end{DoxyCompactItemize}

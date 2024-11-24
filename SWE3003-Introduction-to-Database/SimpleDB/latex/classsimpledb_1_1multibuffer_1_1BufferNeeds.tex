@@ -1,0 +1,51 @@
+\hypertarget{classsimpledb_1_1multibuffer_1_1BufferNeeds}{}\section{simpledb.\+multibuffer.\+Buffer\+Needs Class Reference}
+\label{classsimpledb_1_1multibuffer_1_1BufferNeeds}\index{simpledb.\+multibuffer.\+Buffer\+Needs@{simpledb.\+multibuffer.\+Buffer\+Needs}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classsimpledb_1_1multibuffer_1_1BufferNeeds_ab3eff09df8f5c079b69df4a2939d7545}{best\+Root} (int available, int size)
+\item 
+static int \hyperlink{classsimpledb_1_1multibuffer_1_1BufferNeeds_a882f8972d386e83c271f4fe78753df10}{best\+Factor} (int available, int size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class containing static methods, which estimate the optimal number of buffers to allocate for a scan. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1BufferNeeds_a882f8972d386e83c271f4fe78753df10}\label{classsimpledb_1_1multibuffer_1_1BufferNeeds_a882f8972d386e83c271f4fe78753df10}} 
+\index{simpledb\+::multibuffer\+::\+Buffer\+Needs@{simpledb\+::multibuffer\+::\+Buffer\+Needs}!best\+Factor@{best\+Factor}}
+\index{best\+Factor@{best\+Factor}!simpledb\+::multibuffer\+::\+Buffer\+Needs@{simpledb\+::multibuffer\+::\+Buffer\+Needs}}
+\subsubsection{\texorpdfstring{best\+Factor()}{bestFactor()}}
+{\footnotesize\ttfamily static int simpledb.\+multibuffer.\+Buffer\+Needs.\+best\+Factor (\begin{DoxyParamCaption}\item[{int}]{available,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This method considers the various factors of the specified output size (in blocks), and returns the highest factor that is less than the number of available buffers. $<$B\+UG F\+IX\+: We reserve a couple of buffers so that we don\textquotesingle{}t run completely out.$>$ 
+\begin{DoxyParams}{Parameters}
+{\em size} & the size of the output file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the highest number less than the number of available buffers, that is a factor of the plan\textquotesingle{}s output size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1BufferNeeds_ab3eff09df8f5c079b69df4a2939d7545}\label{classsimpledb_1_1multibuffer_1_1BufferNeeds_ab3eff09df8f5c079b69df4a2939d7545}} 
+\index{simpledb\+::multibuffer\+::\+Buffer\+Needs@{simpledb\+::multibuffer\+::\+Buffer\+Needs}!best\+Root@{best\+Root}}
+\index{best\+Root@{best\+Root}!simpledb\+::multibuffer\+::\+Buffer\+Needs@{simpledb\+::multibuffer\+::\+Buffer\+Needs}}
+\subsubsection{\texorpdfstring{best\+Root()}{bestRoot()}}
+{\footnotesize\ttfamily static int simpledb.\+multibuffer.\+Buffer\+Needs.\+best\+Root (\begin{DoxyParamCaption}\item[{int}]{available,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This method considers the various roots of the specified output size (in blocks), and returns the highest root that is less than the number of available buffers. $<$B\+UG F\+IX\+: We reserve a couple of buffers so that we don\textquotesingle{}t run completely out.$>$ 
+\begin{DoxyParams}{Parameters}
+{\em size} & the size of the output file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the highest number less than the number of available buffers, that is a root of the plan\textquotesingle{}s output size 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/multibuffer/Buffer\+Needs.\+java\end{DoxyCompactItemize}

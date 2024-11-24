@@ -1,0 +1,13 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node38 [label="RuntimeException",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node38 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="simpledb.buffer.BufferAbort\lException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsimpledb_1_1buffer_1_1BufferAbortException.html"];
+  Node38 -> Node40 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node40 [label="simpledb.parse.BadSyntax\lException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsimpledb_1_1parse_1_1BadSyntaxException.html"];
+  Node38 -> Node41 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node41 [label="simpledb.tx.concurrency.\lLockAbortException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsimpledb_1_1tx_1_1concurrency_1_1LockAbortException.html"];
+}

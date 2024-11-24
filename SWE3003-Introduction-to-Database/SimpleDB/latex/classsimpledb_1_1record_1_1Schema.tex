@@ -1,0 +1,156 @@
+\hypertarget{classsimpledb_1_1record_1_1Schema}{}\section{simpledb.\+record.\+Schema Class Reference}
+\label{classsimpledb_1_1record_1_1Schema}\index{simpledb.\+record.\+Schema@{simpledb.\+record.\+Schema}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Field\+Info}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classsimpledb_1_1record_1_1Schema_a1361880d713ad0c059395869bf59c5e2}{add\+Field} (String fldname, int \hyperlink{classsimpledb_1_1record_1_1Schema_a2fe42c01b7fc3c09b25ef1d1d87a48a8}{type}, int \hyperlink{classsimpledb_1_1record_1_1Schema_a69e2645054df731e09efd43feee7345c}{length})
+\item 
+void \hyperlink{classsimpledb_1_1record_1_1Schema_a1954fe8a259b3dc5dffe6587ca977b8c}{add\+Int\+Field} (String fldname)
+\item 
+void \hyperlink{classsimpledb_1_1record_1_1Schema_a8b13da3f48da0a6b3d48300d34a4db3c}{add\+String\+Field} (String fldname, int \hyperlink{classsimpledb_1_1record_1_1Schema_a69e2645054df731e09efd43feee7345c}{length})
+\item 
+void \hyperlink{classsimpledb_1_1record_1_1Schema_a9848518dc6b8857524ef48ed058491c5}{add} (String fldname, \hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} sch)
+\item 
+void \hyperlink{classsimpledb_1_1record_1_1Schema_a34e19c8e5025c96c2a6b552123139be8}{add\+All} (\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} sch)
+\item 
+List$<$ String $>$ \hyperlink{classsimpledb_1_1record_1_1Schema_a0ce7f930b6af17b11ac6fe9082be7f45}{fields} ()
+\item 
+boolean \hyperlink{classsimpledb_1_1record_1_1Schema_a8f7aba3f1db8af14135c81802fe7a5e0}{has\+Field} (String fldname)
+\item 
+int \hyperlink{classsimpledb_1_1record_1_1Schema_a2fe42c01b7fc3c09b25ef1d1d87a48a8}{type} (String fldname)
+\item 
+int \hyperlink{classsimpledb_1_1record_1_1Schema_a69e2645054df731e09efd43feee7345c}{length} (String fldname)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The record schema of a table. A schema contains the name and type of each field of the table, as well as the length of each varchar field. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1Schema_a9848518dc6b8857524ef48ed058491c5}\label{classsimpledb_1_1record_1_1Schema_a9848518dc6b8857524ef48ed058491c5}} 
+\index{simpledb\+::record\+::\+Schema@{simpledb\+::record\+::\+Schema}!add@{add}}
+\index{add@{add}!simpledb\+::record\+::\+Schema@{simpledb\+::record\+::\+Schema}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void simpledb.\+record.\+Schema.\+add (\begin{DoxyParamCaption}\item[{String}]{fldname,  }\item[{\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema}}]{sch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a field to the schema having the same type and length as the corresponding field in another schema. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+{\em sch} & the other schema \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1Schema_a34e19c8e5025c96c2a6b552123139be8}\label{classsimpledb_1_1record_1_1Schema_a34e19c8e5025c96c2a6b552123139be8}} 
+\index{simpledb\+::record\+::\+Schema@{simpledb\+::record\+::\+Schema}!add\+All@{add\+All}}
+\index{add\+All@{add\+All}!simpledb\+::record\+::\+Schema@{simpledb\+::record\+::\+Schema}}
+\subsubsection{\texorpdfstring{add\+All()}{addAll()}}
+{\footnotesize\ttfamily void simpledb.\+record.\+Schema.\+add\+All (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema}}]{sch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add all of the fields in the specified schema to the current schema. 
+\begin{DoxyParams}{Parameters}
+{\em sch} & the other schema \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1Schema_a1361880d713ad0c059395869bf59c5e2}\label{classsimpledb_1_1record_1_1Schema_a1361880d713ad0c059395869bf59c5e2}} 
+\index{simpledb\+::record\+::\+Schema@{simpledb\+::record\+::\+Schema}!add\+Field@{add\+Field}}
+\index{add\+Field@{add\+Field}!simpledb\+::record\+::\+Schema@{simpledb\+::record\+::\+Schema}}
+\subsubsection{\texorpdfstring{add\+Field()}{addField()}}
+{\footnotesize\ttfamily void simpledb.\+record.\+Schema.\+add\+Field (\begin{DoxyParamCaption}\item[{String}]{fldname,  }\item[{int}]{type,  }\item[{int}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a field to the schema having a specified name, type, and length. If the field type is \char`\"{}integer\char`\"{}, then the length value is irrelevant. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+{\em type} & the type of the field, according to the constants in simpledb.\+sql.\+types \\
+\hline
+{\em length} & the conceptual length of a string field. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1Schema_a1954fe8a259b3dc5dffe6587ca977b8c}\label{classsimpledb_1_1record_1_1Schema_a1954fe8a259b3dc5dffe6587ca977b8c}} 
+\index{simpledb\+::record\+::\+Schema@{simpledb\+::record\+::\+Schema}!add\+Int\+Field@{add\+Int\+Field}}
+\index{add\+Int\+Field@{add\+Int\+Field}!simpledb\+::record\+::\+Schema@{simpledb\+::record\+::\+Schema}}
+\subsubsection{\texorpdfstring{add\+Int\+Field()}{addIntField()}}
+{\footnotesize\ttfamily void simpledb.\+record.\+Schema.\+add\+Int\+Field (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add an integer field to the schema. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1Schema_a8b13da3f48da0a6b3d48300d34a4db3c}\label{classsimpledb_1_1record_1_1Schema_a8b13da3f48da0a6b3d48300d34a4db3c}} 
+\index{simpledb\+::record\+::\+Schema@{simpledb\+::record\+::\+Schema}!add\+String\+Field@{add\+String\+Field}}
+\index{add\+String\+Field@{add\+String\+Field}!simpledb\+::record\+::\+Schema@{simpledb\+::record\+::\+Schema}}
+\subsubsection{\texorpdfstring{add\+String\+Field()}{addStringField()}}
+{\footnotesize\ttfamily void simpledb.\+record.\+Schema.\+add\+String\+Field (\begin{DoxyParamCaption}\item[{String}]{fldname,  }\item[{int}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a string field to the schema. The length is the conceptual length of the field. For example, if the field is defined as varchar(8), then its length is 8. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+{\em length} & the number of chars in the varchar definition \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1Schema_a0ce7f930b6af17b11ac6fe9082be7f45}\label{classsimpledb_1_1record_1_1Schema_a0ce7f930b6af17b11ac6fe9082be7f45}} 
+\index{simpledb\+::record\+::\+Schema@{simpledb\+::record\+::\+Schema}!fields@{fields}}
+\index{fields@{fields}!simpledb\+::record\+::\+Schema@{simpledb\+::record\+::\+Schema}}
+\subsubsection{\texorpdfstring{fields()}{fields()}}
+{\footnotesize\ttfamily List$<$String$>$ simpledb.\+record.\+Schema.\+fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return a collection containing the name of each field in the schema. \begin{DoxyReturn}{Returns}
+the collection of the schema\textquotesingle{}s field names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1Schema_a8f7aba3f1db8af14135c81802fe7a5e0}\label{classsimpledb_1_1record_1_1Schema_a8f7aba3f1db8af14135c81802fe7a5e0}} 
+\index{simpledb\+::record\+::\+Schema@{simpledb\+::record\+::\+Schema}!has\+Field@{has\+Field}}
+\index{has\+Field@{has\+Field}!simpledb\+::record\+::\+Schema@{simpledb\+::record\+::\+Schema}}
+\subsubsection{\texorpdfstring{has\+Field()}{hasField()}}
+{\footnotesize\ttfamily boolean simpledb.\+record.\+Schema.\+has\+Field (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return true if the specified field is in the schema 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the field is in the schema 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1Schema_a69e2645054df731e09efd43feee7345c}\label{classsimpledb_1_1record_1_1Schema_a69e2645054df731e09efd43feee7345c}} 
+\index{simpledb\+::record\+::\+Schema@{simpledb\+::record\+::\+Schema}!length@{length}}
+\index{length@{length}!simpledb\+::record\+::\+Schema@{simpledb\+::record\+::\+Schema}}
+\subsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily int simpledb.\+record.\+Schema.\+length (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the conceptual length of the specified field. If the field is not a string field, then the return value is undefined. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the conceptual length of the field 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1Schema_a2fe42c01b7fc3c09b25ef1d1d87a48a8}\label{classsimpledb_1_1record_1_1Schema_a2fe42c01b7fc3c09b25ef1d1d87a48a8}} 
+\index{simpledb\+::record\+::\+Schema@{simpledb\+::record\+::\+Schema}!type@{type}}
+\index{type@{type}!simpledb\+::record\+::\+Schema@{simpledb\+::record\+::\+Schema}}
+\subsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily int simpledb.\+record.\+Schema.\+type (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the type of the specified field, using the constants in \hyperlink{}{java.\+sql.\+Types}. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the integer type of the field 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/record/Schema.\+java\end{DoxyCompactItemize}

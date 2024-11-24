@@ -1,0 +1,126 @@
+.container {
+    border: solid 1px #BBBBBB;
+}
+
+#div_wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#div_chat_messages {
+    flex: 5;
+
+    background-color: #BACEE0;
+    width: 400px;
+    scrollbar-width: none;
+    overflow: auto;
+}
+
+.chat_box {
+
+    height: 100%;
+
+}
+#div_chat_messages::-webkit-scrollbar {
+    color: #FFFFFF;
+    width: 6px;
+}
+#div_chat_messages::-webkit-scrollbar-thumb {
+    background-color: #555555;
+    border-radius: 10px;
+}
+
+#div_chat_textarea {
+    flex: 1;
+}
+
+#textarea {
+    width: 393px;
+    height: 110px;
+
+    outline: none;
+    resize: none;
+    border: #FFFFFF;
+}
+
+#div_btns {
+    text-align: right;
+}
+#btn_option {
+    width: 30px;
+    height: 20px;
+    border: solid 1px #BBBBBB;
+    border-radius: 20px;
+}
+#btn_send {
+    background-color: #FFE402;
+    border: none;
+
+    width: 70px;
+    height: 35px;
+    margin: 5px;
+    
+    font-size: 15px;
+    border-radius: 3px;
+}
+
+
+/* Div */
+.left_div {
+    float: left;
+    margin: 10px;
+}
+.right_div {
+    float: right;
+    margin: 10px;
+}
+
+
+/* Text box */
+.id_div {
+    padding-left: 3px;
+    padding-bottom: 5px;
+}
+.other_id {
+    font-size: 80%;
+}
+
+.text_box {
+    border-radius: 5px;
+    
+    margin-bottom: 5px;
+    padding: 6px 8px 6px 8px;
+    
+    display: inline-block;
+    max-width: 300px;
+    word-break: break-all;
+}
+
+.left_div .text_box {
+    background-color: #FFFFFF;
+}
+.right_div .text_box {
+    background-color: #FFE402;
+}
+
+.time {
+    font-size: 80%;
+    vertical-align: sub;
+}
+.left_div .time {
+    margin-left: 5px;
+}
+.right_div .time {
+    margin-right: 5px;
+}
+
+img {
+    max-width: 300px;
+}
+
+#file_label {
+    padding: 5px;
+    border: solid 1px #BBBBBB;
+    border-radius: 10px;
+}

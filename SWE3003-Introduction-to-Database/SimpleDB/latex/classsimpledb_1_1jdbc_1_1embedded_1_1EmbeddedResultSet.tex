@@ -1,0 +1,90 @@
+\hypertarget{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet}{}\section{simpledb.\+jdbc.\+embedded.\+Embedded\+Result\+Set Class Reference}
+\label{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet}\index{simpledb.\+jdbc.\+embedded.\+Embedded\+Result\+Set@{simpledb.\+jdbc.\+embedded.\+Embedded\+Result\+Set}}
+
+
+Inheritance diagram for simpledb.\+jdbc.\+embedded.\+Embedded\+Result\+Set\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+jdbc.\+embedded.\+Embedded\+Result\+Set\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet_ad521b9af5962a1cc69e82d7225a28e58}{Embedded\+Result\+Set} (\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} plan, Embedded\+Connection conn)  throws S\+Q\+L\+Exception 
+\item 
+boolean \hyperlink{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet_a9d8476584bd75cdb7bad151ed5977511}{next} ()  throws S\+Q\+L\+Exception 
+\item 
+int \hyperlink{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet_a00652d799b354e50aa01f2a6c9b517ac}{get\+Int} (String fldname)  throws S\+Q\+L\+Exception 
+\item 
+String \hyperlink{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet_ab98291535370c4200baad93bab9e8d58}{get\+String} (String fldname)  throws S\+Q\+L\+Exception 
+\item 
+Result\+Set\+Meta\+Data \hyperlink{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet_ab48eda09a1aca7c9860716c28b5eb833}{get\+Meta\+Data} ()  throws S\+Q\+L\+Exception 
+\item 
+void \hyperlink{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet_ac93184388c9508b087ecae9b183a78b0}{close} ()  throws S\+Q\+L\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The embedded implementation of Result\+Set. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet_ad521b9af5962a1cc69e82d7225a28e58}\label{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet_ad521b9af5962a1cc69e82d7225a28e58}} 
+\index{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set}!Embedded\+Result\+Set@{Embedded\+Result\+Set}}
+\index{Embedded\+Result\+Set@{Embedded\+Result\+Set}!simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set}}
+\subsubsection{\texorpdfstring{Embedded\+Result\+Set()}{EmbeddedResultSet()}}
+{\footnotesize\ttfamily simpledb.\+jdbc.\+embedded.\+Embedded\+Result\+Set.\+Embedded\+Result\+Set (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan}}]{plan,  }\item[{Embedded\+Connection}]{conn }\end{DoxyParamCaption}) throws S\+Q\+L\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a Scan object from the specified plan. 
+\begin{DoxyParams}{Parameters}
+{\em plan} & the query plan \\
+\hline
+{\em conn} & the connection \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Remote\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet_ac93184388c9508b087ecae9b183a78b0}\label{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet_ac93184388c9508b087ecae9b183a78b0}} 
+\index{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set}!close@{close}}
+\index{close@{close}!simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void simpledb.\+jdbc.\+embedded.\+Embedded\+Result\+Set.\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws S\+Q\+L\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+Closes the result set by closing its scan, and commits. \mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet_a00652d799b354e50aa01f2a6c9b517ac}\label{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet_a00652d799b354e50aa01f2a6c9b517ac}} 
+\index{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set}!get\+Int@{get\+Int}}
+\index{get\+Int@{get\+Int}!simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set}}
+\subsubsection{\texorpdfstring{get\+Int()}{getInt()}}
+{\footnotesize\ttfamily int simpledb.\+jdbc.\+embedded.\+Embedded\+Result\+Set.\+get\+Int (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption}) throws S\+Q\+L\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the integer value of the specified field, by returning the corresponding value on the saved scan. \mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet_ab48eda09a1aca7c9860716c28b5eb833}\label{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet_ab48eda09a1aca7c9860716c28b5eb833}} 
+\index{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set}!get\+Meta\+Data@{get\+Meta\+Data}}
+\index{get\+Meta\+Data@{get\+Meta\+Data}!simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set}}
+\subsubsection{\texorpdfstring{get\+Meta\+Data()}{getMetaData()}}
+{\footnotesize\ttfamily Result\+Set\+Meta\+Data simpledb.\+jdbc.\+embedded.\+Embedded\+Result\+Set.\+get\+Meta\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws S\+Q\+L\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the result set\textquotesingle{}s metadata, by passing its schema into the \hyperlink{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedMetaData}{Embedded\+Meta\+Data} constructor. \mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet_ab98291535370c4200baad93bab9e8d58}\label{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet_ab98291535370c4200baad93bab9e8d58}} 
+\index{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set}}
+\subsubsection{\texorpdfstring{get\+String()}{getString()}}
+{\footnotesize\ttfamily String simpledb.\+jdbc.\+embedded.\+Embedded\+Result\+Set.\+get\+String (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption}) throws S\+Q\+L\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the integer value of the specified field, by returning the corresponding value on the saved scan. \mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet_a9d8476584bd75cdb7bad151ed5977511}\label{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedResultSet_a9d8476584bd75cdb7bad151ed5977511}} 
+\index{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set}!next@{next}}
+\index{next@{next}!simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Result\+Set}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily boolean simpledb.\+jdbc.\+embedded.\+Embedded\+Result\+Set.\+next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws S\+Q\+L\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+Moves to the next record in the result set, by moving to the next record in the saved scan. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/jdbc/embedded/Embedded\+Result\+Set.\+java\end{DoxyCompactItemize}

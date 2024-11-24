@@ -1,0 +1,126 @@
+\hypertarget{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan}{}\section{simpledb.\+multibuffer.\+Multibuffer\+Product\+Plan Class Reference}
+\label{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan}\index{simpledb.\+multibuffer.\+Multibuffer\+Product\+Plan@{simpledb.\+multibuffer.\+Multibuffer\+Product\+Plan}}
+
+
+Inheritance diagram for simpledb.\+multibuffer.\+Multibuffer\+Product\+Plan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+multibuffer.\+Multibuffer\+Product\+Plan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_aaf644634c282204e7e18014c34481e05}{Multibuffer\+Product\+Plan} (\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx, \hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} lhs, \hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} rhs)
+\item 
+\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a0874bcf0d5bb9839346404d40b06eaed}{open} ()
+\item 
+int \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a5e3555f5da62f198a1d0e8d1b73a3d0d}{blocks\+Accessed} ()
+\item 
+int \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a45cef849c8ac76cce183b7d9909929c1}{records\+Output} ()
+\item 
+int \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a94df401d9ea9f4da99e4851fc5be731a}{distinct\+Values} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} \hyperlink{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a8cc53b6bf91a6d7f28ce76c0c226a93f}{schema} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Plan class for the multi-\/buffer version of the {\itshape product} operator. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_aaf644634c282204e7e18014c34481e05}\label{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_aaf644634c282204e7e18014c34481e05}} 
+\index{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan}!Multibuffer\+Product\+Plan@{Multibuffer\+Product\+Plan}}
+\index{Multibuffer\+Product\+Plan@{Multibuffer\+Product\+Plan}!simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan}}
+\subsubsection{\texorpdfstring{Multibuffer\+Product\+Plan()}{MultibufferProductPlan()}}
+{\footnotesize\ttfamily simpledb.\+multibuffer.\+Multibuffer\+Product\+Plan.\+Multibuffer\+Product\+Plan (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx,  }\item[{\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan}}]{lhs,  }\item[{\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan}}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a product plan for the specified queries. 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the plan for the L\+HS query \\
+\hline
+{\em rhs} & the plan for the R\+HS query \\
+\hline
+{\em tx} & the calling transaction \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a5e3555f5da62f198a1d0e8d1b73a3d0d}\label{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a5e3555f5da62f198a1d0e8d1b73a3d0d}} 
+\index{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan}!blocks\+Accessed@{blocks\+Accessed}}
+\index{blocks\+Accessed@{blocks\+Accessed}!simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan}}
+\subsubsection{\texorpdfstring{blocks\+Accessed()}{blocksAccessed()}}
+{\footnotesize\ttfamily int simpledb.\+multibuffer.\+Multibuffer\+Product\+Plan.\+blocks\+Accessed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns an estimate of the number of block accesses required to execute the query. The formula is\+: 
+\begin{DoxyPre} B(product(p1,p2)) = B(p2) + B(p1)*C(p2) \end{DoxyPre}
+ where C(p2) is the number of chunks of p2. The method uses the current number of available buffers to calculate C(p2), and so this value may differ when the query scan is opened. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan\+::blocks\+Accessed()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a94df401d9ea9f4da99e4851fc5be731a}\label{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a94df401d9ea9f4da99e4851fc5be731a}} 
+\index{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan}!distinct\+Values@{distinct\+Values}}
+\index{distinct\+Values@{distinct\+Values}!simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan}}
+\subsubsection{\texorpdfstring{distinct\+Values()}{distinctValues()}}
+{\footnotesize\ttfamily int simpledb.\+multibuffer.\+Multibuffer\+Product\+Plan.\+distinct\+Values (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimates the distinct number of field values in the product. Since the product does not increase or decrease field values, the estimate is the same as in the appropriate underlying query. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan\+::distinct\+Values}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a0874bcf0d5bb9839346404d40b06eaed}\label{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a0874bcf0d5bb9839346404d40b06eaed}} 
+\index{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan}!open@{open}}
+\index{open@{open}!simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} simpledb.\+multibuffer.\+Multibuffer\+Product\+Plan.\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A scan for this query is created and returned, as follows. First, the method materializes its L\+HS and R\+HS queries. It then determines the optimal chunk size, based on the size of the materialized R\+HS file and the number of available buffers. It creates a chunk plan for each chunk, saving them in a list. Finally, it creates a multiscan for this list of plans, and returns that scan. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan\+::open()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a45cef849c8ac76cce183b7d9909929c1}\label{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a45cef849c8ac76cce183b7d9909929c1}} 
+\index{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan}!records\+Output@{records\+Output}}
+\index{records\+Output@{records\+Output}!simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan}}
+\subsubsection{\texorpdfstring{records\+Output()}{recordsOutput()}}
+{\footnotesize\ttfamily int simpledb.\+multibuffer.\+Multibuffer\+Product\+Plan.\+records\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimates the number of output records in the product. The formula is\+: 
+\begin{DoxyPre} R(product(p1,p2)) = R(p1)*R(p2) \end{DoxyPre}
+ \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan\+::records\+Output()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a8cc53b6bf91a6d7f28ce76c0c226a93f}\label{classsimpledb_1_1multibuffer_1_1MultibufferProductPlan_a8cc53b6bf91a6d7f28ce76c0c226a93f}} 
+\index{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan}!schema@{schema}}
+\index{schema@{schema}!simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan@{simpledb\+::multibuffer\+::\+Multibuffer\+Product\+Plan}}
+\subsubsection{\texorpdfstring{schema()}{schema()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} simpledb.\+multibuffer.\+Multibuffer\+Product\+Plan.\+schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the schema of the product, which is the union of the schemas of the underlying queries. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan\+::schema()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/multibuffer/Multibuffer\+Product\+Plan.\+java\end{DoxyCompactItemize}

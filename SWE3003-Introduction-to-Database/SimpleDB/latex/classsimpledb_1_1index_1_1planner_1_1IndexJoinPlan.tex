@@ -1,0 +1,129 @@
+\hypertarget{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan}{}\section{simpledb.\+index.\+planner.\+Index\+Join\+Plan Class Reference}
+\label{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan}\index{simpledb.\+index.\+planner.\+Index\+Join\+Plan@{simpledb.\+index.\+planner.\+Index\+Join\+Plan}}
+
+
+Inheritance diagram for simpledb.\+index.\+planner.\+Index\+Join\+Plan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+index.\+planner.\+Index\+Join\+Plan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_a3bd27083a88b0ea50256d9d9906367fb}{Index\+Join\+Plan} (\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} p1, \hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} p2, \hyperlink{classsimpledb_1_1metadata_1_1IndexInfo}{Index\+Info} ii, String joinfield)
+\item 
+\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_ab9c7fc729baa00380ee1a314578f5828}{open} ()
+\item 
+int \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_a6189cff464c671000c394b56616e4f89}{blocks\+Accessed} ()
+\item 
+int \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_a885b5d4ff1b8b96353d58a87417e6f5f}{records\+Output} ()
+\item 
+int \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_a91f22c04a47d5bc2385eeadd9b270ac5}{distinct\+Values} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} \hyperlink{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_a4dcc700748306498294974d01a5f78fd}{schema} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Plan class corresponding to the {\itshape indexjoin} relational algebra operator. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_a3bd27083a88b0ea50256d9d9906367fb}\label{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_a3bd27083a88b0ea50256d9d9906367fb}} 
+\index{simpledb\+::index\+::planner\+::\+Index\+Join\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Join\+Plan}!Index\+Join\+Plan@{Index\+Join\+Plan}}
+\index{Index\+Join\+Plan@{Index\+Join\+Plan}!simpledb\+::index\+::planner\+::\+Index\+Join\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Join\+Plan}}
+\subsubsection{\texorpdfstring{Index\+Join\+Plan()}{IndexJoinPlan()}}
+{\footnotesize\ttfamily simpledb.\+index.\+planner.\+Index\+Join\+Plan.\+Index\+Join\+Plan (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan}}]{p1,  }\item[{\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan}}]{p2,  }\item[{\hyperlink{classsimpledb_1_1metadata_1_1IndexInfo}{Index\+Info}}]{ii,  }\item[{String}]{joinfield }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Implements the join operator, using the specified L\+HS and R\+HS plans. 
+\begin{DoxyParams}{Parameters}
+{\em p1} & the left-\/hand plan \\
+\hline
+{\em p2} & the right-\/hand plan \\
+\hline
+{\em ii} & information about the right-\/hand index \\
+\hline
+{\em joinfield} & the left-\/hand field used for joining \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_a6189cff464c671000c394b56616e4f89}\label{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_a6189cff464c671000c394b56616e4f89}} 
+\index{simpledb\+::index\+::planner\+::\+Index\+Join\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Join\+Plan}!blocks\+Accessed@{blocks\+Accessed}}
+\index{blocks\+Accessed@{blocks\+Accessed}!simpledb\+::index\+::planner\+::\+Index\+Join\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Join\+Plan}}
+\subsubsection{\texorpdfstring{blocks\+Accessed()}{blocksAccessed()}}
+{\footnotesize\ttfamily int simpledb.\+index.\+planner.\+Index\+Join\+Plan.\+blocks\+Accessed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimates the number of block accesses to compute the join. The formula is\+: 
+\begin{DoxyPre} B(indexjoin(p1,p2,idx)) = B(p1) + R(p1)*B(idx)
+      + R(indexjoin(p1,p2,idx) \end{DoxyPre}
+ \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan\+::blocks\+Accessed()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_a91f22c04a47d5bc2385eeadd9b270ac5}\label{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_a91f22c04a47d5bc2385eeadd9b270ac5}} 
+\index{simpledb\+::index\+::planner\+::\+Index\+Join\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Join\+Plan}!distinct\+Values@{distinct\+Values}}
+\index{distinct\+Values@{distinct\+Values}!simpledb\+::index\+::planner\+::\+Index\+Join\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Join\+Plan}}
+\subsubsection{\texorpdfstring{distinct\+Values()}{distinctValues()}}
+{\footnotesize\ttfamily int simpledb.\+index.\+planner.\+Index\+Join\+Plan.\+distinct\+Values (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimates the number of distinct values for the specified field. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan\+::distinct\+Values}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_ab9c7fc729baa00380ee1a314578f5828}\label{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_ab9c7fc729baa00380ee1a314578f5828}} 
+\index{simpledb\+::index\+::planner\+::\+Index\+Join\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Join\+Plan}!open@{open}}
+\index{open@{open}!simpledb\+::index\+::planner\+::\+Index\+Join\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Join\+Plan}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} simpledb.\+index.\+planner.\+Index\+Join\+Plan.\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Opens an indexjoin scan for this query \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan\+::open()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_a885b5d4ff1b8b96353d58a87417e6f5f}\label{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_a885b5d4ff1b8b96353d58a87417e6f5f}} 
+\index{simpledb\+::index\+::planner\+::\+Index\+Join\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Join\+Plan}!records\+Output@{records\+Output}}
+\index{records\+Output@{records\+Output}!simpledb\+::index\+::planner\+::\+Index\+Join\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Join\+Plan}}
+\subsubsection{\texorpdfstring{records\+Output()}{recordsOutput()}}
+{\footnotesize\ttfamily int simpledb.\+index.\+planner.\+Index\+Join\+Plan.\+records\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimates the number of output records in the join. The formula is\+: 
+\begin{DoxyPre} R(indexjoin(p1,p2,idx)) = R(p1)*R(idx) \end{DoxyPre}
+ \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan\+::records\+Output()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_a4dcc700748306498294974d01a5f78fd}\label{classsimpledb_1_1index_1_1planner_1_1IndexJoinPlan_a4dcc700748306498294974d01a5f78fd}} 
+\index{simpledb\+::index\+::planner\+::\+Index\+Join\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Join\+Plan}!schema@{schema}}
+\index{schema@{schema}!simpledb\+::index\+::planner\+::\+Index\+Join\+Plan@{simpledb\+::index\+::planner\+::\+Index\+Join\+Plan}}
+\subsubsection{\texorpdfstring{schema()}{schema()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} simpledb.\+index.\+planner.\+Index\+Join\+Plan.\+schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the schema of the index join. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan\+::schema()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/index/planner/Index\+Join\+Plan.\+java\end{DoxyCompactItemize}

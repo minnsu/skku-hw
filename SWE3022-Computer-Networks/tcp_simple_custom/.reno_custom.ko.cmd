@@ -1,0 +1,1 @@
+cmd_/home/minsu/Homework/tcp_simple_custom/reno_custom.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -z noexecstack   --build-id  -T ./scripts/module-common.lds -o /home/minsu/Homework/tcp_simple_custom/reno_custom.ko /home/minsu/Homework/tcp_simple_custom/reno_custom.o /home/minsu/Homework/tcp_simple_custom/reno_custom.mod.o;  true

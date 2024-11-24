@@ -1,0 +1,65 @@
+\hypertarget{classsimpledb_1_1record_1_1RID}{}\section{simpledb.\+record.\+R\+ID Class Reference}
+\label{classsimpledb_1_1record_1_1RID}\index{simpledb.\+record.\+R\+ID@{simpledb.\+record.\+R\+ID}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1record_1_1RID_aeb35927fc958b9a219bfedd94804372e}{R\+ID} (int blknum, int slot)
+\item 
+int \hyperlink{classsimpledb_1_1record_1_1RID_adb8274ea23b81d3c0a06e5d2bb8da896}{block\+Number} ()
+\item 
+int \hyperlink{classsimpledb_1_1record_1_1RID_ac8ee042c2b776110c3a47b8979357f45}{slot} ()
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1RID_ad9008e2021f12d179729ba057214676b}\label{classsimpledb_1_1record_1_1RID_ad9008e2021f12d179729ba057214676b}} 
+boolean {\bfseries equals} (Object obj)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1RID_a7414bf55628ba956de7eea96d60089ae}\label{classsimpledb_1_1record_1_1RID_a7414bf55628ba956de7eea96d60089ae}} 
+String {\bfseries to\+String} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An identifier for a record within a file. A \hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} consists of the block number in the file, and the location of the record in that block. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1RID_aeb35927fc958b9a219bfedd94804372e}\label{classsimpledb_1_1record_1_1RID_aeb35927fc958b9a219bfedd94804372e}} 
+\index{simpledb\+::record\+::\+R\+ID@{simpledb\+::record\+::\+R\+ID}!R\+ID@{R\+ID}}
+\index{R\+ID@{R\+ID}!simpledb\+::record\+::\+R\+ID@{simpledb\+::record\+::\+R\+ID}}
+\subsubsection{\texorpdfstring{R\+I\+D()}{RID()}}
+{\footnotesize\ttfamily simpledb.\+record.\+R\+I\+D.\+R\+ID (\begin{DoxyParamCaption}\item[{int}]{blknum,  }\item[{int}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a \hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} for the record having the specified location in the specified block. 
+\begin{DoxyParams}{Parameters}
+{\em blknum} & the block number where the record lives \\
+\hline
+{\em slot} & the record\textquotesingle{}s loction \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1RID_adb8274ea23b81d3c0a06e5d2bb8da896}\label{classsimpledb_1_1record_1_1RID_adb8274ea23b81d3c0a06e5d2bb8da896}} 
+\index{simpledb\+::record\+::\+R\+ID@{simpledb\+::record\+::\+R\+ID}!block\+Number@{block\+Number}}
+\index{block\+Number@{block\+Number}!simpledb\+::record\+::\+R\+ID@{simpledb\+::record\+::\+R\+ID}}
+\subsubsection{\texorpdfstring{block\+Number()}{blockNumber()}}
+{\footnotesize\ttfamily int simpledb.\+record.\+R\+I\+D.\+block\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the block number associated with this \hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID}. \begin{DoxyReturn}{Returns}
+the block number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1RID_ac8ee042c2b776110c3a47b8979357f45}\label{classsimpledb_1_1record_1_1RID_ac8ee042c2b776110c3a47b8979357f45}} 
+\index{simpledb\+::record\+::\+R\+ID@{simpledb\+::record\+::\+R\+ID}!slot@{slot}}
+\index{slot@{slot}!simpledb\+::record\+::\+R\+ID@{simpledb\+::record\+::\+R\+ID}}
+\subsubsection{\texorpdfstring{slot()}{slot()}}
+{\footnotesize\ttfamily int simpledb.\+record.\+R\+I\+D.\+slot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the slot associated with this \hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID}. \begin{DoxyReturn}{Returns}
+the slot 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/record/R\+I\+D.\+java\end{DoxyCompactItemize}

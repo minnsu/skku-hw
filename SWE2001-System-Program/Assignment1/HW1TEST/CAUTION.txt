@@ -1,0 +1,8 @@
+int2sfp float2sfp : round to zero // 절댓값 작게??? 잘 모르겠다
+sfp2int : TMax, TMin, NaN도 TMin
+sfp_add, sfp_mul : round to even // 완인가?
+
+inf * -normal = -inf // 완
+-inf * -normal = inf // 완
+
+int2sfp = 10100 : round to zero, round to even 차이

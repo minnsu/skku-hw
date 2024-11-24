@@ -1,0 +1,89 @@
+\hypertarget{classsimpledb_1_1metadata_1_1IndexInfo}{}\section{simpledb.\+metadata.\+Index\+Info Class Reference}
+\label{classsimpledb_1_1metadata_1_1IndexInfo}\index{simpledb.\+metadata.\+Index\+Info@{simpledb.\+metadata.\+Index\+Info}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1metadata_1_1IndexInfo_a707aa070db904f077613798734bf5ae3}{Index\+Info} (String idxname, String fldname, \hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} tbl\+Schema, \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx, \hyperlink{classsimpledb_1_1metadata_1_1StatInfo}{Stat\+Info} si)
+\item 
+\hyperlink{interfacesimpledb_1_1index_1_1Index}{Index} \hyperlink{classsimpledb_1_1metadata_1_1IndexInfo_a09f79392e6b84590a29d0d802e958c72}{open} ()
+\item 
+int \hyperlink{classsimpledb_1_1metadata_1_1IndexInfo_a0f2e0f9783093798b3c1d4e6a613a105}{blocks\+Accessed} ()
+\item 
+int \hyperlink{classsimpledb_1_1metadata_1_1IndexInfo_aa262013b08ce555a6c63ff1cbb2899d1}{records\+Output} ()
+\item 
+int \hyperlink{classsimpledb_1_1metadata_1_1IndexInfo_a1fa2fc27f1a58d44dff16d1689cf73e9}{distinct\+Values} (String fname)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The information about an index. This information is used by the query planner in order to estimate the costs of using the index, and to obtain the layout of the index records. Its methods are essentially the same as those of Plan. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1metadata_1_1IndexInfo_a707aa070db904f077613798734bf5ae3}\label{classsimpledb_1_1metadata_1_1IndexInfo_a707aa070db904f077613798734bf5ae3}} 
+\index{simpledb\+::metadata\+::\+Index\+Info@{simpledb\+::metadata\+::\+Index\+Info}!Index\+Info@{Index\+Info}}
+\index{Index\+Info@{Index\+Info}!simpledb\+::metadata\+::\+Index\+Info@{simpledb\+::metadata\+::\+Index\+Info}}
+\subsubsection{\texorpdfstring{Index\+Info()}{IndexInfo()}}
+{\footnotesize\ttfamily simpledb.\+metadata.\+Index\+Info.\+Index\+Info (\begin{DoxyParamCaption}\item[{String}]{idxname,  }\item[{String}]{fldname,  }\item[{\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema}}]{tbl\+Schema,  }\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx,  }\item[{\hyperlink{classsimpledb_1_1metadata_1_1StatInfo}{Stat\+Info}}]{si }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create an \hyperlink{classsimpledb_1_1metadata_1_1IndexInfo}{Index\+Info} object for the specified index. 
+\begin{DoxyParams}{Parameters}
+{\em idxname} & the name of the index \\
+\hline
+{\em fldname} & the name of the indexed field \\
+\hline
+{\em tx} & the calling transaction \\
+\hline
+{\em tbl\+Schema} & the schema of the table \\
+\hline
+{\em si} & the statistics for the table \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1metadata_1_1IndexInfo_a0f2e0f9783093798b3c1d4e6a613a105}\label{classsimpledb_1_1metadata_1_1IndexInfo_a0f2e0f9783093798b3c1d4e6a613a105}} 
+\index{simpledb\+::metadata\+::\+Index\+Info@{simpledb\+::metadata\+::\+Index\+Info}!blocks\+Accessed@{blocks\+Accessed}}
+\index{blocks\+Accessed@{blocks\+Accessed}!simpledb\+::metadata\+::\+Index\+Info@{simpledb\+::metadata\+::\+Index\+Info}}
+\subsubsection{\texorpdfstring{blocks\+Accessed()}{blocksAccessed()}}
+{\footnotesize\ttfamily int simpledb.\+metadata.\+Index\+Info.\+blocks\+Accessed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimate the number of block accesses required to find all index records having a particular search key. The method uses the table\textquotesingle{}s metadata to estimate the size of the index file and the number of index records per block. It then passes this information to the traversal\+Cost method of the appropriate index type, which provides the estimate. \begin{DoxyReturn}{Returns}
+the number of block accesses required to traverse the index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1metadata_1_1IndexInfo_a1fa2fc27f1a58d44dff16d1689cf73e9}\label{classsimpledb_1_1metadata_1_1IndexInfo_a1fa2fc27f1a58d44dff16d1689cf73e9}} 
+\index{simpledb\+::metadata\+::\+Index\+Info@{simpledb\+::metadata\+::\+Index\+Info}!distinct\+Values@{distinct\+Values}}
+\index{distinct\+Values@{distinct\+Values}!simpledb\+::metadata\+::\+Index\+Info@{simpledb\+::metadata\+::\+Index\+Info}}
+\subsubsection{\texorpdfstring{distinct\+Values()}{distinctValues()}}
+{\footnotesize\ttfamily int simpledb.\+metadata.\+Index\+Info.\+distinct\+Values (\begin{DoxyParamCaption}\item[{String}]{fname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the distinct values for a specified field in the underlying table, or 1 for the indexed field. 
+\begin{DoxyParams}{Parameters}
+{\em fname} & the specified field \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1metadata_1_1IndexInfo_a09f79392e6b84590a29d0d802e958c72}\label{classsimpledb_1_1metadata_1_1IndexInfo_a09f79392e6b84590a29d0d802e958c72}} 
+\index{simpledb\+::metadata\+::\+Index\+Info@{simpledb\+::metadata\+::\+Index\+Info}!open@{open}}
+\index{open@{open}!simpledb\+::metadata\+::\+Index\+Info@{simpledb\+::metadata\+::\+Index\+Info}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \hyperlink{interfacesimpledb_1_1index_1_1Index}{Index} simpledb.\+metadata.\+Index\+Info.\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Open the index described by this object. \begin{DoxyReturn}{Returns}
+the Index object associated with this information 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1metadata_1_1IndexInfo_aa262013b08ce555a6c63ff1cbb2899d1}\label{classsimpledb_1_1metadata_1_1IndexInfo_aa262013b08ce555a6c63ff1cbb2899d1}} 
+\index{simpledb\+::metadata\+::\+Index\+Info@{simpledb\+::metadata\+::\+Index\+Info}!records\+Output@{records\+Output}}
+\index{records\+Output@{records\+Output}!simpledb\+::metadata\+::\+Index\+Info@{simpledb\+::metadata\+::\+Index\+Info}}
+\subsubsection{\texorpdfstring{records\+Output()}{recordsOutput()}}
+{\footnotesize\ttfamily int simpledb.\+metadata.\+Index\+Info.\+records\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the estimated number of records having a search key. This value is the same as doing a select query; that is, it is the number of records in the table divided by the number of distinct values of the indexed field. \begin{DoxyReturn}{Returns}
+the estimated number of records having a search key 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/metadata/Index\+Info.\+java\end{DoxyCompactItemize}

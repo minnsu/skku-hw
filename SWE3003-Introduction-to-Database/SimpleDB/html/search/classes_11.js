@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['scan',['Scan',['../interfacesimpledb_1_1query_1_1Scan.html',1,'simpledb::query']]],
+  ['scantest1',['ScanTest1',['../classsimpledb_1_1query_1_1ScanTest1.html',1,'simpledb::query']]],
+  ['scantest2',['ScanTest2',['../classsimpledb_1_1query_1_1ScanTest2.html',1,'simpledb::query']]],
+  ['schema',['Schema',['../classsimpledb_1_1record_1_1Schema.html',1,'simpledb::record']]],
+  ['selectplan',['SelectPlan',['../classsimpledb_1_1plan_1_1SelectPlan.html',1,'simpledb::plan']]],
+  ['selectscan',['SelectScan',['../classsimpledb_1_1query_1_1SelectScan.html',1,'simpledb::query']]],
+  ['setintrecord',['SetIntRecord',['../classsimpledb_1_1tx_1_1recovery_1_1SetIntRecord.html',1,'simpledb::tx::recovery']]],
+  ['setstringrecord',['SetStringRecord',['../classsimpledb_1_1tx_1_1recovery_1_1SetStringRecord.html',1,'simpledb::tx::recovery']]],
+  ['simpledb',['SimpleDB',['../classsimpledb_1_1server_1_1SimpleDB.html',1,'simpledb::server']]],
+  ['simpleij',['SimpleIJ',['../classsimpleclient_1_1SimpleIJ.html',1,'simpleclient']]],
+  ['singletableplantest',['SingleTablePlanTest',['../classsimpledb_1_1plan_1_1SingleTablePlanTest.html',1,'simpledb::plan']]],
+  ['sortplan',['SortPlan',['../classsimpledb_1_1materialize_1_1SortPlan.html',1,'simpledb::materialize']]],
+  ['sortscan',['SortScan',['../classsimpledb_1_1materialize_1_1SortScan.html',1,'simpledb::materialize']]],
+  ['startrecord',['StartRecord',['../classsimpledb_1_1tx_1_1recovery_1_1StartRecord.html',1,'simpledb::tx::recovery']]],
+  ['startserver',['StartServer',['../classsimpledb_1_1server_1_1StartServer.html',1,'simpledb::server']]],
+  ['statementadapter',['StatementAdapter',['../classsimpledb_1_1jdbc_1_1StatementAdapter.html',1,'simpledb::jdbc']]],
+  ['statinfo',['StatInfo',['../classsimpledb_1_1metadata_1_1StatInfo.html',1,'simpledb::metadata']]],
+  ['studentmajor',['StudentMajor',['../classsimpleclient_1_1network_1_1StudentMajor.html',1,'simpleclient.network.StudentMajor'],['../classsimpleclient_1_1embedded_1_1StudentMajor.html',1,'simpleclient.embedded.StudentMajor'],['../classStudentMajor.html',1,'StudentMajor']]],
+  ['studentmajornojdbc',['StudentMajorNoJDBC',['../classsimpleclient_1_1StudentMajorNoJDBC.html',1,'simpleclient']]]
+];

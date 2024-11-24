@@ -1,0 +1,84 @@
+.div_wrapper {
+    display: flex;
+}
+
+.div_sidebar {
+    height: 600px;
+
+    background-color: #EEEEEE;
+    flex: 1;
+
+    clear: both;
+}
+#div_friends, #div_chats {
+    margin: 3px;
+    border-radius: 25px;
+    height: 50px;
+    text-align: center;
+    background-color: #BBBBBB;
+}
+
+#div_friends input, #div_chats input {
+    border: none;
+    background-color: #BBBBBB;
+    position: relative;
+    top:25%;
+}
+
+
+.div_list {
+    padding: 5px;
+    height: 590px;
+    width: 75%;
+    flex: 4;
+
+    display: flex;
+    flex-direction: column;
+}
+#list {
+    margin: 0;
+    padding: 0;
+
+    flex: 18;
+    overflow: auto;
+}
+li {
+    font-size: 25px;
+    padding-left: 5px;
+    border: solid 1px #EEEEEE;
+    list-style: none;
+}
+
+.message {
+    padding-left: 10px;
+    vertical-align: top;
+    font-size: 15px;
+}
+
+
+#btn_group_chat {
+    width: 120px;
+    height: 30px;
+
+    background-color: #BBBBBB;
+    border-radius: 10px;
+
+}
+#div_add_friend {
+    flex: 1;
+}
+#btn_add_friend {
+    width: 100px;
+    height: 30px;
+
+    background-color: #BBBBBB;
+    border-radius: 10px;
+}
+
+#input_friend_id {
+    width: 197px;
+    height: 25px;
+}
+#input_friend_id::placeholder {
+    text-align: center;
+}

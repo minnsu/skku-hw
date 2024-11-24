@@ -1,0 +1,12 @@
+digraph "simpledb.jdbc.ResultSetMetaDataAdapter"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="simpledb.jdbc.ResultSetMeta\lDataAdapter",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="ResultSetMetaData",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="simpledb.jdbc.embedded.Embedded\lMetaData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedMetaData.html"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="simpledb.jdbc.network.Network\lMetaData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classsimpledb_1_1jdbc_1_1network_1_1NetworkMetaData.html"];
+}

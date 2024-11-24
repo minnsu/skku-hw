@@ -1,0 +1,89 @@
+\hypertarget{classsimpledb_1_1server_1_1SimpleDB}{}\section{simpledb.\+server.\+Simple\+DB Class Reference}
+\label{classsimpledb_1_1server_1_1SimpleDB}\index{simpledb.\+server.\+Simple\+DB@{simpledb.\+server.\+Simple\+DB}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1server_1_1SimpleDB_a29c01cb395522b7c79e005122e504195}{Simple\+DB} (String dirname, int blocksize, int buffsize)
+\item 
+\hyperlink{classsimpledb_1_1server_1_1SimpleDB_a66c6ec3e675c8050b83f18a25808f167}{Simple\+DB} (String dirname)
+\item 
+\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} \hyperlink{classsimpledb_1_1server_1_1SimpleDB_abc25117f80a115c4e95247c6505c9f7a}{new\+Tx} ()
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1server_1_1SimpleDB_aaf7df4889f127b1775938adea84b0c70}\label{classsimpledb_1_1server_1_1SimpleDB_aaf7df4889f127b1775938adea84b0c70}} 
+\hyperlink{classsimpledb_1_1metadata_1_1MetadataMgr}{Metadata\+Mgr} {\bfseries md\+Mgr} ()
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1server_1_1SimpleDB_afb1ba19d4194eee647f48392ff295783}\label{classsimpledb_1_1server_1_1SimpleDB_afb1ba19d4194eee647f48392ff295783}} 
+\hyperlink{classsimpledb_1_1plan_1_1Planner}{Planner} {\bfseries planner} ()
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1server_1_1SimpleDB_a0cea6e873052903c92b320250a52d072}\label{classsimpledb_1_1server_1_1SimpleDB_a0cea6e873052903c92b320250a52d072}} 
+\hyperlink{classsimpledb_1_1file_1_1FileMgr}{File\+Mgr} {\bfseries file\+Mgr} ()
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1server_1_1SimpleDB_a50ab892e27904c08ce992a8e808b94bc}\label{classsimpledb_1_1server_1_1SimpleDB_a50ab892e27904c08ce992a8e808b94bc}} 
+\hyperlink{classsimpledb_1_1log_1_1LogMgr}{Log\+Mgr} {\bfseries log\+Mgr} ()
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1server_1_1SimpleDB_ad958e3d531d7cf8f45f78755c86edb8a}\label{classsimpledb_1_1server_1_1SimpleDB_ad958e3d531d7cf8f45f78755c86edb8a}} 
+\hyperlink{classsimpledb_1_1buffer_1_1BufferMgr}{Buffer\+Mgr} {\bfseries buffer\+Mgr} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1server_1_1SimpleDB_a79e5658878b00f425f50b89f03800a87}\label{classsimpledb_1_1server_1_1SimpleDB_a79e5658878b00f425f50b89f03800a87}} 
+static int {\bfseries B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE} = 400
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1server_1_1SimpleDB_af91381c9704595ed36037c40db41877d}\label{classsimpledb_1_1server_1_1SimpleDB_af91381c9704595ed36037c40db41877d}} 
+static int {\bfseries B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE} = 8
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1server_1_1SimpleDB_a440f9b1598f798b54e6b9afefdea8416}\label{classsimpledb_1_1server_1_1SimpleDB_a440f9b1598f798b54e6b9afefdea8416}} 
+static String {\bfseries L\+O\+G\+\_\+\+F\+I\+LE} = \char`\"{}simpledb.\+log\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The class that configures the system.
+
+\begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1server_1_1SimpleDB_a29c01cb395522b7c79e005122e504195}\label{classsimpledb_1_1server_1_1SimpleDB_a29c01cb395522b7c79e005122e504195}} 
+\index{simpledb\+::server\+::\+Simple\+DB@{simpledb\+::server\+::\+Simple\+DB}!Simple\+DB@{Simple\+DB}}
+\index{Simple\+DB@{Simple\+DB}!simpledb\+::server\+::\+Simple\+DB@{simpledb\+::server\+::\+Simple\+DB}}
+\subsubsection{\texorpdfstring{Simple\+D\+B()}{SimpleDB()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily simpledb.\+server.\+Simple\+D\+B.\+Simple\+DB (\begin{DoxyParamCaption}\item[{String}]{dirname,  }\item[{int}]{blocksize,  }\item[{int}]{buffsize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A constructor useful for debugging. 
+\begin{DoxyParams}{Parameters}
+{\em dirname} & the name of the database directory \\
+\hline
+{\em blocksize} & the block size \\
+\hline
+{\em buffsize} & the number of buffers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1server_1_1SimpleDB_a66c6ec3e675c8050b83f18a25808f167}\label{classsimpledb_1_1server_1_1SimpleDB_a66c6ec3e675c8050b83f18a25808f167}} 
+\index{simpledb\+::server\+::\+Simple\+DB@{simpledb\+::server\+::\+Simple\+DB}!Simple\+DB@{Simple\+DB}}
+\index{Simple\+DB@{Simple\+DB}!simpledb\+::server\+::\+Simple\+DB@{simpledb\+::server\+::\+Simple\+DB}}
+\subsubsection{\texorpdfstring{Simple\+D\+B()}{SimpleDB()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily simpledb.\+server.\+Simple\+D\+B.\+Simple\+DB (\begin{DoxyParamCaption}\item[{String}]{dirname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A simpler constructor for most situations. Unlike the 3-\/arg constructor, it also initializes the metadata tables. 
+\begin{DoxyParams}{Parameters}
+{\em dirname} & the name of the database directory \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1server_1_1SimpleDB_abc25117f80a115c4e95247c6505c9f7a}\label{classsimpledb_1_1server_1_1SimpleDB_abc25117f80a115c4e95247c6505c9f7a}} 
+\index{simpledb\+::server\+::\+Simple\+DB@{simpledb\+::server\+::\+Simple\+DB}!new\+Tx@{new\+Tx}}
+\index{new\+Tx@{new\+Tx}!simpledb\+::server\+::\+Simple\+DB@{simpledb\+::server\+::\+Simple\+DB}}
+\subsubsection{\texorpdfstring{new\+Tx()}{newTx()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} simpledb.\+server.\+Simple\+D\+B.\+new\+Tx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A convenient way for clients to create transactions and access the metadata. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/server/Simple\+D\+B.\+java\end{DoxyCompactItemize}

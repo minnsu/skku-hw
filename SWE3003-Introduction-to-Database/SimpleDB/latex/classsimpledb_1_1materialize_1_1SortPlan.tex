@@ -1,0 +1,122 @@
+\hypertarget{classsimpledb_1_1materialize_1_1SortPlan}{}\section{simpledb.\+materialize.\+Sort\+Plan Class Reference}
+\label{classsimpledb_1_1materialize_1_1SortPlan}\index{simpledb.\+materialize.\+Sort\+Plan@{simpledb.\+materialize.\+Sort\+Plan}}
+
+
+Inheritance diagram for simpledb.\+materialize.\+Sort\+Plan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+materialize.\+Sort\+Plan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1materialize_1_1SortPlan_aeaebf38c56d30bf863a10a6e18c624a7}{Sort\+Plan} (\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx, \hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} p, List$<$ String $>$ sortfields)
+\item 
+\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} \hyperlink{classsimpledb_1_1materialize_1_1SortPlan_ace1a90e7d7d4b498e0b1c6ef5d30e4a4}{open} ()
+\item 
+int \hyperlink{classsimpledb_1_1materialize_1_1SortPlan_ab5541a8f02fbd3b751dfdb2af86283e0}{blocks\+Accessed} ()
+\item 
+int \hyperlink{classsimpledb_1_1materialize_1_1SortPlan_a1bcfa71f5e5f33c4bd484d68b6121fbd}{records\+Output} ()
+\item 
+int \hyperlink{classsimpledb_1_1materialize_1_1SortPlan_a7742b83f40664e6a497f87b0e1df958f}{distinct\+Values} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} \hyperlink{classsimpledb_1_1materialize_1_1SortPlan_a38d147acf86926b81ce04c9ba6216e63}{schema} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Plan class for the {\itshape sort} operator. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1SortPlan_aeaebf38c56d30bf863a10a6e18c624a7}\label{classsimpledb_1_1materialize_1_1SortPlan_aeaebf38c56d30bf863a10a6e18c624a7}} 
+\index{simpledb\+::materialize\+::\+Sort\+Plan@{simpledb\+::materialize\+::\+Sort\+Plan}!Sort\+Plan@{Sort\+Plan}}
+\index{Sort\+Plan@{Sort\+Plan}!simpledb\+::materialize\+::\+Sort\+Plan@{simpledb\+::materialize\+::\+Sort\+Plan}}
+\subsubsection{\texorpdfstring{Sort\+Plan()}{SortPlan()}}
+{\footnotesize\ttfamily simpledb.\+materialize.\+Sort\+Plan.\+Sort\+Plan (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx,  }\item[{\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan}}]{p,  }\item[{List$<$ String $>$}]{sortfields }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a sort plan for the specified query. 
+\begin{DoxyParams}{Parameters}
+{\em p} & the plan for the underlying query \\
+\hline
+{\em sortfields} & the fields to sort by \\
+\hline
+{\em tx} & the calling transaction \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1SortPlan_ab5541a8f02fbd3b751dfdb2af86283e0}\label{classsimpledb_1_1materialize_1_1SortPlan_ab5541a8f02fbd3b751dfdb2af86283e0}} 
+\index{simpledb\+::materialize\+::\+Sort\+Plan@{simpledb\+::materialize\+::\+Sort\+Plan}!blocks\+Accessed@{blocks\+Accessed}}
+\index{blocks\+Accessed@{blocks\+Accessed}!simpledb\+::materialize\+::\+Sort\+Plan@{simpledb\+::materialize\+::\+Sort\+Plan}}
+\subsubsection{\texorpdfstring{blocks\+Accessed()}{blocksAccessed()}}
+{\footnotesize\ttfamily int simpledb.\+materialize.\+Sort\+Plan.\+blocks\+Accessed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of blocks in the sorted table, which is the same as it would be in a materialized table. It does {\itshape not} include the one-\/time cost of materializing and sorting the records. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan\+::blocks\+Accessed()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1SortPlan_a7742b83f40664e6a497f87b0e1df958f}\label{classsimpledb_1_1materialize_1_1SortPlan_a7742b83f40664e6a497f87b0e1df958f}} 
+\index{simpledb\+::materialize\+::\+Sort\+Plan@{simpledb\+::materialize\+::\+Sort\+Plan}!distinct\+Values@{distinct\+Values}}
+\index{distinct\+Values@{distinct\+Values}!simpledb\+::materialize\+::\+Sort\+Plan@{simpledb\+::materialize\+::\+Sort\+Plan}}
+\subsubsection{\texorpdfstring{distinct\+Values()}{distinctValues()}}
+{\footnotesize\ttfamily int simpledb.\+materialize.\+Sort\+Plan.\+distinct\+Values (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of distinct field values in the sorted table, which is the same as in the underlying query. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan\+::distinct\+Values}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1SortPlan_ace1a90e7d7d4b498e0b1c6ef5d30e4a4}\label{classsimpledb_1_1materialize_1_1SortPlan_ace1a90e7d7d4b498e0b1c6ef5d30e4a4}} 
+\index{simpledb\+::materialize\+::\+Sort\+Plan@{simpledb\+::materialize\+::\+Sort\+Plan}!open@{open}}
+\index{open@{open}!simpledb\+::materialize\+::\+Sort\+Plan@{simpledb\+::materialize\+::\+Sort\+Plan}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} simpledb.\+materialize.\+Sort\+Plan.\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method is where most of the action is. Up to 2 sorted temporary tables are created, and are passed into \hyperlink{classsimpledb_1_1materialize_1_1SortScan}{Sort\+Scan} for final merging. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan\+::open()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1SortPlan_a1bcfa71f5e5f33c4bd484d68b6121fbd}\label{classsimpledb_1_1materialize_1_1SortPlan_a1bcfa71f5e5f33c4bd484d68b6121fbd}} 
+\index{simpledb\+::materialize\+::\+Sort\+Plan@{simpledb\+::materialize\+::\+Sort\+Plan}!records\+Output@{records\+Output}}
+\index{records\+Output@{records\+Output}!simpledb\+::materialize\+::\+Sort\+Plan@{simpledb\+::materialize\+::\+Sort\+Plan}}
+\subsubsection{\texorpdfstring{records\+Output()}{recordsOutput()}}
+{\footnotesize\ttfamily int simpledb.\+materialize.\+Sort\+Plan.\+records\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of records in the sorted table, which is the same as in the underlying query. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan\+::records\+Output()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1SortPlan_a38d147acf86926b81ce04c9ba6216e63}\label{classsimpledb_1_1materialize_1_1SortPlan_a38d147acf86926b81ce04c9ba6216e63}} 
+\index{simpledb\+::materialize\+::\+Sort\+Plan@{simpledb\+::materialize\+::\+Sort\+Plan}!schema@{schema}}
+\index{schema@{schema}!simpledb\+::materialize\+::\+Sort\+Plan@{simpledb\+::materialize\+::\+Sort\+Plan}}
+\subsubsection{\texorpdfstring{schema()}{schema()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} simpledb.\+materialize.\+Sort\+Plan.\+schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the schema of the sorted table, which is the same as in the underlying query. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan\+::schema()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/materialize/Sort\+Plan.\+java\end{DoxyCompactItemize}

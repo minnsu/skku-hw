@@ -1,0 +1,42 @@
+\hypertarget{classsimpledb_1_1jdbc_1_1network_1_1NetworkResultSet}{}\section{simpledb.\+jdbc.\+network.\+Network\+Result\+Set Class Reference}
+\label{classsimpledb_1_1jdbc_1_1network_1_1NetworkResultSet}\index{simpledb.\+jdbc.\+network.\+Network\+Result\+Set@{simpledb.\+jdbc.\+network.\+Network\+Result\+Set}}
+
+
+Inheritance diagram for simpledb.\+jdbc.\+network.\+Network\+Result\+Set\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+jdbc.\+network.\+Network\+Result\+Set\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1network_1_1NetworkResultSet_a20a2fb4ef84d7cb1e9a1fdd016fba862}\label{classsimpledb_1_1jdbc_1_1network_1_1NetworkResultSet_a20a2fb4ef84d7cb1e9a1fdd016fba862}} 
+{\bfseries Network\+Result\+Set} (\hyperlink{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteResultSet}{Remote\+Result\+Set} s)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1network_1_1NetworkResultSet_aeca07802f038885f05fd6a73cfcdc227}\label{classsimpledb_1_1jdbc_1_1network_1_1NetworkResultSet_aeca07802f038885f05fd6a73cfcdc227}} 
+boolean {\bfseries next} ()  throws S\+Q\+L\+Exception 
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1network_1_1NetworkResultSet_afb52cbfecb9dd87367f8b60930441dbc}\label{classsimpledb_1_1jdbc_1_1network_1_1NetworkResultSet_afb52cbfecb9dd87367f8b60930441dbc}} 
+int {\bfseries get\+Int} (String fldname)  throws S\+Q\+L\+Exception 
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1network_1_1NetworkResultSet_a80cc1dbf9ee91721a1a01085498ea550}\label{classsimpledb_1_1jdbc_1_1network_1_1NetworkResultSet_a80cc1dbf9ee91721a1a01085498ea550}} 
+String {\bfseries get\+String} (String fldname)  throws S\+Q\+L\+Exception 
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1network_1_1NetworkResultSet_abe3c50d42eb13c3590af3c7c629274e1}\label{classsimpledb_1_1jdbc_1_1network_1_1NetworkResultSet_abe3c50d42eb13c3590af3c7c629274e1}} 
+Result\+Set\+Meta\+Data {\bfseries get\+Meta\+Data} ()  throws S\+Q\+L\+Exception 
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1network_1_1NetworkResultSet_a669f862f503ae45b524e9d1a02f7f334}\label{classsimpledb_1_1jdbc_1_1network_1_1NetworkResultSet_a669f862f503ae45b524e9d1a02f7f334}} 
+void {\bfseries close} ()  throws S\+Q\+L\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An adapter class that wraps \hyperlink{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteResultSet}{Remote\+Result\+Set}. Its methods do nothing except transform Remote\+Exceptions into S\+Q\+L\+Exceptions. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/jdbc/network/Network\+Result\+Set.\+java\end{DoxyCompactItemize}

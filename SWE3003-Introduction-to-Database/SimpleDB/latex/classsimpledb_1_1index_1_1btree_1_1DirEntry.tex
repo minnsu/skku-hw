@@ -1,0 +1,59 @@
+\hypertarget{classsimpledb_1_1index_1_1btree_1_1DirEntry}{}\section{simpledb.\+index.\+btree.\+Dir\+Entry Class Reference}
+\label{classsimpledb_1_1index_1_1btree_1_1DirEntry}\index{simpledb.\+index.\+btree.\+Dir\+Entry@{simpledb.\+index.\+btree.\+Dir\+Entry}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1index_1_1btree_1_1DirEntry_a9cbacd41de271cc7fed663c2286353f6}{Dir\+Entry} (\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} dataval, int blocknum)
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{classsimpledb_1_1index_1_1btree_1_1DirEntry_a7cbdc9d126bd11396e03cf671bf7d93e}{data\+Val} ()
+\item 
+int \hyperlink{classsimpledb_1_1index_1_1btree_1_1DirEntry_a2a400c20859d3be59d333b14802711e4}{block\+Number} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A directory entry has two components\+: the number of the child block, and the dataval of the first record in that block. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1DirEntry_a9cbacd41de271cc7fed663c2286353f6}\label{classsimpledb_1_1index_1_1btree_1_1DirEntry_a9cbacd41de271cc7fed663c2286353f6}} 
+\index{simpledb\+::index\+::btree\+::\+Dir\+Entry@{simpledb\+::index\+::btree\+::\+Dir\+Entry}!Dir\+Entry@{Dir\+Entry}}
+\index{Dir\+Entry@{Dir\+Entry}!simpledb\+::index\+::btree\+::\+Dir\+Entry@{simpledb\+::index\+::btree\+::\+Dir\+Entry}}
+\subsubsection{\texorpdfstring{Dir\+Entry()}{DirEntry()}}
+{\footnotesize\ttfamily simpledb.\+index.\+btree.\+Dir\+Entry.\+Dir\+Entry (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}}]{dataval,  }\item[{int}]{blocknum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new entry for the specified dataval and block number. 
+\begin{DoxyParams}{Parameters}
+{\em dataval} & the dataval \\
+\hline
+{\em blocknum} & the block number \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1DirEntry_a2a400c20859d3be59d333b14802711e4}\label{classsimpledb_1_1index_1_1btree_1_1DirEntry_a2a400c20859d3be59d333b14802711e4}} 
+\index{simpledb\+::index\+::btree\+::\+Dir\+Entry@{simpledb\+::index\+::btree\+::\+Dir\+Entry}!block\+Number@{block\+Number}}
+\index{block\+Number@{block\+Number}!simpledb\+::index\+::btree\+::\+Dir\+Entry@{simpledb\+::index\+::btree\+::\+Dir\+Entry}}
+\subsubsection{\texorpdfstring{block\+Number()}{blockNumber()}}
+{\footnotesize\ttfamily int simpledb.\+index.\+btree.\+Dir\+Entry.\+block\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the block number component of the entry \begin{DoxyReturn}{Returns}
+the block number component of the entry 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1DirEntry_a7cbdc9d126bd11396e03cf671bf7d93e}\label{classsimpledb_1_1index_1_1btree_1_1DirEntry_a7cbdc9d126bd11396e03cf671bf7d93e}} 
+\index{simpledb\+::index\+::btree\+::\+Dir\+Entry@{simpledb\+::index\+::btree\+::\+Dir\+Entry}!data\+Val@{data\+Val}}
+\index{data\+Val@{data\+Val}!simpledb\+::index\+::btree\+::\+Dir\+Entry@{simpledb\+::index\+::btree\+::\+Dir\+Entry}}
+\subsubsection{\texorpdfstring{data\+Val()}{dataVal()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+index.\+btree.\+Dir\+Entry.\+data\+Val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the dataval component of the entry \begin{DoxyReturn}{Returns}
+the dataval component of the entry 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/index/btree/Dir\+Entry.\+java\end{DoxyCompactItemize}

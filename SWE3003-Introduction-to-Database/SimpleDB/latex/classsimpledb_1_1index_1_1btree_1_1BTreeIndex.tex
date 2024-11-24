@@ -1,0 +1,158 @@
+\hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeIndex}{}\section{simpledb.\+index.\+btree.\+B\+Tree\+Index Class Reference}
+\label{classsimpledb_1_1index_1_1btree_1_1BTreeIndex}\index{simpledb.\+index.\+btree.\+B\+Tree\+Index@{simpledb.\+index.\+btree.\+B\+Tree\+Index}}
+
+
+Inheritance diagram for simpledb.\+index.\+btree.\+B\+Tree\+Index\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+index.\+btree.\+B\+Tree\+Index\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_aac787bcc64a65ba8983a513e6b7f9719}{B\+Tree\+Index} (\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx, String idxname, \hyperlink{classsimpledb_1_1record_1_1Layout}{Layout} leaf\+Layout)
+\item 
+void \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_adaca869455d2d631df38e7bc81de2420}{before\+First} (\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} searchkey)
+\item 
+boolean \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_aa2629b173455d96fde28353e150da4f0}{next} ()
+\item 
+\hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_a842091f8c02f9d3009f634c5c0635b4f}{get\+Data\+Rid} ()
+\item 
+void \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_a74ac0fcec24483159ab82ac47d7bc790}{insert} (\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} dataval, \hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} datarid)
+\item 
+void \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_ae7be53ba321674d7300c2c67376a9859}{delete} (\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} dataval, \hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} datarid)
+\item 
+void \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_a057aed52a768423734720f07bf0db94b}{close} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_a2f22244ab4a024843d6fca8d74dcb2c1}{search\+Cost} (int numblocks, int rpb)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A B-\/tree implementation of the \hyperlink{interfacesimpledb_1_1index_1_1Index}{Index} interface. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_aac787bcc64a65ba8983a513e6b7f9719}\label{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_aac787bcc64a65ba8983a513e6b7f9719}} 
+\index{simpledb\+::index\+::btree\+::\+B\+Tree\+Index@{simpledb\+::index\+::btree\+::\+B\+Tree\+Index}!B\+Tree\+Index@{B\+Tree\+Index}}
+\index{B\+Tree\+Index@{B\+Tree\+Index}!simpledb\+::index\+::btree\+::\+B\+Tree\+Index@{simpledb\+::index\+::btree\+::\+B\+Tree\+Index}}
+\subsubsection{\texorpdfstring{B\+Tree\+Index()}{BTreeIndex()}}
+{\footnotesize\ttfamily simpledb.\+index.\+btree.\+B\+Tree\+Index.\+B\+Tree\+Index (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx,  }\item[{String}]{idxname,  }\item[{\hyperlink{classsimpledb_1_1record_1_1Layout}{Layout}}]{leaf\+Layout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Opens a B-\/tree index for the specified index. The method determines the appropriate files for the leaf and directory records, creating them if they did not exist. 
+\begin{DoxyParams}{Parameters}
+{\em idxname} & the name of the index \\
+\hline
+{\em leafsch} & the schema of the leaf index records \\
+\hline
+{\em tx} & the calling transaction \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_adaca869455d2d631df38e7bc81de2420}\label{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_adaca869455d2d631df38e7bc81de2420}} 
+\index{simpledb\+::index\+::btree\+::\+B\+Tree\+Index@{simpledb\+::index\+::btree\+::\+B\+Tree\+Index}!before\+First@{before\+First}}
+\index{before\+First@{before\+First}!simpledb\+::index\+::btree\+::\+B\+Tree\+Index@{simpledb\+::index\+::btree\+::\+B\+Tree\+Index}}
+\subsubsection{\texorpdfstring{before\+First()}{beforeFirst()}}
+{\footnotesize\ttfamily void simpledb.\+index.\+btree.\+B\+Tree\+Index.\+before\+First (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}}]{searchkey }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Traverse the directory to find the leaf block corresponding to the specified search key. The method then opens a page for that leaf block, and positions the page before the first record (if any) having that search key. The leaf page is kept open, for use by the methods next and get\+Data\+Rid. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1index_1_1Index_a393ce322b5a7ffee20d8ff85abef7444}{simpledb.\+index.\+Index\+::before\+First}(\hyperlink{classsimpledb_1_1query_1_1Constant}{simpledb.\+query.\+Constant}) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1index_1_1Index_a393ce322b5a7ffee20d8ff85abef7444}{simpledb.\+index.\+Index}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_a057aed52a768423734720f07bf0db94b}\label{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_a057aed52a768423734720f07bf0db94b}} 
+\index{simpledb\+::index\+::btree\+::\+B\+Tree\+Index@{simpledb\+::index\+::btree\+::\+B\+Tree\+Index}!close@{close}}
+\index{close@{close}!simpledb\+::index\+::btree\+::\+B\+Tree\+Index@{simpledb\+::index\+::btree\+::\+B\+Tree\+Index}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void simpledb.\+index.\+btree.\+B\+Tree\+Index.\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Close the index by closing its open leaf page, if necessary. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1index_1_1Index_aedde7a12ff7788c1dc00ef9404b4266e}{simpledb.\+index.\+Index\+::close()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1index_1_1Index_aedde7a12ff7788c1dc00ef9404b4266e}{simpledb.\+index.\+Index}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_ae7be53ba321674d7300c2c67376a9859}\label{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_ae7be53ba321674d7300c2c67376a9859}} 
+\index{simpledb\+::index\+::btree\+::\+B\+Tree\+Index@{simpledb\+::index\+::btree\+::\+B\+Tree\+Index}!delete@{delete}}
+\index{delete@{delete}!simpledb\+::index\+::btree\+::\+B\+Tree\+Index@{simpledb\+::index\+::btree\+::\+B\+Tree\+Index}}
+\subsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily void simpledb.\+index.\+btree.\+B\+Tree\+Index.\+delete (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}}]{dataval,  }\item[{\hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID}}]{datarid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Delete the specified index record. The method first traverses the directory to find the leaf page containing that record; then it deletes the record from the page. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1index_1_1Index_a3bbe4098bf5422023391ce24f2e7df88}{simpledb.\+index.\+Index\+::delete}(\hyperlink{classsimpledb_1_1query_1_1Constant}{simpledb.\+query.\+Constant}, \hyperlink{classsimpledb_1_1record_1_1RID}{simpledb.\+record.\+R\+ID}) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1index_1_1Index_a3bbe4098bf5422023391ce24f2e7df88}{simpledb.\+index.\+Index}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_a842091f8c02f9d3009f634c5c0635b4f}\label{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_a842091f8c02f9d3009f634c5c0635b4f}} 
+\index{simpledb\+::index\+::btree\+::\+B\+Tree\+Index@{simpledb\+::index\+::btree\+::\+B\+Tree\+Index}!get\+Data\+Rid@{get\+Data\+Rid}}
+\index{get\+Data\+Rid@{get\+Data\+Rid}!simpledb\+::index\+::btree\+::\+B\+Tree\+Index@{simpledb\+::index\+::btree\+::\+B\+Tree\+Index}}
+\subsubsection{\texorpdfstring{get\+Data\+Rid()}{getDataRid()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID} simpledb.\+index.\+btree.\+B\+Tree\+Index.\+get\+Data\+Rid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the data\+R\+ID value from the current leaf record. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1index_1_1Index_aad4ee85740a0f5b3453bdf24e8b82615}{simpledb.\+index.\+Index\+::get\+Data\+Rid()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1index_1_1Index_aad4ee85740a0f5b3453bdf24e8b82615}{simpledb.\+index.\+Index}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_a74ac0fcec24483159ab82ac47d7bc790}\label{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_a74ac0fcec24483159ab82ac47d7bc790}} 
+\index{simpledb\+::index\+::btree\+::\+B\+Tree\+Index@{simpledb\+::index\+::btree\+::\+B\+Tree\+Index}!insert@{insert}}
+\index{insert@{insert}!simpledb\+::index\+::btree\+::\+B\+Tree\+Index@{simpledb\+::index\+::btree\+::\+B\+Tree\+Index}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void simpledb.\+index.\+btree.\+B\+Tree\+Index.\+insert (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant}}]{dataval,  }\item[{\hyperlink{classsimpledb_1_1record_1_1RID}{R\+ID}}]{datarid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Insert the specified record into the index. The method first traverses the directory to find the appropriate leaf page; then it inserts the record into the leaf. If the insertion causes the leaf to split, then the method calls insert on the root, passing it the directory entry of the new leaf page. If the root node splits, then make\+New\+Root is called. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1index_1_1Index_a7e72ba9fe47d6d7631e0ad3feee882d7}{simpledb.\+index.\+Index\+::insert}(\hyperlink{classsimpledb_1_1query_1_1Constant}{simpledb.\+query.\+Constant}, \hyperlink{classsimpledb_1_1record_1_1RID}{simpledb.\+record.\+R\+ID}) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1index_1_1Index_a7e72ba9fe47d6d7631e0ad3feee882d7}{simpledb.\+index.\+Index}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_aa2629b173455d96fde28353e150da4f0}\label{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_aa2629b173455d96fde28353e150da4f0}} 
+\index{simpledb\+::index\+::btree\+::\+B\+Tree\+Index@{simpledb\+::index\+::btree\+::\+B\+Tree\+Index}!next@{next}}
+\index{next@{next}!simpledb\+::index\+::btree\+::\+B\+Tree\+Index@{simpledb\+::index\+::btree\+::\+B\+Tree\+Index}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily boolean simpledb.\+index.\+btree.\+B\+Tree\+Index.\+next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Move to the next leaf record having the previously-\/specified search key. Returns false if there are no more such leaf records. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1index_1_1Index_a38b2addb6813fbf1d94e77de2345724c}{simpledb.\+index.\+Index\+::next()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1index_1_1Index_a38b2addb6813fbf1d94e77de2345724c}{simpledb.\+index.\+Index}.
+
+\mbox{\Hypertarget{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_a2f22244ab4a024843d6fca8d74dcb2c1}\label{classsimpledb_1_1index_1_1btree_1_1BTreeIndex_a2f22244ab4a024843d6fca8d74dcb2c1}} 
+\index{simpledb\+::index\+::btree\+::\+B\+Tree\+Index@{simpledb\+::index\+::btree\+::\+B\+Tree\+Index}!search\+Cost@{search\+Cost}}
+\index{search\+Cost@{search\+Cost}!simpledb\+::index\+::btree\+::\+B\+Tree\+Index@{simpledb\+::index\+::btree\+::\+B\+Tree\+Index}}
+\subsubsection{\texorpdfstring{search\+Cost()}{searchCost()}}
+{\footnotesize\ttfamily static int simpledb.\+index.\+btree.\+B\+Tree\+Index.\+search\+Cost (\begin{DoxyParamCaption}\item[{int}]{numblocks,  }\item[{int}]{rpb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Estimate the number of block accesses required to find all index records having a particular search key. 
+\begin{DoxyParams}{Parameters}
+{\em numblocks} & the number of blocks in the B-\/tree directory \\
+\hline
+{\em rpb} & the number of index entries per block \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the estimated traversal cost 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/index/btree/B\+Tree\+Index.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,40 @@
+\hypertarget{classsimpledb_1_1jdbc_1_1network_1_1NetworkDriver}{}\section{simpledb.\+jdbc.\+network.\+Network\+Driver Class Reference}
+\label{classsimpledb_1_1jdbc_1_1network_1_1NetworkDriver}\index{simpledb.\+jdbc.\+network.\+Network\+Driver@{simpledb.\+jdbc.\+network.\+Network\+Driver}}
+
+
+Inheritance diagram for simpledb.\+jdbc.\+network.\+Network\+Driver\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+jdbc.\+network.\+Network\+Driver\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Connection \hyperlink{classsimpledb_1_1jdbc_1_1network_1_1NetworkDriver_af6428f6dfb94b5cd952281366037fc45}{connect} (String url, Properties prop)  throws S\+Q\+L\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Simple\+DB database driver. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1network_1_1NetworkDriver_af6428f6dfb94b5cd952281366037fc45}\label{classsimpledb_1_1jdbc_1_1network_1_1NetworkDriver_af6428f6dfb94b5cd952281366037fc45}} 
+\index{simpledb\+::jdbc\+::network\+::\+Network\+Driver@{simpledb\+::jdbc\+::network\+::\+Network\+Driver}!connect@{connect}}
+\index{connect@{connect}!simpledb\+::jdbc\+::network\+::\+Network\+Driver@{simpledb\+::jdbc\+::network\+::\+Network\+Driver}}
+\subsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily Connection simpledb.\+jdbc.\+network.\+Network\+Driver.\+connect (\begin{DoxyParamCaption}\item[{String}]{url,  }\item[{Properties}]{prop }\end{DoxyParamCaption}) throws S\+Q\+L\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+Connects to the Simple\+DB server on the specified host. The method retrieves the \hyperlink{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteDriver}{Remote\+Driver} stub from the R\+MI registry on the specified host. It then calls the connect method on that stub, which in turn creates a new connection and returns the \hyperlink{interfacesimpledb_1_1jdbc_1_1network_1_1RemoteConnection}{Remote\+Connection} stub for it. This stub is wrapped in a Simple\+Connection object and is returned. 
+
+The current implementation of this method ignores the properties argument. \begin{DoxySeeAlso}{See also}
+java.\+sql.\+Driver\+::connect(java.\+lang.\+String, Properties) 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/jdbc/network/Network\+Driver.\+java\end{DoxyCompactItemize}

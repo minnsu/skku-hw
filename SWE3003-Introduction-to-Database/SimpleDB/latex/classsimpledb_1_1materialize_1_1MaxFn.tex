@@ -1,0 +1,103 @@
+\hypertarget{classsimpledb_1_1materialize_1_1MaxFn}{}\section{simpledb.\+materialize.\+Max\+Fn Class Reference}
+\label{classsimpledb_1_1materialize_1_1MaxFn}\index{simpledb.\+materialize.\+Max\+Fn@{simpledb.\+materialize.\+Max\+Fn}}
+
+
+Inheritance diagram for simpledb.\+materialize.\+Max\+Fn\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+materialize.\+Max\+Fn\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1materialize_1_1MaxFn_a8f4c63ecc000bf3679a452f12153a65b}{Max\+Fn} (String fldname)
+\item 
+void \hyperlink{classsimpledb_1_1materialize_1_1MaxFn_aeb7c0c3b7beddb944fac6f843f288cae}{process\+First} (\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} s)
+\item 
+void \hyperlink{classsimpledb_1_1materialize_1_1MaxFn_a4ce58a04c1c3891b611771630a33dc74}{process\+Next} (\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} s)
+\item 
+String \hyperlink{classsimpledb_1_1materialize_1_1MaxFn_a51dc995821073599a8780df18b86ae9f}{field\+Name} ()
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{classsimpledb_1_1materialize_1_1MaxFn_a00a636276f06c0599ebbe3dbc560a4e6}{value} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The {\itshape max} aggregation function. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1MaxFn_a8f4c63ecc000bf3679a452f12153a65b}\label{classsimpledb_1_1materialize_1_1MaxFn_a8f4c63ecc000bf3679a452f12153a65b}} 
+\index{simpledb\+::materialize\+::\+Max\+Fn@{simpledb\+::materialize\+::\+Max\+Fn}!Max\+Fn@{Max\+Fn}}
+\index{Max\+Fn@{Max\+Fn}!simpledb\+::materialize\+::\+Max\+Fn@{simpledb\+::materialize\+::\+Max\+Fn}}
+\subsubsection{\texorpdfstring{Max\+Fn()}{MaxFn()}}
+{\footnotesize\ttfamily simpledb.\+materialize.\+Max\+Fn.\+Max\+Fn (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a max aggregation function for the specified field. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the aggregated field \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1MaxFn_a51dc995821073599a8780df18b86ae9f}\label{classsimpledb_1_1materialize_1_1MaxFn_a51dc995821073599a8780df18b86ae9f}} 
+\index{simpledb\+::materialize\+::\+Max\+Fn@{simpledb\+::materialize\+::\+Max\+Fn}!field\+Name@{field\+Name}}
+\index{field\+Name@{field\+Name}!simpledb\+::materialize\+::\+Max\+Fn@{simpledb\+::materialize\+::\+Max\+Fn}}
+\subsubsection{\texorpdfstring{field\+Name()}{fieldName()}}
+{\footnotesize\ttfamily String simpledb.\+materialize.\+Max\+Fn.\+field\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the field\textquotesingle{}s name, prepended by \char`\"{}maxof\char`\"{}. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_a03cbdf13e41c3e6ea0b8a76863cd58cf}{simpledb.\+materialize.\+Aggregation\+Fn\+::field\+Name()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_a03cbdf13e41c3e6ea0b8a76863cd58cf}{simpledb.\+materialize.\+Aggregation\+Fn}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1MaxFn_aeb7c0c3b7beddb944fac6f843f288cae}\label{classsimpledb_1_1materialize_1_1MaxFn_aeb7c0c3b7beddb944fac6f843f288cae}} 
+\index{simpledb\+::materialize\+::\+Max\+Fn@{simpledb\+::materialize\+::\+Max\+Fn}!process\+First@{process\+First}}
+\index{process\+First@{process\+First}!simpledb\+::materialize\+::\+Max\+Fn@{simpledb\+::materialize\+::\+Max\+Fn}}
+\subsubsection{\texorpdfstring{process\+First()}{processFirst()}}
+{\footnotesize\ttfamily void simpledb.\+materialize.\+Max\+Fn.\+process\+First (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Start a new maximum to be the field value in the current record. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_abc424e0873445d14786ae0f3c539c80f}{simpledb.\+materialize.\+Aggregation\+Fn\+::process\+First}(\hyperlink{interfacesimpledb_1_1query_1_1Scan}{simpledb.\+query.\+Scan}) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_abc424e0873445d14786ae0f3c539c80f}{simpledb.\+materialize.\+Aggregation\+Fn}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1MaxFn_a4ce58a04c1c3891b611771630a33dc74}\label{classsimpledb_1_1materialize_1_1MaxFn_a4ce58a04c1c3891b611771630a33dc74}} 
+\index{simpledb\+::materialize\+::\+Max\+Fn@{simpledb\+::materialize\+::\+Max\+Fn}!process\+Next@{process\+Next}}
+\index{process\+Next@{process\+Next}!simpledb\+::materialize\+::\+Max\+Fn@{simpledb\+::materialize\+::\+Max\+Fn}}
+\subsubsection{\texorpdfstring{process\+Next()}{processNext()}}
+{\footnotesize\ttfamily void simpledb.\+materialize.\+Max\+Fn.\+process\+Next (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Replace the current maximum by the field value in the current record, if it is higher. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_ae2ff3fb2b1207eab18a70ecf8ffb98dc}{simpledb.\+materialize.\+Aggregation\+Fn\+::process\+Next}(\hyperlink{interfacesimpledb_1_1query_1_1Scan}{simpledb.\+query.\+Scan}) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_ae2ff3fb2b1207eab18a70ecf8ffb98dc}{simpledb.\+materialize.\+Aggregation\+Fn}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1MaxFn_a00a636276f06c0599ebbe3dbc560a4e6}\label{classsimpledb_1_1materialize_1_1MaxFn_a00a636276f06c0599ebbe3dbc560a4e6}} 
+\index{simpledb\+::materialize\+::\+Max\+Fn@{simpledb\+::materialize\+::\+Max\+Fn}!value@{value}}
+\index{value@{value}!simpledb\+::materialize\+::\+Max\+Fn@{simpledb\+::materialize\+::\+Max\+Fn}}
+\subsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+materialize.\+Max\+Fn.\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the current maximum. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_a65957d8075e508ef5555e3bf6ba16184}{simpledb.\+materialize.\+Aggregation\+Fn\+::value()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1materialize_1_1AggregationFn_a65957d8075e508ef5555e3bf6ba16184}{simpledb.\+materialize.\+Aggregation\+Fn}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/materialize/Max\+Fn.\+java\end{DoxyCompactItemize}

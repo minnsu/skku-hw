@@ -1,0 +1,61 @@
+\hypertarget{classsimpledb_1_1materialize_1_1RecordComparator}{}\section{simpledb.\+materialize.\+Record\+Comparator Class Reference}
+\label{classsimpledb_1_1materialize_1_1RecordComparator}\index{simpledb.\+materialize.\+Record\+Comparator@{simpledb.\+materialize.\+Record\+Comparator}}
+
+
+Inheritance diagram for simpledb.\+materialize.\+Record\+Comparator\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+materialize.\+Record\+Comparator\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1materialize_1_1RecordComparator_a6195b7c5891f0869a26b6d2d56ddd93c}{Record\+Comparator} (List$<$ String $>$ fields)
+\item 
+int \hyperlink{classsimpledb_1_1materialize_1_1RecordComparator_a014bbee593c4642fb40d5debfb767da7}{compare} (\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} s1, \hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} s2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A comparator for scans. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1RecordComparator_a6195b7c5891f0869a26b6d2d56ddd93c}\label{classsimpledb_1_1materialize_1_1RecordComparator_a6195b7c5891f0869a26b6d2d56ddd93c}} 
+\index{simpledb\+::materialize\+::\+Record\+Comparator@{simpledb\+::materialize\+::\+Record\+Comparator}!Record\+Comparator@{Record\+Comparator}}
+\index{Record\+Comparator@{Record\+Comparator}!simpledb\+::materialize\+::\+Record\+Comparator@{simpledb\+::materialize\+::\+Record\+Comparator}}
+\subsubsection{\texorpdfstring{Record\+Comparator()}{RecordComparator()}}
+{\footnotesize\ttfamily simpledb.\+materialize.\+Record\+Comparator.\+Record\+Comparator (\begin{DoxyParamCaption}\item[{List$<$ String $>$}]{fields }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a comparator using the specified fields, using the ordering implied by its iterator. 
+\begin{DoxyParams}{Parameters}
+{\em fields} & a list of field names \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1RecordComparator_a014bbee593c4642fb40d5debfb767da7}\label{classsimpledb_1_1materialize_1_1RecordComparator_a014bbee593c4642fb40d5debfb767da7}} 
+\index{simpledb\+::materialize\+::\+Record\+Comparator@{simpledb\+::materialize\+::\+Record\+Comparator}!compare@{compare}}
+\index{compare@{compare}!simpledb\+::materialize\+::\+Record\+Comparator@{simpledb\+::materialize\+::\+Record\+Comparator}}
+\subsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily int simpledb.\+materialize.\+Record\+Comparator.\+compare (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan}}]{s1,  }\item[{\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan}}]{s2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Compare the current records of the two specified scans. The sort fields are considered in turn. When a field is encountered for which the records have different values, those values are used as the result of the comparison. If the two records have the same values for all sort fields, then the method returns 0. 
+\begin{DoxyParams}{Parameters}
+{\em s1} & the first scan \\
+\hline
+{\em s2} & the second scan \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the result of comparing each scan\textquotesingle{}s current record according to the field list 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/materialize/Record\+Comparator.\+java\end{DoxyCompactItemize}

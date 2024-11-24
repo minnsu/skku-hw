@@ -1,0 +1,103 @@
+\hypertarget{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord}{}\section{simpledb.\+tx.\+recovery.\+Rollback\+Record Class Reference}
+\label{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord}\index{simpledb.\+tx.\+recovery.\+Rollback\+Record@{simpledb.\+tx.\+recovery.\+Rollback\+Record}}
+
+
+Inheritance diagram for simpledb.\+tx.\+recovery.\+Rollback\+Record\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+tx.\+recovery.\+Rollback\+Record\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_a0e7540ad9c5f594ccfce3a1e0f38d72c}{Rollback\+Record} (\hyperlink{classsimpledb_1_1file_1_1Page}{Page} p)
+\item 
+int \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_a4131d5dbb07f84058bd9551d023ff34b}{op} ()
+\item 
+int \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_a89c5de69f9f9653116e3335afb4f178b}{tx\+Number} ()
+\item 
+void \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_ad21d99845cfc0eaafe7ffdb01f8dae70}{undo} (\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_a91c7746dd73769aee937987306de6757}\label{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_a91c7746dd73769aee937987306de6757}} 
+String {\bfseries to\+String} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_aa31fa6247f89d5cf47160c34d0a0dcbf}{write\+To\+Log} (\hyperlink{classsimpledb_1_1log_1_1LogMgr}{Log\+Mgr} lm, int txnum)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The R\+O\+L\+L\+B\+A\+CK log record. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_a0e7540ad9c5f594ccfce3a1e0f38d72c}\label{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_a0e7540ad9c5f594ccfce3a1e0f38d72c}} 
+\index{simpledb\+::tx\+::recovery\+::\+Rollback\+Record@{simpledb\+::tx\+::recovery\+::\+Rollback\+Record}!Rollback\+Record@{Rollback\+Record}}
+\index{Rollback\+Record@{Rollback\+Record}!simpledb\+::tx\+::recovery\+::\+Rollback\+Record@{simpledb\+::tx\+::recovery\+::\+Rollback\+Record}}
+\subsubsection{\texorpdfstring{Rollback\+Record()}{RollbackRecord()}}
+{\footnotesize\ttfamily simpledb.\+tx.\+recovery.\+Rollback\+Record.\+Rollback\+Record (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1file_1_1Page}{Page}}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord}{Rollback\+Record} object. 
+\begin{DoxyParams}{Parameters}
+{\em txnum} & the ID of the specified transaction \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_a4131d5dbb07f84058bd9551d023ff34b}\label{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_a4131d5dbb07f84058bd9551d023ff34b}} 
+\index{simpledb\+::tx\+::recovery\+::\+Rollback\+Record@{simpledb\+::tx\+::recovery\+::\+Rollback\+Record}!op@{op}}
+\index{op@{op}!simpledb\+::tx\+::recovery\+::\+Rollback\+Record@{simpledb\+::tx\+::recovery\+::\+Rollback\+Record}}
+\subsubsection{\texorpdfstring{op()}{op()}}
+{\footnotesize\ttfamily int simpledb.\+tx.\+recovery.\+Rollback\+Record.\+op (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the log record\textquotesingle{}s type. \begin{DoxyReturn}{Returns}
+the log record\textquotesingle{}s type 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_aa97a8907de4709c2b3596e8c9709a26c}{simpledb.\+tx.\+recovery.\+Log\+Record}.
+
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_a89c5de69f9f9653116e3335afb4f178b}\label{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_a89c5de69f9f9653116e3335afb4f178b}} 
+\index{simpledb\+::tx\+::recovery\+::\+Rollback\+Record@{simpledb\+::tx\+::recovery\+::\+Rollback\+Record}!tx\+Number@{tx\+Number}}
+\index{tx\+Number@{tx\+Number}!simpledb\+::tx\+::recovery\+::\+Rollback\+Record@{simpledb\+::tx\+::recovery\+::\+Rollback\+Record}}
+\subsubsection{\texorpdfstring{tx\+Number()}{txNumber()}}
+{\footnotesize\ttfamily int simpledb.\+tx.\+recovery.\+Rollback\+Record.\+tx\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the transaction id stored with the log record. \begin{DoxyReturn}{Returns}
+the log record\textquotesingle{}s transaction id 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a167f7406c18bf3367f1b83f6853870db}{simpledb.\+tx.\+recovery.\+Log\+Record}.
+
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_ad21d99845cfc0eaafe7ffdb01f8dae70}\label{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_ad21d99845cfc0eaafe7ffdb01f8dae70}} 
+\index{simpledb\+::tx\+::recovery\+::\+Rollback\+Record@{simpledb\+::tx\+::recovery\+::\+Rollback\+Record}!undo@{undo}}
+\index{undo@{undo}!simpledb\+::tx\+::recovery\+::\+Rollback\+Record@{simpledb\+::tx\+::recovery\+::\+Rollback\+Record}}
+\subsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily void simpledb.\+tx.\+recovery.\+Rollback\+Record.\+undo (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Does nothing, because a rollback record contains no undo information. 
+
+Implements \hyperlink{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a1f1949e7f3746b9b8b3bc985c89214e5}{simpledb.\+tx.\+recovery.\+Log\+Record}.
+
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_aa31fa6247f89d5cf47160c34d0a0dcbf}\label{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_aa31fa6247f89d5cf47160c34d0a0dcbf}} 
+\index{simpledb\+::tx\+::recovery\+::\+Rollback\+Record@{simpledb\+::tx\+::recovery\+::\+Rollback\+Record}!write\+To\+Log@{write\+To\+Log}}
+\index{write\+To\+Log@{write\+To\+Log}!simpledb\+::tx\+::recovery\+::\+Rollback\+Record@{simpledb\+::tx\+::recovery\+::\+Rollback\+Record}}
+\subsubsection{\texorpdfstring{write\+To\+Log()}{writeToLog()}}
+{\footnotesize\ttfamily static int simpledb.\+tx.\+recovery.\+Rollback\+Record.\+write\+To\+Log (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1log_1_1LogMgr}{Log\+Mgr}}]{lm,  }\item[{int}]{txnum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+A static method to write a rollback record to the log. This log record contains the R\+O\+L\+L\+B\+A\+CK operator, followed by the transaction id. \begin{DoxyReturn}{Returns}
+the L\+SN of the last log value 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/tx/recovery/Rollback\+Record.\+java\end{DoxyCompactItemize}

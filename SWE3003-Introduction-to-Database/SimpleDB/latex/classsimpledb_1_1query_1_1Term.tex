@@ -1,0 +1,124 @@
+\hypertarget{classsimpledb_1_1query_1_1Term}{}\section{simpledb.\+query.\+Term Class Reference}
+\label{classsimpledb_1_1query_1_1Term}\index{simpledb.\+query.\+Term@{simpledb.\+query.\+Term}}
+
+
+Collaboration diagram for simpledb.\+query.\+Term\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Term_a9e05b76143543f071858b832bd63ecdf}{Term} (\hyperlink{classsimpledb_1_1query_1_1Expression}{Expression} lhs, \hyperlink{classsimpledb_1_1query_1_1Expression}{Expression} rhs)
+\item 
+boolean \hyperlink{classsimpledb_1_1query_1_1Term_a197592ae9c263bbfb91ac948c6c90b35}{is\+Satisfied} (\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} s)
+\item 
+int \hyperlink{classsimpledb_1_1query_1_1Term_a6d48a55de2d5b3a475cd42fc93c36010}{reduction\+Factor} (\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} p)
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{classsimpledb_1_1query_1_1Term_ae746c87c9815e12ec762612d6a53ecc4}{equates\+With\+Constant} (String fldname)
+\item 
+String \hyperlink{classsimpledb_1_1query_1_1Term_a744943bf6c77d103c05db6cc0fb29ac5}{equates\+With\+Field} (String fldname)
+\item 
+boolean \hyperlink{classsimpledb_1_1query_1_1Term_a9683bc9e3d7e67339ae9c167edc718e3}{applies\+To} (\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} sch)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Term_ae02c99bebc767b19067b802acc41b71d}\label{classsimpledb_1_1query_1_1Term_ae02c99bebc767b19067b802acc41b71d}} 
+String {\bfseries to\+String} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A term is a comparison between two expressions. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Term_a9e05b76143543f071858b832bd63ecdf}\label{classsimpledb_1_1query_1_1Term_a9e05b76143543f071858b832bd63ecdf}} 
+\index{simpledb\+::query\+::\+Term@{simpledb\+::query\+::\+Term}!Term@{Term}}
+\index{Term@{Term}!simpledb\+::query\+::\+Term@{simpledb\+::query\+::\+Term}}
+\subsubsection{\texorpdfstring{Term()}{Term()}}
+{\footnotesize\ttfamily simpledb.\+query.\+Term.\+Term (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1query_1_1Expression}{Expression}}]{lhs,  }\item[{\hyperlink{classsimpledb_1_1query_1_1Expression}{Expression}}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a new term that compares two expressions for equality. 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & the L\+HS expression \\
+\hline
+{\em rhs} & the R\+HS expression \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Term_a9683bc9e3d7e67339ae9c167edc718e3}\label{classsimpledb_1_1query_1_1Term_a9683bc9e3d7e67339ae9c167edc718e3}} 
+\index{simpledb\+::query\+::\+Term@{simpledb\+::query\+::\+Term}!applies\+To@{applies\+To}}
+\index{applies\+To@{applies\+To}!simpledb\+::query\+::\+Term@{simpledb\+::query\+::\+Term}}
+\subsubsection{\texorpdfstring{applies\+To()}{appliesTo()}}
+{\footnotesize\ttfamily boolean simpledb.\+query.\+Term.\+applies\+To (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema}}]{sch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return true if both of the term\textquotesingle{}s expressions apply to the specified schema. 
+\begin{DoxyParams}{Parameters}
+{\em sch} & the schema \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both expressions apply to the schema 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Term_ae746c87c9815e12ec762612d6a53ecc4}\label{classsimpledb_1_1query_1_1Term_ae746c87c9815e12ec762612d6a53ecc4}} 
+\index{simpledb\+::query\+::\+Term@{simpledb\+::query\+::\+Term}!equates\+With\+Constant@{equates\+With\+Constant}}
+\index{equates\+With\+Constant@{equates\+With\+Constant}!simpledb\+::query\+::\+Term@{simpledb\+::query\+::\+Term}}
+\subsubsection{\texorpdfstring{equates\+With\+Constant()}{equatesWithConstant()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+query.\+Term.\+equates\+With\+Constant (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Determine if this term is of the form \char`\"{}\+F=c\char`\"{} where F is the specified field and c is some constant. If so, the method returns that constant. If not, the method returns null. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+either the constant or null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Term_a744943bf6c77d103c05db6cc0fb29ac5}\label{classsimpledb_1_1query_1_1Term_a744943bf6c77d103c05db6cc0fb29ac5}} 
+\index{simpledb\+::query\+::\+Term@{simpledb\+::query\+::\+Term}!equates\+With\+Field@{equates\+With\+Field}}
+\index{equates\+With\+Field@{equates\+With\+Field}!simpledb\+::query\+::\+Term@{simpledb\+::query\+::\+Term}}
+\subsubsection{\texorpdfstring{equates\+With\+Field()}{equatesWithField()}}
+{\footnotesize\ttfamily String simpledb.\+query.\+Term.\+equates\+With\+Field (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Determine if this term is of the form \char`\"{}\+F1=\+F2\char`\"{} where F1 is the specified field and F2 is another field. If so, the method returns the name of that field. If not, the method returns null. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+either the name of the other field, or null 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Term_a197592ae9c263bbfb91ac948c6c90b35}\label{classsimpledb_1_1query_1_1Term_a197592ae9c263bbfb91ac948c6c90b35}} 
+\index{simpledb\+::query\+::\+Term@{simpledb\+::query\+::\+Term}!is\+Satisfied@{is\+Satisfied}}
+\index{is\+Satisfied@{is\+Satisfied}!simpledb\+::query\+::\+Term@{simpledb\+::query\+::\+Term}}
+\subsubsection{\texorpdfstring{is\+Satisfied()}{isSatisfied()}}
+{\footnotesize\ttfamily boolean simpledb.\+query.\+Term.\+is\+Satisfied (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return true if both of the term\textquotesingle{}s expressions evaluate to the same constant, with respect to the specified scan. 
+\begin{DoxyParams}{Parameters}
+{\em s} & the scan \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both expressions have the same value in the scan 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1query_1_1Term_a6d48a55de2d5b3a475cd42fc93c36010}\label{classsimpledb_1_1query_1_1Term_a6d48a55de2d5b3a475cd42fc93c36010}} 
+\index{simpledb\+::query\+::\+Term@{simpledb\+::query\+::\+Term}!reduction\+Factor@{reduction\+Factor}}
+\index{reduction\+Factor@{reduction\+Factor}!simpledb\+::query\+::\+Term@{simpledb\+::query\+::\+Term}}
+\subsubsection{\texorpdfstring{reduction\+Factor()}{reductionFactor()}}
+{\footnotesize\ttfamily int simpledb.\+query.\+Term.\+reduction\+Factor (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan}}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calculate the extent to which selecting on the term reduces the number of records output by a query. For example if the reduction factor is 2, then the term cuts the size of the output in half. 
+\begin{DoxyParams}{Parameters}
+{\em p} & the query\textquotesingle{}s plan \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the integer reduction factor. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/query/Term.\+java\end{DoxyCompactItemize}

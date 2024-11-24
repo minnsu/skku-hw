@@ -1,0 +1,75 @@
+\hypertarget{classsimpledb_1_1materialize_1_1GroupValue}{}\section{simpledb.\+materialize.\+Group\+Value Class Reference}
+\label{classsimpledb_1_1materialize_1_1GroupValue}\index{simpledb.\+materialize.\+Group\+Value@{simpledb.\+materialize.\+Group\+Value}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1materialize_1_1GroupValue_a6d65e14c563eb9d73d75da62528735af}{Group\+Value} (\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} s, List$<$ String $>$ fields)
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{classsimpledb_1_1materialize_1_1GroupValue_af53c8c966b982c0b62f6db2ec07fcbd0}{get\+Val} (String fldname)
+\item 
+boolean \hyperlink{classsimpledb_1_1materialize_1_1GroupValue_a5b0b30fc31eb67a79015bdc8b08340b0}{equals} (Object obj)
+\item 
+int \hyperlink{classsimpledb_1_1materialize_1_1GroupValue_a5a18a858cd82fe9c59399975447de206}{hash\+Code} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An object that holds the values of the grouping fields for the current record of a scan. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1GroupValue_a6d65e14c563eb9d73d75da62528735af}\label{classsimpledb_1_1materialize_1_1GroupValue_a6d65e14c563eb9d73d75da62528735af}} 
+\index{simpledb\+::materialize\+::\+Group\+Value@{simpledb\+::materialize\+::\+Group\+Value}!Group\+Value@{Group\+Value}}
+\index{Group\+Value@{Group\+Value}!simpledb\+::materialize\+::\+Group\+Value@{simpledb\+::materialize\+::\+Group\+Value}}
+\subsubsection{\texorpdfstring{Group\+Value()}{GroupValue()}}
+{\footnotesize\ttfamily simpledb.\+materialize.\+Group\+Value.\+Group\+Value (\begin{DoxyParamCaption}\item[{\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan}}]{s,  }\item[{List$<$ String $>$}]{fields }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a new group value, given the specified scan and list of fields. The values in the current record of each field are stored. 
+\begin{DoxyParams}{Parameters}
+{\em s} & a scan \\
+\hline
+{\em fields} & the list of fields \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1GroupValue_a5b0b30fc31eb67a79015bdc8b08340b0}\label{classsimpledb_1_1materialize_1_1GroupValue_a5b0b30fc31eb67a79015bdc8b08340b0}} 
+\index{simpledb\+::materialize\+::\+Group\+Value@{simpledb\+::materialize\+::\+Group\+Value}!equals@{equals}}
+\index{equals@{equals}!simpledb\+::materialize\+::\+Group\+Value@{simpledb\+::materialize\+::\+Group\+Value}}
+\subsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily boolean simpledb.\+materialize.\+Group\+Value.\+equals (\begin{DoxyParamCaption}\item[{Object}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Two \hyperlink{classsimpledb_1_1materialize_1_1GroupValue}{Group\+Value} objects are equal if they have the same values for their grouping fields. \begin{DoxySeeAlso}{See also}
+java.\+lang.\+Object\+::equals(java.\+lang.\+Object) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1GroupValue_af53c8c966b982c0b62f6db2ec07fcbd0}\label{classsimpledb_1_1materialize_1_1GroupValue_af53c8c966b982c0b62f6db2ec07fcbd0}} 
+\index{simpledb\+::materialize\+::\+Group\+Value@{simpledb\+::materialize\+::\+Group\+Value}!get\+Val@{get\+Val}}
+\index{get\+Val@{get\+Val}!simpledb\+::materialize\+::\+Group\+Value@{simpledb\+::materialize\+::\+Group\+Value}}
+\subsubsection{\texorpdfstring{get\+Val()}{getVal()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+materialize.\+Group\+Value.\+get\+Val (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the Constant value of the specified field in the group. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of a field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value of the field in the group 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1GroupValue_a5a18a858cd82fe9c59399975447de206}\label{classsimpledb_1_1materialize_1_1GroupValue_a5a18a858cd82fe9c59399975447de206}} 
+\index{simpledb\+::materialize\+::\+Group\+Value@{simpledb\+::materialize\+::\+Group\+Value}!hash\+Code@{hash\+Code}}
+\index{hash\+Code@{hash\+Code}!simpledb\+::materialize\+::\+Group\+Value@{simpledb\+::materialize\+::\+Group\+Value}}
+\subsubsection{\texorpdfstring{hash\+Code()}{hashCode()}}
+{\footnotesize\ttfamily int simpledb.\+materialize.\+Group\+Value.\+hash\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The hashcode of a \hyperlink{classsimpledb_1_1materialize_1_1GroupValue}{Group\+Value} object is the sum of the hashcodes of its field values. \begin{DoxySeeAlso}{See also}
+java.\+lang.\+Object\+::hash\+Code() 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/materialize/Group\+Value.\+java\end{DoxyCompactItemize}

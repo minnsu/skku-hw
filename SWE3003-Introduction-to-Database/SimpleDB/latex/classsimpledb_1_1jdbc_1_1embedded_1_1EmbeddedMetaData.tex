@@ -1,0 +1,75 @@
+\hypertarget{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedMetaData}{}\section{simpledb.\+jdbc.\+embedded.\+Embedded\+Meta\+Data Class Reference}
+\label{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedMetaData}\index{simpledb.\+jdbc.\+embedded.\+Embedded\+Meta\+Data@{simpledb.\+jdbc.\+embedded.\+Embedded\+Meta\+Data}}
+
+
+Inheritance diagram for simpledb.\+jdbc.\+embedded.\+Embedded\+Meta\+Data\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+jdbc.\+embedded.\+Embedded\+Meta\+Data\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedMetaData_a91ade54d80ce7b048eb85732279491d1}{Embedded\+Meta\+Data} (\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} sch)
+\item 
+int \hyperlink{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedMetaData_a705a129ea1ffb4bd59f19c338f5c0edb}{get\+Column\+Count} ()  throws S\+Q\+L\+Exception 
+\item 
+String \hyperlink{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedMetaData_a090cf18d364fe42ec078e85745ecd270}{get\+Column\+Name} (int column)  throws S\+Q\+L\+Exception 
+\item 
+int \hyperlink{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedMetaData_a2b5e8a6fa3cc530acce45e1399c903c5}{get\+Column\+Type} (int column)  throws S\+Q\+L\+Exception 
+\item 
+int \hyperlink{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedMetaData_a9939060dea7987e5b26535c2db9d503c}{get\+Column\+Display\+Size} (int column)  throws S\+Q\+L\+Exception 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The embedded implementation of Result\+Set\+Meta\+Data. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedMetaData_a91ade54d80ce7b048eb85732279491d1}\label{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedMetaData_a91ade54d80ce7b048eb85732279491d1}} 
+\index{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data}!Embedded\+Meta\+Data@{Embedded\+Meta\+Data}}
+\index{Embedded\+Meta\+Data@{Embedded\+Meta\+Data}!simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data}}
+\subsubsection{\texorpdfstring{Embedded\+Meta\+Data()}{EmbeddedMetaData()}}
+{\footnotesize\ttfamily simpledb.\+jdbc.\+embedded.\+Embedded\+Meta\+Data.\+Embedded\+Meta\+Data (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema}}]{sch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a metadata object that wraps the specified schema. The method also creates a list to hold the schema\textquotesingle{}s collection of field names, so that the fields can be accessed by position. 
+\begin{DoxyParams}{Parameters}
+{\em sch} & the schema \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedMetaData_a705a129ea1ffb4bd59f19c338f5c0edb}\label{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedMetaData_a705a129ea1ffb4bd59f19c338f5c0edb}} 
+\index{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data}!get\+Column\+Count@{get\+Column\+Count}}
+\index{get\+Column\+Count@{get\+Column\+Count}!simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data}}
+\subsubsection{\texorpdfstring{get\+Column\+Count()}{getColumnCount()}}
+{\footnotesize\ttfamily int simpledb.\+jdbc.\+embedded.\+Embedded\+Meta\+Data.\+get\+Column\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws S\+Q\+L\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the size of the field list. \mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedMetaData_a9939060dea7987e5b26535c2db9d503c}\label{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedMetaData_a9939060dea7987e5b26535c2db9d503c}} 
+\index{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data}!get\+Column\+Display\+Size@{get\+Column\+Display\+Size}}
+\index{get\+Column\+Display\+Size@{get\+Column\+Display\+Size}!simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data}}
+\subsubsection{\texorpdfstring{get\+Column\+Display\+Size()}{getColumnDisplaySize()}}
+{\footnotesize\ttfamily int simpledb.\+jdbc.\+embedded.\+Embedded\+Meta\+Data.\+get\+Column\+Display\+Size (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption}) throws S\+Q\+L\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of characters required to display the specified column. For a string-\/type field, the method simply looks up the field\textquotesingle{}s length in the schema and returns that. For an int-\/type field, the method needs to decide how large integers can be. Here, the method arbitrarily chooses 6 characters, which means that integers over 999,999 will probably get displayed improperly. \mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedMetaData_a090cf18d364fe42ec078e85745ecd270}\label{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedMetaData_a090cf18d364fe42ec078e85745ecd270}} 
+\index{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data}!get\+Column\+Name@{get\+Column\+Name}}
+\index{get\+Column\+Name@{get\+Column\+Name}!simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data}}
+\subsubsection{\texorpdfstring{get\+Column\+Name()}{getColumnName()}}
+{\footnotesize\ttfamily String simpledb.\+jdbc.\+embedded.\+Embedded\+Meta\+Data.\+get\+Column\+Name (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption}) throws S\+Q\+L\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the field name for the specified column number. In J\+D\+BC, column numbers start with 1, so the field is taken from position (column-\/1) in the list. \mbox{\Hypertarget{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedMetaData_a2b5e8a6fa3cc530acce45e1399c903c5}\label{classsimpledb_1_1jdbc_1_1embedded_1_1EmbeddedMetaData_a2b5e8a6fa3cc530acce45e1399c903c5}} 
+\index{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data}!get\+Column\+Type@{get\+Column\+Type}}
+\index{get\+Column\+Type@{get\+Column\+Type}!simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data@{simpledb\+::jdbc\+::embedded\+::\+Embedded\+Meta\+Data}}
+\subsubsection{\texorpdfstring{get\+Column\+Type()}{getColumnType()}}
+{\footnotesize\ttfamily int simpledb.\+jdbc.\+embedded.\+Embedded\+Meta\+Data.\+get\+Column\+Type (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption}) throws S\+Q\+L\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the type of the specified column. The method first finds the name of the field in that column, and then looks up its type in the schema. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/jdbc/embedded/Embedded\+Meta\+Data.\+java\end{DoxyCompactItemize}

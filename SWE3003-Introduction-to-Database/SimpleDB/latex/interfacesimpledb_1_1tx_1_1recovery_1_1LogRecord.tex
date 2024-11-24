@@ -1,0 +1,110 @@
+\hypertarget{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord}{}\section{simpledb.\+tx.\+recovery.\+Log\+Record Interface Reference}
+\label{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord}\index{simpledb.\+tx.\+recovery.\+Log\+Record@{simpledb.\+tx.\+recovery.\+Log\+Record}}
+
+
+Inheritance diagram for simpledb.\+tx.\+recovery.\+Log\+Record\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_aa97a8907de4709c2b3596e8c9709a26c}{op} ()
+\item 
+int \hyperlink{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a167f7406c18bf3367f1b83f6853870db}{tx\+Number} ()
+\item 
+void \hyperlink{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a1f1949e7f3746b9b8b3bc985c89214e5}{undo} (\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord}{Log\+Record} \hyperlink{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a2c292397e0409fe26f4208aec31776bf}{create\+Log\+Record} (byte\mbox{[}$\,$\mbox{]} bytes)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a33e8b2db2794154d3e4a9ebfe0a7664a}\label{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a33e8b2db2794154d3e4a9ebfe0a7664a}} 
+static final int {\bfseries C\+H\+E\+C\+K\+P\+O\+I\+NT} = 0
+\item 
+\mbox{\Hypertarget{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_ad91bda04a65992441b925311c8247dcb}\label{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_ad91bda04a65992441b925311c8247dcb}} 
+static final int {\bfseries S\+T\+A\+RT} = 1
+\item 
+\mbox{\Hypertarget{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_ac6d90cb0075e7d56f599b37e3cc3f673}\label{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_ac6d90cb0075e7d56f599b37e3cc3f673}} 
+static final int {\bfseries C\+O\+M\+M\+IT} = 2
+\item 
+\mbox{\Hypertarget{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_af45dd2e103150fa25d5ad9efef963bc4}\label{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_af45dd2e103150fa25d5ad9efef963bc4}} 
+static final int {\bfseries R\+O\+L\+L\+B\+A\+CK} = 3
+\item 
+\mbox{\Hypertarget{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a20d6d3ec534516217e81540d7ae49b25}\label{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a20d6d3ec534516217e81540d7ae49b25}} 
+static final int {\bfseries S\+E\+T\+I\+NT} = 4
+\item 
+\mbox{\Hypertarget{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a48c6f220053a4d1b1c3cf566b9fb538e}\label{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a48c6f220053a4d1b1c3cf566b9fb538e}} 
+static final int {\bfseries S\+E\+T\+S\+T\+R\+I\+NG} = 5
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The interface implemented by each type of log record. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a2c292397e0409fe26f4208aec31776bf}\label{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a2c292397e0409fe26f4208aec31776bf}} 
+\index{simpledb\+::tx\+::recovery\+::\+Log\+Record@{simpledb\+::tx\+::recovery\+::\+Log\+Record}!create\+Log\+Record@{create\+Log\+Record}}
+\index{create\+Log\+Record@{create\+Log\+Record}!simpledb\+::tx\+::recovery\+::\+Log\+Record@{simpledb\+::tx\+::recovery\+::\+Log\+Record}}
+\subsubsection{\texorpdfstring{create\+Log\+Record()}{createLogRecord()}}
+{\footnotesize\ttfamily static \hyperlink{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord}{Log\+Record} simpledb.\+tx.\+recovery.\+Log\+Record.\+create\+Log\+Record (\begin{DoxyParamCaption}\item[{byte \mbox{[}$\,$\mbox{]}}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Interpret the bytes returned by the log iterator. 
+\begin{DoxyParams}{Parameters}
+{\em bytes} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_aa97a8907de4709c2b3596e8c9709a26c}\label{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_aa97a8907de4709c2b3596e8c9709a26c}} 
+\index{simpledb\+::tx\+::recovery\+::\+Log\+Record@{simpledb\+::tx\+::recovery\+::\+Log\+Record}!op@{op}}
+\index{op@{op}!simpledb\+::tx\+::recovery\+::\+Log\+Record@{simpledb\+::tx\+::recovery\+::\+Log\+Record}}
+\subsubsection{\texorpdfstring{op()}{op()}}
+{\footnotesize\ttfamily int simpledb.\+tx.\+recovery.\+Log\+Record.\+op (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the log record\textquotesingle{}s type. \begin{DoxyReturn}{Returns}
+the log record\textquotesingle{}s type 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1SetStringRecord_a87005ca427089666bd5d1c96ce4fa29d}{simpledb.\+tx.\+recovery.\+Set\+String\+Record}, \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1SetIntRecord_a8e244e4c544a8253c802931f463c139d}{simpledb.\+tx.\+recovery.\+Set\+Int\+Record}, \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_a4131d5dbb07f84058bd9551d023ff34b}{simpledb.\+tx.\+recovery.\+Rollback\+Record}, \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord_a4a550ab6247f33e349b3edff767bc630}{simpledb.\+tx.\+recovery.\+Commit\+Record}, \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1StartRecord_a528df40fb41199ed19510524aa0a8044}{simpledb.\+tx.\+recovery.\+Start\+Record}, and \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord_add91e88d6b4eb9ed6cfff2d8d8cc021f}{simpledb.\+tx.\+recovery.\+Checkpoint\+Record}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a167f7406c18bf3367f1b83f6853870db}\label{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a167f7406c18bf3367f1b83f6853870db}} 
+\index{simpledb\+::tx\+::recovery\+::\+Log\+Record@{simpledb\+::tx\+::recovery\+::\+Log\+Record}!tx\+Number@{tx\+Number}}
+\index{tx\+Number@{tx\+Number}!simpledb\+::tx\+::recovery\+::\+Log\+Record@{simpledb\+::tx\+::recovery\+::\+Log\+Record}}
+\subsubsection{\texorpdfstring{tx\+Number()}{txNumber()}}
+{\footnotesize\ttfamily int simpledb.\+tx.\+recovery.\+Log\+Record.\+tx\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the transaction id stored with the log record. \begin{DoxyReturn}{Returns}
+the log record\textquotesingle{}s transaction id 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1SetStringRecord_adcd0381963f274bf07aeb2e615ba6c8f}{simpledb.\+tx.\+recovery.\+Set\+String\+Record}, \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1SetIntRecord_aaadefbf9f55cefb7308df960c329a21e}{simpledb.\+tx.\+recovery.\+Set\+Int\+Record}, \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_a89c5de69f9f9653116e3335afb4f178b}{simpledb.\+tx.\+recovery.\+Rollback\+Record}, \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord_aea455bb47be4edb732b0da09ca308dda}{simpledb.\+tx.\+recovery.\+Checkpoint\+Record}, \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord_a9e644845f0e04b1c9c0fae4d9cdbe618}{simpledb.\+tx.\+recovery.\+Commit\+Record}, and \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1StartRecord_ae6680c3904f3a0734c2a8656ed58b706}{simpledb.\+tx.\+recovery.\+Start\+Record}.
+
+\mbox{\Hypertarget{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a1f1949e7f3746b9b8b3bc985c89214e5}\label{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a1f1949e7f3746b9b8b3bc985c89214e5}} 
+\index{simpledb\+::tx\+::recovery\+::\+Log\+Record@{simpledb\+::tx\+::recovery\+::\+Log\+Record}!undo@{undo}}
+\index{undo@{undo}!simpledb\+::tx\+::recovery\+::\+Log\+Record@{simpledb\+::tx\+::recovery\+::\+Log\+Record}}
+\subsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily void simpledb.\+tx.\+recovery.\+Log\+Record.\+undo (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx }\end{DoxyParamCaption})}
+
+Undoes the operation encoded by this log record. The only log record types for which this method does anything interesting are S\+E\+T\+I\+NT and S\+E\+T\+S\+T\+R\+I\+NG. 
+\begin{DoxyParams}{Parameters}
+{\em txnum} & the id of the transaction that is performing the undo. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1SetStringRecord_a34e8c9a212d3dfcd8f36774271d8cb38}{simpledb.\+tx.\+recovery.\+Set\+String\+Record}, \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1SetIntRecord_a917897bef9acb164bed44eb6655f6835}{simpledb.\+tx.\+recovery.\+Set\+Int\+Record}, \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1RollbackRecord_ad21d99845cfc0eaafe7ffdb01f8dae70}{simpledb.\+tx.\+recovery.\+Rollback\+Record}, \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord_a4972aad5462b30acfd987cf21b3fc7c2}{simpledb.\+tx.\+recovery.\+Checkpoint\+Record}, \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1CommitRecord_aa7a60156e7d7dfb10d2e6f8e4496f756}{simpledb.\+tx.\+recovery.\+Commit\+Record}, and \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1StartRecord_af33d26ca2032ba63cc06f266e9c41efa}{simpledb.\+tx.\+recovery.\+Start\+Record}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/tx/recovery/Log\+Record.\+java\end{DoxyCompactItemize}

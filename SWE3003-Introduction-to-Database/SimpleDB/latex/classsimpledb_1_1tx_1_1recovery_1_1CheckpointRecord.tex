@@ -1,0 +1,84 @@
+\hypertarget{classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord}{}\section{simpledb.\+tx.\+recovery.\+Checkpoint\+Record Class Reference}
+\label{classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord}\index{simpledb.\+tx.\+recovery.\+Checkpoint\+Record@{simpledb.\+tx.\+recovery.\+Checkpoint\+Record}}
+
+
+Inheritance diagram for simpledb.\+tx.\+recovery.\+Checkpoint\+Record\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+tx.\+recovery.\+Checkpoint\+Record\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord_add91e88d6b4eb9ed6cfff2d8d8cc021f}{op} ()
+\item 
+int \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord_aea455bb47be4edb732b0da09ca308dda}{tx\+Number} ()
+\item 
+void \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord_a4972aad5462b30acfd987cf21b3fc7c2}{undo} (\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord_ad395c7b39d32d5c965e0ec5dc8e9dfac}\label{classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord_ad395c7b39d32d5c965e0ec5dc8e9dfac}} 
+String {\bfseries to\+String} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord_ae8556c19188908e304e1592690689d3e}{write\+To\+Log} (\hyperlink{classsimpledb_1_1log_1_1LogMgr}{Log\+Mgr} lm)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The C\+H\+E\+C\+K\+P\+O\+I\+NT log record. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord_add91e88d6b4eb9ed6cfff2d8d8cc021f}\label{classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord_add91e88d6b4eb9ed6cfff2d8d8cc021f}} 
+\index{simpledb\+::tx\+::recovery\+::\+Checkpoint\+Record@{simpledb\+::tx\+::recovery\+::\+Checkpoint\+Record}!op@{op}}
+\index{op@{op}!simpledb\+::tx\+::recovery\+::\+Checkpoint\+Record@{simpledb\+::tx\+::recovery\+::\+Checkpoint\+Record}}
+\subsubsection{\texorpdfstring{op()}{op()}}
+{\footnotesize\ttfamily int simpledb.\+tx.\+recovery.\+Checkpoint\+Record.\+op (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the log record\textquotesingle{}s type. \begin{DoxyReturn}{Returns}
+the log record\textquotesingle{}s type 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_aa97a8907de4709c2b3596e8c9709a26c}{simpledb.\+tx.\+recovery.\+Log\+Record}.
+
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord_aea455bb47be4edb732b0da09ca308dda}\label{classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord_aea455bb47be4edb732b0da09ca308dda}} 
+\index{simpledb\+::tx\+::recovery\+::\+Checkpoint\+Record@{simpledb\+::tx\+::recovery\+::\+Checkpoint\+Record}!tx\+Number@{tx\+Number}}
+\index{tx\+Number@{tx\+Number}!simpledb\+::tx\+::recovery\+::\+Checkpoint\+Record@{simpledb\+::tx\+::recovery\+::\+Checkpoint\+Record}}
+\subsubsection{\texorpdfstring{tx\+Number()}{txNumber()}}
+{\footnotesize\ttfamily int simpledb.\+tx.\+recovery.\+Checkpoint\+Record.\+tx\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Checkpoint records have no associated transaction, and so the method returns a \char`\"{}dummy\char`\"{}, negative txid. 
+
+Implements \hyperlink{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a167f7406c18bf3367f1b83f6853870db}{simpledb.\+tx.\+recovery.\+Log\+Record}.
+
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord_a4972aad5462b30acfd987cf21b3fc7c2}\label{classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord_a4972aad5462b30acfd987cf21b3fc7c2}} 
+\index{simpledb\+::tx\+::recovery\+::\+Checkpoint\+Record@{simpledb\+::tx\+::recovery\+::\+Checkpoint\+Record}!undo@{undo}}
+\index{undo@{undo}!simpledb\+::tx\+::recovery\+::\+Checkpoint\+Record@{simpledb\+::tx\+::recovery\+::\+Checkpoint\+Record}}
+\subsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily void simpledb.\+tx.\+recovery.\+Checkpoint\+Record.\+undo (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Does nothing, because a checkpoint record contains no undo information. 
+
+Implements \hyperlink{interfacesimpledb_1_1tx_1_1recovery_1_1LogRecord_a1f1949e7f3746b9b8b3bc985c89214e5}{simpledb.\+tx.\+recovery.\+Log\+Record}.
+
+\mbox{\Hypertarget{classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord_ae8556c19188908e304e1592690689d3e}\label{classsimpledb_1_1tx_1_1recovery_1_1CheckpointRecord_ae8556c19188908e304e1592690689d3e}} 
+\index{simpledb\+::tx\+::recovery\+::\+Checkpoint\+Record@{simpledb\+::tx\+::recovery\+::\+Checkpoint\+Record}!write\+To\+Log@{write\+To\+Log}}
+\index{write\+To\+Log@{write\+To\+Log}!simpledb\+::tx\+::recovery\+::\+Checkpoint\+Record@{simpledb\+::tx\+::recovery\+::\+Checkpoint\+Record}}
+\subsubsection{\texorpdfstring{write\+To\+Log()}{writeToLog()}}
+{\footnotesize\ttfamily static int simpledb.\+tx.\+recovery.\+Checkpoint\+Record.\+write\+To\+Log (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1log_1_1LogMgr}{Log\+Mgr}}]{lm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+A static method to write a checkpoint record to the log. This log record contains the C\+H\+E\+C\+K\+P\+O\+I\+NT operator, and nothing else. \begin{DoxyReturn}{Returns}
+the L\+SN of the last log value 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/tx/recovery/Checkpoint\+Record.\+java\end{DoxyCompactItemize}

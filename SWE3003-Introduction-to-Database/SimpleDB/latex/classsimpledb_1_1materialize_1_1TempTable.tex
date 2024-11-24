@@ -1,0 +1,59 @@
+\hypertarget{classsimpledb_1_1materialize_1_1TempTable}{}\section{simpledb.\+materialize.\+Temp\+Table Class Reference}
+\label{classsimpledb_1_1materialize_1_1TempTable}\index{simpledb.\+materialize.\+Temp\+Table@{simpledb.\+materialize.\+Temp\+Table}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1materialize_1_1TempTable_adc3cebb2d2dd45f141fb4f3b8bd36e88}{Temp\+Table} (\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx, \hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} sch)
+\item 
+\hyperlink{interfacesimpledb_1_1query_1_1UpdateScan}{Update\+Scan} \hyperlink{classsimpledb_1_1materialize_1_1TempTable_adcf144ac73b859736c7d2f71fb42e22e}{open} ()
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1TempTable_a300c905ab7314f1bbddfec7339dc0f80}\label{classsimpledb_1_1materialize_1_1TempTable_a300c905ab7314f1bbddfec7339dc0f80}} 
+String {\bfseries table\+Name} ()
+\item 
+\hyperlink{classsimpledb_1_1record_1_1Layout}{Layout} \hyperlink{classsimpledb_1_1materialize_1_1TempTable_abf17e522f52e49657f10db1156e05c46}{get\+Layout} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that creates temporary tables. A temporary table is not registered in the catalog. The class therefore has a method get\+Table\+Info to return the table\textquotesingle{}s metadata. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1TempTable_adc3cebb2d2dd45f141fb4f3b8bd36e88}\label{classsimpledb_1_1materialize_1_1TempTable_adc3cebb2d2dd45f141fb4f3b8bd36e88}} 
+\index{simpledb\+::materialize\+::\+Temp\+Table@{simpledb\+::materialize\+::\+Temp\+Table}!Temp\+Table@{Temp\+Table}}
+\index{Temp\+Table@{Temp\+Table}!simpledb\+::materialize\+::\+Temp\+Table@{simpledb\+::materialize\+::\+Temp\+Table}}
+\subsubsection{\texorpdfstring{Temp\+Table()}{TempTable()}}
+{\footnotesize\ttfamily simpledb.\+materialize.\+Temp\+Table.\+Temp\+Table (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx,  }\item[{\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema}}]{sch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allocate a name for for a new temporary table having the specified schema. 
+\begin{DoxyParams}{Parameters}
+{\em sch} & the new table\textquotesingle{}s schema \\
+\hline
+{\em tx} & the calling transaction \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1TempTable_abf17e522f52e49657f10db1156e05c46}\label{classsimpledb_1_1materialize_1_1TempTable_abf17e522f52e49657f10db1156e05c46}} 
+\index{simpledb\+::materialize\+::\+Temp\+Table@{simpledb\+::materialize\+::\+Temp\+Table}!get\+Layout@{get\+Layout}}
+\index{get\+Layout@{get\+Layout}!simpledb\+::materialize\+::\+Temp\+Table@{simpledb\+::materialize\+::\+Temp\+Table}}
+\subsubsection{\texorpdfstring{get\+Layout()}{getLayout()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1Layout}{Layout} simpledb.\+materialize.\+Temp\+Table.\+get\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the table\textquotesingle{}s metadata. \begin{DoxyReturn}{Returns}
+the table\textquotesingle{}s metadata 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1TempTable_adcf144ac73b859736c7d2f71fb42e22e}\label{classsimpledb_1_1materialize_1_1TempTable_adcf144ac73b859736c7d2f71fb42e22e}} 
+\index{simpledb\+::materialize\+::\+Temp\+Table@{simpledb\+::materialize\+::\+Temp\+Table}!open@{open}}
+\index{open@{open}!simpledb\+::materialize\+::\+Temp\+Table@{simpledb\+::materialize\+::\+Temp\+Table}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \hyperlink{interfacesimpledb_1_1query_1_1UpdateScan}{Update\+Scan} simpledb.\+materialize.\+Temp\+Table.\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Open a table scan for the temporary table. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/materialize/Temp\+Table.\+java\end{DoxyCompactItemize}

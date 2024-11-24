@@ -1,0 +1,120 @@
+\hypertarget{classsimpledb_1_1plan_1_1TablePlan}{}\section{simpledb.\+plan.\+Table\+Plan Class Reference}
+\label{classsimpledb_1_1plan_1_1TablePlan}\index{simpledb.\+plan.\+Table\+Plan@{simpledb.\+plan.\+Table\+Plan}}
+
+
+Inheritance diagram for simpledb.\+plan.\+Table\+Plan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+plan.\+Table\+Plan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1plan_1_1TablePlan_ad381b52fcfe92f8147a5046bfb6d5690}{Table\+Plan} (\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx, String tblname, \hyperlink{classsimpledb_1_1metadata_1_1MetadataMgr}{Metadata\+Mgr} md)
+\item 
+\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} \hyperlink{classsimpledb_1_1plan_1_1TablePlan_afb47e9016581a59788ec4de4c672cf76}{open} ()
+\item 
+int \hyperlink{classsimpledb_1_1plan_1_1TablePlan_a02096e40476829aa8df6de4519bfee33}{blocks\+Accessed} ()
+\item 
+int \hyperlink{classsimpledb_1_1plan_1_1TablePlan_ab55d872332c11cd882240f8b1851abc6}{records\+Output} ()
+\item 
+int \hyperlink{classsimpledb_1_1plan_1_1TablePlan_a07271b00072ebfcc314da8f4be7a93f4}{distinct\+Values} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} \hyperlink{classsimpledb_1_1plan_1_1TablePlan_aeceae838a8fdc6dedfd23e8175374510}{schema} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} class corresponding to a table. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1TablePlan_ad381b52fcfe92f8147a5046bfb6d5690}\label{classsimpledb_1_1plan_1_1TablePlan_ad381b52fcfe92f8147a5046bfb6d5690}} 
+\index{simpledb\+::plan\+::\+Table\+Plan@{simpledb\+::plan\+::\+Table\+Plan}!Table\+Plan@{Table\+Plan}}
+\index{Table\+Plan@{Table\+Plan}!simpledb\+::plan\+::\+Table\+Plan@{simpledb\+::plan\+::\+Table\+Plan}}
+\subsubsection{\texorpdfstring{Table\+Plan()}{TablePlan()}}
+{\footnotesize\ttfamily simpledb.\+plan.\+Table\+Plan.\+Table\+Plan (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx,  }\item[{String}]{tblname,  }\item[{\hyperlink{classsimpledb_1_1metadata_1_1MetadataMgr}{Metadata\+Mgr}}]{md }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a leaf node in the query tree corresponding to the specified table. 
+\begin{DoxyParams}{Parameters}
+{\em tblname} & the name of the table \\
+\hline
+{\em tx} & the calling transaction \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1TablePlan_a02096e40476829aa8df6de4519bfee33}\label{classsimpledb_1_1plan_1_1TablePlan_a02096e40476829aa8df6de4519bfee33}} 
+\index{simpledb\+::plan\+::\+Table\+Plan@{simpledb\+::plan\+::\+Table\+Plan}!blocks\+Accessed@{blocks\+Accessed}}
+\index{blocks\+Accessed@{blocks\+Accessed}!simpledb\+::plan\+::\+Table\+Plan@{simpledb\+::plan\+::\+Table\+Plan}}
+\subsubsection{\texorpdfstring{blocks\+Accessed()}{blocksAccessed()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Table\+Plan.\+blocks\+Accessed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimates the number of block accesses for the table, which is obtainable from the statistics manager. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan\+::blocks\+Accessed()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1TablePlan_a07271b00072ebfcc314da8f4be7a93f4}\label{classsimpledb_1_1plan_1_1TablePlan_a07271b00072ebfcc314da8f4be7a93f4}} 
+\index{simpledb\+::plan\+::\+Table\+Plan@{simpledb\+::plan\+::\+Table\+Plan}!distinct\+Values@{distinct\+Values}}
+\index{distinct\+Values@{distinct\+Values}!simpledb\+::plan\+::\+Table\+Plan@{simpledb\+::plan\+::\+Table\+Plan}}
+\subsubsection{\texorpdfstring{distinct\+Values()}{distinctValues()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Table\+Plan.\+distinct\+Values (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimates the number of distinct field values in the table, which is obtainable from the statistics manager. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan\+::distinct\+Values}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1TablePlan_afb47e9016581a59788ec4de4c672cf76}\label{classsimpledb_1_1plan_1_1TablePlan_afb47e9016581a59788ec4de4c672cf76}} 
+\index{simpledb\+::plan\+::\+Table\+Plan@{simpledb\+::plan\+::\+Table\+Plan}!open@{open}}
+\index{open@{open}!simpledb\+::plan\+::\+Table\+Plan@{simpledb\+::plan\+::\+Table\+Plan}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} simpledb.\+plan.\+Table\+Plan.\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a table scan for this query. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan\+::open()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1TablePlan_ab55d872332c11cd882240f8b1851abc6}\label{classsimpledb_1_1plan_1_1TablePlan_ab55d872332c11cd882240f8b1851abc6}} 
+\index{simpledb\+::plan\+::\+Table\+Plan@{simpledb\+::plan\+::\+Table\+Plan}!records\+Output@{records\+Output}}
+\index{records\+Output@{records\+Output}!simpledb\+::plan\+::\+Table\+Plan@{simpledb\+::plan\+::\+Table\+Plan}}
+\subsubsection{\texorpdfstring{records\+Output()}{recordsOutput()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Table\+Plan.\+records\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Estimates the number of records in the table, which is obtainable from the statistics manager. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan\+::records\+Output()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1TablePlan_aeceae838a8fdc6dedfd23e8175374510}\label{classsimpledb_1_1plan_1_1TablePlan_aeceae838a8fdc6dedfd23e8175374510}} 
+\index{simpledb\+::plan\+::\+Table\+Plan@{simpledb\+::plan\+::\+Table\+Plan}!schema@{schema}}
+\index{schema@{schema}!simpledb\+::plan\+::\+Table\+Plan@{simpledb\+::plan\+::\+Table\+Plan}}
+\subsubsection{\texorpdfstring{schema()}{schema()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} simpledb.\+plan.\+Table\+Plan.\+schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Determines the schema of the table, which is obtainable from the catalog manager. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan\+::schema()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/plan/Table\+Plan.\+java\end{DoxyCompactItemize}

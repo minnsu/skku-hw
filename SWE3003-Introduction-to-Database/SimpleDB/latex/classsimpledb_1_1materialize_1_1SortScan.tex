@@ -1,0 +1,168 @@
+\hypertarget{classsimpledb_1_1materialize_1_1SortScan}{}\section{simpledb.\+materialize.\+Sort\+Scan Class Reference}
+\label{classsimpledb_1_1materialize_1_1SortScan}\index{simpledb.\+materialize.\+Sort\+Scan@{simpledb.\+materialize.\+Sort\+Scan}}
+
+
+Inheritance diagram for simpledb.\+materialize.\+Sort\+Scan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+materialize.\+Sort\+Scan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1materialize_1_1SortScan_aff8ec9b6958bc0af2b668e33e1a23f3d}{Sort\+Scan} (List$<$ \hyperlink{classsimpledb_1_1materialize_1_1TempTable}{Temp\+Table} $>$ runs, \hyperlink{classsimpledb_1_1materialize_1_1RecordComparator}{Record\+Comparator} comp)
+\item 
+void \hyperlink{classsimpledb_1_1materialize_1_1SortScan_aa9fed9077d78dcbd50a0c1504e5b5c86}{before\+First} ()
+\item 
+boolean \hyperlink{classsimpledb_1_1materialize_1_1SortScan_a4180abc890522265c22728e67f2131cd}{next} ()
+\item 
+void \hyperlink{classsimpledb_1_1materialize_1_1SortScan_abbd920a65ae5509e705112fe6cfbb966}{close} ()
+\item 
+\hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} \hyperlink{classsimpledb_1_1materialize_1_1SortScan_a6be5b206585dbd12c251a203364b5b1f}{get\+Val} (String fldname)
+\item 
+int \hyperlink{classsimpledb_1_1materialize_1_1SortScan_a2a0cdce171742d1f7b29d15ba4413621}{get\+Int} (String fldname)
+\item 
+String \hyperlink{classsimpledb_1_1materialize_1_1SortScan_a4e8f52b556a029c86480d969f06bb1e0}{get\+String} (String fldname)
+\item 
+boolean \hyperlink{classsimpledb_1_1materialize_1_1SortScan_a9987dac3483863a86dd3a97495a1f522}{has\+Field} (String fldname)
+\item 
+void \hyperlink{classsimpledb_1_1materialize_1_1SortScan_a58bd86766d38fce4c85b214a13cd4f5d}{save\+Position} ()
+\item 
+void \hyperlink{classsimpledb_1_1materialize_1_1SortScan_a11a8c64ec0c360d31469606780481625}{restore\+Position} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Scan class for the {\itshape sort} operator. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+
+sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1SortScan_aff8ec9b6958bc0af2b668e33e1a23f3d}\label{classsimpledb_1_1materialize_1_1SortScan_aff8ec9b6958bc0af2b668e33e1a23f3d}} 
+\index{simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}!Sort\+Scan@{Sort\+Scan}}
+\index{Sort\+Scan@{Sort\+Scan}!simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}}
+\subsubsection{\texorpdfstring{Sort\+Scan()}{SortScan()}}
+{\footnotesize\ttfamily simpledb.\+materialize.\+Sort\+Scan.\+Sort\+Scan (\begin{DoxyParamCaption}\item[{List$<$ \hyperlink{classsimpledb_1_1materialize_1_1TempTable}{Temp\+Table} $>$}]{runs,  }\item[{\hyperlink{classsimpledb_1_1materialize_1_1RecordComparator}{Record\+Comparator}}]{comp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a sort scan, given a list of 1 or 2 runs. If there is only 1 run, then s2 will be null and hasmore2 will be false. 
+\begin{DoxyParams}{Parameters}
+{\em runs} & the list of runs \\
+\hline
+{\em comp} & the record comparator \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1SortScan_aa9fed9077d78dcbd50a0c1504e5b5c86}\label{classsimpledb_1_1materialize_1_1SortScan_aa9fed9077d78dcbd50a0c1504e5b5c86}} 
+\index{simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}!before\+First@{before\+First}}
+\index{before\+First@{before\+First}!simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}}
+\subsubsection{\texorpdfstring{before\+First()}{beforeFirst()}}
+{\footnotesize\ttfamily void simpledb.\+materialize.\+Sort\+Scan.\+before\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Position the scan before the first record in sorted order. Internally, it moves to the first record of each underlying scan. The variable currentscan is set to null, indicating that there is no current scan. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a2eceb634b69da9bf1269a4355808cc6b}{simpledb.\+query.\+Scan\+::before\+First()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2eceb634b69da9bf1269a4355808cc6b}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1SortScan_abbd920a65ae5509e705112fe6cfbb966}\label{classsimpledb_1_1materialize_1_1SortScan_abbd920a65ae5509e705112fe6cfbb966}} 
+\index{simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}!close@{close}}
+\index{close@{close}!simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void simpledb.\+materialize.\+Sort\+Scan.\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Close the two underlying scans. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a260f40a8c82edaa00398bea9d698933c}{simpledb.\+query.\+Scan\+::close()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a260f40a8c82edaa00398bea9d698933c}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1SortScan_a2a0cdce171742d1f7b29d15ba4413621}\label{classsimpledb_1_1materialize_1_1SortScan_a2a0cdce171742d1f7b29d15ba4413621}} 
+\index{simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}!get\+Int@{get\+Int}}
+\index{get\+Int@{get\+Int}!simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}}
+\subsubsection{\texorpdfstring{get\+Int()}{getInt()}}
+{\footnotesize\ttfamily int simpledb.\+materialize.\+Sort\+Scan.\+get\+Int (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the integer value of the specified field of the current scan. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a2e064555e16240115167b5d42d2b3d19}{simpledb.\+query.\+Scan\+::get\+Int}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a2e064555e16240115167b5d42d2b3d19}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1SortScan_a4e8f52b556a029c86480d969f06bb1e0}\label{classsimpledb_1_1materialize_1_1SortScan_a4e8f52b556a029c86480d969f06bb1e0}} 
+\index{simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}}
+\subsubsection{\texorpdfstring{get\+String()}{getString()}}
+{\footnotesize\ttfamily String simpledb.\+materialize.\+Sort\+Scan.\+get\+String (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the string value of the specified field of the current scan. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a922e219fee53ecfa6163525f9e3ef222}{simpledb.\+query.\+Scan\+::get\+String}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a922e219fee53ecfa6163525f9e3ef222}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1SortScan_a6be5b206585dbd12c251a203364b5b1f}\label{classsimpledb_1_1materialize_1_1SortScan_a6be5b206585dbd12c251a203364b5b1f}} 
+\index{simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}!get\+Val@{get\+Val}}
+\index{get\+Val@{get\+Val}!simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}}
+\subsubsection{\texorpdfstring{get\+Val()}{getVal()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1query_1_1Constant}{Constant} simpledb.\+materialize.\+Sort\+Scan.\+get\+Val (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the Constant value of the specified field of the current scan. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan\+::get\+Val}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_aca80bca2857c983a88834bf6c01ee5ca}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1SortScan_a9987dac3483863a86dd3a97495a1f522}\label{classsimpledb_1_1materialize_1_1SortScan_a9987dac3483863a86dd3a97495a1f522}} 
+\index{simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}!has\+Field@{has\+Field}}
+\index{has\+Field@{has\+Field}!simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}}
+\subsubsection{\texorpdfstring{has\+Field()}{hasField()}}
+{\footnotesize\ttfamily boolean simpledb.\+materialize.\+Sort\+Scan.\+has\+Field (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return true if the specified field is in the current scan. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a8f4ccf13eed0bed983c928e9b998fe5c}{simpledb.\+query.\+Scan\+::has\+Field}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a8f4ccf13eed0bed983c928e9b998fe5c}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1SortScan_a4180abc890522265c22728e67f2131cd}\label{classsimpledb_1_1materialize_1_1SortScan_a4180abc890522265c22728e67f2131cd}} 
+\index{simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}!next@{next}}
+\index{next@{next}!simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily boolean simpledb.\+materialize.\+Sort\+Scan.\+next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Move to the next record in sorted order. First, the current scan is moved to the next record. Then the lowest record of the two scans is found, and that scan is chosen to be the new current scan. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}{simpledb.\+query.\+Scan\+::next()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1query_1_1Scan_a5fc77b7c76d91f89f6c09ac4f15ef351}{simpledb.\+query.\+Scan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1SortScan_a11a8c64ec0c360d31469606780481625}\label{classsimpledb_1_1materialize_1_1SortScan_a11a8c64ec0c360d31469606780481625}} 
+\index{simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}!restore\+Position@{restore\+Position}}
+\index{restore\+Position@{restore\+Position}!simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}}
+\subsubsection{\texorpdfstring{restore\+Position()}{restorePosition()}}
+{\footnotesize\ttfamily void simpledb.\+materialize.\+Sort\+Scan.\+restore\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Move the scan to its previously-\/saved position. \mbox{\Hypertarget{classsimpledb_1_1materialize_1_1SortScan_a58bd86766d38fce4c85b214a13cd4f5d}\label{classsimpledb_1_1materialize_1_1SortScan_a58bd86766d38fce4c85b214a13cd4f5d}} 
+\index{simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}!save\+Position@{save\+Position}}
+\index{save\+Position@{save\+Position}!simpledb\+::materialize\+::\+Sort\+Scan@{simpledb\+::materialize\+::\+Sort\+Scan}}
+\subsubsection{\texorpdfstring{save\+Position()}{savePosition()}}
+{\footnotesize\ttfamily void simpledb.\+materialize.\+Sort\+Scan.\+save\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Save the position of the current record, so that it can be restored at a later time. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/materialize/Sort\+Scan.\+java\end{DoxyCompactItemize}

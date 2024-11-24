@@ -1,0 +1,69 @@
+\hypertarget{classsimpledb_1_1log_1_1LogMgr}{}\section{simpledb.\+log.\+Log\+Mgr Class Reference}
+\label{classsimpledb_1_1log_1_1LogMgr}\index{simpledb.\+log.\+Log\+Mgr@{simpledb.\+log.\+Log\+Mgr}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1log_1_1LogMgr_ac6a5610d12fca7bbc29d7ee59f4e27ab}{Log\+Mgr} (\hyperlink{classsimpledb_1_1file_1_1FileMgr}{File\+Mgr} fm, String logfile)
+\item 
+void \hyperlink{classsimpledb_1_1log_1_1LogMgr_a6624ee41235ebaa1297551d51a7946ac}{flush} (int lsn)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1log_1_1LogMgr_a2d94e88ab5335f712fb34b2458b09358}\label{classsimpledb_1_1log_1_1LogMgr_a2d94e88ab5335f712fb34b2458b09358}} 
+Iterator$<$ byte\mbox{[}$\,$\mbox{]}$>$ {\bfseries iterator} ()
+\item 
+synchronized int \hyperlink{classsimpledb_1_1log_1_1LogMgr_ae147d7c57574b8c580b8cac41d112727}{append} (byte\mbox{[}$\,$\mbox{]} logrec)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The log manager, which is responsible for writing log records into a log file. The tail of the log is kept in a bytebuffer, which is flushed to disk when needed. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1log_1_1LogMgr_ac6a5610d12fca7bbc29d7ee59f4e27ab}\label{classsimpledb_1_1log_1_1LogMgr_ac6a5610d12fca7bbc29d7ee59f4e27ab}} 
+\index{simpledb\+::log\+::\+Log\+Mgr@{simpledb\+::log\+::\+Log\+Mgr}!Log\+Mgr@{Log\+Mgr}}
+\index{Log\+Mgr@{Log\+Mgr}!simpledb\+::log\+::\+Log\+Mgr@{simpledb\+::log\+::\+Log\+Mgr}}
+\subsubsection{\texorpdfstring{Log\+Mgr()}{LogMgr()}}
+{\footnotesize\ttfamily simpledb.\+log.\+Log\+Mgr.\+Log\+Mgr (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1file_1_1FileMgr}{File\+Mgr}}]{fm,  }\item[{String}]{logfile }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates the manager for the specified log file. If the log file does not yet exist, it is created with an empty first block. 
+\begin{DoxyParams}{Parameters}
+{\em File\+Mgr} & the file manager \\
+\hline
+{\em logfile} & the name of the log file \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1log_1_1LogMgr_ae147d7c57574b8c580b8cac41d112727}\label{classsimpledb_1_1log_1_1LogMgr_ae147d7c57574b8c580b8cac41d112727}} 
+\index{simpledb\+::log\+::\+Log\+Mgr@{simpledb\+::log\+::\+Log\+Mgr}!append@{append}}
+\index{append@{append}!simpledb\+::log\+::\+Log\+Mgr@{simpledb\+::log\+::\+Log\+Mgr}}
+\subsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily synchronized int simpledb.\+log.\+Log\+Mgr.\+append (\begin{DoxyParamCaption}\item[{byte \mbox{[}$\,$\mbox{]}}]{logrec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Appends a log record to the log buffer. The record consists of an arbitrary array of bytes. Log records are written right to left in the buffer. The size of the record is written before the bytes. The beginning of the buffer contains the location of the last-\/written record (the \char`\"{}boundary\char`\"{}). Storing the records backwards makes it easy to read them in reverse order. 
+\begin{DoxyParams}{Parameters}
+{\em logrec} & a byte buffer containing the bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the L\+SN of the final value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1log_1_1LogMgr_a6624ee41235ebaa1297551d51a7946ac}\label{classsimpledb_1_1log_1_1LogMgr_a6624ee41235ebaa1297551d51a7946ac}} 
+\index{simpledb\+::log\+::\+Log\+Mgr@{simpledb\+::log\+::\+Log\+Mgr}!flush@{flush}}
+\index{flush@{flush}!simpledb\+::log\+::\+Log\+Mgr@{simpledb\+::log\+::\+Log\+Mgr}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void simpledb.\+log.\+Log\+Mgr.\+flush (\begin{DoxyParamCaption}\item[{int}]{lsn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Ensures that the log record corresponding to the specified L\+SN has been written to disk. All earlier log records will also be written to disk. 
+\begin{DoxyParams}{Parameters}
+{\em lsn} & the L\+SN of a log record \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/log/Log\+Mgr.\+java\end{DoxyCompactItemize}

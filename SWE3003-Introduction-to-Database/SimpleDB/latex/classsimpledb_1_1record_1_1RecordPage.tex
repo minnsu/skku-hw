@@ -1,0 +1,110 @@
+\hypertarget{classsimpledb_1_1record_1_1RecordPage}{}\section{simpledb.\+record.\+Record\+Page Class Reference}
+\label{classsimpledb_1_1record_1_1RecordPage}\index{simpledb.\+record.\+Record\+Page@{simpledb.\+record.\+Record\+Page}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1RecordPage_a313d883654d4a7b94d32e20d3a0f2239}\label{classsimpledb_1_1record_1_1RecordPage_a313d883654d4a7b94d32e20d3a0f2239}} 
+{\bfseries Record\+Page} (\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx, \hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} blk, \hyperlink{classsimpledb_1_1record_1_1Layout}{Layout} layout)
+\item 
+int \hyperlink{classsimpledb_1_1record_1_1RecordPage_a4ff1955420f4018a6809e88b6008654a}{get\+Int} (int slot, String fldname)
+\item 
+String \hyperlink{classsimpledb_1_1record_1_1RecordPage_aa304049fd993d08097e8e0e6e5877810}{get\+String} (int slot, String fldname)
+\item 
+void \hyperlink{classsimpledb_1_1record_1_1RecordPage_ade07f28ec8ebd2f9b5635fdaf2aa1b93}{set\+Int} (int slot, String fldname, int val)
+\item 
+void \hyperlink{classsimpledb_1_1record_1_1RecordPage_ad464ee57a318a8a8044fb2258d49058f}{set\+String} (int slot, String fldname, String val)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1RecordPage_aad65baf26da26bafee81915ddcfcb44f}\label{classsimpledb_1_1record_1_1RecordPage_aad65baf26da26bafee81915ddcfcb44f}} 
+void {\bfseries delete} (int slot)
+\item 
+void \hyperlink{classsimpledb_1_1record_1_1RecordPage_a892fe53c31f295c503179004c4a9037d}{format} ()
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1RecordPage_a537ac9ff4b5bf231042b950efe8e1b2d}\label{classsimpledb_1_1record_1_1RecordPage_a537ac9ff4b5bf231042b950efe8e1b2d}} 
+int {\bfseries next\+After} (int slot)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1RecordPage_ad3f91a8ee9fdda828ee5bc8d2912b1e5}\label{classsimpledb_1_1record_1_1RecordPage_ad3f91a8ee9fdda828ee5bc8d2912b1e5}} 
+int {\bfseries insert\+After} (int slot)
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1RecordPage_a194a0b13d477a7aa9d94cd124d22e798}\label{classsimpledb_1_1record_1_1RecordPage_a194a0b13d477a7aa9d94cd124d22e798}} 
+\hyperlink{classsimpledb_1_1file_1_1BlockId}{Block\+Id} {\bfseries block} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1RecordPage_a9bb02cd42375e8ca654ab59f7867d50d}\label{classsimpledb_1_1record_1_1RecordPage_a9bb02cd42375e8ca654ab59f7867d50d}} 
+static final int {\bfseries E\+M\+P\+TY} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Store a record at a given location in a block. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1RecordPage_a892fe53c31f295c503179004c4a9037d}\label{classsimpledb_1_1record_1_1RecordPage_a892fe53c31f295c503179004c4a9037d}} 
+\index{simpledb\+::record\+::\+Record\+Page@{simpledb\+::record\+::\+Record\+Page}!format@{format}}
+\index{format@{format}!simpledb\+::record\+::\+Record\+Page@{simpledb\+::record\+::\+Record\+Page}}
+\subsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily void simpledb.\+record.\+Record\+Page.\+format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Use the layout to format a new block of records. These values should not be logged (because the old values are meaningless). \mbox{\Hypertarget{classsimpledb_1_1record_1_1RecordPage_a4ff1955420f4018a6809e88b6008654a}\label{classsimpledb_1_1record_1_1RecordPage_a4ff1955420f4018a6809e88b6008654a}} 
+\index{simpledb\+::record\+::\+Record\+Page@{simpledb\+::record\+::\+Record\+Page}!get\+Int@{get\+Int}}
+\index{get\+Int@{get\+Int}!simpledb\+::record\+::\+Record\+Page@{simpledb\+::record\+::\+Record\+Page}}
+\subsubsection{\texorpdfstring{get\+Int()}{getInt()}}
+{\footnotesize\ttfamily int simpledb.\+record.\+Record\+Page.\+get\+Int (\begin{DoxyParamCaption}\item[{int}]{slot,  }\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the integer value stored for the specified field of a specified slot. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the integer stored in that field 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1RecordPage_aa304049fd993d08097e8e0e6e5877810}\label{classsimpledb_1_1record_1_1RecordPage_aa304049fd993d08097e8e0e6e5877810}} 
+\index{simpledb\+::record\+::\+Record\+Page@{simpledb\+::record\+::\+Record\+Page}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!simpledb\+::record\+::\+Record\+Page@{simpledb\+::record\+::\+Record\+Page}}
+\subsubsection{\texorpdfstring{get\+String()}{getString()}}
+{\footnotesize\ttfamily String simpledb.\+record.\+Record\+Page.\+get\+String (\begin{DoxyParamCaption}\item[{int}]{slot,  }\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the string value stored for the specified field of the specified slot. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the string stored in that field 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1RecordPage_ade07f28ec8ebd2f9b5635fdaf2aa1b93}\label{classsimpledb_1_1record_1_1RecordPage_ade07f28ec8ebd2f9b5635fdaf2aa1b93}} 
+\index{simpledb\+::record\+::\+Record\+Page@{simpledb\+::record\+::\+Record\+Page}!set\+Int@{set\+Int}}
+\index{set\+Int@{set\+Int}!simpledb\+::record\+::\+Record\+Page@{simpledb\+::record\+::\+Record\+Page}}
+\subsubsection{\texorpdfstring{set\+Int()}{setInt()}}
+{\footnotesize\ttfamily void simpledb.\+record.\+Record\+Page.\+set\+Int (\begin{DoxyParamCaption}\item[{int}]{slot,  }\item[{String}]{fldname,  }\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Store an integer at the specified field of the specified slot. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+{\em val} & the integer value stored in that field \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsimpledb_1_1record_1_1RecordPage_ad464ee57a318a8a8044fb2258d49058f}\label{classsimpledb_1_1record_1_1RecordPage_ad464ee57a318a8a8044fb2258d49058f}} 
+\index{simpledb\+::record\+::\+Record\+Page@{simpledb\+::record\+::\+Record\+Page}!set\+String@{set\+String}}
+\index{set\+String@{set\+String}!simpledb\+::record\+::\+Record\+Page@{simpledb\+::record\+::\+Record\+Page}}
+\subsubsection{\texorpdfstring{set\+String()}{setString()}}
+{\footnotesize\ttfamily void simpledb.\+record.\+Record\+Page.\+set\+String (\begin{DoxyParamCaption}\item[{int}]{slot,  }\item[{String}]{fldname,  }\item[{String}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Store a string at the specified field of the specified slot. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of the field \\
+\hline
+{\em val} & the string value stored in that field \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/record/Record\+Page.\+java\end{DoxyCompactItemize}

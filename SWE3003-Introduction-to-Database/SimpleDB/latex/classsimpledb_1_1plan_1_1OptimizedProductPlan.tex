@@ -1,0 +1,110 @@
+\hypertarget{classsimpledb_1_1plan_1_1OptimizedProductPlan}{}\section{simpledb.\+plan.\+Optimized\+Product\+Plan Class Reference}
+\label{classsimpledb_1_1plan_1_1OptimizedProductPlan}\index{simpledb.\+plan.\+Optimized\+Product\+Plan@{simpledb.\+plan.\+Optimized\+Product\+Plan}}
+
+
+Inheritance diagram for simpledb.\+plan.\+Optimized\+Product\+Plan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+plan.\+Optimized\+Product\+Plan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1OptimizedProductPlan_afaa675021c19ffebca4f4086a3fe9fbd}\label{classsimpledb_1_1plan_1_1OptimizedProductPlan_afaa675021c19ffebca4f4086a3fe9fbd}} 
+{\bfseries Optimized\+Product\+Plan} (\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} p1, \hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} p2)
+\item 
+\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} \hyperlink{classsimpledb_1_1plan_1_1OptimizedProductPlan_a885a442c4708535114b8e7a8b022a5f7}{open} ()
+\item 
+int \hyperlink{classsimpledb_1_1plan_1_1OptimizedProductPlan_a52b0ca647203a27b037e001abda794ae}{blocks\+Accessed} ()
+\item 
+int \hyperlink{classsimpledb_1_1plan_1_1OptimizedProductPlan_acf3d4c379376683928f83fa56de38d60}{records\+Output} ()
+\item 
+int \hyperlink{classsimpledb_1_1plan_1_1OptimizedProductPlan_a53c2cbca815961d5349736f735fa2a0b}{distinct\+Values} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} \hyperlink{classsimpledb_1_1plan_1_1OptimizedProductPlan_aaeadc35607f4bce16a6f57988e8737b5}{schema} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} class corresponding to the {\itshape product} relational algebra operator that determines the most efficient ordering of its inputs. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1OptimizedProductPlan_a52b0ca647203a27b037e001abda794ae}\label{classsimpledb_1_1plan_1_1OptimizedProductPlan_a52b0ca647203a27b037e001abda794ae}} 
+\index{simpledb\+::plan\+::\+Optimized\+Product\+Plan@{simpledb\+::plan\+::\+Optimized\+Product\+Plan}!blocks\+Accessed@{blocks\+Accessed}}
+\index{blocks\+Accessed@{blocks\+Accessed}!simpledb\+::plan\+::\+Optimized\+Product\+Plan@{simpledb\+::plan\+::\+Optimized\+Product\+Plan}}
+\subsubsection{\texorpdfstring{blocks\+Accessed()}{blocksAccessed()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Optimized\+Product\+Plan.\+blocks\+Accessed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns an estimate of the number of block accesses that will occur when the scan is read to completion. \begin{DoxyReturn}{Returns}
+the estimated number of block accesses 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1OptimizedProductPlan_a53c2cbca815961d5349736f735fa2a0b}\label{classsimpledb_1_1plan_1_1OptimizedProductPlan_a53c2cbca815961d5349736f735fa2a0b}} 
+\index{simpledb\+::plan\+::\+Optimized\+Product\+Plan@{simpledb\+::plan\+::\+Optimized\+Product\+Plan}!distinct\+Values@{distinct\+Values}}
+\index{distinct\+Values@{distinct\+Values}!simpledb\+::plan\+::\+Optimized\+Product\+Plan@{simpledb\+::plan\+::\+Optimized\+Product\+Plan}}
+\subsubsection{\texorpdfstring{distinct\+Values()}{distinctValues()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Optimized\+Product\+Plan.\+distinct\+Values (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns an estimate of the number of distinct values for the specified field in the query\textquotesingle{}s output table. 
+\begin{DoxyParams}{Parameters}
+{\em fldname} & the name of a field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the estimated number of distinct field values in the output 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1OptimizedProductPlan_a885a442c4708535114b8e7a8b022a5f7}\label{classsimpledb_1_1plan_1_1OptimizedProductPlan_a885a442c4708535114b8e7a8b022a5f7}} 
+\index{simpledb\+::plan\+::\+Optimized\+Product\+Plan@{simpledb\+::plan\+::\+Optimized\+Product\+Plan}!open@{open}}
+\index{open@{open}!simpledb\+::plan\+::\+Optimized\+Product\+Plan@{simpledb\+::plan\+::\+Optimized\+Product\+Plan}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} simpledb.\+plan.\+Optimized\+Product\+Plan.\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Opens a scan corresponding to this plan. The scan will be positioned before its first record. \begin{DoxyReturn}{Returns}
+a scan 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1OptimizedProductPlan_acf3d4c379376683928f83fa56de38d60}\label{classsimpledb_1_1plan_1_1OptimizedProductPlan_acf3d4c379376683928f83fa56de38d60}} 
+\index{simpledb\+::plan\+::\+Optimized\+Product\+Plan@{simpledb\+::plan\+::\+Optimized\+Product\+Plan}!records\+Output@{records\+Output}}
+\index{records\+Output@{records\+Output}!simpledb\+::plan\+::\+Optimized\+Product\+Plan@{simpledb\+::plan\+::\+Optimized\+Product\+Plan}}
+\subsubsection{\texorpdfstring{records\+Output()}{recordsOutput()}}
+{\footnotesize\ttfamily int simpledb.\+plan.\+Optimized\+Product\+Plan.\+records\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns an estimate of the number of records in the query\textquotesingle{}s output table. \begin{DoxyReturn}{Returns}
+the estimated number of output records 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1plan_1_1OptimizedProductPlan_aaeadc35607f4bce16a6f57988e8737b5}\label{classsimpledb_1_1plan_1_1OptimizedProductPlan_aaeadc35607f4bce16a6f57988e8737b5}} 
+\index{simpledb\+::plan\+::\+Optimized\+Product\+Plan@{simpledb\+::plan\+::\+Optimized\+Product\+Plan}!schema@{schema}}
+\index{schema@{schema}!simpledb\+::plan\+::\+Optimized\+Product\+Plan@{simpledb\+::plan\+::\+Optimized\+Product\+Plan}}
+\subsubsection{\texorpdfstring{schema()}{schema()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} simpledb.\+plan.\+Optimized\+Product\+Plan.\+schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the schema of the query. \begin{DoxyReturn}{Returns}
+the query\textquotesingle{}s schema 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/plan/Optimized\+Product\+Plan.\+java\end{DoxyCompactItemize}

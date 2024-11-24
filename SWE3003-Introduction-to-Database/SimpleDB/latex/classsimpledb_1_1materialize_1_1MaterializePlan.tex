@@ -1,0 +1,120 @@
+\hypertarget{classsimpledb_1_1materialize_1_1MaterializePlan}{}\section{simpledb.\+materialize.\+Materialize\+Plan Class Reference}
+\label{classsimpledb_1_1materialize_1_1MaterializePlan}\index{simpledb.\+materialize.\+Materialize\+Plan@{simpledb.\+materialize.\+Materialize\+Plan}}
+
+
+Inheritance diagram for simpledb.\+materialize.\+Materialize\+Plan\+:
+% FIG 0
+
+
+Collaboration diagram for simpledb.\+materialize.\+Materialize\+Plan\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsimpledb_1_1materialize_1_1MaterializePlan_afbbc97c880a46462da0ed153828a33fb}{Materialize\+Plan} (\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction} tx, \hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan} srcplan)
+\item 
+\hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} \hyperlink{classsimpledb_1_1materialize_1_1MaterializePlan_acf693ce6e3b9e7603286ea4c971e1d51}{open} ()
+\item 
+int \hyperlink{classsimpledb_1_1materialize_1_1MaterializePlan_a17e5dc3ecdd3ea848ad34c796f988da1}{blocks\+Accessed} ()
+\item 
+int \hyperlink{classsimpledb_1_1materialize_1_1MaterializePlan_a3e3d3cdd3bff924c476e7943d7fe70e7}{records\+Output} ()
+\item 
+int \hyperlink{classsimpledb_1_1materialize_1_1MaterializePlan_a98964c2c20961730b37e240e318b537d}{distinct\+Values} (String fldname)
+\item 
+\hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} \hyperlink{classsimpledb_1_1materialize_1_1MaterializePlan_aa15451a3ee0639ccca88ca332d050b57}{schema} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Plan class for the {\itshape materialize} operator. \begin{DoxyAuthor}{Author}
+Edward Sciore 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1MaterializePlan_afbbc97c880a46462da0ed153828a33fb}\label{classsimpledb_1_1materialize_1_1MaterializePlan_afbbc97c880a46462da0ed153828a33fb}} 
+\index{simpledb\+::materialize\+::\+Materialize\+Plan@{simpledb\+::materialize\+::\+Materialize\+Plan}!Materialize\+Plan@{Materialize\+Plan}}
+\index{Materialize\+Plan@{Materialize\+Plan}!simpledb\+::materialize\+::\+Materialize\+Plan@{simpledb\+::materialize\+::\+Materialize\+Plan}}
+\subsubsection{\texorpdfstring{Materialize\+Plan()}{MaterializePlan()}}
+{\footnotesize\ttfamily simpledb.\+materialize.\+Materialize\+Plan.\+Materialize\+Plan (\begin{DoxyParamCaption}\item[{\hyperlink{classsimpledb_1_1tx_1_1Transaction}{Transaction}}]{tx,  }\item[{\hyperlink{interfacesimpledb_1_1plan_1_1Plan}{Plan}}]{srcplan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a materialize plan for the specified query. 
+\begin{DoxyParams}{Parameters}
+{\em srcplan} & the plan of the underlying query \\
+\hline
+{\em tx} & the calling transaction \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1MaterializePlan_a17e5dc3ecdd3ea848ad34c796f988da1}\label{classsimpledb_1_1materialize_1_1MaterializePlan_a17e5dc3ecdd3ea848ad34c796f988da1}} 
+\index{simpledb\+::materialize\+::\+Materialize\+Plan@{simpledb\+::materialize\+::\+Materialize\+Plan}!blocks\+Accessed@{blocks\+Accessed}}
+\index{blocks\+Accessed@{blocks\+Accessed}!simpledb\+::materialize\+::\+Materialize\+Plan@{simpledb\+::materialize\+::\+Materialize\+Plan}}
+\subsubsection{\texorpdfstring{blocks\+Accessed()}{blocksAccessed()}}
+{\footnotesize\ttfamily int simpledb.\+materialize.\+Materialize\+Plan.\+blocks\+Accessed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the estimated number of blocks in the materialized table. It does {\itshape not} include the one-\/time cost of materializing the records. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan\+::blocks\+Accessed()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a6a333b95b956fe224812155b9d1c8202}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1MaterializePlan_a98964c2c20961730b37e240e318b537d}\label{classsimpledb_1_1materialize_1_1MaterializePlan_a98964c2c20961730b37e240e318b537d}} 
+\index{simpledb\+::materialize\+::\+Materialize\+Plan@{simpledb\+::materialize\+::\+Materialize\+Plan}!distinct\+Values@{distinct\+Values}}
+\index{distinct\+Values@{distinct\+Values}!simpledb\+::materialize\+::\+Materialize\+Plan@{simpledb\+::materialize\+::\+Materialize\+Plan}}
+\subsubsection{\texorpdfstring{distinct\+Values()}{distinctValues()}}
+{\footnotesize\ttfamily int simpledb.\+materialize.\+Materialize\+Plan.\+distinct\+Values (\begin{DoxyParamCaption}\item[{String}]{fldname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of distinct field values, which is the same as in the underlying plan. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan\+::distinct\+Values}(java.\+lang.\+String) 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a55094c16c756b0c09b5c71b94d573271}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1MaterializePlan_acf693ce6e3b9e7603286ea4c971e1d51}\label{classsimpledb_1_1materialize_1_1MaterializePlan_acf693ce6e3b9e7603286ea4c971e1d51}} 
+\index{simpledb\+::materialize\+::\+Materialize\+Plan@{simpledb\+::materialize\+::\+Materialize\+Plan}!open@{open}}
+\index{open@{open}!simpledb\+::materialize\+::\+Materialize\+Plan@{simpledb\+::materialize\+::\+Materialize\+Plan}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \hyperlink{interfacesimpledb_1_1query_1_1Scan}{Scan} simpledb.\+materialize.\+Materialize\+Plan.\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method loops through the underlying query, copying its output records into a temporary table. It then returns a table scan for that table. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan\+::open()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_aaa4c15cda4e9c0d52308850f9f13ff99}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1MaterializePlan_a3e3d3cdd3bff924c476e7943d7fe70e7}\label{classsimpledb_1_1materialize_1_1MaterializePlan_a3e3d3cdd3bff924c476e7943d7fe70e7}} 
+\index{simpledb\+::materialize\+::\+Materialize\+Plan@{simpledb\+::materialize\+::\+Materialize\+Plan}!records\+Output@{records\+Output}}
+\index{records\+Output@{records\+Output}!simpledb\+::materialize\+::\+Materialize\+Plan@{simpledb\+::materialize\+::\+Materialize\+Plan}}
+\subsubsection{\texorpdfstring{records\+Output()}{recordsOutput()}}
+{\footnotesize\ttfamily int simpledb.\+materialize.\+Materialize\+Plan.\+records\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the number of records in the materialized table, which is the same as in the underlying plan. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan\+::records\+Output()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_a187e06657d356c80a7f743d7ff8fd257}{simpledb.\+plan.\+Plan}.
+
+\mbox{\Hypertarget{classsimpledb_1_1materialize_1_1MaterializePlan_aa15451a3ee0639ccca88ca332d050b57}\label{classsimpledb_1_1materialize_1_1MaterializePlan_aa15451a3ee0639ccca88ca332d050b57}} 
+\index{simpledb\+::materialize\+::\+Materialize\+Plan@{simpledb\+::materialize\+::\+Materialize\+Plan}!schema@{schema}}
+\index{schema@{schema}!simpledb\+::materialize\+::\+Materialize\+Plan@{simpledb\+::materialize\+::\+Materialize\+Plan}}
+\subsubsection{\texorpdfstring{schema()}{schema()}}
+{\footnotesize\ttfamily \hyperlink{classsimpledb_1_1record_1_1Schema}{Schema} simpledb.\+materialize.\+Materialize\+Plan.\+schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return the schema of the materialized table, which is the same as in the underlying plan. \begin{DoxySeeAlso}{See also}
+\hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan\+::schema()} 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{interfacesimpledb_1_1plan_1_1Plan_ad0ee1aa2c4e7147e9f8fc6f3301fa986}{simpledb.\+plan.\+Plan}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/simpledb/materialize/Materialize\+Plan.\+java\end{DoxyCompactItemize}
